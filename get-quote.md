@@ -120,6 +120,12 @@ permalink: /get-quote/
   }
 }
 
+/* ===== Shrink header section ===== */
+.header-section {
+  height: 25px;       /* shrink header to 25px */
+  margin: 0;
+  padding: 0;
+}
 </style>
 
 <form action="/payment-page" method="POST" class="quote-form">
@@ -132,7 +138,7 @@ permalink: /get-quote/
       </div>
       <div class="form-group">
         <label for="phone">Phone *</label>
-        <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required>
+        <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" maxlength="14" required>
       </div>
     </div>
 
@@ -180,6 +186,26 @@ permalink: /get-quote/
       By submitting, you acknowledge our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.
     </p>
 
-    <button type="submit" class="cta-button">Get Free Quote</button>
+    <button type="submit" class="cta-button">Get My Free Quote</button>
   </fieldset>
 </form>
+
+<!-- ===== Phone input formatting ===== -->
+<script>
+const phoneInput = document.getElementById('phone');
+
+phoneInput.addEventListener('input', function(e) {
+  let x = e.target.value.replace(/\D/g, '').substring(0,10); // remove non-digits, limit 10
+  let formatted = x;
+
+  if (x.length > 6) {
+    formatted = `(${x.substring(0,3)}) ${x.substring(3,6)}-${x.substring(6,10)}`;
+  } else if (x.length > 3) {
+    formatted = `(${x.substring(0,3)}) ${x.substring(3,6)}`;
+  } else if (x.length > 0) {
+    formatted = `(${x}`;
+  }
+
+  e.target.value = formatted;
+});
+</script>
