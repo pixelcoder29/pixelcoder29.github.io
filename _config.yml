@@ -20,12 +20,10 @@ title: Yard Guards PDX - Pet Waste Removal
 ###############################################
 
 navbar-links:
+  Services: "services"
+  About Us: "about-us"
   FAQ: "faq"
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Get Quote: "get-quote"
 
 ################
 # --- Logo --- #
