@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Get a Quote"
-permalink: /getquote/
+permalink: /get-quote/
 ---
 
 # Get a Quote
