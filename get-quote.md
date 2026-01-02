@@ -85,7 +85,7 @@ permalink: /get-quote/
 }
 
 /* Add side padding for small screens */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   form input,
   form select,
   form textarea {
