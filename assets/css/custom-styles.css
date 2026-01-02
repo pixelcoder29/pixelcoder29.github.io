@@ -163,3 +163,22 @@ footer a:focus {
     padding-right: 0;
   }
 }
+
+/* --- Tiny screens logo adjustment --- */
+@media (max-width: 349px) {
+  .navbar-custom .navbar-brand-logo img {
+    height: 4rem; /* smaller logo height for tiny screens */
+  }
+
+  /* Optional: reduce left padding for logo on tiny screens */
+  .navbar-custom .navbar-brand-logo {
+    padding-left: 0.5rem;
+  }
+
+  /* Ensure collapsed menu still has spacing */
+  .navbar-custom .navbar-collapse {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
