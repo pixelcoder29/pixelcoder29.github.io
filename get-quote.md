@@ -81,17 +81,12 @@ permalink: /get-quote/
   resize: vertical;
 }
 
-/* ===== Error styles ===== */
+/* ===== Error message only (no red borders) ===== */
 .error-message {
   color: #d93025;
   font-size: 12px;
   margin-top: 4px;
   display: none;
-}
-
-input:invalid,
-select:invalid {
-  outline: 2px solid #d93025;
 }
 
 /* ===== CTA ===== */
@@ -189,18 +184,30 @@ select:invalid {
 </form>
 
 <script>
-/* ===== Phone auto-format ===== */
 const phone = document.getElementById('phone');
 const zip = document.getElementById('zip');
 const email = document.getElementById('email');
 
+/* ===== Phone auto-format ===== */
 phone.addEventListener('input', e => {
   let x = e.target.value.replace(/\D/g, '').substring(0,10);
-  let f = x;
+  let f = '';
   if (x.length > 6) f = `(${x.slice(0,3)}) ${x.slice(3,6)}-${x.slice(6)}`;
   else if (x.length > 3) f = `(${x.slice(0,3)}) ${x.slice(3)}`;
   else if (x.length > 0) f = `(${x}`;
   e.target.value = f;
+});
+
+/* ===== Phone validation ===== */
+phone.addEventListener('blur', () => {
+  const err = document.getElementById('phone-error');
+  const digits = phone.value.replace(/\D/g, '');
+  if (digits.length !== 10) {
+    err.textContent = 'Please enter a valid 10-digit phone number.';
+    err.style.display = 'block';
+  } else {
+    err.style.display = 'none';
+  }
 });
 
 /* ===== ZIP: digits only ===== */
@@ -208,23 +215,25 @@ zip.addEventListener('input', () => {
   zip.value = zip.value.replace(/\D/g, '').substring(0,5);
 });
 
-/* ===== Inline validation messages ===== */
-phone.addEventListener('blur', () => {
-  const err = document.getElementById('phone-error');
-  const digits = phone.value.replace(/\D/g, '');
-  err.style.display = digits.length !== 10 ? 'block' : 'none';
-  err.textContent = 'Please enter a valid 10-digit phone number.';
-});
-
+/* ===== ZIP validation ===== */
 zip.addEventListener('blur', () => {
   const err = document.getElementById('zip-error');
-  err.style.display = zip.value.length !== 5 ? 'block' : 'none';
-  err.textContent = 'ZIP code must be 5 digits.';
+  if (zip.value.length !== 5) {
+    err.textContent = 'ZIP code must be 5 digits.';
+    err.style.display = 'block';
+  } else {
+    err.style.display = 'none';
+  }
 });
 
+/* ===== Email validation ===== */
 email.addEventListener('blur', () => {
   const err = document.getElementById('email-error');
-  err.style.display = email.checkValidity() ? 'none' : 'block';
-  err.textContent = 'Please enter a valid email address.';
+  if (!email.checkValidity()) {
+    err.textContent = 'Please enter a valid email address.';
+    err.style.display = 'block';
+  } else {
+    err.style.display = 'none';
+  }
 });
 </script>
