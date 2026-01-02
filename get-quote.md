@@ -84,21 +84,23 @@ permalink: /get-quote/
   margin-bottom: 5px;
 }
 
-/* Add side padding for small screens */
+/* Add more side padding for small screens */
 @media (max-width: 768px) {
+  form {
+    padding-left: 20px;   /* increased from 12px */
+    padding-right: 20px;  /* increased from 12px */
+    box-sizing: border-box;
+  }
+
   form input,
   form select,
   form textarea {
-    padding-left: 12px;   /* adjust as needed */
-    padding-right: 12px;  /* adjust as needed */
-    box-sizing: border-box; /* ensures padding doesn’t break width */
-  }
-
-  form {
-    padding-left: 12px;   /* optional extra padding on the form container */
-    padding-right: 12px;
+    padding-left: 14px;   /* inner padding for fields */
+    padding-right: 14px;
+    box-sizing: border-box;
   }
 }
+
 
 </style>
 
