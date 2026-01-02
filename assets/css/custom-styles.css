@@ -121,7 +121,7 @@ footer a:focus {
 /* --- Slightly shift navbar logo to the right on desktop --- */
 @media (min-width: 1200px) {
   .navbar-custom .navbar-brand-logo {
-    padding-left: 8rem; /* move logo right */
+    padding-left: 10rem; /* move logo right */
   }
 }
 
