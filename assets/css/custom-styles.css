@@ -23,7 +23,7 @@
 
 /* Logo image */
 .navbar-custom .navbar-brand-logo img {
-  height: 6.25rem;      /* double size */
+  height: 8.25rem;      /* double size */
   max-width: 100%;
   width: auto;           /* maintain aspect ratio */
   object-fit: contain;
@@ -73,13 +73,13 @@
 
 /* --- Body adjustments for fixed navbar --- */
 body {
-  padding-top: 6.25rem; /* same as navbar height to prevent overlap */
+  padding-top: 8.25rem; /* same as navbar height to prevent overlap */
 }
 
 /* --- Intro headers adjustments --- */
 .intro-header,
 .intro-header.big-img {
-  margin-top: 6.25rem; /* account for fixed navbar */
+  margin-top: 8.25rem; /* account for fixed navbar */
 }
 
 /* --- Footer --- */
@@ -104,7 +104,7 @@ footer a:focus {
 
   /* Keep body padding same as navbar height */
   body {
-    padding-top: 6.25rem;
+    padding-top: 8.25rem;
   }
 
   /* Slightly shift navbar logo to the right */
@@ -121,6 +121,6 @@ footer a:focus {
 
   /* Logo height already doubled */
   .navbar-custom .navbar-brand-logo img {
-    height: 6.25rem;
+    height: 8.25rem;
   }
 }
