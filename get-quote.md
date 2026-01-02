@@ -63,9 +63,8 @@ permalink: /get-quote/
   font-size: 14px;
 }
 
-/* ===== Inputs ===== */
+/* ===== Inputs, Textareas ===== */
 .quote-form input,
-.quote-form select,
 .quote-form textarea {
   background-color: #d9f4cd;
   border: none;
@@ -77,6 +76,26 @@ permalink: /get-quote/
   line-height: 1.5;
 }
 
+/* ===== Placeholder styling ===== */
+.quote-form input::placeholder,
+.quote-form textarea::placeholder {
+  color: rgba(0,0,0,0.4); /* semi-transparent placeholder */
+}
+
+/* ===== Select placeholder styling ===== */
+.quote-form select {
+  color: rgba(0,0,0,0.4); /* placeholder color by default */
+}
+
+.quote-form select:valid {
+  color: rgba(0,0,0,0.8); /* fully opaque once a real option is selected */
+}
+
+.quote-form select option:disabled[selected] {
+  color: rgba(0,0,0,0.4); /* matches placeholder transparency */
+}
+
+/* ===== Textarea resize ===== */
 .quote-form textarea {
   resize: vertical;
 }
