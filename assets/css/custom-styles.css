@@ -136,6 +136,10 @@ footer a:focus {
 /* --- Mobile/Tablet adjustments (below 1200px) --- */
 @media (max-width: 1199px) {
 
+ .navbar-custom .navbar-brand-logo img {
+    height: 7rem;  /* adjust as needed */
+  }
+
   /* Logo spacing from left */
   .navbar-custom .navbar-brand-logo {
     padding-left: 1rem;
