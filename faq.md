@@ -1,10 +1,8 @@
 ---
 layout: page
-title: "FAQ"
+title: "Frequently Asked Questions"
 permalink: /faq/
 ---
-
-# Yard Guards PDX – FAQ
 
 ## General Questions
 
