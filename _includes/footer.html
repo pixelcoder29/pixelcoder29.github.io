@@ -2,7 +2,18 @@
   <div class="container-md">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+
+        <!-- Social network links -->
         {% include social-networks-links.html %}
+
+        <!-- Footer links: FAQ, Terms, Privacy -->
+        <div class="footer-links mb-2 text-center">
+          <a href="/faq/">FAQ</a> &nbsp;|&nbsp;
+          <a href="/terms/">Terms & Conditions</a> &nbsp;|&nbsp;
+          <a href="/privacy-policy/">Privacy Policy</a>
+        </div>
+
+        <!-- Custom footer content (optional) -->
         {% if page.footer-extra %}
           <div class="footer-custom-content">
             {% for file in page.footer-extra %}
@@ -10,10 +21,11 @@
             {% endfor %}
           </div>
         {% endif %}
-        <p class="copyright text-muted">
+
+        <!-- Copyright / author info -->
+        <p class="copyright text-muted text-center">
           {% if site.author %}
-            {{ site.author }}
-            &nbsp;&bull;&nbsp;
+            {{ site.author }} &nbsp;&bull;&nbsp;
           {% endif %}
           {{ site.time | date: '%Y' }}
 
@@ -24,11 +36,9 @@
             </span>
           {% endif %}
 
-          {% if site.matomo %}
-            {% if site.matomo.opt-out %}
-              &nbsp;&bull;&nbsp;
-              <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
-            {% endif %}
+          {% if site.matomo and site.matomo.opt-out %}
+            &nbsp;&bull;&nbsp;
+            <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
           {% endif %}
 
           {% if site.edit_page_button and site.github.repository_url %}
@@ -36,6 +46,7 @@
             <a title="Edit this page on GitHub" href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}" class="text_muted">Edit page</a>
           {% endif %}
         </p>
+
       </div>
     </div>
   </div>
