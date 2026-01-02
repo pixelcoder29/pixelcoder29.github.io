@@ -8,6 +8,8 @@ permalink: /get-quote/
 *{box-sizing:border-box}body,.quote-form,.quote-form input,.quote-form select,.quote-form textarea,.quote-form label,.cta-button{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}.header-section{height:25px;margin:0;padding:0}.quote-form{max-width:600px;margin:0 auto;padding:24px}.quote-form fieldset{border:none;padding:0;margin:0}.form-row{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:15px}.form-group{flex:1 1 100%;display:flex;flex-direction:column}@media(min-width:650px){.form-group{flex:1 1 calc(50% - 10px)}}.quote-form label{margin-bottom:6px;font-weight:bold;font-size:14px}.quote-form input,.quote-form select,.quote-form textarea{background-color:#d9f4cd;border:none;border-radius:8px;padding:10px;font-size:16px;width:100%;line-height:1.5}.quote-form input::placeholder,.quote-form textarea::placeholder{color:rgba(0,0,0,.4)}.quote-form select{color:rgba(0,0,0,.8)}.quote-form select option:disabled[selected]{color:rgba(0,0,0,.4)}.quote-form textarea{resize:vertical;height:40px}.error-message{color:#d93025;font-size:12px;margin-top:4px;display:none}.cta-button{background-color:#4CAF50;color:#fff;font-weight:bold;padding:14px 20px;border:none;border-radius:8px;cursor:pointer;margin-top:15px;width:100%;font-size:16px}.cta-button:hover{background-color:#45a049}.privacy-text{font-size:12px;margin-top:10px}
 </style>
 
+<img src="/assets/img/yard-guards-pdx-banner-logo.webp" alt="Yard Guards PDX Logo" width="213" height="112" fetchpriority="high">
+
 <form action="/payment-page" method="POST" class="quote-form" novalidate>
 <fieldset>
 <div class="form-row">
@@ -70,8 +72,13 @@ permalink: /get-quote/
 </form>
 
 <script defer>
-document.addEventListener('DOMContentLoaded',()=>{const t=document.getElementById("full_name"),e=document.getElementById("phone"),n=document.getElementById("zip"),o=document.getElementById("email");t.addEventListener("blur",()=>{const a=document.getElementById("name-error");t.value.trim()?a.style.display="none":(a.textContent="Full Name is required.",a.style.display="block")}),e.addEventListener("input",t=>{let a=t.target.value.replace(/\D/g,"").substring(0,10),r="";a.length>6?r=`(${a.slice(0,3)}) ${a.slice(3,6)}-${a.slice(6)}`:a.length>3?r=`(${a.slice(0,3)}) ${a.slice(3)}`:a.length>0&&(r=`(${a}`),t.target.value=r}),e.addEventListener("blur",()=>{const t=document.getElementById("phone-error"),a=e.value.replace(/\D/g,"");a.length!==10?(t.textContent="Please enter a valid 10-digit phone number.",t.style.display="block"):t.style.display="none"}),n.addEventListener("input",()=>{n.value=n.value.replace(/\D/g,"").substring(0,5)}),n.addEventListener("blur",()=>{const t=document.getElementById("zip-error");n.value.length!==5?(t.textContent="ZIP code must be 5 digits.",t.style.display="block"):t.style.display="none"}),o.addEventListener("blur",()=>{const t=document.getElementById("email-error");o.checkValidity()?t.style.display="none":(t.textContent="Please enter a valid email address.",t.style.display="block")})});
+document.addEventListener('DOMContentLoaded',()=>{
+const t=document.getElementById("full_name"),e=document.getElementById("phone"),n=document.getElementById("zip"),o=document.getElementById("email");
+t.addEventListener("blur",()=>{const a=document.getElementById("name-error");t.value.trim()?a.style.display="none":(a.textContent="Full Name is required.",a.style.display="block")});
+e.addEventListener("input",t=>{let a=t.target.value.replace(/\D/g,"").substring(0,10),r="";a.length>6?r=`(${a.slice(0,3)}) ${a.slice(3,6)}-${a.slice(6)}`:a.length>3?r=`(${a.slice(0,3)}) ${a.slice(3)}`:a.length>0&&(r=`(${a}`),t.target.value=r});
+e.addEventListener("blur",()=>{const t=document.getElementById("phone-error"),a=e.value.replace(/\D/g,"");a.length!==10?(t.textContent="Please enter a valid 10-digit phone number.",t.style.display="block"):t.style.display="none"});
+n.addEventListener("input",()=>{n.value=n.value.replace(/\D/g,"").substring(0,5)});
+n.addEventListener("blur",()=>{const t=document.getElementById("zip-error");n.value.length!==5?(t.textContent="ZIP code must be 5 digits.",t.style.display="block"):t.style.display="none"});
+o.addEventListener("blur",()=>{const t=document.getElementById("email-error");o.checkValidity()?t.style.display="none":(t.textContent="Please enter a valid email address.",t.style.display="block")});
+});
 </script>
-
-<link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet"></noscript>
