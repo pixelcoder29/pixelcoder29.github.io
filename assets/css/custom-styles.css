@@ -192,27 +192,27 @@ footer a:focus {
     margin: 0;
     padding: 0;
 }
+
 /* ---------- Form Container ---------- */
-#get-quote-form {
-  max-width: 500px; /* keeps form narrow and readable */
-  margin: 0 auto 40px auto; /* center with bottom spacing */
+form {
+  max-width: 500px;
+  margin: 40px auto;
   padding: 25px 30px;
-  background-color: #ffffff; /* clean white background */
+  background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* subtle shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   font-family: 'Arial', sans-serif;
 }
 
-/* ---------- Form Headings ---------- */
-#get-quote-form h2 {
-  text-align: center;
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #008AFF; /* optional: or keep brand green if you prefer */
+/* ---------- Fieldset ---------- */
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* ---------- Form Labels ---------- */
-#get-quote-form label {
+form label {
   display: block;
   margin-bottom: 6px;
   font-weight: 600;
@@ -221,11 +221,11 @@ footer a:focus {
 }
 
 /* ---------- Input Fields ---------- */
-#get-quote-form input[type="text"],
-#get-quote-form input[type="email"],
-#get-quote-form input[type="tel"],
-#get-quote-form select,
-#get-quote-form textarea {
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
   width: 100%;
   padding: 12px 14px;
   margin-bottom: 16px;
@@ -235,19 +235,19 @@ footer a:focus {
   transition: all 0.2s ease;
 }
 
-#get-quote-form input:focus,
-#get-quote-form select:focus,
-#get-quote-form textarea:focus {
-  border-color: #d9f4cd; /* brand green focus */
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #d9f4cd;
   box-shadow: 0 0 6px rgba(217, 244, 205, 0.4);
   outline: none;
 }
 
 /* ---------- Submit Button ---------- */
-#get-quote-form button {
+.cta-button {
   width: 100%;
   padding: 14px;
-  background-color: #008AFF; /* bright blue CTA */
+  background-color: #008AFF; /* bright CTA blue */
   color: #fff;
   font-size: 1.1em;
   font-weight: 600;
@@ -257,45 +257,34 @@ footer a:focus {
   transition: all 0.2s ease;
 }
 
-#get-quote-form button:hover {
+.cta-button:hover {
   background-color: #006bbf;
   transform: translateY(-2px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ---------- Textarea ---------- */
-#get-quote-form textarea {
+form textarea {
   min-height: 100px;
   resize: vertical;
 }
 
-/* ---------- Small Notes / Subtext ---------- */
-#get-quote-form .form-note {
+/* ---------- Privacy Text ---------- */
+.privacy-text {
   font-size: 0.85em;
   color: #777;
   margin-bottom: 12px;
 }
 
-/* ---------- Checkbox / Privacy ---------- */
-#get-quote-form .privacy-label {
-  display: flex;
-  align-items: center;
-  font-size: 0.85em;
-  color: #404040;
-}
-
-#get-quote-form .privacy-label a {
+.privacy-text a {
   color: #008AFF;
   text-decoration: underline;
 }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 600px) {
-  #get-quote-form {
+  form {
     padding: 20px;
-    margin: 0 15px 30px 15px;
-  }
-  #get-quote-form h2 {
-    font-size: 1.5em;
+    margin: 20px 15px;
   }
 }
