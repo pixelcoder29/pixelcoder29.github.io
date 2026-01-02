@@ -63,9 +63,8 @@ permalink: /get-quote/
   font-size: 14px;
 }
 
-/* ===== Inputs, Textareas, Selects ===== */
+/* ===== Inputs, Textareas ===== */
 .quote-form input,
-.quote-form select,
 .quote-form textarea {
   background-color: #d9f4cd;
   border: none;
@@ -83,17 +82,15 @@ permalink: /get-quote/
   color: rgba(0,0,0,0.4); /* semi-transparent placeholder */
 }
 
+/* ===== Select styling ===== */
 .quote-form select {
-  color: rgba(0,0,0,0.8); /* normal selected option color */
+  color: rgba(0,0,0,0.8); /* fully opaque text */
 }
 
-.quote-form select option:disabled[selected] {
-  color: rgba(0,0,0,0.4); /* match placeholder transparency */
-}
-
-/* ===== Textarea resize ===== */
+/* ===== Textarea resize & height ===== */
 .quote-form textarea {
   resize: vertical;
+  height: 40px; /* half-height */
 }
 
 /* ===== Error message only ===== */
@@ -164,21 +161,19 @@ permalink: /get-quote/
       <div class="form-group">
         <label for="dogs">How many dogs do you have? *</label>
         <select id="dogs" name="dogs" required>
-          <option value="" disabled selected>Select</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
         </select>
       </div>
 
       <div class="form-group">
         <label for="frequency">Service Frequency *</label>
         <select id="frequency" name="frequency" required>
-          <option value="" disabled selected>Select</option>
-          <option value="weekly">Weekly</option>
+          <option value="weekly" selected>Weekly</option>
           <option value="bi-weekly">Bi-Weekly</option>
           <option value="twice-weekly">Twice a Week</option>
         </select>
@@ -199,69 +194,71 @@ permalink: /get-quote/
   </fieldset>
 </form>
 
-<script>
-const nameInput = document.getElementById('full_name');
-const phone = document.getElementById('phone');
-const zip = document.getElementById('zip');
-const email = document.getElementById('email');
+<script defer>
+document.addEventListener('DOMContentLoaded', () => {
+  const nameInput = document.getElementById('full_name');
+  const phone = document.getElementById('phone');
+  const zip = document.getElementById('zip');
+  const email = document.getElementById('email');
 
-/* ===== Full Name validation ===== */
-nameInput.addEventListener('blur', () => {
-  const err = document.getElementById('name-error');
-  if (!nameInput.value.trim()) {
-    err.textContent = 'Full Name is required.';
-    err.style.display = 'block';
-  } else {
-    err.style.display = 'none';
-  }
-});
+  /* ===== Full Name validation ===== */
+  nameInput.addEventListener('blur', () => {
+    const err = document.getElementById('name-error');
+    if (!nameInput.value.trim()) {
+      err.textContent = 'Full Name is required.';
+      err.style.display = 'block';
+    } else {
+      err.style.display = 'none';
+    }
+  });
 
-/* ===== Phone auto-format ===== */
-phone.addEventListener('input', e => {
-  let x = e.target.value.replace(/\D/g, '').substring(0,10);
-  let f = '';
-  if (x.length > 6) f = `(${x.slice(0,3)}) ${x.slice(3,6)}-${x.slice(6)}`;
-  else if (x.length > 3) f = `(${x.slice(0,3)}) ${x.slice(3)}`;
-  else if (x.length > 0) f = `(${x}`;
-  e.target.value = f;
-});
+  /* ===== Phone auto-format ===== */
+  phone.addEventListener('input', e => {
+    let x = e.target.value.replace(/\D/g, '').substring(0,10);
+    let f = '';
+    if (x.length > 6) f = `(${x.slice(0,3)}) ${x.slice(3,6)}-${x.slice(6)}`;
+    else if (x.length > 3) f = `(${x.slice(0,3)}) ${x.slice(3)}`;
+    else if (x.length > 0) f = `(${x}`;
+    e.target.value = f;
+  });
 
-/* ===== Phone validation ===== */
-phone.addEventListener('blur', () => {
-  const err = document.getElementById('phone-error');
-  const digits = phone.value.replace(/\D/g, '');
-  if (digits.length !== 10) {
-    err.textContent = 'Please enter a valid 10-digit phone number.';
-    err.style.display = 'block';
-  } else {
-    err.style.display = 'none';
-  }
-});
+  /* ===== Phone validation ===== */
+  phone.addEventListener('blur', () => {
+    const err = document.getElementById('phone-error');
+    const digits = phone.value.replace(/\D/g, '');
+    if (digits.length !== 10) {
+      err.textContent = 'Please enter a valid 10-digit phone number.';
+      err.style.display = 'block';
+    } else {
+      err.style.display = 'none';
+    }
+  });
 
-/* ===== ZIP input ===== */
-zip.addEventListener('input', () => {
-  zip.value = zip.value.replace(/\D/g, '').substring(0,5);
-});
+  /* ===== ZIP input ===== */
+  zip.addEventListener('input', () => {
+    zip.value = zip.value.replace(/\D/g, '').substring(0,5);
+  });
 
-/* ===== ZIP validation ===== */
-zip.addEventListener('blur', () => {
-  const err = document.getElementById('zip-error');
-  if (zip.value.length !== 5) {
-    err.textContent = 'ZIP code must be 5 digits.';
-    err.style.display = 'block';
-  } else {
-    err.style.display = 'none';
-  }
-});
+  /* ===== ZIP validation ===== */
+  zip.addEventListener('blur', () => {
+    const err = document.getElementById('zip-error');
+    if (zip.value.length !== 5) {
+      err.textContent = 'ZIP code must be 5 digits.';
+      err.style.display = 'block';
+    } else {
+      err.style.display = 'none';
+    }
+  });
 
-/* ===== Email validation ===== */
-email.addEventListener('blur', () => {
-  const err = document.getElementById('email-error');
-  if (!email.checkValidity()) {
-    err.textContent = 'Please enter a valid email address.';
-    err.style.display = 'block';
-  } else {
-    err.style.display = 'none';
-  }
+  /* ===== Email validation ===== */
+  email.addEventListener('blur', () => {
+    const err = document.getElementById('email-error');
+    if (!email.checkValidity()) {
+      err.textContent = 'Please enter a valid email address.';
+      err.style.display = 'block';
+    } else {
+      err.style.display = 'none';
+    }
+  });
 });
 </script>
