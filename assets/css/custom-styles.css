@@ -18,22 +18,18 @@
 .navbar-custom .navbar-brand-logo {
   display: flex;
   align-items: center;
-  padding: 0;           /* remove default padding */
+  padding-left: 1rem;   /* default spacing from left */
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Logo image */
 .navbar-custom .navbar-brand-logo img {
   height: 8.25rem;      /* double size */
   max-width: 100%;
-  width: auto;           /* maintain aspect ratio */
+  width: auto;          /* maintain aspect ratio */
   object-fit: contain;
   transition: none !important;  /* prevent shrinking */
-}
-
-/* Logo anchor spacing (fixes links issue) */
-/* Mobile/tablet default */
-.navbar-custom .navbar-brand.navbar-brand-logo {
-  margin-left: 1rem;    /* space from left edge */
 }
 
 /* Brand text and nav links */
@@ -77,6 +73,11 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* Add spacing for nav links so they don't touch the right edge */
+.navbar-custom .navbar-nav {
+  padding-right: 1rem;  /* default for mobile/tablet */
+}
+
 /* --- Body adjustments for fixed navbar --- */
 body {
   padding-top: 8.25rem; /* same as navbar height to prevent overlap */
@@ -108,9 +109,19 @@ footer a:focus {
 /* --- Desktop-specific adjustments --- */
 @media (min-width: 1200px) {
 
-  /* Desktop logo spacing */
-  .navbar-custom .navbar-brand.navbar-brand-logo {
-    margin-left: 12rem; /* move logo further right */
+  /* Keep body padding same as navbar height */
+  body {
+    padding-top: 8.25rem;
+  }
+
+  /* Logo spacing on desktop */
+  .navbar-custom .navbar-brand-logo {
+    padding-left: 12rem;
+  }
+
+  /* Nav links padding on desktop */
+  .navbar-custom .navbar-nav {
+    padding-right: 2rem;  /* more space for desktop */
   }
 
   /* Add shadow on desktop only */
@@ -118,11 +129,6 @@ footer a:focus {
     box-shadow: 2px 1px 16px 5px #70707099;
     -webkit-box-shadow: 2px 1px 16px 5px #70707099;
     -moz-box-shadow: 2px 1px 16px 5px #70707099;
-  }
-
-  /* Body padding same as navbar height */
-  body {
-    padding-top: 8.25rem;
   }
 
   /* Logo height already doubled */
