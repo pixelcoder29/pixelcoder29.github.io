@@ -151,6 +151,12 @@ footer a:focus {
     padding-right: 1rem; /* space from right */
   }
 
+  /* Add padding inside the collapsed menu so links aren't flush left */
+  .navbar-custom .navbar-collapse {
+    padding-left: 1rem;   /* space from left */
+    padding-right: 1rem;  /* optional: space from right */
+  }
+
   /* Optional: remove extra padding inside links */
   .navbar-custom .navbar-nav .nav-link {
     padding-left: 0;
