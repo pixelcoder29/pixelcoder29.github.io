@@ -102,7 +102,7 @@ footer a:focus {
 /* Add left padding for logo on screens below 1200px */
 @media (max-width: 1199px) {
   .navbar-custom .navbar-brand-logo {
-    padding-left: 2rem; /* adjust as needed */
+    padding-left: 1rem; /* adjust as needed */
   }
 }
 
