@@ -186,3 +186,7 @@ footer a:focus {
     padding-right: 0.5rem;
   }
 }
+
+.page-title {
+    display: none;
+}
