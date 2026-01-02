@@ -30,11 +30,6 @@ permalink: /get-quote/
 .privacy-text{font-size:12px;margin-top:10px}
 </style>
 
-<!-- ===== Optimized LCP Logo ===== -->
-<img src="/assets/img/yard-guards-pdx-banner-logo-213x112.webp" 
-     width="213" height="112" alt="Yard Guards PDX - Pet Waste Removal Logo" 
-     fetchpriority="high" style="display:block;margin:0 auto 20px auto;">
-
 <form action="/payment-page" method="POST" class="quote-form" novalidate>
 <fieldset>
 <div class="form-row">
