@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Yard Guards PDX - Pet Waste Removal | Get Quote
+title: Get Quote
 hide-title: true
 permalink: /get-quote/
 ---
