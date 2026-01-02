@@ -83,6 +83,23 @@ permalink: /get-quote/
   margin-top: 10px;
   margin-bottom: 5px;
 }
+
+/* Add side padding for small screens */
+@media (max-width: 767px) {
+  form input,
+  form select,
+  form textarea {
+    padding-left: 12px;   /* adjust as needed */
+    padding-right: 12px;  /* adjust as needed */
+    box-sizing: border-box; /* ensures padding doesn’t break width */
+  }
+
+  form {
+    padding-left: 12px;   /* optional extra padding on the form container */
+    padding-right: 12px;
+  }
+}
+
 </style>
 
 <form action="/payment-page" method="POST" class="quote-form">
