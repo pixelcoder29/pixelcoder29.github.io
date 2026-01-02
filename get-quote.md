@@ -5,7 +5,7 @@ permalink: /get-quote/
 ---
 
 <style>
-/* ===== System font stack for conversions ===== */
+/* ===== System font stack (best for conversions) ===== */
 .quote-form,
 .quote-form input,
 .quote-form select,
@@ -15,12 +15,18 @@ permalink: /get-quote/
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* ===== Form container styling ===== */
+/* ===== Shrink unused header space ===== */
+.header-section {
+  height: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Form container ===== */
 .quote-form {
   max-width: 600px;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 24px;
   box-sizing: border-box;
 }
 
@@ -30,7 +36,7 @@ permalink: /get-quote/
   margin: 0;
 }
 
-/* ===== Row container for 2-column layout ===== */
+/* ===== Layout ===== */
 .form-row {
   display: flex;
   flex-wrap: wrap;
@@ -38,28 +44,26 @@ permalink: /get-quote/
   margin-bottom: 15px;
 }
 
-/* ===== Individual form field ===== */
 .form-group {
   flex: 1 1 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* Two columns on larger screens */
 @media (min-width: 650px) {
   .form-group {
     flex: 1 1 calc(50% - 10px);
   }
 }
 
-/* ===== Labels styling ===== */
+/* ===== Labels ===== */
 .quote-form label {
   margin-bottom: 6px;
   font-weight: bold;
   font-size: 14px;
 }
 
-/* ===== Inputs, selects, textarea styling ===== */
+/* ===== Inputs ===== */
 .quote-form input,
 .quote-form select,
 .quote-form textarea {
@@ -73,84 +77,75 @@ permalink: /get-quote/
   line-height: 1.5;
 }
 
-/* ===== Textarea resize ===== */
 .quote-form textarea {
   resize: vertical;
 }
 
-/* ===== CTA button ===== */
+/* ===== Error styles ===== */
+.error-message {
+  color: #d93025;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+input:invalid,
+select:invalid {
+  outline: 2px solid #d93025;
+}
+
+/* ===== CTA ===== */
 .cta-button {
   background-color: #4CAF50;
   color: white;
   font-weight: bold;
-  padding: 12px 20px;
+  padding: 14px 20px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   margin-top: 15px;
   width: 100%;
   font-size: 16px;
-  transition: background-color 0.2s ease;
 }
 
 .cta-button:hover {
   background-color: #45a049;
 }
 
-/* ===== Privacy text ===== */
+/* ===== Privacy ===== */
 .privacy-text {
   font-size: 12px;
   margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-/* ===== Mobile adjustments ===== */
-@media (max-width: 768px) {
-  .quote-form {
-    max-width: 90%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .quote-form input,
-  .quote-form select,
-  .quote-form textarea {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-}
-
-/* ===== Shrink header section ===== */
-.header-section {
-  height: 25px;
-  margin: 0;
-  padding: 0;
 }
 </style>
 
-<form action="/payment-page" method="POST" class="quote-form">
+<form action="/payment-page" method="POST" class="quote-form" novalidate>
   <fieldset>
 
     <div class="form-row">
       <div class="form-group">
         <label for="full_name">Full Name *</label>
-        <input type="text" id="full_name" name="full_name" placeholder="Your full name" required>
+        <input type="text" id="full_name" name="full_name" required>
       </div>
+
       <div class="form-group">
         <label for="phone">Phone *</label>
         <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" maxlength="14" required>
+        <small class="error-message" id="phone-error"></small>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
         <label for="email">Email *</label>
-        <input type="email" id="email" name="email" placeholder="example@example.com" 
-               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <input type="email" id="email" name="email" placeholder="example@example.com" required>
+        <small class="error-message" id="email-error"></small>
       </div>
+
       <div class="form-group">
         <label for="zip">Zip Code *</label>
-        <input type="text" id="zip" name="zip" placeholder="972xx" pattern="\d{5}" maxlength="5" required>
+        <input type="text" id="zip" name="zip" placeholder="97201" maxlength="5" required>
+        <small class="error-message" id="zip-error"></small>
       </div>
     </div>
 
@@ -158,19 +153,20 @@ permalink: /get-quote/
       <div class="form-group">
         <label for="dogs">How many dogs do you have? *</label>
         <select id="dogs" name="dogs" required>
-          <option value="" disabled selected>Select number of dogs</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
+          <option value="" disabled selected>Select</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
         </select>
       </div>
+
       <div class="form-group">
-        <label for="frequency">How often would you like service? *</label>
+        <label for="frequency">Service Frequency *</label>
         <select id="frequency" name="frequency" required>
-          <option value="" disabled selected>Select service frequency</option>
+          <option value="" disabled selected>Select</option>
           <option value="weekly">Weekly</option>
           <option value="bi-weekly">Bi-Weekly</option>
           <option value="twice-weekly">Twice a Week</option>
@@ -179,34 +175,56 @@ permalink: /get-quote/
     </div>
 
     <div class="form-group">
-      <label for="questions">Any questions or concerns?</label>
-      <textarea id="questions" name="questions" placeholder="Anything we should know?" rows="4"></textarea>
+      <label for="questions">Any questions?</label>
+      <textarea id="questions" name="questions" rows="4"></textarea>
     </div>
 
     <p class="privacy-text">
-      By submitting, you acknowledge our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.
+      By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.
     </p>
 
     <button type="submit" class="cta-button">Get My Free Quote</button>
+
   </fieldset>
 </form>
 
-<!-- ===== Phone input formatting ===== -->
 <script>
-const phoneInput = document.getElementById('phone');
+/* ===== Phone auto-format ===== */
+const phone = document.getElementById('phone');
+const zip = document.getElementById('zip');
+const email = document.getElementById('email');
 
-phoneInput.addEventListener('input', function(e) {
-  let x = e.target.value.replace(/\D/g, '').substring(0,10); // remove non-digits, limit 10
-  let formatted = x;
+phone.addEventListener('input', e => {
+  let x = e.target.value.replace(/\D/g, '').substring(0,10);
+  let f = x;
+  if (x.length > 6) f = `(${x.slice(0,3)}) ${x.slice(3,6)}-${x.slice(6)}`;
+  else if (x.length > 3) f = `(${x.slice(0,3)}) ${x.slice(3)}`;
+  else if (x.length > 0) f = `(${x}`;
+  e.target.value = f;
+});
 
-  if (x.length > 6) {
-    formatted = `(${x.substring(0,3)}) ${x.substring(3,6)}-${x.substring(6,10)}`;
-  } else if (x.length > 3) {
-    formatted = `(${x.substring(0,3)}) ${x.substring(3,6)}`;
-  } else if (x.length > 0) {
-    formatted = `(${x}`;
-  }
+/* ===== ZIP: digits only ===== */
+zip.addEventListener('input', () => {
+  zip.value = zip.value.replace(/\D/g, '').substring(0,5);
+});
 
-  e.target.value = formatted;
+/* ===== Inline validation messages ===== */
+phone.addEventListener('blur', () => {
+  const err = document.getElementById('phone-error');
+  const digits = phone.value.replace(/\D/g, '');
+  err.style.display = digits.length !== 10 ? 'block' : 'none';
+  err.textContent = 'Please enter a valid 10-digit phone number.';
+});
+
+zip.addEventListener('blur', () => {
+  const err = document.getElementById('zip-error');
+  err.style.display = zip.value.length !== 5 ? 'block' : 'none';
+  err.textContent = 'ZIP code must be 5 digits.';
+});
+
+email.addEventListener('blur', () => {
+  const err = document.getElementById('email-error');
+  err.style.display = email.checkValidity() ? 'none' : 'block';
+  err.textContent = 'Please enter a valid email address.';
 });
 </script>
