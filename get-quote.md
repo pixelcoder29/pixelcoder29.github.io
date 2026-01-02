@@ -5,14 +5,22 @@ permalink: /get-quote/
 ---
 
 <style>
-/* Form container styling */
+/* ===== Form container styling ===== */
+.quote-form {
+  max-width: 600px;      /* limits the total width of the form */
+  margin: 0 auto;        /* center the form on the page */
+  padding-left: 24px;    /* padding inside form */
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
 .quote-form fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-/* Row container for 2-column layout */
+/* ===== Row container for 2-column layout ===== */
 .form-row {
   display: flex;
   flex-wrap: wrap;
@@ -20,7 +28,7 @@ permalink: /get-quote/
   margin-bottom: 15px; /* space below row */
 }
 
-/* Individual form field */
+/* ===== Individual form field ===== */
 .form-group {
   flex: 1 1 100%; /* full width by default */
   display: flex;
@@ -34,13 +42,13 @@ permalink: /get-quote/
   }
 }
 
-/* Labels styling */
+/* ===== Labels styling ===== */
 .quote-form label {
   margin-bottom: 6px;
   font-weight: 500;
 }
 
-/* Inputs, selects, textarea styling */
+/* ===== Inputs, selects, textarea styling ===== */
 .quote-form input,
 .quote-form select,
 .quote-form textarea {
@@ -49,16 +57,16 @@ permalink: /get-quote/
   border-radius: 8px;
   padding: 10px;
   font-size: 14px;
-  width: 100%;
+  width: 100%;       /* fields fill the container width */
   box-sizing: border-box;
 }
 
-/* Textarea resize */
+/* ===== Textarea resize ===== */
 .quote-form textarea {
   resize: vertical;
 }
 
-/* CTA button */
+/* ===== CTA button ===== */
 .cta-button {
   background-color: #4CAF50;
   color: white;
@@ -77,31 +85,28 @@ permalink: /get-quote/
   background-color: #45a049;
 }
 
-/* Privacy text */
+/* ===== Privacy text ===== */
 .privacy-text {
   font-size: 12px;
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
-/* Add more side padding for small screens */
+/* ===== Mobile adjustments ===== */
 @media (max-width: 768px) {
-  form {
-    padding-left: 24px;   /* increased from 12px */
-    padding-right: 24px;  /* increased from 12px */
-    box-sizing: border-box;
+  .quote-form {
+    max-width: 90%;   /* form shrinks a bit on mobile */
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  form input,
-  form select,
-  form textarea {
-    padding-left: 14px;   /* inner padding for fields */
+  .quote-form input,
+  .quote-form select,
+  .quote-form textarea {
+    padding-left: 14px;
     padding-right: 14px;
-    box-sizing: border-box;
   }
 }
-
-
 </style>
 
 <form action="/payment-page" method="POST" class="quote-form">
