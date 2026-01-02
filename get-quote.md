@@ -4,7 +4,6 @@ title: "Get a Quote"
 permalink: /get-quote/
 ---
 
-# Get a Quote
 
 Thank you for your interest in Yard Guards PDX! Please fill out the form below and we’ll provide a personalized quote for your dog waste removal service.
 
