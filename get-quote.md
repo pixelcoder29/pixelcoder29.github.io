@@ -81,7 +81,7 @@ permalink: /get-quote/
   resize: vertical;
 }
 
-/* ===== Error message only (no red borders) ===== */
+/* ===== Error message only ===== */
 .error-message {
   color: #d93025;
   font-size: 12px;
@@ -120,12 +120,13 @@ permalink: /get-quote/
     <div class="form-row">
       <div class="form-group">
         <label for="full_name">Full Name *</label>
-        <input type="text" id="full_name" name="full_name" required>
+        <input type="text" id="full_name" name="full_name" placeholder="John Doe" required>
+        <small class="error-message" id="name-error"></small>
       </div>
 
       <div class="form-group">
         <label for="phone">Phone *</label>
-        <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" maxlength="14" required>
+        <input type="tel" id="phone" name="phone" placeholder="(503) 123-4567" maxlength="14" required>
         <small class="error-message" id="phone-error"></small>
       </div>
     </div>
@@ -133,7 +134,7 @@ permalink: /get-quote/
     <div class="form-row">
       <div class="form-group">
         <label for="email">Email *</label>
-        <input type="email" id="email" name="email" placeholder="example@example.com" required>
+        <input type="email" id="email" name="email" placeholder="john@email.com" required>
         <small class="error-message" id="email-error"></small>
       </div>
 
@@ -171,7 +172,7 @@ permalink: /get-quote/
 
     <div class="form-group">
       <label for="questions">Any questions?</label>
-      <textarea id="questions" name="questions" rows="4"></textarea>
+      <textarea id="questions" name="questions" rows="4" placeholder="Gate code, dogs in yard, or scheduling notes"></textarea>
     </div>
 
     <p class="privacy-text">
@@ -184,9 +185,21 @@ permalink: /get-quote/
 </form>
 
 <script>
+const nameInput = document.getElementById('full_name');
 const phone = document.getElementById('phone');
 const zip = document.getElementById('zip');
 const email = document.getElementById('email');
+
+/* ===== Full Name validation ===== */
+nameInput.addEventListener('blur', () => {
+  const err = document.getElementById('name-error');
+  if (!nameInput.value.trim()) {
+    err.textContent = 'Full Name is required.';
+    err.style.display = 'block';
+  } else {
+    err.style.display = 'none';
+  }
+});
 
 /* ===== Phone auto-format ===== */
 phone.addEventListener('input', e => {
@@ -210,7 +223,7 @@ phone.addEventListener('blur', () => {
   }
 });
 
-/* ===== ZIP: digits only ===== */
+/* ===== ZIP input ===== */
 zip.addEventListener('input', () => {
   zip.value = zip.value.replace(/\D/g, '').substring(0,5);
 });
