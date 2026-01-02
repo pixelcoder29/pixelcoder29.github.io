@@ -28,6 +28,7 @@
   width: auto;           /* maintain aspect ratio */
   object-fit: contain;
   transition: none !important;  /* prevent shrinking */
+  margin-left: 2rem;     /* consistent left spacing on all screens */
 }
 
 /* Brand text and nav links */
@@ -99,25 +100,12 @@ footer a:focus {
   color: var(--footer-hover-col);
 }
 
-/* Add left padding for logo on screens below 1200px */
-@media (max-width: 1199px) {
-  .navbar-custom .navbar-brand-logo {
-    padding-left: 1rem; /* adjust as needed */
-  }
-}
-
-
 /* --- Desktop-specific adjustments --- */
 @media (min-width: 1200px) {
 
   /* Keep body padding same as navbar height */
   body {
     padding-top: 8.25rem;
-  }
-
-  /* Slightly shift navbar logo to the right */
-  .navbar-custom .navbar-brand-logo {
-    padding-left: 12rem;
   }
 
   /* Add shadow on desktop only */
