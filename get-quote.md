@@ -120,13 +120,6 @@ permalink: /get-quote/
   }
 }
 
-/* ===== Hide header section if present ===== */
-.header-section {
-  display: none;
-  height: 0;
-  margin: 0;
-  padding: 0;
-}
 </style>
 
 <form action="/payment-page" method="POST" class="quote-form">
