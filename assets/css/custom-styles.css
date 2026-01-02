@@ -110,9 +110,16 @@ footer a:focus {
     padding-top: 8.25rem;
   }
 
+    /* Move the entire logo link to the right */
+  .navbar-custom .navbar-brand {
+    margin-left: 12rem;  /* moves logo + clickable area */
+    display: flex;       /* keeps image vertically centered */
+    align-items: center;
+  }
+
   /* Logo spacing on desktop */
   .navbar-custom .navbar-brand-logo {
-    padding-left: 12rem;
+    padding-left: 0; /*was 12rem */
   }
 
   /* Nav links padding on desktop */
