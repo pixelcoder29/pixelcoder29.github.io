@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Get Quote
-hide-title: true
 permalink: /get-quote/
 ---
 
