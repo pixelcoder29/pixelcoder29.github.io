@@ -12,6 +12,7 @@
   z-index: 9999;
   padding: 0;           /* remove extra padding */
   transition: none !important;  /* disable shrinking transitions */
+  box-shadow: 2px 1px 16px 5px #70707099; /* shadow on all devices */
 }
 
 /* Logo container */
@@ -119,13 +120,6 @@ footer a:focus {
     padding-right: 2rem;  /* more space for desktop */
   }
 
-  /* Add shadow on desktop only */
-  .navbar-custom {
-    box-shadow: 2px 1px 16px 5px #70707099;
-    -webkit-box-shadow: 2px 1px 16px 5px #70707099;
-    -moz-box-shadow: 2px 1px 16px 5px #70707099;
-  }
-
   /* Logo height already doubled */
   .navbar-custom .navbar-brand-logo img {
     height: 8.25rem;
@@ -181,4 +175,3 @@ footer a:focus {
     padding-right: 0.5rem;
   }
 }
-
