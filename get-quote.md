@@ -4,36 +4,114 @@ title: Get Quote
 permalink: /get-quote/
 ---
 
-<form action="/payment-page" method="POST">
+<style>
+/* Form container styling */
+.quote-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Row container for 2-column layout */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between columns */
+  margin-bottom: 15px; /* space below row */
+}
+
+/* Individual form field */
+.form-group {
+  flex: 1 1 100%; /* full width by default */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Two columns on larger screens */
+@media (min-width: 650px) {
+  .form-group {
+    flex: 1 1 calc(50% - 10px); /* two columns with gap */
+  }
+}
+
+/* Labels styling */
+.quote-form label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+/* Inputs, selects, textarea styling */
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  background-color: #d9f4cd; /* brand color */
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Textarea resize */
+.quote-form textarea {
+  resize: vertical;
+}
+
+/* CTA button */
+.cta-button {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+}
+
+/* Privacy text */
+.privacy-text {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+</style>
+
+<form action="/payment-page" method="POST" class="quote-form">
   <fieldset>
 
-    <!-- Row 1: Full Name / Phone -->
     <div class="form-row">
-      <div class="form-field">
+      <div class="form-group">
         <label for="full_name">Full Name *</label>
         <input type="text" id="full_name" name="full_name" placeholder="Your full name" required>
       </div>
-      <div class="form-field">
+      <div class="form-group">
         <label for="phone">Phone *</label>
         <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required>
       </div>
     </div>
 
-    <!-- Row 2: Email / Zip -->
     <div class="form-row">
-      <div class="form-field">
+      <div class="form-group">
         <label for="email">Email *</label>
         <input type="email" id="email" name="email" placeholder="example@example.com" required>
       </div>
-      <div class="form-field">
+      <div class="form-group">
         <label for="zip">Zip Code *</label>
         <input type="text" id="zip" name="zip" placeholder="972xx" required>
       </div>
     </div>
 
-    <!-- Row 3: Dogs / Frequency -->
     <div class="form-row">
-      <div class="form-field">
+      <div class="form-group">
         <label for="dogs">How many dogs do you have? *</label>
         <select id="dogs" name="dogs" required>
           <option value="" disabled selected>Select number of dogs</option>
@@ -45,7 +123,7 @@ permalink: /get-quote/
           <option value="6">6</option>
         </select>
       </div>
-      <div class="form-field">
+      <div class="form-group">
         <label for="frequency">How often would you like service? *</label>
         <select id="frequency" name="frequency" required>
           <option value="" disabled selected>Select service frequency</option>
@@ -56,101 +134,15 @@ permalink: /get-quote/
       </div>
     </div>
 
-    <!-- Questions -->
-    <div class="form-field">
+    <div class="form-group">
       <label for="questions">Any questions or concerns?</label>
       <textarea id="questions" name="questions" placeholder="Anything we should know?" rows="4"></textarea>
     </div>
 
-    <!-- Privacy -->
     <p class="privacy-text">
       By submitting, you acknowledge our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.
     </p>
 
-    <!-- CTA -->
     <button type="submit" class="cta-button">Get Free Quote</button>
-
   </fieldset>
 </form>
-
-<style>
-/* ---------- Form Styling ---------- */
-form fieldset {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  font-family: sans-serif;
-  font-size: 0.9rem;
-  padding: 0;
-  border: none;
-}
-
-/* ---------- Flex rows for 2-column layout ---------- */
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  width: 100%;
-}
-
-/* Two-column layout for screens wider than 650px */
-@media (min-width: 650px) {
-  .form-row {
-    flex-direction: row;
-    gap: 16px;
-  }
-}
-
-/* ---------- Inputs & Selects ---------- */
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form select,
-form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: none;
-  border-radius: 8px;
-  background-color: #d9f4cd; /* brand color */
-  font-size: 0.9rem;
-  box-sizing: border-box;
-}
-
-/* ---------- Textarea ---------- */
-form textarea {
-  resize: vertical;
-}
-
-/* ---------- Button ---------- */
-.cta-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.cta-button:hover {
-  background-color: #45a049;
-}
-
-/* ---------- Privacy text ---------- */
-.privacy-text {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 8px;
-}
-
-.privacy-text a {
-  color: #4CAF50;
-  text-decoration: underline;
-}
-</style>
