@@ -82,22 +82,15 @@ permalink: /get-quote/
   color: rgba(0,0,0,0.4); /* semi-transparent placeholder */
 }
 
-/* ===== Select placeholder styling ===== */
+/* ===== Select styling ===== */
 .quote-form select {
-  color: rgba(0,0,0,0.4); /* placeholder color by default */
-}
-
-.quote-form select:valid {
-  color: rgba(0,0,0,0.8); /* fully opaque once a real option is selected */
-}
-
-.quote-form select option:disabled[selected] {
-  color: rgba(0,0,0,0.4); /* matches placeholder transparency */
+  color: rgba(0,0,0,0.8); /* fully opaque text */
 }
 
 /* ===== Textarea resize ===== */
 .quote-form textarea {
   resize: vertical;
+  height: 40px; /* half-height as requested */
 }
 
 /* ===== Error message only ===== */
@@ -168,21 +161,19 @@ permalink: /get-quote/
       <div class="form-group">
         <label for="dogs">How many dogs do you have? *</label>
         <select id="dogs" name="dogs" required>
-          <option value="" disabled selected>Select</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
         </select>
       </div>
 
       <div class="form-group">
         <label for="frequency">Service Frequency *</label>
         <select id="frequency" name="frequency" required>
-          <option value="" disabled selected>Select</option>
-          <option value="weekly">Weekly</option>
+          <option value="weekly" selected>Weekly</option>
           <option value="bi-weekly">Bi-Weekly</option>
           <option value="twice-weekly">Twice a Week</option>
         </select>
