@@ -195,7 +195,7 @@ footer a:focus {
 
 .header-section {
   display: none;   /* hides the section completely */
-  height: 0;       /* removes leftover vertical space */
+  height: 30px;       /* removes leftover vertical space */
   margin: 0;
   padding: 0;
 }

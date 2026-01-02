@@ -5,6 +5,16 @@ permalink: /get-quote/
 ---
 
 <style>
+/* ===== System font stack for conversions ===== */
+.quote-form,
+.quote-form input,
+.quote-form select,
+.quote-form textarea,
+.quote-form label,
+.cta-button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 /* ===== Form container styling ===== */
 .quote-form {
   max-width: 600px;      /* limits the total width of the form */
@@ -45,7 +55,8 @@ permalink: /get-quote/
 /* ===== Labels styling ===== */
 .quote-form label {
   margin-bottom: 6px;
-  font-weight: 500;
+  font-weight: bold;  /* labels are now bold */
+  font-size: 14px;
 }
 
 /* ===== Inputs, selects, textarea styling ===== */
@@ -56,9 +67,10 @@ permalink: /get-quote/
   border: none;
   border-radius: 8px;
   padding: 10px;
-  font-size: 14px;
+  font-size: 16px;   /* optimized for conversions */
   width: 100%;       /* fields fill the container width */
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
 /* ===== Textarea resize ===== */
@@ -106,6 +118,14 @@ permalink: /get-quote/
     padding-left: 14px;
     padding-right: 14px;
   }
+}
+
+/* ===== Hide header section if present ===== */
+.header-section {
+  display: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 </style>
 
