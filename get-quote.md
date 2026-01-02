@@ -17,9 +17,9 @@ permalink: /get-quote/
 
 /* ===== Form container styling ===== */
 .quote-form {
-  max-width: 600px;      /* limits the total width of the form */
-  margin: 0 auto;        /* center the form on the page */
-  padding-left: 24px;    /* padding inside form */
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 24px;
   padding-right: 24px;
   box-sizing: border-box;
 }
@@ -34,13 +34,13 @@ permalink: /get-quote/
 .form-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* space between columns */
-  margin-bottom: 15px; /* space below row */
+  gap: 20px;
+  margin-bottom: 15px;
 }
 
 /* ===== Individual form field ===== */
 .form-group {
-  flex: 1 1 100%; /* full width by default */
+  flex: 1 1 100%;
   display: flex;
   flex-direction: column;
 }
@@ -48,14 +48,14 @@ permalink: /get-quote/
 /* Two columns on larger screens */
 @media (min-width: 650px) {
   .form-group {
-    flex: 1 1 calc(50% - 10px); /* two columns with gap */
+    flex: 1 1 calc(50% - 10px);
   }
 }
 
 /* ===== Labels styling ===== */
 .quote-form label {
   margin-bottom: 6px;
-  font-weight: bold;  /* labels are now bold */
+  font-weight: bold;
   font-size: 14px;
 }
 
@@ -63,12 +63,12 @@ permalink: /get-quote/
 .quote-form input,
 .quote-form select,
 .quote-form textarea {
-  background-color: #d9f4cd; /* brand color */
+  background-color: #d9f4cd;
   border: none;
   border-radius: 8px;
   padding: 10px;
-  font-size: 16px;   /* optimized for conversions */
-  width: 100%;       /* fields fill the container width */
+  font-size: 16px;
+  width: 100%;
   box-sizing: border-box;
   line-height: 1.5;
 }
@@ -107,7 +107,7 @@ permalink: /get-quote/
 /* ===== Mobile adjustments ===== */
 @media (max-width: 768px) {
   .quote-form {
-    max-width: 90%;   /* form shrinks a bit on mobile */
+    max-width: 90%;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -122,7 +122,7 @@ permalink: /get-quote/
 
 /* ===== Shrink header section ===== */
 .header-section {
-  height: 25px;       /* shrink header to 25px */
+  height: 25px;
   margin: 0;
   padding: 0;
 }
@@ -145,11 +145,12 @@ permalink: /get-quote/
     <div class="form-row">
       <div class="form-group">
         <label for="email">Email *</label>
-        <input type="email" id="email" name="email" placeholder="example@example.com" required>
+        <input type="email" id="email" name="email" placeholder="example@example.com" 
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
       </div>
       <div class="form-group">
         <label for="zip">Zip Code *</label>
-        <input type="text" id="zip" name="zip" placeholder="972xx" required>
+        <input type="text" id="zip" name="zip" placeholder="972xx" pattern="\d{5}" maxlength="5" required>
       </div>
     </div>
 
