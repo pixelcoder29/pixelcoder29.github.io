@@ -186,3 +186,14 @@ footer a:focus {
     padding-right: 0.5rem;
   }
 }
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: #888;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-links a:hover {
+  color: #555;
+}
