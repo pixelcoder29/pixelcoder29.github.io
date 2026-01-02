@@ -87,8 +87,8 @@ permalink: /get-quote/
 /* Add more side padding for small screens */
 @media (max-width: 768px) {
   form {
-    padding-left: 20px;   /* increased from 12px */
-    padding-right: 20px;  /* increased from 12px */
+    padding-left: 24px;   /* increased from 12px */
+    padding-right: 24px;  /* increased from 12px */
     box-sizing: border-box;
   }
 
