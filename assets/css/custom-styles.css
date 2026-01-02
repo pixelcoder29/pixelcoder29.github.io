@@ -5,30 +5,31 @@
   background-color: var(--navbar-col);
   border-bottom: 1px solid var(--navbar-border-col);
   font-family: var(--header-font);
-  position: fixed;      /* stick to top */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
-  padding: 0;           /* remove extra padding */
-  transition: none !important;  /* disable shrinking transitions */
+  padding: 0;
+  transition: none !important;
 }
 
 /* Logo container */
 .navbar-custom .navbar-brand-logo {
   display: flex;
   align-items: center;
-  padding: 0;           /* remove default padding */
+  padding-left: 1rem; /* default left padding for mobile/tablet */
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Logo image */
 .navbar-custom .navbar-brand-logo img {
-  height: 8.25rem;      /* double size */
+  height: 8.25rem; /* double size */
+  width: auto;
   max-width: 100%;
-  width: auto;           /* maintain aspect ratio */
   object-fit: contain;
-  transition: none !important;  /* prevent shrinking */
-  margin-left: 2rem;     /* consistent left spacing on all screens */
+  transition: none !important; /* prevent shrinking */
 }
 
 /* Brand text and nav links */
@@ -74,13 +75,13 @@
 
 /* --- Body adjustments for fixed navbar --- */
 body {
-  padding-top: 8.25rem; /* same as navbar height to prevent overlap */
+  padding-top: 8.25rem; /* same as navbar height */
 }
 
 /* --- Intro headers adjustments --- */
 .intro-header,
 .intro-header.big-img {
-  margin-top: 8.25rem; /* account for fixed navbar */
+  margin-top: 8.25rem;
 }
 
 /* --- Footer --- */
@@ -113,6 +114,11 @@ footer a:focus {
     box-shadow: 2px 1px 16px 5px #70707099;
     -webkit-box-shadow: 2px 1px 16px 5px #70707099;
     -moz-box-shadow: 2px 1px 16px 5px #70707099;
+  }
+
+  /* Increase left padding for logo only on desktop */
+  .navbar-custom .navbar-brand-logo {
+    padding-left: 12rem;
   }
 
   /* Logo height already doubled */
