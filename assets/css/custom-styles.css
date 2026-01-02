@@ -187,6 +187,8 @@ footer a:focus {
   }
 }
 
-.page-title {
+.page-heading {
     display: none;
+    margin: 0;
+    padding: 0;
 }
