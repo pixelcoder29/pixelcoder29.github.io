@@ -120,13 +120,13 @@ permalink: /get-quote/
     <div class="form-row">
       <div class="form-group">
         <label for="full_name">Full Name *</label>
-        <input type="text" id="full_name" name="full_name" placeholder="John Doe" required>
+        <input type="text" id="full_name" name="full_name" placeholder="John Doe" required spellcheck="false">
         <small class="error-message" id="name-error"></small>
       </div>
 
       <div class="form-group">
         <label for="phone">Phone *</label>
-        <input type="tel" id="phone" name="phone" placeholder="(503) 123-4567" maxlength="14" required>
+        <input type="tel" id="phone" name="phone" placeholder="(503) 123-4567" maxlength="14" required spellcheck="false">
         <small class="error-message" id="phone-error"></small>
       </div>
     </div>
@@ -134,13 +134,13 @@ permalink: /get-quote/
     <div class="form-row">
       <div class="form-group">
         <label for="email">Email *</label>
-        <input type="email" id="email" name="email" placeholder="john@email.com" required>
+        <input type="email" id="email" name="email" placeholder="john@email.com" required spellcheck="false">
         <small class="error-message" id="email-error"></small>
       </div>
 
       <div class="form-group">
         <label for="zip">Zip Code *</label>
-        <input type="text" id="zip" name="zip" placeholder="97201" maxlength="5" required>
+        <input type="text" id="zip" name="zip" placeholder="97202" maxlength="5" required spellcheck="false">
         <small class="error-message" id="zip-error"></small>
       </div>
     </div>
@@ -171,8 +171,8 @@ permalink: /get-quote/
     </div>
 
     <div class="form-group">
-      <label for="questions">Any questions?</label>
-      <textarea id="questions" name="questions" rows="4" placeholder="Gate code, dogs in yard, or scheduling notes"></textarea>
+      <label for="questions">Any questions or concerns?</label>
+      <textarea id="questions" name="questions" rows="2"></textarea>
     </div>
 
     <p class="privacy-text">
