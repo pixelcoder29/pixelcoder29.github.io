@@ -1,21 +1,107 @@
-.navbar {
-  padding-top: 20px;
-  padding-bottom: 20px;
+/* --- Custom CSS for Beautifully Jekyll --- */
+
+/* --- Navbar --- */
+.navbar-custom {
+  background-color: var(--navbar-col);
+  border-bottom: 1px solid var(--navbar-border-col);
+  font-family: var(--header-font);
+  position: fixed; /* keep navbar at top */
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  padding-top: 1rem; /* adjust spacing */
+  padding-bottom: 1rem;
 }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
+/* Remove shrink-on-scroll behavior */
+.navbar-custom,
+.navbar-custom.top-nav-short,
+.navbar-custom.top-nav-short-permanent {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
-.navbar-brand img {
-  height: 70px;
-  width: auto;
-  max-height: none;
+.navbar-custom .navbar-brand-logo img {
+  height: 6.25rem !important; /* doubled size */
+  transition: none !important; /* disable scroll shrinking */
 }
 
-@media (max-width: 768px) {
-  .navbar-brand img {
-    height: 50px;
+/* Ensure padding for page content so navbar doesn't overlap */
+body {
+  padding-top: 7rem; /* adjust if your navbar height changes */
+}
+
+/* Navbar links styling */
+.navbar-custom .navbar-nav .nav-item {
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 0.0625rem;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  line-height: 1.25rem;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  font-weight: 800;
+  color: var(--navbar-text-col);
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link:focus {
+  color: var(--hover-col);
+}
+
+/* --- Intro header adjustments --- */
+.intro-header {
+  margin-top: 0 !important; /* remove extra space from navbar */
+}
+
+.intro-header.big-img {
+  margin-top: 7rem !important; /* same as body padding-top */
+}
+
+/* Fix in-page anchors so they aren’t hidden behind navbar */
+:target:before {
+  content: "";
+  display: block;
+  height: 7rem; /* same as navbar height */
+  margin: -7rem 0 0;
+}
+
+/* Optional: Make avatar container stay put if using */
+.navbar-custom .avatar-container {
+  bottom: -1.5rem;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 1199px) {
+  body {
+    padding-top: 8rem; /* mobile padding adjustment */
+  }
+  :target:before {
+    height: 8rem;
+    margin-top: -8rem;
+  }
+  .navbar-custom .navbar-brand-logo img {
+    height: 5rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 9rem; /* mobile padding adjustment */
+  }
+  :target:before {
+    height: 9rem;
+    margin-top: -9rem;
+  }
+  .navbar-custom .navbar-brand-logo img {
+    height: 4rem !important;
   }
 }
