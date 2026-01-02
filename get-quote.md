@@ -4,50 +4,66 @@ title: "Get a Quote"
 permalink: /get-quote/
 ---
 
+# Get Your Quote – Yard Guards PDX
 
-Thank you for your interest in Yard Guards PDX! Please fill out the form below and we’ll provide a personalized quote for your dog waste removal service.
+A cleaner yard starts here — just tell us a few details!
 
-<div class="form-container">
-  <form action="https://submit.jotform.com/YOUR_FORM_ID" method="post" target="_blank" class="beautiful-form">
+<form action="/getquote-step2/" method="POST">
+  <div>
+    <label for="full_name">Full Name *</label><br>
+    <input type="text" id="full_name" name="full_name" placeholder="Your full name" required>
+  </div>
 
-    <div class="form-group">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
-    </div>
+  <div>
+    <label for="email">Email Address *</label><br>
+    <input type="email" id="email" name="email" placeholder="example@example.com" required>
+  </div>
 
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-    </div>
+  <div>
+    <label for="phone">Phone Number *</label><br>
+    <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required>
+  </div>
 
-    <div class="form-group">
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required>
-    </div>
+  <div>
+    <label for="dogs">How many dogs do you have? *</label><br>
+    <select id="dogs" name="dogs" required>
+      <option value="" disabled selected>Select</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6+</option>
+    </select>
+  </div>
 
-    <div class="form-group">
-      <label for="address">Service Address</label>
-      <input type="text" id="address" name="address" required>
-    </div>
+  <div>
+    <label for="frequency">Service Frequency *</label><br>
+    <select id="frequency" name="frequency" required>
+      <option value="" disabled selected>Select</option>
+      <option value="weekly">Weekly</option>
+      <option value="bi-weekly">Bi-weekly</option>
+      <option value="twice-a-week">Twice a week</option>
+    </select>
+  </div>
 
-    <div class="form-group">
-      <label for="dogs">Number of Dogs</label>
-      <input type="number" id="dogs" name="dogs" min="1" required>
-    </div>
+  <div>
+    <label for="questions">Any questions or concerns?</label><br>
+    <textarea id="questions" name="questions" placeholder="Let us know anything we should know..." rows="3"></textarea>
+  </div>
 
-    <div class="form-group">
-      <label for="notes">Additional Notes</label>
-      <textarea id="notes" name="notes" rows="4" placeholder="Any special instructions or yard notes"></textarea>
-    </div>
+  <div>
+    <input type="checkbox" id="privacy" name="privacy" required>
+    <label for="privacy">
+      I agree to the <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-conditions">Terms & Conditions</a> *
+    </label>
+  </div>
 
-    <div class="form-group">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
+  <div>
+    <button type="submit">Get My Quote</button>
+  </div>
+</form>
 
-  </form>
-</div>
-
----
-
-After submitting, we’ll contact you with a quote and schedule your first service.  
-For questions, email us at [service@yardguardspdx.com](mailto:service@yardguardspdx.com).
+<p style="margin-top:1rem;">
+  📌 Currently serving Portland, OR only.
+</p>
