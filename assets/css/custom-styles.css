@@ -73,11 +73,6 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Add spacing for nav links so they don't touch the right edge */
-.navbar-custom .navbar-nav {
-  padding-right: 1rem;  /* default for mobile/tablet */
-}
-
 /* --- Body adjustments for fixed navbar --- */
 body {
   padding-top: 8.25rem; /* same as navbar height to prevent overlap */
@@ -134,5 +129,31 @@ footer a:focus {
   /* Logo height already doubled */
   .navbar-custom .navbar-brand-logo img {
     height: 8.25rem;
+  }
+}
+
+/* --- Mobile/Tablet adjustments (below 1200px) --- */
+@media (max-width: 1199px) {
+
+  /* Logo spacing from left */
+  .navbar-custom .navbar-brand-logo {
+    padding-left: 1rem;
+  }
+
+  /* Hamburger icon spacing from right */
+  .navbar-custom .navbar-toggler {
+    margin-right: 1rem;  /* space from the edge */
+  }
+
+  /* Nav links inside collapsed menu spacing */
+  .navbar-custom .navbar-nav {
+    padding-left: 1rem;  /* space from left */
+    padding-right: 1rem; /* space from right */
+  }
+
+  /* Optional: remove extra padding inside links */
+  .navbar-custom .navbar-nav .nav-link {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
