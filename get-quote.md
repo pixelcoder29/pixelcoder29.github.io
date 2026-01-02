@@ -4,10 +4,6 @@ title: Get Quote
 permalink: /get-quote/
 ---
 
-# Get Your Free Quote
-
-A cleaner yard starts here — just tell us a few details and we'll provide your free quote.  
-
 <form action="/payment-page" method="POST">
   <fieldset>
     <label for="full_name">Full Name *</label>

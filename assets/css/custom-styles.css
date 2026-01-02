@@ -192,3 +192,110 @@ footer a:focus {
     margin: 0;
     padding: 0;
 }
+/* ---------- Form Container ---------- */
+#get-quote-form {
+  max-width: 500px; /* keeps form narrow and readable */
+  margin: 0 auto 40px auto; /* center with bottom spacing */
+  padding: 25px 30px;
+  background-color: #ffffff; /* clean white background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* subtle shadow */
+  font-family: 'Arial', sans-serif;
+}
+
+/* ---------- Form Headings ---------- */
+#get-quote-form h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #008AFF; /* optional: or keep brand green if you prefer */
+}
+
+/* ---------- Form Labels ---------- */
+#get-quote-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #d9f4cd; /* brand light green */
+  font-size: 0.95em;
+}
+
+/* ---------- Input Fields ---------- */
+#get-quote-form input[type="text"],
+#get-quote-form input[type="email"],
+#get-quote-form input[type="tel"],
+#get-quote-form select,
+#get-quote-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: all 0.2s ease;
+}
+
+#get-quote-form input:focus,
+#get-quote-form select:focus,
+#get-quote-form textarea:focus {
+  border-color: #d9f4cd; /* brand green focus */
+  box-shadow: 0 0 6px rgba(217, 244, 205, 0.4);
+  outline: none;
+}
+
+/* ---------- Submit Button ---------- */
+#get-quote-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #008AFF; /* bright blue CTA */
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#get-quote-form button:hover {
+  background-color: #006bbf;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Textarea ---------- */
+#get-quote-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ---------- Small Notes / Subtext ---------- */
+#get-quote-form .form-note {
+  font-size: 0.85em;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+/* ---------- Checkbox / Privacy ---------- */
+#get-quote-form .privacy-label {
+  display: flex;
+  align-items: center;
+  font-size: 0.85em;
+  color: #404040;
+}
+
+#get-quote-form .privacy-label a {
+  color: #008AFF;
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  #get-quote-form {
+    padding: 20px;
+    margin: 0 15px 30px 15px;
+  }
+  #get-quote-form h2 {
+    font-size: 1.5em;
+  }
+}
