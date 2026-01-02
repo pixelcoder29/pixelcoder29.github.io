@@ -83,7 +83,7 @@ permalink: /get-quote/
 
 <div class="form-group">
 <label for="questions">Any questions or concerns?</label>
-<textarea id="questions" name="questions" rows="2"></textarea>
+<textarea id="questions" name="questions" rows="3"></textarea>
 </div>
 
 <p class="privacy-text">By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</p>
