@@ -1,6 +1,6 @@
-/* --- Custom Beautiful Jekyll CSS --- */
+/* --- Custom Beautiful Jekyll Navbar CSS --- */
 
-/* --- Navbar Fixes --- */
+/* --- General Navbar --- */
 .navbar-custom {
   background-color: var(--navbar-col);
   border-bottom: 1px solid var(--navbar-border-col);
@@ -10,39 +10,33 @@
   left: 0;
   right: 0;
   z-index: 9999;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;           /* remove extra padding */
   transition: none !important;  /* disable shrinking transitions */
 }
 
+/* Logo container */
 .navbar-custom .navbar-brand-logo {
   display: flex;
   align-items: center;
-  padding: 0;           /* remove extra padding */
+  padding: 0;           /* remove default padding */
 }
 
+/* Logo image */
 .navbar-custom .navbar-brand-logo img {
-  height: 6.25rem;      /* double the size */
+  height: 6.25rem;      /* double size */
   max-width: 100%;
-  width: auto;           /* keeps aspect ratio */
+  width: auto;           /* maintain aspect ratio */
   object-fit: contain;
-  transition: none !important;  /* prevent shrinking on scroll */
+  transition: none !important;  /* prevent shrinking */
 }
 
-/* Optional: stretch full width */
-.navbar-custom .navbar-brand-logo img.full-width {
-  width: 100%;
-  height: 6.25rem;
-  object-fit: cover;
-}
-
+/* Brand text and nav links */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
   font-weight: 800;
   color: var(--navbar-text-col);
 }
 
-/* Nav items */
 .navbar-custom .navbar-nav .nav-item {
   text-transform: uppercase;
   font-size: 0.8125rem;
@@ -67,10 +61,12 @@
   font-size: 1rem;
   margin: 0.5rem 0;
 }
+
 .navbar-custom .navbar-toggler:focus,
 .navbar-custom .navbar-toggler:hover {
   background-color: initial;
 }
+
 .navbar-custom .navbar-toggler[aria-expanded="true"] {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -103,27 +99,28 @@ footer a:focus {
   color: var(--footer-hover-col);
 }
 
-/* --- Responsive --- */
+/* --- Desktop-specific adjustments --- */
 @media (min-width: 1200px) {
-  .navbar-custom .navbar-brand-logo img {
-    height: 6.25rem;
-  }
+
+  /* Keep body padding same as navbar height */
   body {
     padding-top: 6.25rem;
   }
-}
 
-/* --- Optional: smooth logo resize if you ever want later --- */
-.navbar-custom .navbar-brand-logo img {
-  transition: none !important;  /* disables automatic shrinking */
-}
-
-/* --- Slightly shift navbar logo to the right on desktop --- */
-@media (min-width: 1200px) {
+  /* Slightly shift navbar logo to the right */
   .navbar-custom .navbar-brand-logo {
-    padding-left: 10rem; /* move logo right */
+    padding-left: 10rem;
+  }
+
+  /* Add shadow on desktop only */
+  .navbar-custom {
+    box-shadow: 2px 1px 16px 5px #70707099;
+    -webkit-box-shadow: 2px 1px 16px 5px #70707099;
+    -moz-box-shadow: 2px 1px 16px 5px #70707099;
+  }
+
+  /* Logo height already doubled */
+  .navbar-custom .navbar-brand-logo img {
+    height: 6.25rem;
   }
 }
-
-
-/* --- End of Custom CSS --- */
