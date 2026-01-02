@@ -4,9 +4,14 @@ title: Get Quote
 permalink: /get-quote/
 ---
 
-<!-- ===== Critical CSS inlined for above-the-fold content ===== -->
+<!-- ===== Preconnect for external origins ===== -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- ===== Critical CSS inlined ===== -->
 <style>
-*{box-sizing:border-box}body,.quote-form,.quote-form input,.quote-form select,.quote-form textarea,.quote-form label,.cta-button{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;margin:0;padding:0}body{background:#fff} 
+*{box-sizing:border-box;margin:0;padding:0}body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .header-section{height:25px} 
 .quote-form{max-width:600px;margin:0 auto;padding:24px} 
 .quote-form fieldset{border:none} 
@@ -91,7 +96,7 @@ permalink: /get-quote/
 </fieldset>
 </form>
 
-<!-- ===== Deferred JS for form validation ===== -->
+<!-- ===== Deferred JS ===== -->
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
 const t=document.getElementById("full_name"),e=document.getElementById("phone"),n=document.getElementById("zip"),o=document.getElementById("email");
@@ -102,3 +107,6 @@ n.addEventListener("input",()=>{n.value=n.value.replace(/\D/g,"").substring(0,5)
 n.addEventListener("blur",()=>{const t=document.getElementById("zip-error");n.value.length!==5?(t.textContent="ZIP code must be 5 digits.",t.style.display="block"):t.style.display="none"});
 o.addEventListener("blur",()=>{const t=document.getElementById("email-error");o.checkValidity()?t.style.display="none":(t.textContent="Please enter a valid email address.",t.style.display="block")})});
 </script>
+
+<!-- ===== Self-hosted fonts example ===== -->
+<link rel="stylesheet" href="/assets/fonts/roboto-400-500.css">
