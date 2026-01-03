@@ -39,7 +39,7 @@ permalink: /get-quote/
 <small class="error-message" id="name-error"></small>
 </div>
 <div class="form-group">
-<label for="phone">Phone *</label>
+<label for="phone">Phone Number *</label>
 <input type="tel" id="phone" name="phone" placeholder="(503) 123-4567" maxlength="14" required spellcheck="false">
 <small class="error-message" id="phone-error"></small>
 </div>
