@@ -119,6 +119,12 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   </fieldset>
 </form>
 
+
+
+
+
+
+
 <section id="hero-process" style="background:#f9f9f9;padding:60px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
   <!-- Hero headline -->
   <div style="text-align:center;margin-bottom:50px;">
@@ -126,23 +132,27 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     <p style="font-size:1.1rem;color:#555;">Let us handle the dirty work while you enjoy your yard and your time.</p>
   </div>
 
+  <section id="hero-process" style="width:100%;padding:60px 0;background:#f9f9f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
+  <!-- Hero headline -->
+  <div style="text-align:center;margin-bottom:50px;max-width:900px;margin-left:auto;margin-right:auto;">
+    <h2 style="font-size:2rem;margin-bottom:10px;color:#333;">We Scoop, You Relax</h2>
+    <p style="font-size:1.1rem;color:#555;">Let us handle the dirty work while you enjoy your yard and your time.</p>
+  </div>
+
   <!-- Process steps -->
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1000px;margin:0 auto;">
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1200px;margin:0 auto;padding:0 20px;">
     
-    <!-- Step 1 -->
-    <div style="flex:1 1 250px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+    <div style="flex:1 1 300px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
       <h3 style="margin-bottom:10px;font-size:1.3rem;">1. Get Your Quote</h3>
       <p>Fill out our quick form and get an instant estimate tailored to your yard and pets.</p>
     </div>
 
-    <!-- Step 2 -->
-    <div style="flex:1 1 250px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+    <div style="flex:1 1 300px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
       <h3 style="margin-bottom:10px;font-size:1.3rem;">2. Schedule Your Scoop</h3>
       <p>Choose the day and frequency that works best for you, and we’ll take care of the rest.</p>
     </div>
 
-    <!-- Step 3 -->
-    <div style="flex:1 1 250px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+    <div style="flex:1 1 300px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
       <h3 style="margin-bottom:10px;font-size:1.3rem;">3. Enjoy a Poop-Free Yard</h3>
       <p>Relax knowing your yard is clean, safe, and ready for family and pets to enjoy.</p>
     </div>
@@ -152,10 +162,54 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 <style>
   #hero-process div:hover { transform: translateY(-5px); }
-  @media(max-width:650px){
+
+  /* Mobile stacking */
+  @media(max-width:900px){
     #hero-process div { flex:1 1 100%; }
   }
+
+  /* Remove extra margins/padding to edges */
+  #hero-process { margin:0; padding-left:0; padding-right:0; }
 </style>
+
+
+<section id="benefits" style="width:100%;padding:60px 0;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
+  <div style="text-align:center;margin-bottom:50px;max-width:900px;margin-left:auto;margin-right:auto;">
+    <h2 style="font-size:2rem;margin-bottom:10px;color:#333;">Why Choose Our Poop Scooping Service?</h2>
+    <p style="font-size:1.1rem;color:#555;">We take the dirty work off your hands, giving you back your time and a yard you can be proud of.</p>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1200px;margin:0 auto;padding:0 20px;">
+    <div style="flex:1 1 300px;background:#e0f7fa;color:#00796b;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">More Free Time</h3>
+      <p>Stop spending hours cleaning up after your pets. Focus on what matters most while we handle the mess.</p>
+    </div>
+
+    <div style="flex:1 1 300px;background:#e0f7fa;color:#00796b;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">Stress-Free</h3>
+      <p>Never worry about missing a cleanup. Our dependable service keeps your yard safe and clean.</p>
+    </div>
+
+    <div style="flex:1 1 300px;background:#e0f7fa;color:#00796b;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">Healthier Yard</h3>
+      <p>Regular waste removal protects your grass and keeps your yard vibrant and free from harmful bacteria.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  #benefits div:hover { transform: translateY(-5px); }
+
+  @media(max-width:900px){
+    #benefits div { flex:1 1 100%; }
+  }
+
+  #benefits { margin:0; padding-left:0; padding-right:0; }
+</style>
+
+
+
+
 
 
 <script defer>
