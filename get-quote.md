@@ -11,8 +11,7 @@ permalink: /get-quote/
 
 <!-- ===== Critical CSS inlined ===== -->
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .header-section{height:25px} 
 .quote-form{max-width:600px;margin:0 auto;padding:24px} 
 .quote-form fieldset{border:none} 
@@ -71,6 +70,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 <option>5</option>
 <option>6</option>
 </select>
+<small class="error-message" id="dogs-error"></small>
 </div>
 <div class="form-group">
 <label for="frequency">Service Frequency *</label>
@@ -80,6 +80,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 <option value="bi-weekly">Bi-Weekly</option>
 <option value="twice-weekly">Twice a Week</option>
 </select>
+<small class="error-message" id="freq-error"></small>
 </div>
 </div>
 
@@ -117,47 +118,42 @@ document.addEventListener('DOMContentLoaded',()=>{
         error.style.display = 'none';
     }
 
-    // Full Name validation
-    fullName.addEventListener("blur",()=>{
-        fullName.value.trim()?clearError(fullName):showError(fullName,"Full Name is required.");
+    fullName.addEventListener("blur",()=>{ fullName.value.trim()?clearError(fullName):showError(fullName,"Full Name is required.") });
+
+    phone.addEventListener("input", t=>{
+        let a=t.target.value.replace(/\D/g,"").substring(0,10), r="";
+        a.length>6?r=`(${a.slice(0,3)}) ${a.slice(3,6)}-${a.slice(6)}`:
+        a.length>3?r=`(${a.slice(0,3)}) ${a.slice(3)}`:
+        a.length>0&&(r=`(${a}`);
+        t.target.value=r;
     });
 
-    // Phone formatting & validation
-    phone.addEventListener("input", e=>{
-        let val = e.target.value.replace(/\D/g,"").substring(0,10);
-        let formatted = "";
-        if(val.length>6){ formatted=`(${val.slice(0,3)}) ${val.slice(3,6)}-${val.slice(6)}`; }
-        else if(val.length>3){ formatted=`(${val.slice(0,3)}) ${val.slice(3)}`; }
-        else if(val.length>0){ formatted=`(${val}`; }
-        e.target.value = formatted;
-    });
-
-    phone.addEventListener("blur", ()=>{
+    phone.addEventListener("blur",()=>{
         const digits = phone.value.replace(/\D/g,"");
         digits.length!==10?showError(phone,"Please enter a valid 10-digit phone number."):clearError(phone);
     });
 
-    // ZIP validation
-    zip.addEventListener("input",()=>{ zip.value = zip.value.replace(/\D/g,"").substring(0,5); });
-    zip.addEventListener("blur",()=>{ zip.value.length!==5?showError(zip,"ZIP code must be 5 digits."):clearError(zip); });
+    zip.addEventListener("input",()=>{ zip.value=zip.value.replace(/\D/g,"").substring(0,5) });
+    zip.addEventListener("blur",()=>{ zip.value.length!==5?showError(zip,"ZIP code must be 5 digits."):clearError(zip) });
 
-    // Email validation
-    email.addEventListener("blur",()=>{ email.checkValidity()?clearError(email):showError(email,"Please enter a valid email address."); });
+    email.addEventListener("blur",()=>{ email.checkValidity()?clearError(email):showError(email,"Please enter a valid email address.") });
 
-    // Submit handler
+    dogs.addEventListener("change",()=>{ dogs.value?clearError(dogs):showError(dogs,"Please select how many dogs you have.") });
+    freq.addEventListener("change",()=>{ freq.value?clearError(freq):showError(freq,"Please select a service frequency.") });
+
     form.addEventListener('submit', async function(e){
         e.preventDefault();
 
-        // Final validation
-        let phoneDigits = phone.value.replace(/\D/g,"");
-        if(!fullName.value.trim()){ showError(fullName,"Full Name is required."); return; }
-        if(phoneDigits.length!==10){ showError(phone,"Please enter a valid 10-digit phone number."); return; }
-        if(!email.checkValidity()){ showError(email,"Please enter a valid email address."); return; }
-        if(zip.value.length!==5){ showError(zip,"ZIP code must be 5 digits."); return; }
-        if(!dogs.value){ alert("Please select how many dogs you have."); return; }
-        if(!freq.value){ alert("Please select service frequency."); return; }
+        let valid = true;
+        if(!fullName.value.trim()){ showError(fullName,"Full Name is required."); valid=false; }
+        if(phone.value.replace(/\D/g,"").length!==10){ showError(phone,"Please enter a valid 10-digit phone number."); valid=false; }
+        if(!email.checkValidity()){ showError(email,"Please enter a valid email address."); valid=false; }
+        if(zip.value.length!==5){ showError(zip,"ZIP code must be 5 digits."); valid=false; }
+        if(!dogs.value){ showError(dogs,"Please select how many dogs you have."); valid=false; }
+        if(!freq.value){ showError(freq,"Please select a service frequency."); valid=false; }
 
-        // Prepare data
+        if(!valid) return;
+
         const data = new URLSearchParams();
         data.append("fullName", fullName.value.trim());
         data.append("phoneNumber", phone.value.trim());
@@ -171,23 +167,21 @@ document.addEventListener('DOMContentLoaded',()=>{
             const response = await fetch('https://hook.us2.make.com/xlq2u7rc1gf2h9wtzjwrxqcij6p96spd', {
                 method: 'POST',
                 headers: {
-                    'x-make-apikey': 'waq39c8a89237cn4vb096avb07a47b08c6vba0394v6cb0', // Replace with your Make API key
+                    'x-make-apikey': 'waq39c8a89237cn4vb096avb07a47b08c6vba0394v6cb0', // replace with your Make API key
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
                 body: data.toString()
             });
 
             if(response.ok){
-                alert("Form submitted successfully!");
                 window.location.href = '/thank-you/';
             } else {
-                alert("Submission failed. Please try again.");
+                showError(form, "Submission failed. Please try again.");
             }
         } catch(err){
             console.error(err);
-            alert("Submission failed. Please check your connection.");
+            showError(form, "Submission failed. Please check your connection.");
         }
-
     });
 
 });
