@@ -9,8 +9,11 @@ permalink: /get-quote/
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .header-section{height:25px} 
+
+/* --- Form Styles --- */
 .quote-form{max-width:600px;margin:0 auto;padding:24px;position:relative} 
 .quote-form fieldset{border:none} 
 .form-row{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:15px} 
@@ -27,8 +30,31 @@ permalink: /get-quote/
 .cta-button:hover{background-color:#45a049} 
 .privacy-text{font-size:12px;margin-top:10px} 
 .form-error-banner{display:none;background:#fdd; color:#900; padding:10px; border-radius:8px; margin-bottom:15px; font-weight:bold;}
+
+/* --- Under-Form Section --- */
+.under-form{max-width:700px;margin:40px auto;padding:0 20px}
+.under-form h2{font-size:28px;margin-bottom:20px;color:#333;text-align:center}
+
+/* Micro CTAs */
+.micro-cta{text-align:center;margin-bottom:30px;font-weight:bold;font-size:16px;color:#4CAF50;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.micro-cta span{background:#e3f5d9;padding:6px 12px;border-radius:6px;cursor:pointer}
+
+/* Benefits / Differentiators / FAQ */
+.benefits, .differentiators, .faq{margin-bottom:40px}
+.benefits .item, .differentiators .item{display:flex;align-items:flex-start;margin-bottom:20px}
+.benefits .icon, .differentiators .icon{font-size:28px;margin-right:15px;color:#4CAF50}
+.benefits .text, .differentiators .text{flex:1}
+.faq h3{margin-bottom:10px;text-align:center}
+.faq dl{margin-left:0}
+.faq dt{font-weight:bold;margin-top:15px}
+.faq dd{margin-left:15px;margin-bottom:10px}
+
+/* Bottom CTA */
+.bottom-cta{text-align:center;margin-top:20px}
+.bottom-cta .cta-button{max-width:300px;margin:0 auto}
 </style>
 
+<!-- --- Form Section --- -->
 <form class="quote-form" novalidate>
   <div class="form-error-banner" id="form-error">Submission failed. Please try again.</div>
   <fieldset>
@@ -78,7 +104,6 @@ permalink: /get-quote/
           <option value="" disabled selected>Select</option>
           <option value="weekly">Weekly</option>
           <option value="bi-weekly">Bi-Weekly</option>
-          <option value="twice-weekly">Twice a Week</option>
         </select>
         <small class="error-message" id="freq-error"></small>
       </div>
@@ -94,8 +119,98 @@ permalink: /get-quote/
   </fieldset>
 </form>
 
+<!-- --- Under Form Section --- -->
+<section class="under-form">
+  <!-- Micro CTAs -->
+  <div class="micro-cta">
+    <span>Poop-Free Yard!</span>
+    <span>Schedule Your Scoop</span>
+    <span>Request a Quote</span>
+  </div>
+
+  <!-- Main Headline -->
+  <h2>We Scoop, You Relax</h2>
+
+  <!-- Benefits -->
+  <div class="benefits">
+    <div class="item">
+      <div class="icon">⏱</div>
+      <div class="text">
+        <strong>More Free Time</strong>
+        <p>Stop spending weekends cleaning up after your dog. We handle the mess so you can focus on what matters.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="icon">😌</div>
+      <div class="text">
+        <strong>Stress-Free Service</strong>
+        <p>Reliable scheduling keeps your yard clean without reminders or last-minute stress.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="icon">🌱</div>
+      <div class="text">
+        <strong>Healthier Yard</strong>
+        <p>Consistent waste removal protects your grass and reduces harmful bacteria for pets and family.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Differentiators -->
+  <div class="differentiators">
+    <div class="item">
+      <div class="icon">📱</div>
+      <div class="text">
+        <strong>Fast SMS Quotes</strong>
+        <p>Submit your request and get a personalized quote sent straight to your phone within minutes.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="icon">🚚</div>
+      <div class="text">
+        <strong>We Haul Away</strong>
+        <p>No extra charge — your yard stays clean and odor-free every time.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="icon">🐶</div>
+      <div class="text">
+        <strong>Pet-Friendly, Local Team</strong>
+        <p>Our trained, background-checked team treats your pets and property with care.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQs -->
+  <div class="faq">
+    <h3>Frequently Asked Questions</h3>
+    <dl>
+      <dt>Do I need to be home during service?</dt>
+      <dd>Nope! As long as we have access to your yard, you don’t need to be home.</dd>
+
+      <dt>How often can cleanups be scheduled?</dt>
+      <dd>Weekly and bi-weekly options are available based on your needs.</dd>
+
+      <dt>Is this safe for my pets?</dt>
+      <dd>Absolutely. We follow pet-safe practices on every visit.</dd>
+
+      <dt>Do you haul away waste?</dt>
+      <dd>Yes! We include haul-away in every service — no extra fees.</dd>
+
+      <dt>How do I get my quote?</dt>
+      <dd>Fill out the form above and your personalized quote will be sent via text within minutes.</dd>
+    </dl>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bottom-cta">
+    <button class="cta-button" onclick="document.querySelector('.quote-form').scrollIntoView({behavior:'smooth'});">Get My Free Quote</button>
+  </div>
+</section>
+
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
+
     const form = document.querySelector('.quote-form');
     const fullName = document.getElementById("full_name");
     const phone = document.getElementById("phone");
@@ -143,12 +258,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         if(!freq.value){ showError(freq,"Please select a service frequency."); valid=false; }
         if(!valid) return;
 
-        // map to exact Jotform text
-        const freqMap = {
-            "weekly": "Weekly",
-            "bi-weekly": "Bi-Weekly",
-            "twice-weekly": "Twice a Week"
-        };
+        const freqMap = { "weekly": "Weekly", "bi-weekly": "Bi-Weekly" };
         const freqValue = freqMap[freq.value];
 
         const data = new URLSearchParams();
