@@ -119,94 +119,44 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   </fieldset>
 </form>
 
-<!-- --- Under Form Section --- -->
-<section class="under-form">
-  <!-- Micro CTAs -->
-  <div class="micro-cta">
-    <span>Poop-Free Yard!</span>
-    <span>Schedule Your Scoop</span>
-    <span>Request a Quote</span>
+<section id="hero-process" style="background:#f9f9f9;padding:60px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
+  <!-- Hero headline -->
+  <div style="text-align:center;margin-bottom:50px;">
+    <h2 style="font-size:2rem;margin-bottom:10px;color:#333;">We Scoop, You Relax</h2>
+    <p style="font-size:1.1rem;color:#555;">Let us handle the dirty work while you enjoy your yard and your time.</p>
   </div>
 
-  <!-- Main Headline -->
-  <h2>We Scoop, You Relax</h2>
-
-  <!-- Benefits -->
-  <div class="benefits">
-    <div class="item">
-      <div class="icon">⏱</div>
-      <div class="text">
-        <strong>More Free Time</strong>
-        <p>Stop spending weekends cleaning up after your dog. We handle the mess so you can focus on what matters.</p>
-      </div>
+  <!-- Process steps -->
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1000px;margin:0 auto;">
+    
+    <!-- Step 1 -->
+    <div style="flex:1 1 250px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">1. Get Your Quote</h3>
+      <p>Fill out our quick form and get an instant estimate tailored to your yard and pets.</p>
     </div>
-    <div class="item">
-      <div class="icon">😌</div>
-      <div class="text">
-        <strong>Stress-Free Service</strong>
-        <p>Reliable scheduling keeps your yard clean without reminders or last-minute stress.</p>
-      </div>
+
+    <!-- Step 2 -->
+    <div style="flex:1 1 250px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">2. Schedule Your Scoop</h3>
+      <p>Choose the day and frequency that works best for you, and we’ll take care of the rest.</p>
     </div>
-    <div class="item">
-      <div class="icon">🌱</div>
-      <div class="text">
-        <strong>Healthier Yard</strong>
-        <p>Consistent waste removal protects your grass and reduces harmful bacteria for pets and family.</p>
-      </div>
+
+    <!-- Step 3 -->
+    <div style="flex:1 1 250px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">3. Enjoy a Poop-Free Yard</h3>
+      <p>Relax knowing your yard is clean, safe, and ready for family and pets to enjoy.</p>
     </div>
-  </div>
 
-  <!-- Differentiators -->
-  <div class="differentiators">
-    <div class="item">
-      <div class="icon">📱</div>
-      <div class="text">
-        <strong>Fast SMS Quotes</strong>
-        <p>Submit your request and get a personalized quote sent straight to your phone within minutes.</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="icon">🚚</div>
-      <div class="text">
-        <strong>We Haul Away</strong>
-        <p>No extra charge — your yard stays clean and odor-free every time.</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="icon">🐶</div>
-      <div class="text">
-        <strong>Pet-Friendly, Local Team</strong>
-        <p>Our trained, background-checked team treats your pets and property with care.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQs -->
-  <div class="faq">
-    <h3>Frequently Asked Questions</h3>
-    <dl>
-      <dt>Do I need to be home during service?</dt>
-      <dd>Nope! As long as we have access to your yard, you don’t need to be home.</dd>
-
-      <dt>How often can cleanups be scheduled?</dt>
-      <dd>Weekly and bi-weekly options are available based on your needs.</dd>
-
-      <dt>Is this safe for my pets?</dt>
-      <dd>Absolutely. We follow pet-safe practices on every visit.</dd>
-
-      <dt>Do you haul away waste?</dt>
-      <dd>Yes! We include haul-away in every service — no extra fees.</dd>
-
-      <dt>How do I get my quote?</dt>
-      <dd>Fill out the form above and your personalized quote will be sent via text within minutes.</dd>
-    </dl>
-  </div>
-
-  <!-- Bottom CTA -->
-  <div class="bottom-cta">
-    <button class="cta-button" onclick="document.querySelector('.quote-form').scrollIntoView({behavior:'smooth'});">Get My Free Quote</button>
   </div>
 </section>
+
+<style>
+  #hero-process div:hover { transform: translateY(-5px); }
+  @media(max-width:650px){
+    #hero-process div { flex:1 1 100%; }
+  }
+</style>
+
 
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
