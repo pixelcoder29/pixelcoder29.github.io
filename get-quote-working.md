@@ -97,7 +97,6 @@ permalink: /get-quote/
 <!-- ===== Client-Side Validation + Make Webhook Submission ===== -->
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
-
     const form = document.querySelector('.quote-form');
     const fullName = document.getElementById("full_name");
     const phone = document.getElementById("phone");
@@ -119,7 +118,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
 
     fullName.addEventListener("blur",()=>{ fullName.value.trim()?clearError(fullName):showError(fullName,"Full Name is required.") });
-
     phone.addEventListener("input", t=>{
         let a=t.target.value.replace(/\D/g,"").substring(0,10), r="";
         a.length>6?r=`(${a.slice(0,3)}) ${a.slice(3,6)}-${a.slice(6)}`:
@@ -127,23 +125,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         a.length>0&&(r=`(${a}`);
         t.target.value=r;
     });
-
-    phone.addEventListener("blur",()=>{
-        const digits = phone.value.replace(/\D/g,"");
-        digits.length!==10?showError(phone,"Please enter a valid 10-digit phone number."):clearError(phone);
-    });
-
+    phone.addEventListener("blur",()=>{ phone.value.replace(/\D/g,"").length!==10?showError(phone,"Please enter a valid 10-digit phone number."):clearError(phone) });
     zip.addEventListener("input",()=>{ zip.value=zip.value.replace(/\D/g,"").substring(0,5) });
     zip.addEventListener("blur",()=>{ zip.value.length!==5?showError(zip,"ZIP code must be 5 digits."):clearError(zip) });
-
     email.addEventListener("blur",()=>{ email.checkValidity()?clearError(email):showError(email,"Please enter a valid email address.") });
-
     dogs.addEventListener("change",()=>{ dogs.value?clearError(dogs):showError(dogs,"Please select how many dogs you have.") });
     freq.addEventListener("change",()=>{ freq.value?clearError(freq):showError(freq,"Please select a service frequency.") });
 
     form.addEventListener('submit', async function(e){
         e.preventDefault();
-
         let valid = true;
         if(!fullName.value.trim()){ showError(fullName,"Full Name is required."); valid=false; }
         if(phone.value.replace(/\D/g,"").length!==10){ showError(phone,"Please enter a valid 10-digit phone number."); valid=false; }
@@ -151,8 +141,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         if(zip.value.length!==5){ showError(zip,"ZIP code must be 5 digits."); valid=false; }
         if(!dogs.value){ showError(dogs,"Please select how many dogs you have."); valid=false; }
         if(!freq.value){ showError(freq,"Please select a service frequency."); valid=false; }
-
         if(!valid) return;
+
+        // map to exact Jotform text
+        const freqMap = {
+            "weekly": "Weekly",
+            "bi-weekly": "Bi-Weekly",
+            "twice-weekly": "Twice a Week"
+        };
+        const freqValue = freqMap[freq.value];
 
         const data = new URLSearchParams();
         data.append("fullName", fullName.value.trim());
@@ -160,29 +157,25 @@ document.addEventListener('DOMContentLoaded',()=>{
         data.append("email", email.value.trim());
         data.append("zipCode", zip.value.trim());
         data.append("howMany", dogs.value);
-        data.append("serviceFrequency", freq.value);
+        data.append("serviceFrequency", freqValue); // <-- mapped text
         data.append("anyQuestions", questions.value.trim());
 
         try {
-            const response = await fetch('https://hook.us2.make.com/xlq2u7rc1gf2h9wtzjwrxqcij6p96spd', {
+            const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {
                 method: 'POST',
-                headers: {
-                    'x-make-apikey': 'waq39c8a89237cn4vb096avb07a47b08c6vba0394v6cb0', // replace with your Make API key
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: data.toString()
             });
 
             if(response.ok){
                 window.location.href = '/thank-you/';
             } else {
-                showError(form, "Submission failed. Please try again.");
+                alert("Submission failed. Please try again.");
             }
         } catch(err){
             console.error(err);
-            showError(form, "Submission failed. Please check your connection.");
+            alert("Submission failed. Check your connection.");
         }
     });
-
 });
 </script>
