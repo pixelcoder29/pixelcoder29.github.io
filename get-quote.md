@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         data.append("anyQuestions", questions.value.trim());
 
         try {
-            const response = await fetch('https://hook.us2.make.com/xlq2u7rc1gf2h9wtzjwrxqcij6p96spd', {
+            const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
