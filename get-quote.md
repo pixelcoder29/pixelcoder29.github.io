@@ -30,117 +30,152 @@ permalink: /get-quote/
 .privacy-text{font-size:12px;margin-top:10px}
 </style>
 
-<form action="https://submit.jotform.com/submit/260018693859064/" method="POST" class="quote-form" novalidate>
-  <!-- Hidden fields required by Jotform -->
-  <input type="hidden" name="formID" value="260018693859064" />
-  <input type="hidden" name="simple_spc" value="260018693859064" />
-  <input type="hidden" name="uploadServerUrl" value="https://upload.jotform.com/upload" />
-  <input type="hidden" name="eventObserver" value="1" />
+<form class="quote-form" novalidate>
+<fieldset>
+<div class="form-row">
+<div class="form-group">
+<label for="full_name">Full Name *</label>
+<input type="text" id="full_name" name="fullName" placeholder="John Doe" required spellcheck="false">
+<small class="error-message" id="name-error"></small>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number *</label>
+<input type="tel" id="phone" name="phoneNumber" placeholder="(503) 123-4567" maxlength="14" required spellcheck="false">
+<small class="error-message" id="phone-error"></small>
+</div>
+</div>
 
-  <fieldset>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="full_name">Full Name *</label>
-        <input type="text" id="full_name" name="q4_fullName" placeholder="John Doe" required spellcheck="false">
-        <small class="error-message" id="name-error"></small>
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number *</label>
-        <input type="tel" id="phone" name="q5_phoneNumber[full]" placeholder="(503) 123-4567" maxlength="14" required spellcheck="false">
-        <small class="error-message" id="phone-error"></small>
-      </div>
-    </div>
+<div class="form-row">
+<div class="form-group">
+<label for="email">Email *</label>
+<input type="email" id="email" name="email" placeholder="john@email.com" required spellcheck="false">
+<small class="error-message" id="email-error"></small>
+</div>
+<div class="form-group">
+<label for="zip">Zip Code *</label>
+<input type="text" id="zip" name="zipCode" placeholder="97202" maxlength="5" required spellcheck="false">
+<small class="error-message" id="zip-error"></small>
+</div>
+</div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="q6_email" placeholder="john@email.com" required spellcheck="false">
-        <small class="error-message" id="email-error"></small>
-      </div>
-      <div class="form-group">
-        <label for="zip">Zip Code *</label>
-        <input type="text" id="zip" name="q7_zipCode" placeholder="97202" maxlength="5" required spellcheck="false">
-        <small class="error-message" id="zip-error"></small>
-      </div>
-    </div>
+<div class="form-row">
+<div class="form-group">
+<label for="dogs">How many dogs do you have? *</label>
+<select id="dogs" name="howMany" required>
+<option value="" disabled selected>Select</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+</select>
+</div>
+<div class="form-group">
+<label for="frequency">Service Frequency *</label>
+<select id="frequency" name="serviceFrequency" required>
+<option value="weekly" selected>Weekly</option>
+<option value="bi-weekly">Bi-Weekly</option>
+<option value="twice-weekly">Twice a Week</option>
+</select>
+</div>
+</div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label for="dogs">How many dogs do you have? *</label>
-        <select id="dogs" name="q8_howMany" required>
-          <option value="" disabled selected>Select</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="frequency">Service Frequency *</label>
-        <select id="frequency" name="q9_serviceFrequency" required>
-          <option value="">Select</option>
-          <option value="Weekly">Weekly</option>
-          <option value="Bi-Weekly">Bi-Weekly</option>
-          <option value="Twice a Week">Twice a Week</option>
-        </select>
-      </div>
-    </div>
+<div class="form-group">
+<label for="questions">Any questions or concerns?</label>
+<textarea id="questions" name="anyQuestions" rows="3"></textarea>
+</div>
 
-    <div class="form-group">
-      <label for="questions">Any questions or concerns?</label>
-      <textarea id="questions" name="q11_anyQuestions" rows="3"></textarea>
-    </div>
-
-    <p class="privacy-text">By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</p>
-    <button type="submit" class="cta-button">Get My Free Quote</button>
-  </fieldset>
+<p class="privacy-text">By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</p>
+<button type="submit" class="cta-button">Get My Free Quote</button>
+</fieldset>
 </form>
 
-<!-- ===== Deferred JS (keeps your client-side validation) ===== -->
+<!-- ===== Client-Side Validation + Make Webhook Submission ===== -->
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
 
-  const t=document.getElementById("full_name"),
-        e=document.getElementById("phone"),
-        n=document.getElementById("zip"),
-        o=document.getElementById("email");
+    const form = document.querySelector('.quote-form');
+    const t = document.getElementById("full_name");
+    const e = document.getElementById("phone");
+    const n = document.getElementById("zip");
+    const o = document.getElementById("email");
+    const dogs = document.getElementById("dogs");
+    const freq = document.getElementById("frequency");
 
-  // Full Name
-  t.addEventListener("blur",()=>{
-    const a=document.getElementById("name-error");
-    t.value.trim()?a.style.display="none":(a.textContent="Full Name is required.",a.style.display="block")
-  });
+    function showError(el, msg){
+        const error = el.parentElement.querySelector('.error-message');
+        error.textContent = msg;
+        error.style.display = 'block';
+    }
 
-  // Phone formatting and validation
-  e.addEventListener("input",t=>{
-    let a=t.target.value.replace(/\D/g,"").substring(0,10),r="";
-    a.length>6?r=`(${a.slice(0,3)}) ${a.slice(3,6)}-${a.slice(6)}`:
-    a.length>3?r=`(${a.slice(0,3)}) ${a.slice(3)}`:
-    a.length>0&&(r=`(${a}`);
-    t.target.value=r
-  });
-  e.addEventListener("blur",()=>{
-    const t=document.getElementById("phone-error"),a=e.value.replace(/\D/g,"");
-    a.length!==10?(t.textContent="Please enter a valid 10-digit phone number.",t.style.display="block"):t.style.display="none"
-  });
+    function clearError(el){
+        const error = el.parentElement.querySelector('.error-message');
+        error.style.display = 'none';
+    }
 
-  // ZIP code
-  n.addEventListener("input",()=>{ n.value=n.value.replace(/\D/g,"").substring(0,5) });
-  n.addEventListener("blur",()=>{
-    const t=document.getElementById("zip-error");
-    n.value.length!==5?(t.textContent="ZIP code must be 5 digits.",t.style.display="block"):t.style.display="none"
-  });
+    // Validation events
+    t.addEventListener("blur",()=>{ t.value.trim()?clearError(t):showError(t,"Full Name is required.") });
 
-  // Email validation
-  o.addEventListener("blur",()=>{
-    const t=document.getElementById("email-error");
-    o.checkValidity()?t.style.display="none":(t.textContent="Please enter a valid email address.",t.style.display="block")
-  });
+    e.addEventListener("input", t=>{
+        let a=t.target.value.replace(/\D/g,"").substring(0,10), r="";
+        a.length>6?r=`(${a.slice(0,3)}) ${a.slice(3,6)}-${a.slice(6)}`:
+        a.length>3?r=`(${a.slice(0,3)}) ${a.slice(3)}`:
+        a.length>0&&(r=`(${a}`);
+        t.target.value=r;
+    });
+
+    e.addEventListener("blur",()=>{
+        const digits = e.value.replace(/\D/g,"");
+        digits.length!==10?showError(e,"Please enter a valid 10-digit phone number."):clearError(e);
+    });
+
+    n.addEventListener("input",()=>{ n.value=n.value.replace(/\D/g,"").substring(0,5) });
+    n.addEventListener("blur",()=>{ n.value.length!==5?showError(n,"ZIP code must be 5 digits."):clearError(n) });
+
+    o.addEventListener("blur",()=>{ o.checkValidity()?clearError(o):showError(o,"Please enter a valid email address.") });
+
+    // Submit handler
+    form.addEventListener('submit', async function(e){
+        e.preventDefault();
+
+        // Final validation
+        if(!t.value.trim() || !e.value.replace(/\D/g,"").length===10 || !o.checkValidity() || !n.value.length===5 || !dogs.value || !freq.value){
+            alert("Please fix the errors before submitting.");
+            return;
+        }
+
+        // Prepare data
+        const data = new URLSearchParams();
+        data.append("fullName", t.value.trim());
+        data.append("phoneNumber", e.value.trim());
+        data.append("email", o.value.trim());
+        data.append("zipCode", n.value.trim());
+        data.append("howMany", dogs.value);
+        data.append("serviceFrequency", freq.value);
+        data.append("anyQuestions", document.getElementById("questions").value.trim());
+
+        try {
+            const response = await fetch('https://hook.us2.make.com/xlq2u7rc1gf2h9wtzjwrxqcij6p96spd', {
+                method: 'POST',
+                headers: {
+                    'x-make-apikey': 'YOUR_API_KEY_HERE', // replace with your Make API key
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: data.toString()
+            });
+
+            if(response.ok){
+                alert("Form submitted successfully!");
+                window.location.href = '/thank-you/';
+            } else {
+                alert("Submission failed. Please try again.");
+            }
+        } catch(err){
+            console.error(err);
+            alert("Submission failed. Please check your connection.");
+        }
+    });
 
 });
 </script>
-
-<!-- ===== Self-hosted fonts example ===== -->
-<link rel="stylesheet" href="/assets/fonts/roboto-400-500.css">
