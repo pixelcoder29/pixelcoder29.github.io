@@ -30,17 +30,17 @@ permalink: /get-quote/
 .privacy-text{font-size:12px;margin-top:10px}
 </style>
 
-<form action="/payment-page" method="POST" class="quote-form" novalidate>
+<form action="https://submit.jotform.com/submit/260018693859064/" method="POST" class="quote-form" novalidate>
 <fieldset>
 <div class="form-row">
 <div class="form-group">
 <label for="full_name">Full Name *</label>
-<input type="text" id="full_name" name="full_name" placeholder="John Doe" required spellcheck="false">
+<input type="text" id="full_name" name="fullName" placeholder="John Doe" required spellcheck="false">
 <small class="error-message" id="name-error"></small>
 </div>
 <div class="form-group">
 <label for="phone">Phone Number *</label>
-<input type="tel" id="phone" name="phone" placeholder="(503) 123-4567" maxlength="14" required spellcheck="false">
+<input type="tel" id="phone" name="phoneNumber" placeholder="(503) 123-4567" maxlength="14" required spellcheck="false">
 <small class="error-message" id="phone-error"></small>
 </div>
 </div>
@@ -53,7 +53,7 @@ permalink: /get-quote/
 </div>
 <div class="form-group">
 <label for="zip">Zip Code *</label>
-<input type="text" id="zip" name="zip" placeholder="97202" maxlength="5" required spellcheck="false">
+<input type="text" id="zip" name="zipCode" placeholder="97202" maxlength="5" required spellcheck="false">
 <small class="error-message" id="zip-error"></small>
 </div>
 </div>
@@ -61,7 +61,7 @@ permalink: /get-quote/
 <div class="form-row">
 <div class="form-group">
 <label for="dogs">How many dogs do you have? *</label>
-<select id="dogs" name="dogs" required>
+<select id="dogs" name="howMany" required>
 <option value="" disabled selected>Select</option>
 <option>1</option>
 <option>2</option>
@@ -73,7 +73,7 @@ permalink: /get-quote/
 </div>
 <div class="form-group">
 <label for="frequency">Service Frequency *</label>
-<select id="frequency" name="frequency" required>
+<select id="frequency" name="serviceFrequency" required>
 <option value="weekly" selected>Weekly</option>
 <option value="bi-weekly">Bi-Weekly</option>
 <option value="twice-weekly">Twice a Week</option>
@@ -83,7 +83,7 @@ permalink: /get-quote/
 
 <div class="form-group">
 <label for="questions">Any questions or concerns?</label>
-<textarea id="questions" name="questions" rows="3"></textarea>
+<textarea id="questions" name="anyQuestions" rows="3"></textarea>
 </div>
 
 <p class="privacy-text">By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</p>
@@ -97,9 +97,9 @@ document.addEventListener('DOMContentLoaded',()=>{
 const t=document.getElementById("full_name"),e=document.getElementById("phone"),n=document.getElementById("zip"),o=document.getElementById("email");
 t.addEventListener("blur",()=>{const a=document.getElementById("name-error");t.value.trim()?a.style.display="none":(a.textContent="Full Name is required.",a.style.display="block")});
 e.addEventListener("input",t=>{let a=t.target.value.replace(/\D/g,"").substring(0,10),r="";a.length>6?r=`(${a.slice(0,3)}) ${a.slice(3,6)}-${a.slice(6)}`:a.length>3?r=`(${a.slice(0,3)}) ${a.slice(3)}`:a.length>0&&(r=`(${a}`),t.target.value=r});
-e.addEventListener("blur",()=>{const t=document.getElementById("phone-error"),a=e.value.replace(/\D/g,"");a.length!==10?(t.textContent="Please enter a valid 10-digit phone number.",t.style.display="block"):t.style.display="none"});
+e.addEventListener("blur",()=>{const t=document.getElementById("phone-error"),a=e.value.replace(/\D/g,"");a.length!==10?(t.textContent="Please enter a valid 10-digit phone number.",t.style.display="block"):t.style.display="none"}});
 n.addEventListener("input",()=>{n.value=n.value.replace(/\D/g,"").substring(0,5)});
-n.addEventListener("blur",()=>{const t=document.getElementById("zip-error");n.value.length!==5?(t.textContent="ZIP code must be 5 digits.",t.style.display="block"):t.style.display="none"});
+n.addEventListener("blur",()=>{const t=document.getElementById("zip-error");n.value.length!==5?(t.textContent="ZIP code must be 5 digits.",t.style.display="block"):t.style.display="none"}});
 o.addEventListener("blur",()=>{const t=document.getElementById("email-error");o.checkValidity()?t.style.display="none":(t.textContent="Please enter a valid email address.",t.style.display="block")})});
 </script>
 
