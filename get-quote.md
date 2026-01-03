@@ -143,21 +143,27 @@ document.addEventListener('DOMContentLoaded',()=>{
         if(!freq.value){ showError(freq,"Please select a service frequency."); valid=false; }
         if(!valid) return;
 
+        // map to exact Jotform text
+        const freqMap = {
+            "weekly": "Weekly",
+            "bi-weekly": "Bi-Weekly",
+            "twice-weekly": "Twice a Week"
+        };
+        const freqValue = freqMap[freq.value];
+
         const data = new URLSearchParams();
         data.append("fullName", fullName.value.trim());
         data.append("phoneNumber", phone.value.trim());
         data.append("email", email.value.trim());
         data.append("zipCode", zip.value.trim());
         data.append("howMany", dogs.value);
-        data.append("serviceFrequency", freq.value);
+        data.append("serviceFrequency", freqValue); // <-- mapped text
         data.append("anyQuestions", questions.value.trim());
 
         try {
             const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: data.toString()
             });
 
