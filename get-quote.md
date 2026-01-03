@@ -132,13 +132,6 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     <p style="font-size:1.1rem;color:#555;">Let us handle the dirty work while you enjoy your yard and your time.</p>
   </div>
 
-  <section id="hero-process" style="width:100%;padding:60px 0;background:#f9f9f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
-  <!-- Hero headline -->
-  <div style="text-align:center;margin-bottom:50px;max-width:900px;margin-left:auto;margin-right:auto;">
-    <h2 style="font-size:2rem;margin-bottom:10px;color:#333;">We Scoop, You Relax</h2>
-    <p style="font-size:1.1rem;color:#555;">Let us handle the dirty work while you enjoy your yard and your time.</p>
-  </div>
-
   <!-- Process steps -->
   <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1200px;margin:0 auto;padding:0 20px;">
     
