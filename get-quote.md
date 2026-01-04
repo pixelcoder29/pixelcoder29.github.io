@@ -96,6 +96,75 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     flex: 1 1 100%;
   }
 }
+
+<!-- --- Modal Style --- -->
+<style>
+  .quote-form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999;
+  }
+
+  .modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+    margin: 10% auto; /* Center modal vertically on larger screens */
+    max-width: 600px;
+    width: 90%;
+    box-sizing: border-box;
+  }
+
+  #close-form {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+  }
+
+  #close-form:hover {
+    color: #333;
+  }
+
+  /* Responsive Design for Mobile Devices */
+  @media (max-width: 600px) {
+    .modal-content {
+      max-width: 100%;
+      padding: 16px;
+      margin: 10% auto; /* Adjusted for mobile */
+    }
+
+    #close-form {
+      top: 5px;
+      right: 10px;
+      font-size: 18px;
+    }
+  }
+
+  /* For very small devices like phones in portrait mode */
+  @media (max-width: 400px) {
+    .modal-content {
+      padding: 12px;
+      margin: 15% auto;
+    }
+  }
+
+  /* Adjusting for Desktop (adding margin-top to lower the modal on larger screens) */
+  @media (min-width: 1024px) {
+    .modal-content {
+      margin-top: 15%; /* Push the modal down on larger screens */
+    }
+  }
+</style>
+
 </style>
 
 <!-- --- Form Section --- -->
