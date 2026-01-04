@@ -97,6 +97,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   }
 }
 
+
 /* --- Modal Styles --- */
 .quote-form-modal {
   position: fixed;
@@ -113,12 +114,15 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   background: #fff;
   border-radius: 10px;
   padding: 24px;
-  position: relative;
-  margin: 10% auto; /* Center modal vertically on larger screens */
-  max-width: 600px;
-  width: 90%;
+  position: absolute;
+  top: 10px; /* Small padding from the top */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
   box-sizing: border-box;
-  max-height: 80vh; /* Limit height to 80% of the viewport */
+  max-width: 100%;
+  min-height: 90%; /* Form will cover most of the screen */
   overflow-y: auto; /* Allow scrolling if content exceeds height */
 }
 
@@ -135,13 +139,18 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   color: #333;
 }
 
-/* Responsive Design for Mobile Devices */
+/* Prevent background page scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Mobile Adjustment */
 @media (max-width: 600px) {
   .modal-content {
-    max-width: 100%;
     padding: 16px;
-    margin: 0; /* Adjusted for mobile */
-    border-radius: 0; /* Optional: Remove rounded corners for full-width look */
+    margin: 0; /* Remove margins for mobile */
+    border-radius: 0; /* Optional: Remove rounded corners */
+    min-height: 85%; /* Adjust for mobile */
   }
 
   #close-form {
@@ -158,12 +167,14 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   }
 }
 
-/* Adjusting for Desktop (adding margin-top to lower the modal on larger screens) */
+/* Adjusting for Desktop (add margin-top to lower the modal on larger screens) */
 @media (min-width: 1024px) {
   .modal-content {
     margin-top: 15%; /* Push the modal down on larger screens */
   }
 }
+
+
 
 </style>
 
@@ -500,20 +511,24 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   // Open the form modal
   openFormButton.addEventListener("click", () => {
     quoteFormModal.style.display = "block";
+    document.body.classList.add('modal-open'); // Disable background scrolling
   });
 
   // Close the form modal
   closeFormButton.addEventListener("click", () => {
     quoteFormModal.style.display = "none";
+    document.body.classList.remove('modal-open'); // Re-enable background scrolling
   });
 
   // Close the form if the user clicks outside of it
   window.addEventListener("click", (event) => {
     if (event.target === quoteFormModal) {
       quoteFormModal.style.display = "none";
+      document.body.classList.remove('modal-open'); // Re-enable background scrolling
     }
   });
 </script>
+
 
 
 
