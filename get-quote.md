@@ -234,7 +234,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
       
       <!-- Right: Image -->
       <div style="flex:1; min-width:300px; text-align:center;">
-        <img src="/path-to-your-image.jpg" alt="Clean Yard" style="max-width:100%; border-radius:12px;">
+        <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard" style="max-width:100%; border-radius:12px;">
       </div>
 
     </div>
