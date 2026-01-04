@@ -189,46 +189,83 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 /* FAQ Styling */
 .faq-item {
-  margin-bottom: 32px;
-  padding-bottom: 32px;
-  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 16px;
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  transition: all 0.3s ease;
 }
 
-.faq-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.faq-item:hover {
+  border-color: #e0e0e0;
 }
 
 @media (max-width: 480px) {
   .faq-item {
-    margin-bottom: 28px;
-    padding-bottom: 28px;
+    margin-bottom: 12px;
+    border-radius: 10px;
   }
 }
 
-.faq-item h4 {
+.faq-question {
   font-size: 20px;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 12px;
-  line-height: 1.4;
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #f8f8f8;
 }
 
 @media (max-width: 480px) {
-  .faq-item h4 {
+  .faq-question {
     font-size: 18px;
+    padding: 16px 20px;
   }
 }
 
-.faq-item p {
+.faq-icon {
+  font-size: 24px;
+  color: #4CAF50;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+}
+
+.faq-answer p {
   font-size: 16px;
   color: #555;
   line-height: 1.7;
+  padding: 0 24px 20px 24px;
 }
 
 @media (max-width: 480px) {
-  .faq-item p {
+  .faq-answer p {
     font-size: 15px;
+    padding: 0 20px 16px 20px;
   }
 }
 
@@ -645,58 +682,113 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
     <div style="max-width: 900px; margin: 0 auto;">
       <div class="faq-item">
-        <h4>Q: Can you clean with my dog in the yard?</h4>
-        <p>A: Yes, we love cleaning with dogs! However, if your dog has shown signs of aggression, we ask that you keep them inside for the safety of our team. If your dog becomes aggressive, we will kindly ask you to secure them indoors for the duration of the service.</p>
+        <div class="faq-question">
+          <span>Can you clean with my dog in the yard?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we love cleaning with dogs! However, if your dog has shown signs of aggression, we ask that you keep them inside for the safety of our team. If your dog becomes aggressive, we will kindly ask you to secure them indoors for the duration of the service.</p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Q: Do I need to be home during the service?</h4>
-        <p>A: No, you don't need to be home! As long as we have access to your yard, we'll take care of the rest. We'll send you a text notification when we're on our way, so you'll always know when to expect us.</p>
+        <div class="faq-question">
+          <span>Do I need to be home during the service?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>No, you don't need to be home! As long as we have access to your yard, we'll take care of the rest. We'll send you a text notification when we're on our way, so you'll always know when to expect us.</p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Q: What areas do you serve?</h4>
-        <p>A: We proudly serve all of East Portland, including areas beyond the Willamette River, extending east to the end of Portland. We plan to expand our service areas soon!</p>
+        <div class="faq-question">
+          <span>What areas do you serve?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We proudly serve all of East Portland, including areas beyond the Willamette River, extending east to the end of Portland. We plan to expand our service areas soon!</p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Q: How often can I schedule dog waste removal services?</h4>
-        <p>A: We offer weekly and bi-weekly services to keep your yard clean, safe, and odor-free. You can choose the frequency that fits your needs.</p>
+        <div class="faq-question">
+          <span>How often can I schedule dog waste removal services?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We offer weekly and bi-weekly services to keep your yard clean, safe, and odor-free. You can choose the frequency that fits your needs.</p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Q: How do you ensure the safety of my pets?</h4>
-        <p>A: Pet safety is a top priority. We sanitize our tools and boots between yards, and we ensure all gates are securely closed after service. If we notice any abnormalities in pet waste that could indicate health issues, we'll alert you right away.</p>
+        <div class="faq-question">
+          <span>How do you ensure the safety of my pets?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Pet safety is a top priority. We sanitize our tools and boots between yards, and we ensure all gates are securely closed after service. If we notice any abnormalities in pet waste that could indicate health issues, we'll alert you right away.</p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Q: Do you offer dog waste removal for commercial properties?</h4>
-        <p>A: Yes, we provide professional dog waste removal services for commercial properties. Whether it's a dog park or a pet-friendly business, we've got you covered!</p>
+        <div class="faq-question">
+          <span>Do you offer dog waste removal for commercial properties?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we provide professional dog waste removal services for commercial properties. Whether it's a dog park or a pet-friendly business, we've got you covered!</p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Q: How do you handle bad weather?</h4>
-        <p>A: We always put safety first. If bad weather such as heavy rain or snow makes it unsafe to work, we'll reschedule your service to the next available day.</p>
+        <div class="faq-question">
+          <span>How do you handle bad weather?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We always put safety first. If bad weather such as heavy rain or snow makes it unsafe to work, we'll reschedule your service to the next available day.</p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Q: How does billing work for recurring services?</h4>
-        <p>A: We charge your card on file after each service. This ensures that you only pay for the services completed. If a service is skipped, you won't be charged.</p>
+        <div class="faq-question">
+          <span>How does billing work for recurring services?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We charge your card on file after each service. This ensures that you only pay for the services completed. If a service is skipped, you won't be charged.</p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Q: Are you insured?</h4>
-        <p>A: We are not currently insured, but we take every precaution to ensure your property and pets are safe while we work.</p>
+        <div class="faq-question">
+          <span>Are you insured?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We are not currently insured, but we take every precaution to ensure your property and pets are safe while we work.</p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Q: What if I need to skip a service day?</h4>
-        <p>A: Life happens! If you need to skip a service, simply let us know, and we'll reschedule for a more convenient day.</p>
+        <div class="faq-question">
+          <span>What if I need to skip a service day?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Life happens! If you need to skip a service, simply let us know, and we'll reschedule for a more convenient day.</p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Q: What happens if there's an issue with the service?</h4>
-        <p>A: We strive to provide excellent service every time. If any issues arise, please contact us right away, and we'll address the situation promptly.</p>
+        <div class="faq-question">
+          <span>What happens if there's an issue with the service?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We strive to provide excellent service every time. If any issues arise, please contact us right away, and we'll address the situation promptly.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -795,6 +887,27 @@ openFormButton.addEventListener("click", () => {
 closeFormButton.addEventListener("click", () => {
   quoteFormModal.style.display = "none";
   document.body.style.overflow = "";
+});
+
+// FAQ Accordion functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      // Close other open items (optional - remove if you want multiple open at once)
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+        }
+      });
+      
+      // Toggle current item
+      item.classList.toggle('active');
+    });
+  });
 });
 </script>
 
