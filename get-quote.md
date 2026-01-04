@@ -97,8 +97,6 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   }
 }
 
-<!-- --- Modal Style --- -->
-<style>
   .quote-form-modal {
     position: fixed;
     top: 0;
@@ -119,6 +117,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     max-width: 600px;
     width: 90%;
     box-sizing: border-box;
+    max-height: 80vh; /* Limit height to 80% of the viewport */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
   }
 
   #close-form {
@@ -140,6 +140,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
       max-width: 100%;
       padding: 16px;
       margin: 10% auto; /* Adjusted for mobile */
+      max-height: 80vh; /* Prevent cutoff */
+      overflow-y: auto; /* Enable scrolling if content exceeds the height */
     }
 
     #close-form {
@@ -154,6 +156,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     .modal-content {
       padding: 12px;
       margin: 15% auto;
+      max-height: 80vh; /* Prevent cutoff */
+      overflow-y: auto; /* Enable scrolling */
     }
   }
 
@@ -163,7 +167,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
       margin-top: 15%; /* Push the modal down on larger screens */
     }
   }
-</style>
+
+
 
 </style>
 
