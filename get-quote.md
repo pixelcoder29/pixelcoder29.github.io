@@ -97,7 +97,6 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   }
 }
 
-
 /* --- Modal Styles --- */
 .quote-form-modal {
   position: fixed;
@@ -125,20 +124,27 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 /* Mobile Adjustments - Full Screen with Top Space */
 @media (max-width: 600px) {
+  .quote-form-modal {
+    overflow: hidden; /* Prevent any scrolling on the modal backdrop */
+  }
+  
   .modal-content {
-    margin: 40px 0 0 0; /* 40px space at top */
+    margin: 40px 0 0 0; /* 40px space at top to show dark overlay */
     max-width: 100%;
     width: 100%;
     height: calc(100vh - 40px); /* Full height minus top space */
     max-height: calc(100vh - 40px);
+    min-height: calc(100vh - 40px); /* Ensure it doesn't shrink */
     border-radius: 12px 12px 0 0; /* Rounded top corners only */
-    padding: 60px 16px 16px 16px; /* Extra padding at top for close button */
+    padding: 16px; /* Standard padding all around */
+    padding-top: 50px; /* Just enough for the close button */
     overflow-y: auto;
+    overflow-x: hidden;
   }
   
   .quote-form-modal #close-form {
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 16px;
     font-size: 28px;
     z-index: 10;
     background: white;
