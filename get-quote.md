@@ -174,15 +174,12 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     <div class="cards">
       <div class="card" style="background:#4CAF50;color:#fff;">
         <h3>Request My Quote</h3>
-        <p>Fill out our quick form and get an instant estimate tailored to your yard and pets.</p>
       </div>
       <div class="card" style="background:#4CAF50;color:#fff;">
-        <h3>Stress-Free Scheduling</h3>
-        <p>Choose the day and frequency that works best for you, and we’ll take care of the rest.</p>
+        <h3>We Handle Scheduling</h3>
       </div>
       <div class="card" style="background:#4CAF50;color:#fff;">
         <h3>No More Poop!</h3>
-        <p>Relax knowing your yard is clean, safe, and ready for family and pets to enjoy.</p>
       </div>
     </div>
   </div>
