@@ -308,6 +308,144 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   </div>
 </section>
 
+<!-- --- Final CTA Section: "Ready for a Clean, Stress-Free Yard?" --- -->
+<section style="text-align:center; padding: 50px 20px; background-color: #f8f8f8;">
+  <h2>Ready for a Clean, Stress-Free Yard?</h2>
+  <button id="open-form" class="cta-button" style="max-width:300px; margin: 20px auto;">Get My Instant Quote</button>
+</section>
+
+<!-- --- Hidden Form Modal (same as the form at the top) --- -->
+<div id="quote-form-modal" class="quote-form-modal" style="display: none;">
+  <div class="modal-content" style="max-width:600px; margin: 0 auto; padding:24px; position: relative; background: white; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+    <span id="close-form" style="position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer;">&times;</span>
+    
+    <!-- --- This is the same form as at the top --- -->
+    <form class="quote-form" novalidate>
+      <div class="form-error-banner" id="form-error">Submission failed. Please try again.</div>
+      <fieldset>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="full_name">Full Name *</label>
+            <input type="text" id="full_name_modal" name="fullName" placeholder="John Doe" required spellcheck="false">
+            <small class="error-message" id="name-error-modal"></small>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone_modal" name="phoneNumber" placeholder="(503) 123-4567" maxlength="14" required spellcheck="false">
+            <small class="error-message" id="phone-error-modal"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email_modal" name="email" placeholder="john@email.com" required spellcheck="false">
+            <small class="error-message" id="email-error-modal"></small>
+          </div>
+          <div class="form-group">
+            <label for="zip">Zip Code *</label>
+            <input type="text" id="zip_modal" name="zipCode" placeholder="97202" maxlength="5" required spellcheck="false">
+            <small class="error-message" id="zip-error-modal"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dogs">How many dogs do you have? *</label>
+            <select id="dogs_modal" name="howMany" required>
+              <option value="" disabled selected>Select</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+            <small class="error-message" id="dogs-error-modal"></small>
+          </div>
+          <div class="form-group">
+            <label for="frequency">Service Frequency *</label>
+            <select id="frequency_modal" name="serviceFrequency" required>
+              <option value="" disabled selected>Select</option>
+              <option value="weekly">Weekly</option>
+              <option value="bi-weekly">Bi-Weekly</option>
+            </select>
+            <small class="error-message" id="freq-error-modal"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="questions">Any questions or concerns?</label>
+          <textarea id="questions_modal" name="anyQuestions" rows="3"></textarea>
+        </div>
+
+        <p class="privacy-text">By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</p>
+        <button type="submit" class="cta-button">Request My Quote</button>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+<!-- --- Modal Style --- -->
+<style>
+  .quote-form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999;
+  }
+
+  .modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+    margin-top: 100px;
+  }
+
+  #close-form {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+  }
+
+  #close-form:hover {
+    color: #333;
+  }
+</style>
+
+<script>
+  // JavaScript for opening and closing the form popup
+  const openFormButton = document.getElementById("open-form");
+  const quoteFormModal = document.getElementById("quote-form-modal");
+  const closeFormButton = document.getElementById("close-form");
+
+  // Open the form modal
+  openFormButton.addEventListener("click", () => {
+    quoteFormModal.style.display = "block";
+  });
+
+  // Close the form modal
+  closeFormButton.addEventListener("click", () => {
+    quoteFormModal.style.display = "none";
+  });
+
+  // Close the form if the user clicks outside of it
+  window.addEventListener("click", (event) => {
+    if (event.target === quoteFormModal) {
+      quoteFormModal.style.display = "none";
+    }
+  });
+</script>
+
+
 
 
 <script defer>
