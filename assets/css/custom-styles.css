@@ -199,6 +199,8 @@ footer a:focus {
   padding: 0;
 }
 
+
+/*bubbles for form page css below*/
 /* Full-width breakout for sections below the form */
 .full-bleed-wrapper {
   width: 100vw;
@@ -221,7 +223,7 @@ footer a:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  align-items: stretch; /* ensures equal height across cards in the row */
+  align-items: stretch; /* ensures all cards in a row are same height */
 }
 
 .full-bleed-wrapper .card {
@@ -233,24 +235,19 @@ footer a:focus {
   text-align: center;
   transition: transform .2s;
 
-  /* Flex for vertical centering of content */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: flex;           /* new */
+  flex-direction: column;  /* new */
+  justify-content: center; /* vertically centers content */
 }
 
+/* Hover effect */
 .full-bleed-wrapper .card:hover {
   transform: translateY(-5px);
 }
 
+/* Responsive stacking */
 @media (max-width: 900px) {
   .full-bleed-wrapper .card {
     flex: 1 1 100%;
   }
-}
-
-/* Optional: make text inside steps slightly bigger for clarity */
-.full-bleed-wrapper .card h3 {
-  margin-bottom: 10px;
-  font-size: 1.3rem;
 }
