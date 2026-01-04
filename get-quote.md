@@ -159,7 +159,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     </div>
 
     <p class="privacy-text">By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</p>
-    <button type="submit" class="cta-button">Get My Free Quote</button>
+    <button type="submit" class="cta-button">Request My Quote</button>
   </fieldset>
 </form>
 
@@ -173,15 +173,15 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
     <div class="cards">
       <div class="card" style="background:#4CAF50;color:#fff;">
-        <h3>1. Get Your Quote</h3>
+        <h3>Request My Quote</h3>
         <p>Fill out our quick form and get an instant estimate tailored to your yard and pets.</p>
       </div>
       <div class="card" style="background:#4CAF50;color:#fff;">
-        <h3>2. Schedule Your Scoop</h3>
+        <h3>Stress-Free Scheduling</h3>
         <p>Choose the day and frequency that works best for you, and we’ll take care of the rest.</p>
       </div>
       <div class="card" style="background:#4CAF50;color:#fff;">
-        <h3>3. Enjoy a Poop-Free Yard</h3>
+        <h3>No More Poop!</h3>
         <p>Relax knowing your yard is clean, safe, and ready for family and pets to enjoy.</p>
       </div>
     </div>
