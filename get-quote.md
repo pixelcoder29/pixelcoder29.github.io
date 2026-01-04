@@ -600,13 +600,19 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
     <div class="cards">
       <div class="card" style="background:#4CAF50;color:#fff;">
-        <h3>Request My Quote</h3>
+        <div style="font-size:48px;margin-bottom:16px;">📝</div>
+        <h3>1. Request Your Quote</h3>
+        <p style="color:#fff;opacity:0.95;">Quick form, instant estimate</p>
       </div>
       <div class="card" style="background:#4CAF50;color:#fff;">
-        <h3>We Handle Scheduling</h3>
+        <div style="font-size:48px;margin-bottom:16px;">📅</div>
+        <h3>2. We Handle Everything</h3>
+        <p style="color:#fff;opacity:0.95;">Set it and forget it</p>
       </div>
       <div class="card" style="background:#4CAF50;color:#fff;">
-        <h3>No More Poop!</h3>
+        <div style="font-size:48px;margin-bottom:16px;">✨</div>
+        <h3>3. Enjoy Your Clean Yard</h3>
+        <p style="color:#fff;opacity:0.95;">No more cleanup stress</p>
       </div>
     </div>
   </div>
@@ -661,7 +667,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
       
       <!-- Right: Image -->
       <div class="trust-section-right">
-        <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard">
+        <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard" loading="lazy">
       </div>
 
     </div>
