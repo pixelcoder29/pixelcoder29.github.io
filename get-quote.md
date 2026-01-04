@@ -103,8 +103,9 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 @media (max-width: 480px) {
   .section-inner h2,
   .section-inner > div > h2 {
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: -0.5px;
+    line-height: 1.1;
   }
   .section-inner p {
     font-size: 17px;
@@ -151,7 +152,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 }
 
 .full-bleed-wrapper .card h3 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   margin: 0;
   line-height: 1.3;
@@ -159,12 +160,12 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 @media (max-width: 480px) {
   .full-bleed-wrapper .card h3 {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
 .full-bleed-wrapper .card p {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 12px;
   line-height: 1.6;
   color: inherit;
@@ -172,7 +173,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 @media (max-width: 480px) {
   .full-bleed-wrapper .card p {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
@@ -307,12 +308,14 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 @media (max-width: 768px) {
   .trust-section-left h2 {
     font-size: 32px;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .trust-section-left h2 {
     font-size: 28px;
+    text-align: center;
   }
 }
 
@@ -800,8 +803,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 <!-- --- Final CTA Section: "Ready for a Clean, Stress-Free Yard?" --- -->
 <div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner" style="text-align:center;">
-    <h2>Ready for a Clean, Stress-Free Yard?</h2>
-    <button id="open-form" class="cta-button" style="max-width:300px; margin: 20px auto;">Get My Instant Quote</button>
+    <h2 style="margin-bottom:32px;">Ready for a Clean, Stress-Free Yard?</h2>
+    <button id="open-form" class="cta-button" style="max-width:300px; margin: 0 auto;">Get My Instant Quote</button>
   </div>
 </div>
 
