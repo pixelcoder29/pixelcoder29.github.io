@@ -462,20 +462,16 @@ const closeFormButton = document.getElementById("close-form");
 // Open the form modal
 openFormButton.addEventListener("click", () => {
   quoteFormModal.style.display = "block";
+  document.body.style.overflow = "hidden"; // Prevent body scroll
 });
 
 // Close the form modal
 closeFormButton.addEventListener("click", () => {
   quoteFormModal.style.display = "none";
+  document.body.style.overflow = ""; // Re-enable body scroll
 });
 
-// Close the form if the user clicks outside of it
-//window.addEventListener("click", (event) => {
-//  if (event.target === quoteFormModal) {
-//    quoteFormModal.style.display = "none";
-//  }
-//});
-
+// Modal will NOT close when clicking outside - removed that functionality
 </script>
 
 
