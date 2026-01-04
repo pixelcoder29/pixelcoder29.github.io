@@ -601,18 +601,15 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     <div class="cards">
       <div class="card" style="background:#4CAF50;color:#fff;">
         <div style="font-size:48px;margin-bottom:16px;">📝</div>
-        <h3>1. Request Your Quote</h3>
-        <p style="color:#fff;opacity:0.95;">Quick form, instant estimate</p>
+        <h3>1. Request My Quote</h3>
       </div>
       <div class="card" style="background:#4CAF50;color:#fff;">
         <div style="font-size:48px;margin-bottom:16px;">📅</div>
-        <h3>2. We Handle Everything</h3>
-        <p style="color:#fff;opacity:0.95;">Set it and forget it</p>
+        <h3>2. We Handle Scheduling</h3>
       </div>
       <div class="card" style="background:#4CAF50;color:#fff;">
         <div style="font-size:48px;margin-bottom:16px;">✨</div>
-        <h3>3. Enjoy Your Clean Yard</h3>
-        <p style="color:#fff;opacity:0.95;">No more cleanup stress</p>
+        <h3>3. No More Poop!</h3>
       </div>
     </div>
   </div>
