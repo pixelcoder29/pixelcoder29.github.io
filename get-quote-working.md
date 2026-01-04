@@ -10,7 +10,7 @@ permalink: /get-quote/
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6}
 .header-section{height:25px} 
 
 /* --- Form Styles --- */
@@ -19,17 +19,21 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 .form-row{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:15px} 
 .form-group{flex:1 1 100%;display:flex;flex-direction:column} 
 @media(min-width:650px){.form-group{flex:1 1 calc(50% - 10px)}} 
-.quote-form label{margin-bottom:6px;font-weight:bold;font-size:14px} 
-.quote-form input,.quote-form select,.quote-form textarea{background-color:#d9f4cd;border:none;border-radius:8px;padding:10px;font-size:16px;width:100%;line-height:1.5} 
+.quote-form label{margin-bottom:8px;font-weight:600;font-size:15px;color:#333} 
+.quote-form input,.quote-form select,.quote-form textarea{background-color:#d9f4cd;border:2px solid transparent;border-radius:12px;padding:12px 16px;font-size:16px;width:100%;line-height:1.5;transition:all 0.3s ease} 
+.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:none;border-color:#4CAF50;box-shadow:0 0 0 3px rgba(76,175,80,0.1)}
 .quote-form input::placeholder,.quote-form textarea::placeholder{color:rgba(0,0,0,.4)} 
 .quote-form select{color:rgba(0,0,0,.8)} 
 .quote-form select option:disabled[selected]{color:rgba(0,0,0,.4)} 
-.quote-form textarea{resize:vertical;height:40px} 
-.error-message{color:#d93025;font-size:12px;margin-top:4px;display:none} 
-.cta-button{background-color:#4CAF50;color:#fff;font-weight:bold;padding:14px 20px;border:none;border-radius:8px;cursor:pointer;margin-top:15px;width:100%;font-size:16px} 
-.cta-button:hover{background-color:#45a049} 
-.privacy-text{font-size:12px;margin-top:10px} 
-.form-error-banner{display:none;background:#fdd; color:#900; padding:10px; border-radius:8px; margin-bottom:15px; font-weight:bold;}
+.quote-form textarea{resize:vertical;min-height:80px} 
+.error-message{color:#d93025;font-size:13px;margin-top:6px;display:none;font-weight:500} 
+.cta-button{background:linear-gradient(135deg, #4CAF50 0%, #45a049 100%);color:#fff;font-weight:700;padding:16px 32px;border:none;border-radius:12px;cursor:pointer;margin-top:20px;width:100%;font-size:18px;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(76,175,80,0.3)} 
+.cta-button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(76,175,80,0.4)} 
+.cta-button:active{transform:translateY(0)}
+.privacy-text{font-size:13px;margin-top:12px;color:#666} 
+.privacy-text a{color:#4CAF50;text-decoration:none;font-weight:500}
+.privacy-text a:hover{text-decoration:underline}
+.form-error-banner{display:none;background:#fdd; color:#900; padding:12px; border-radius:12px; margin-bottom:20px; font-weight:600;}
 
 /* --- Under-Form Section --- */
 .under-form{max-width:700px;margin:40px auto;padding:0 20px}
@@ -67,34 +71,131 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 .section-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 80px 40px;
+}
+
+@media (max-width: 768px) {
+  .section-inner {
+    padding: 60px 20px;
+  }
+}
+
+/* Section Headers */
+.section-inner h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.section-inner > div > h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.section-inner p {
+  font-size: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .section-inner h2,
+  .section-inner > div > h2 {
+    font-size: 36px;
+  }
+  .section-inner p {
+    font-size: 18px;
+  }
 }
 
 /* Process / benefit cards */
 .full-bleed-wrapper .cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
 }
 
 .full-bleed-wrapper .card {
-  flex: 1 1 0;
-  min-width: 260px;
-  padding: 30px;
-  border-radius: 40px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
   text-align: center;
-  transition: transform .2s;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.full-bleed-wrapper .card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.full-bleed-wrapper .card p {
+  font-size: 16px;
+  margin-top: 12px;
+  line-height: 1.6;
 }
 
 .full-bleed-wrapper .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
 }
 
-@media (max-width: 900px) {
-  .full-bleed-wrapper .card {
-    flex: 1 1 100%;
-  }
+/* FAQ Styling */
+.faq-item {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Trust section list styling */
+.trust-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 18px;
+  line-height: 2;
+  color: #00796b;
+}
+
+.trust-list li {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.trust-list li::before {
+  content: attr(data-icon);
+  font-size: 24px;
+  flex-shrink: 0;
 }
 
 /* --- Modal Styles --- */
@@ -104,7 +205,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
   display: none;
   z-index: 9999;
   overflow: hidden;
@@ -112,15 +214,40 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 .modal-content {
   background: #fff;
-  border-radius: 10px;
-  padding: 24px;
+  border-radius: 20px;
+  padding: 32px;
   position: relative;
-  margin: 10% auto;
+  margin: 5% auto;
   max-width: 600px;
   width: 90%;
   box-sizing: border-box;
-  max-height: 80vh;
+  max-height: 85vh;
   overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+#close-form {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  background: #f5f5f5;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: #333;
+  font-weight: 300;
+  line-height: 1;
+}
+
+#close-form:hover {
+  background: #e0e0e0;
+  transform: rotate(90deg);
 }
 
 /* Mobile Adjustments - Full Screen with Top Space */
@@ -146,9 +273,9 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     height: calc(100dvh - 40px);
     max-height: calc(100vh - 40px);
     max-height: calc(100dvh - 40px);
-    border-radius: 12px 12px 0 0;
-    padding: 16px;
-    padding-top: 50px;
+    border-radius: 20px 20px 0 0;
+    padding: 24px;
+    padding-top: 60px;
     padding-bottom: 40px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -160,17 +287,13 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   .quote-form-modal #close-form {
     position: fixed;
     top: 50px;
-    right: 16px;
-    font-size: 28px;
+    right: 20px;
+    font-size: 32px;
     z-index: 10;
     background: white;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
   
   .quote-form-modal .quote-form {
@@ -296,27 +419,27 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 <!-- --- Section 2: Trust / Proof-Focused (with image) --- -->
 <div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner">
-    <div style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:40px;">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:60px;">
       
       <!-- Left: Bullet Points -->
       <div style="flex:1; min-width:300px;">
-        <h2 style="text-align:left; margin-bottom:20px;">Our Commitment to Your Yard</h2>
-        <p style="text-align:left; margin-bottom:20px;">We keep your yard clean and safe so you can relax knowing the job is done right.</p>
-        <ul style="list-style:none; padding-left:0; font-size:18px; line-height:1.8; color:#00796b;">
-          <li>🚛 We haul away all pet waste for a clean yard</li>
-          <li>🛡️ Enjoy a clean, safe yard every day</li>
-          <li>📸 Get a photo of your secured gate after every visit</li>
-          <li>📱 We send a text when we're on our way</li>
-          <li>🐶 Trained, dog-loving team you can trust</li>
-          <li>🔄 No contracts, fully flexible service</li>
-          <li>🚗 Spot our branded vehicle magnet on arrival</li>
-          <li>⭐ "They did amazing! Highly recommend to anyone who wants to take one thing off their plate." – Wyatt D.</li>
+        <h2 style="font-size:42px; font-weight:800; text-align:left; margin-bottom:20px; color:#1a1a1a;">Our Commitment to Your Yard</h2>
+        <p style="font-size:18px; text-align:left; margin-bottom:30px; color:#555;">We keep your yard clean and safe so you can relax knowing the job is done right.</p>
+        <ul class="trust-list">
+          <li data-icon="🚛">We haul away all pet waste for a clean yard</li>
+          <li data-icon="🛡️">Enjoy a clean, safe yard every day</li>
+          <li data-icon="📸">Get a photo of your secured gate after every visit</li>
+          <li data-icon="📱">We send a text when we're on our way</li>
+          <li data-icon="🐶">Trained, dog-loving team you can trust</li>
+          <li data-icon="🔄">No contracts, fully flexible service</li>
+          <li data-icon="🚗">Spot our branded vehicle magnet on arrival</li>
+          <li data-icon="⭐">"They did amazing! Highly recommend to anyone who wants to take one thing off their plate." – Wyatt D.</li>
         </ul>
       </div>
       
       <!-- Right: Image -->
       <div style="flex:1; min-width:300px; text-align:center;">
-        <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard" style="max-width:100%; border-radius:12px;">
+        <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard" style="max-width:100%; border-radius:20px; box-shadow:0 10px 40px rgba(0,0,0,0.1);">
       </div>
 
     </div>
@@ -324,67 +447,69 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 </div>
 
 <!-- Clean Yard, Happy Pets, Happy Home Section -->
-<section style="text-align:center; padding: 50px 20px;">
-  <h2>Clean Yard, Happy Pets, Happy Home</h2>
-</section>
+<div class="full-bleed-wrapper" style="background:#fff;">
+  <div class="section-inner" style="text-align:center; padding:60px 40px;">
+    <h2 style="font-size:48px; font-weight:800; color:#1a1a1a;">Clean Yard, Happy Pets, Happy Home</h2>
+  </div>
+</div>
 
 <!-- Frequently Asked Questions (FAQs) -->
 <div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner">
-    <h2 style="text-align:center; margin-bottom:40px;">Frequently Asked Questions (FAQs)</h2>
+    <h2 style="text-align:center; margin-bottom:60px;">Frequently Asked Questions</h2>
 
-    <div style="max-width: 800px; margin: 0 auto; font-size: 16px; color: #333;">
-      <div style="margin-bottom: 20px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div class="faq-item">
         <h4>Q: Can you clean with my dog in the yard?</h4>
         <p>A: Yes, we love cleaning with dogs! However, if your dog has shown signs of aggression, we ask that you keep them inside for the safety of our team. If your dog becomes aggressive, we will kindly ask you to secure them indoors for the duration of the service.</p>
       </div>
 
-      <div style="margin-bottom: 20px;">
+      <div class="faq-item">
         <h4>Q: Do I need to be home during the service?</h4>
         <p>A: No, you don't need to be home! As long as we have access to your yard, we'll take care of the rest. We'll send you a text notification when we're on our way, so you'll always know when to expect us.</p>
       </div>
 
-      <div style="margin-bottom: 20px;">
+      <div class="faq-item">
         <h4>Q: What areas do you serve?</h4>
         <p>A: We proudly serve all of East Portland, including areas beyond the Willamette River, extending east to the end of Portland. We plan to expand our service areas soon!</p>
       </div>
 
-      <div style="margin-bottom: 20px;">
+      <div class="faq-item">
         <h4>Q: How often can I schedule dog waste removal services?</h4>
         <p>A: We offer weekly and bi-weekly services to keep your yard clean, safe, and odor-free. You can choose the frequency that fits your needs.</p>
       </div>
 
-      <div style="margin-bottom: 20px;">
+      <div class="faq-item">
         <h4>Q: How do you ensure the safety of my pets?</h4>
         <p>A: Pet safety is a top priority. We sanitize our tools and boots between yards, and we ensure all gates are securely closed after service. If we notice any abnormalities in pet waste that could indicate health issues, we'll alert you right away.</p>
       </div>
 
-      <div style="margin-bottom: 20px;">
+      <div class="faq-item">
         <h4>Q: Do you offer dog waste removal for commercial properties?</h4>
         <p>A: Yes, we provide professional dog waste removal services for commercial properties. Whether it's a dog park or a pet-friendly business, we've got you covered!</p>
       </div>
 
-      <div style="margin-bottom: 20px;">
+      <div class="faq-item">
         <h4>Q: How do you handle bad weather?</h4>
         <p>A: We always put safety first. If bad weather such as heavy rain or snow makes it unsafe to work, we'll reschedule your service to the next available day.</p>
       </div>
 
-      <div style="margin-bottom: 20px;">
+      <div class="faq-item">
         <h4>Q: How does billing work for recurring services?</h4>
         <p>A: We charge your card on file after each service. This ensures that you only pay for the services completed. If a service is skipped, you won't be charged.</p>
       </div>
 
-      <div style="margin-bottom: 20px;">
+      <div class="faq-item">
         <h4>Q: Are you insured?</h4>
         <p>A: We are not currently insured, but we take every precaution to ensure your property and pets are safe while we work.</p>
       </div>
 
-      <div style="margin-bottom: 20px;">
+      <div class="faq-item">
         <h4>Q: What if I need to skip a service day?</h4>
         <p>A: Life happens! If you need to skip a service, simply let us know, and we'll reschedule for a more convenient day.</p>
       </div>
 
-      <div style="margin-bottom: 20px;">
+      <div class="faq-item">
         <h4>Q: What happens if there's an issue with the service?</h4>
         <p>A: We strive to provide excellent service every time. If any issues arise, please contact us right away, and we'll address the situation promptly.</p>
       </div>

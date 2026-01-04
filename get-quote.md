@@ -10,52 +10,30 @@ permalink: /get-quote/
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6}
+body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
 .header-section{height:25px} 
 
 /* --- Form Styles --- */
-.quote-form{max-width:600px;margin:0 auto;padding:24px;position:relative} 
+.quote-form{max-width:600px;margin:0 auto;padding:32px 24px;position:relative} 
 .quote-form fieldset{border:none} 
-.form-row{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:15px} 
+.form-row{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:20px} 
 .form-group{flex:1 1 100%;display:flex;flex-direction:column} 
 @media(min-width:650px){.form-group{flex:1 1 calc(50% - 10px)}} 
-.quote-form label{margin-bottom:8px;font-weight:600;font-size:15px;color:#333} 
-.quote-form input,.quote-form select,.quote-form textarea{background-color:#d9f4cd;border:2px solid transparent;border-radius:12px;padding:12px 16px;font-size:16px;width:100%;line-height:1.5;transition:all 0.3s ease} 
-.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:none;border-color:#4CAF50;box-shadow:0 0 0 3px rgba(76,175,80,0.1)}
-.quote-form input::placeholder,.quote-form textarea::placeholder{color:rgba(0,0,0,.4)} 
-.quote-form select{color:rgba(0,0,0,.8)} 
-.quote-form select option:disabled[selected]{color:rgba(0,0,0,.4)} 
-.quote-form textarea{resize:vertical;min-height:80px} 
-.error-message{color:#d93025;font-size:13px;margin-top:6px;display:none;font-weight:500} 
-.cta-button{background:linear-gradient(135deg, #4CAF50 0%, #45a049 100%);color:#fff;font-weight:700;padding:16px 32px;border:none;border-radius:12px;cursor:pointer;margin-top:20px;width:100%;font-size:18px;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(76,175,80,0.3)} 
-.cta-button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(76,175,80,0.4)} 
+.quote-form label{margin-bottom:8px;font-weight:600;font-size:15px;color:#1a1a1a} 
+.quote-form input,.quote-form select,.quote-form textarea{background-color:#d9f4cd;border:2px solid transparent;border-radius:12px;padding:14px 16px;font-size:16px;width:100%;line-height:1.5;transition:all 0.3s ease} 
+.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:none;border-color:#4CAF50;box-shadow:0 0 0 4px rgba(76,175,80,0.1);background-color:#e8f9e5}
+.quote-form input::placeholder,.quote-form textarea::placeholder{color:rgba(0,0,0,.45)} 
+.quote-form select{color:rgba(0,0,0,.85)} 
+.quote-form select option:disabled[selected]{color:rgba(0,0,0,.45)} 
+.quote-form textarea{resize:vertical;min-height:100px} 
+.error-message{color:#d93025;font-size:13px;margin-top:8px;display:none;font-weight:500} 
+.cta-button{background:linear-gradient(135deg, #4CAF50 0%, #45a049 100%);color:#fff;font-weight:700;padding:18px 32px;border:none;border-radius:12px;cursor:pointer;margin-top:24px;width:100%;font-size:18px;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(76,175,80,0.3);letter-spacing:0.3px} 
+.cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(76,175,80,0.4)} 
 .cta-button:active{transform:translateY(0)}
-.privacy-text{font-size:13px;margin-top:12px;color:#666} 
-.privacy-text a{color:#4CAF50;text-decoration:none;font-weight:500}
+.privacy-text{font-size:13px;margin-top:16px;color:#666;line-height:1.5} 
+.privacy-text a{color:#4CAF50;text-decoration:none;font-weight:600}
 .privacy-text a:hover{text-decoration:underline}
-.form-error-banner{display:none;background:#fdd; color:#900; padding:12px; border-radius:12px; margin-bottom:20px; font-weight:600;}
-
-/* --- Under-Form Section --- */
-.under-form{max-width:700px;margin:40px auto;padding:0 20px}
-.under-form h2{font-size:28px;margin-bottom:20px;color:#333;text-align:center}
-
-/* Micro CTAs */
-.micro-cta{text-align:center;margin-bottom:30px;font-weight:bold;font-size:16px;color:#4CAF50;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-.micro-cta span{background:#e3f5d9;padding:6px 12px;border-radius:6px;cursor:pointer}
-
-/* Benefits / Differentiators / FAQ */
-.benefits, .differentiators, .faq{margin-bottom:40px}
-.benefits .item, .differentiators .item{display:flex;align-items:flex-start;margin-bottom:20px}
-.benefits .icon, .differentiators .icon{font-size:28px;margin-right:15px;color:#4CAF50}
-.benefits .text, .differentiators .text{flex:1}
-.faq h3{margin-bottom:10px;text-align:center}
-.faq dl{margin-left:0}
-.faq dt{font-weight:bold;margin-top:15px}
-.faq dd{margin-left:15px;margin-bottom:10px}
-
-/* Bottom CTA */
-.bottom-cta{text-align:center;margin-top:20px}
-.bottom-cta .cta-button{max-width:300px;margin:0 auto}
+.form-error-banner{display:none;background:#fdd;color:#900;padding:14px;border-radius:12px;margin-bottom:20px;font-weight:600;font-size:14px}
 
 /* --- Full-width breakout for sections below the form --- */
 .full-bleed-wrapper {
@@ -76,7 +54,13 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 @media (max-width: 768px) {
   .section-inner {
-    padding: 60px 20px;
+    padding: 60px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-inner {
+    padding: 50px 20px;
   }
 }
 
@@ -86,7 +70,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   font-weight: 800;
   margin-bottom: 16px;
   color: #1a1a1a;
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
+  line-height: 1.2;
 }
 
 .section-inner > div > h2 {
@@ -94,7 +79,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   font-weight: 800;
   margin-bottom: 16px;
   color: #1a1a1a;
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
+  line-height: 1.2;
 }
 
 .section-inner p {
@@ -107,9 +93,24 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   .section-inner h2,
   .section-inner > div > h2 {
     font-size: 36px;
+    letter-spacing: -0.5px;
   }
   .section-inner p {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-inner h2,
+  .section-inner > div > h2 {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+  .section-inner p {
+    font-size: 17px;
+  }
+  .quote-form {
+    padding: 24px 16px;
   }
 }
 
@@ -118,6 +119,13 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .full-bleed-wrapper .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 .full-bleed-wrapper .card {
@@ -131,6 +139,15 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   align-items: center;
   justify-content: center;
   min-height: 200px;
+  background: white;
+}
+
+@media (max-width: 480px) {
+  .full-bleed-wrapper .card {
+    padding: 32px 24px;
+    min-height: 160px;
+    border-radius: 20px;
+  }
 }
 
 .full-bleed-wrapper .card h3 {
@@ -140,15 +157,34 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   line-height: 1.3;
 }
 
+@media (max-width: 480px) {
+  .full-bleed-wrapper .card h3 {
+    font-size: 22px;
+  }
+}
+
 .full-bleed-wrapper .card p {
   font-size: 16px;
   margin-top: 12px;
   line-height: 1.6;
+  color: inherit;
+}
+
+@media (max-width: 480px) {
+  .full-bleed-wrapper .card p {
+    font-size: 15px;
+  }
 }
 
 .full-bleed-wrapper .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 768px) {
+  .full-bleed-wrapper .card:hover {
+    transform: translateY(-4px);
+  }
 }
 
 /* FAQ Styling */
@@ -160,6 +196,14 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 .faq-item:last-child {
   border-bottom: none;
+  padding-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .faq-item {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+  }
 }
 
 .faq-item h4 {
@@ -170,19 +214,100 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   line-height: 1.4;
 }
 
+@media (max-width: 480px) {
+  .faq-item h4 {
+    font-size: 18px;
+  }
+}
+
 .faq-item p {
   font-size: 16px;
   color: #555;
   line-height: 1.7;
 }
 
-/* Trust section list styling */
+@media (max-width: 480px) {
+  .faq-item p {
+    font-size: 15px;
+  }
+}
+
+/* Trust section styling */
+.trust-section-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+@media (max-width: 768px) {
+  .trust-section-content {
+    gap: 40px;
+  }
+}
+
+.trust-section-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .trust-section-left {
+    min-width: 100%;
+  }
+}
+
+.trust-section-left h2 {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .trust-section-left h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-section-left h2 {
+    font-size: 28px;
+  }
+}
+
+.trust-section-left > p {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 30px;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .trust-section-left > p {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Trust list styling */
 .trust-list {
   list-style: none;
   padding-left: 0;
   font-size: 18px;
-  line-height: 2;
+  line-height: 1.8;
   color: #00796b;
+}
+
+@media (max-width: 480px) {
+  .trust-list {
+    font-size: 16px;
+    line-height: 1.7;
+  }
 }
 
 .trust-list li {
@@ -192,10 +317,48 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   gap: 12px;
 }
 
+@media (max-width: 480px) {
+  .trust-list li {
+    margin-bottom: 14px;
+    gap: 10px;
+  }
+}
+
 .trust-list li::before {
   content: attr(data-icon);
   font-size: 24px;
   flex-shrink: 0;
+  line-height: 1.3;
+}
+
+@media (max-width: 480px) {
+  .trust-list li::before {
+    font-size: 20px;
+  }
+}
+
+.trust-section-right {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .trust-section-right {
+    min-width: 100%;
+  }
+}
+
+.trust-section-right img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 480px) {
+  .trust-section-right img {
+    border-radius: 16px;
+  }
 }
 
 /* --- Modal Styles --- */
@@ -243,6 +406,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   color: #333;
   font-weight: 300;
   line-height: 1;
+  z-index: 10;
 }
 
 #close-form:hover {
@@ -274,8 +438,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     max-height: calc(100vh - 40px);
     max-height: calc(100dvh - 40px);
     border-radius: 20px 20px 0 0;
-    padding: 24px;
-    padding-top: 60px;
+    padding: 20px;
+    padding-top: 70px;
     padding-bottom: 40px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -297,7 +461,28 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   }
   
   .quote-form-modal .quote-form {
+    padding: 16px;
     padding-bottom: 20px;
+  }
+}
+
+/* Additional mobile-specific improvements */
+@media (max-width: 480px) {
+  .form-row {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .quote-form input,
+  .quote-form select,
+  .quote-form textarea {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+  
+  .cta-button {
+    padding: 16px 28px;
+    font-size: 17px;
   }
 }
 </style>
@@ -419,12 +604,12 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 <!-- --- Section 2: Trust / Proof-Focused (with image) --- -->
 <div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner">
-    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:60px;">
+    <div class="trust-section-content">
       
       <!-- Left: Bullet Points -->
-      <div style="flex:1; min-width:300px;">
-        <h2 style="font-size:42px; font-weight:800; text-align:left; margin-bottom:20px; color:#1a1a1a;">Our Commitment to Your Yard</h2>
-        <p style="font-size:18px; text-align:left; margin-bottom:30px; color:#555;">We keep your yard clean and safe so you can relax knowing the job is done right.</p>
+      <div class="trust-section-left">
+        <h2>Our Commitment to Your Yard</h2>
+        <p>We keep your yard clean and safe so you can relax knowing the job is done right.</p>
         <ul class="trust-list">
           <li data-icon="🚛">We haul away all pet waste for a clean yard</li>
           <li data-icon="🛡️">Enjoy a clean, safe yard every day</li>
@@ -438,8 +623,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
       </div>
       
       <!-- Right: Image -->
-      <div style="flex:1; min-width:300px; text-align:center;">
-        <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard" style="max-width:100%; border-radius:20px; box-shadow:0 10px 40px rgba(0,0,0,0.1);">
+      <div class="trust-section-right">
+        <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard">
       </div>
 
     </div>
