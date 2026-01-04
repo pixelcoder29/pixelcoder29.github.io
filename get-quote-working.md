@@ -52,6 +52,50 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 /* Bottom CTA */
 .bottom-cta{text-align:center;margin-top:20px}
 .bottom-cta .cta-button{max-width:300px;margin:0 auto}
+
+/* --- Full-width breakout for sections below the form --- */
+.full-bleed-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Inner content width control */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+/* Process / benefit cards */
+.full-bleed-wrapper .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.full-bleed-wrapper .card {
+  flex: 1 1 0;
+  min-width: 260px;
+  padding: 30px;
+  border-radius: 40px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform .2s;
+}
+
+.full-bleed-wrapper .card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 900px) {
+  .full-bleed-wrapper .card {
+    flex: 1 1 100%;
+  }
+}
 </style>
 
 <!-- --- Form Section --- -->
@@ -115,93 +159,154 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     </div>
 
     <p class="privacy-text">By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</p>
-    <button type="submit" class="cta-button">Get My Free Quote</button>
+    <button type="submit" class="cta-button">Request My Quote</button>
   </fieldset>
 </form>
 
+<!-- --- Hero / Process Section --- -->
+<div class="full-bleed-wrapper" style="background:#f8f8f8;">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:50px;">
+      <h2>We Scoop, You Relax</h2>
+      <p>Let us handle the dirty work while you enjoy your yard and your time.</p>
+    </div>
 
-
-
-
-
-
-<section id="hero-process" style="background:#f9f9f9;padding:60px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
-  <!-- Hero headline -->
-  <div style="text-align:center;margin-bottom:50px;">
-    <h2 style="font-size:2rem;margin-bottom:10px;color:#333;">We Scoop, You Relax</h2>
-    <p style="font-size:1.1rem;color:#555;">Let us handle the dirty work while you enjoy your yard and your time.</p>
+    <div class="cards">
+      <div class="card" style="background:#4CAF50;color:#fff;">
+        <h3>Request My Quote</h3>
+      </div>
+      <div class="card" style="background:#4CAF50;color:#fff;">
+        <h3>We Handle Scheduling</h3>
+      </div>
+      <div class="card" style="background:#4CAF50;color:#fff;">
+        <h3>No More Poop!</h3>
+      </div>
+    </div>
   </div>
+</div>
 
-  <!-- Process steps -->
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1200px;margin:0 auto;padding:0 20px;">
-    
-    <div style="flex:1 1 300px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
-      <h3 style="margin-bottom:10px;font-size:1.3rem;">1. Get Your Quote</h3>
-      <p>Fill out our quick form and get an instant estimate tailored to your yard and pets.</p>
+<!-- --- Section 1: Customer Benefits --- -->
+<div class="full-bleed-wrapper" style="background:#ffffff;">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:50px;">
+      <h2>Why Choose Yard Guards PDX?</h2>
+      <p>Effortless yard cleanup. More free time. Peace of mind.</p>
     </div>
 
-    <div style="flex:1 1 300px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
-      <h3 style="margin-bottom:10px;font-size:1.3rem;">2. Schedule Your Scoop</h3>
-      <p>Choose the day and frequency that works best for you, and we’ll take care of the rest.</p>
+    <div class="cards">
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>🕒 Save Time</h3>
+        <p>We handle the pet waste so you can focus on what matters most.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>✅ Zero Hassle</h3>
+        <p>Reliable cleanups, scheduled and managed entirely by our team.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>🌿 Enjoy Your Yard</h3>
+        <p>Healthy, vibrant lawn that’s safe for your family and pets.</p>
+      </div>
     </div>
-
-    <div style="flex:1 1 300px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
-      <h3 style="margin-bottom:10px;font-size:1.3rem;">3. Enjoy a Poop-Free Yard</h3>
-      <p>Relax knowing your yard is clean, safe, and ready for family and pets to enjoy.</p>
-    </div>
-
   </div>
+</div>
+
+
+<!-- --- Section 2: Trust / Proof-Focused (with image) --- -->
+<div class="full-bleed-wrapper" style="background:#f8f8f8;">
+  <div class="section-inner">
+    <div style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:40px;">
+      
+      <!-- Left: Bullet Points -->
+      <div style="flex:1; min-width:300px;">
+        <h2 style="text-align:left; margin-bottom:20px;">Our Commitment to Your Yard</h2>
+        <p style="text-align:left; margin-bottom:20px;">We keep your yard clean and safe so you can relax knowing the job is done right.</p>
+        <ul style="list-style:none; padding-left:0; font-size:18px; line-height:1.8; color:#00796b;">
+          <li>🚛 We haul away all pet waste for a clean yard</li>
+          <li>🛡️ Enjoy a clean, safe yard every day</li>
+          <li>📸 Get a photo of your secured gate after every visit</li>
+          <li>📱 We send a text when we’re on our way</li>
+          <li>🐶 Trained, dog-loving team you can trust</li>
+          <li>🔄 No contracts, fully flexible service</li>
+          <li>🚗 Spot our branded vehicle magnet on arrival</li>
+          <li>⭐ “They did amazing! Highly recommend to anyone who wants to take one thing off their plate.” – Wyatt D.</li>
+        </ul>
+      </div>
+      
+      <!-- Right: Image -->
+      <div style="flex:1; min-width:300px; text-align:center;">
+        <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard" style="max-width:100%; border-radius:12px;">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Clean Yard, Happy Pets, Happy Home Section -->
+<section style="text-align:center; padding: 50px 20px;">
+  <h2>Clean Yard, Happy Pets, Happy Home</h2>
 </section>
 
-<style>
-  #hero-process div:hover { transform: translateY(-5px); }
+<!-- Frequently Asked Questions (FAQs) -->
+<section style="background-color: #f8f8f8; padding: 40px 20px;">
+  <div style="max-width: 800px; margin: 0 auto; font-size: 16px; color: #333;">
+    <h3>Frequently Asked Questions (FAQs)</h3>
 
-  /* Mobile stacking */
-  @media(max-width:900px){
-    #hero-process div { flex:1 1 100%; }
-  }
-
-  /* Remove extra margins/padding to edges */
-  #hero-process { margin:0; padding-left:0; padding-right:0; }
-</style>
-
-
-<section id="benefits" style="width:100%;padding:60px 0;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
-  <div style="text-align:center;margin-bottom:50px;max-width:900px;margin-left:auto;margin-right:auto;">
-    <h2 style="font-size:2rem;margin-bottom:10px;color:#333;">Why Choose Our Poop Scooping Service?</h2>
-    <p style="font-size:1.1rem;color:#555;">We take the dirty work off your hands, giving you back your time and a yard you can be proud of.</p>
-  </div>
-
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1200px;margin:0 auto;padding:0 20px;">
-    <div style="flex:1 1 300px;background:#e0f7fa;color:#00796b;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
-      <h3 style="margin-bottom:10px;font-size:1.3rem;">More Free Time</h3>
-      <p>Stop spending hours cleaning up after your pets. Focus on what matters most while we handle the mess.</p>
+    <div style="margin-bottom: 20px;">
+      <h4>Q: Can you clean with my dog in the yard?</h4>
+      <p>A: Yes, we love cleaning with dogs! However, if your dog has shown signs of aggression, we ask that you keep them inside for the safety of our team. If your dog becomes aggressive, we will kindly ask you to secure them indoors for the duration of the service.</p>
     </div>
 
-    <div style="flex:1 1 300px;background:#e0f7fa;color:#00796b;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
-      <h3 style="margin-bottom:10px;font-size:1.3rem;">Stress-Free</h3>
-      <p>Never worry about missing a cleanup. Our dependable service keeps your yard safe and clean.</p>
+    <div style="margin-bottom: 20px;">
+      <h4>Q: Do I need to be home during the service?</h4>
+      <p>A: No, you don’t need to be home! As long as we have access to your yard, we’ll take care of the rest. We’ll send you a text notification when we’re on our way, so you’ll always know when to expect us.</p>
     </div>
 
-    <div style="flex:1 1 300px;background:#e0f7fa;color:#00796b;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
-      <h3 style="margin-bottom:10px;font-size:1.3rem;">Healthier Yard</h3>
-      <p>Regular waste removal protects your grass and keeps your yard vibrant and free from harmful bacteria.</p>
+    <div style="margin-bottom: 20px;">
+      <h4>Q: What areas do you serve?</h4>
+      <p>A: We proudly serve all of East Portland, including areas beyond the Willamette River, extending east to the end of Portland. We plan to expand our service areas soon!</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: How often can I schedule dog waste removal services?</h4>
+      <p>A: We offer weekly and bi-weekly services to keep your yard clean, safe, and odor-free. You can choose the frequency that fits your needs.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: How do you ensure the safety of my pets?</h4>
+      <p>A: Pet safety is a top priority. We sanitize our tools and boots between yards, and we ensure all gates are securely closed after service. If we notice any abnormalities in pet waste that could indicate health issues, we’ll alert you right away.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: Do you offer dog waste removal for commercial properties?</h4>
+      <p>A: Yes, we provide professional dog waste removal services for commercial properties. Whether it’s a dog park or a pet-friendly business, we’ve got you covered!</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: How do you handle bad weather?</h4>
+      <p>A: We always put safety first. If bad weather such as heavy rain or snow makes it unsafe to work, we’ll reschedule your service to the next available day.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: How does billing work for recurring services?</h4>
+      <p>A: We charge your card on file after each service. This ensures that you only pay for the services completed. If a service is skipped, you won’t be charged.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: Are you insured?</h4>
+      <p>A: We are not currently insured, but we take every precaution to ensure your property and pets are safe while we work.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: What if I need to skip a service day?</h4>
+      <p>A: Life happens! If you need to skip a service, simply let us know, and we’ll reschedule for a more convenient day.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: What happens if there’s an issue with the service?</h4>
+      <p>A: We strive to provide excellent service every time. If any issues arise, please contact us right away, and we’ll address the situation promptly.</p>
     </div>
   </div>
 </section>
-
-<style>
-  #benefits div:hover { transform: translateY(-5px); }
-
-  @media(max-width:900px){
-    #benefits div { flex:1 1 100%; }
-  }
-
-  #benefits { margin:0; padding-left:0; padding-right:0; }
-</style>
-
-
-
 
 
 
