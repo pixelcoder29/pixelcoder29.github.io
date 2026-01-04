@@ -9,8 +9,11 @@ permalink: /get-quote/
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .header-section{height:25px} 
+
+/* --- Form Styles --- */
 .quote-form{max-width:600px;margin:0 auto;padding:24px;position:relative} 
 .quote-form fieldset{border:none} 
 .form-row{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:15px} 
@@ -27,8 +30,31 @@ permalink: /get-quote/
 .cta-button:hover{background-color:#45a049} 
 .privacy-text{font-size:12px;margin-top:10px} 
 .form-error-banner{display:none;background:#fdd; color:#900; padding:10px; border-radius:8px; margin-bottom:15px; font-weight:bold;}
+
+/* --- Under-Form Section --- */
+.under-form{max-width:700px;margin:40px auto;padding:0 20px}
+.under-form h2{font-size:28px;margin-bottom:20px;color:#333;text-align:center}
+
+/* Micro CTAs */
+.micro-cta{text-align:center;margin-bottom:30px;font-weight:bold;font-size:16px;color:#4CAF50;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.micro-cta span{background:#e3f5d9;padding:6px 12px;border-radius:6px;cursor:pointer}
+
+/* Benefits / Differentiators / FAQ */
+.benefits, .differentiators, .faq{margin-bottom:40px}
+.benefits .item, .differentiators .item{display:flex;align-items:flex-start;margin-bottom:20px}
+.benefits .icon, .differentiators .icon{font-size:28px;margin-right:15px;color:#4CAF50}
+.benefits .text, .differentiators .text{flex:1}
+.faq h3{margin-bottom:10px;text-align:center}
+.faq dl{margin-left:0}
+.faq dt{font-weight:bold;margin-top:15px}
+.faq dd{margin-left:15px;margin-bottom:10px}
+
+/* Bottom CTA */
+.bottom-cta{text-align:center;margin-top:20px}
+.bottom-cta .cta-button{max-width:300px;margin:0 auto}
 </style>
 
+<!-- --- Form Section --- -->
 <form class="quote-form" novalidate>
   <div class="form-error-banner" id="form-error">Submission failed. Please try again.</div>
   <fieldset>
@@ -78,7 +104,6 @@ permalink: /get-quote/
           <option value="" disabled selected>Select</option>
           <option value="weekly">Weekly</option>
           <option value="bi-weekly">Bi-Weekly</option>
-          <option value="twice-weekly">Twice a Week</option>
         </select>
         <small class="error-message" id="freq-error"></small>
       </div>
@@ -94,8 +119,95 @@ permalink: /get-quote/
   </fieldset>
 </form>
 
+
+
+
+
+
+
+<section id="hero-process" style="background:#f9f9f9;padding:60px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
+  <!-- Hero headline -->
+  <div style="text-align:center;margin-bottom:50px;">
+    <h2 style="font-size:2rem;margin-bottom:10px;color:#333;">We Scoop, You Relax</h2>
+    <p style="font-size:1.1rem;color:#555;">Let us handle the dirty work while you enjoy your yard and your time.</p>
+  </div>
+
+  <!-- Process steps -->
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1200px;margin:0 auto;padding:0 20px;">
+    
+    <div style="flex:1 1 300px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">1. Get Your Quote</h3>
+      <p>Fill out our quick form and get an instant estimate tailored to your yard and pets.</p>
+    </div>
+
+    <div style="flex:1 1 300px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">2. Schedule Your Scoop</h3>
+      <p>Choose the day and frequency that works best for you, and we’ll take care of the rest.</p>
+    </div>
+
+    <div style="flex:1 1 300px;background:#4CAF50;color:#fff;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">3. Enjoy a Poop-Free Yard</h3>
+      <p>Relax knowing your yard is clean, safe, and ready for family and pets to enjoy.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  #hero-process div:hover { transform: translateY(-5px); }
+
+  /* Mobile stacking */
+  @media(max-width:900px){
+    #hero-process div { flex:1 1 100%; }
+  }
+
+  /* Remove extra margins/padding to edges */
+  #hero-process { margin:0; padding-left:0; padding-right:0; }
+</style>
+
+
+<section id="benefits" style="width:100%;padding:60px 0;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
+  <div style="text-align:center;margin-bottom:50px;max-width:900px;margin-left:auto;margin-right:auto;">
+    <h2 style="font-size:2rem;margin-bottom:10px;color:#333;">Why Choose Our Poop Scooping Service?</h2>
+    <p style="font-size:1.1rem;color:#555;">We take the dirty work off your hands, giving you back your time and a yard you can be proud of.</p>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1200px;margin:0 auto;padding:0 20px;">
+    <div style="flex:1 1 300px;background:#e0f7fa;color:#00796b;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">More Free Time</h3>
+      <p>Stop spending hours cleaning up after your pets. Focus on what matters most while we handle the mess.</p>
+    </div>
+
+    <div style="flex:1 1 300px;background:#e0f7fa;color:#00796b;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">Stress-Free</h3>
+      <p>Never worry about missing a cleanup. Our dependable service keeps your yard safe and clean.</p>
+    </div>
+
+    <div style="flex:1 1 300px;background:#e0f7fa;color:#00796b;padding:30px;border-radius:40px;box-shadow:0 10px 20px rgba(0,0,0,0.1);text-align:center;transition:transform .2s;">
+      <h3 style="margin-bottom:10px;font-size:1.3rem;">Healthier Yard</h3>
+      <p>Regular waste removal protects your grass and keeps your yard vibrant and free from harmful bacteria.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  #benefits div:hover { transform: translateY(-5px); }
+
+  @media(max-width:900px){
+    #benefits div { flex:1 1 100%; }
+  }
+
+  #benefits { margin:0; padding-left:0; padding-right:0; }
+</style>
+
+
+
+
+
+
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
+
     const form = document.querySelector('.quote-form');
     const fullName = document.getElementById("full_name");
     const phone = document.getElementById("phone");
@@ -143,12 +255,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         if(!freq.value){ showError(freq,"Please select a service frequency."); valid=false; }
         if(!valid) return;
 
-        // map to exact Jotform text
-        const freqMap = {
-            "weekly": "Weekly",
-            "bi-weekly": "Bi-Weekly",
-            "twice-weekly": "Twice a Week"
-        };
+        const freqMap = { "weekly": "Weekly", "bi-weekly": "Bi-Weekly" };
         const freqValue = freqMap[freq.value];
 
         const data = new URLSearchParams();

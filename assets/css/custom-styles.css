@@ -198,3 +198,47 @@ footer a:focus {
   margin: 0;
   padding: 0;
 }
+
+/* Full-width breakout for sections below the form */
+.full-bleed-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Inner content width control */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+/* Process / benefit cards */
+.full-bleed-wrapper .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.full-bleed-wrapper .card {
+  flex: 1 1 0;
+  min-width: 260px;
+  padding: 30px;
+  border-radius: 40px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform .2s;
+}
+
+.full-bleed-wrapper .card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 900px) {
+  .full-bleed-wrapper .card {
+    flex: 1 1 100%;
+  }
+}
