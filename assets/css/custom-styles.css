@@ -203,42 +203,27 @@ footer a:focus {
 /*bubbles for form page css below*/
 
 
-/* Full-width breakout for sections below the form */
-.full-bleed-wrapper {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-/* Inner content width control */
-.section-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 40px;
-}
-
-/* Process / benefit cards - responsive equal height */
+/* Step / process bubbles */
 .full-bleed-wrapper .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center; /* center cards horizontally */
+  align-items: stretch;    /* equal height cards */
 }
 
-/* Card styling */
 .full-bleed-wrapper .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centers content vertically */
+  flex: 1 1 260px;         /* flex-basis: 260px */
+  max-width: 100%;         /* never exceed container width */
   padding: 30px;
   border-radius: 40px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.2s;
-  background-color: #4CAF50; /* default, override inline if needed */
-  color: #fff;               /* default, override inline if needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 /* Hover effect */
@@ -246,9 +231,28 @@ footer a:focus {
   transform: translateY(-5px);
 }
 
-/* Mobile text alignment & spacing adjustments */
-@media (max-width: 600px) {
+/* Tablets / small screens */
+@media (max-width: 900px) {
+  .full-bleed-wrapper .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Extra small screens: make sure cards fit viewport */
+@media (max-width: 380px) {
   .full-bleed-wrapper .cards {
-    grid-template-columns: 1fr; /* stack cards on small screens */
+    gap: 15px; /* smaller gap so cards fit */
+  }
+  .full-bleed-wrapper .card {
+    padding: 20px;       /* reduce padding */
+    flex: 1 1 calc(100% - 20px); /* fit almost full width */
+    border-radius: 30px; /* slightly smaller radius */
+  }
+  .full-bleed-wrapper .card h3 {
+    font-size: 1.2rem;
+  }
+  .full-bleed-wrapper .card p {
+    font-size: 0.95rem;
   }
 }
