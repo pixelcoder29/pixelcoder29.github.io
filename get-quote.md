@@ -327,10 +327,18 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+  .trust-section-left > p {
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
 @media (max-width: 480px) {
   .trust-section-left > p {
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 24px;
+    text-align: center;
   }
 }
 
@@ -343,10 +351,16 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   color: #00796b;
 }
 
+@media (max-width: 768px) {
+  .trust-list {
+    font-size: 17px;
+  }
+}
+
 @media (max-width: 480px) {
   .trust-list {
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 17px;
+    line-height: 1.8;
   }
 }
 
@@ -359,8 +373,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 @media (max-width: 480px) {
   .trust-list li {
-    margin-bottom: 14px;
-    gap: 10px;
+    margin-bottom: 18px;
+    gap: 12px;
   }
 }
 
@@ -373,7 +387,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 @media (max-width: 480px) {
   .trust-list li::before {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
