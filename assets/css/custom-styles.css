@@ -224,6 +224,8 @@ footer a:focus {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  
+  min-height: 150px; /* <- ensures all cards start equal height */
 }
 
 /* Hover effect */
@@ -236,6 +238,7 @@ footer a:focus {
   .full-bleed-wrapper .card {
     flex: 1 1 100%;
     max-width: 100%;
+    min-height: auto; /* allow natural height for stacked cards */
   }
 }
 
