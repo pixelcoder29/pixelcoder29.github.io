@@ -96,81 +96,57 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     flex: 1 1 100%;
   }
 }
+/* --- Modal Styles --- */
+.quote-form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 9999;
+}
 
-  .quote-form-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 9999;
-  }
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  position: relative;
+  margin: 10% auto; /* Center modal vertically on larger screens */
+  max-width: 600px;
+  width: 90%;
+  box-sizing: border-box;
+  max-height: 80vh; /* Limit height to 80% of the viewport */
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
 
+/* Mobile Adjustments */
+@media (max-width: 600px) {
   .modal-content {
-    background: #fff;
-    border-radius: 10px;
-    padding: 24px;
-    position: relative;
-    margin: 10% auto; /* Center modal vertically on larger screens */
-    max-width: 600px;
-    width: 90%;
-    box-sizing: border-box;
-    max-height: 80vh; /* Limit height to 80% of the viewport */
-    overflow-y: auto; /* Allow scrolling if content exceeds height */
+    max-width: 100%;
+    padding: 16px;
+    margin: 5% auto; /* Adjust margin for mobile */
+    border-radius: 8px;
+    max-height: 85vh; /* Prevent cutoff */
+    overflow-y: auto; /* Enable scrolling */
   }
+}
 
-  #close-form {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    color: #999;
-    cursor: pointer;
+@media (max-width: 400px) {
+  .modal-content {
+    padding: 12px;
+    margin: 15% auto;
+    max-height: 80vh; /* Prevent cutoff */
+    overflow-y: auto; /* Enable scrolling */
   }
+}
 
-  #close-form:hover {
-    color: #333;
-  }
-
-  /* Responsive Design for Mobile Devices */
-  @media (max-width: 600px) {
-    .modal-content {
-      max-width: 100%;
-      padding: 16px;
-      margin: 10% auto; /* Adjusted for mobile */
-      max-height: 80vh; /* Prevent cutoff */
-      overflow-y: auto; /* Enable scrolling if content exceeds the height */
-    }
-
-    #close-form {
-      top: 5px;
-      right: 10px;
-      font-size: 18px;
-    }
-  }
-
-  /* For very small devices like phones in portrait mode */
-  @media (max-width: 400px) {
-    .modal-content {
-      padding: 12px;
-      margin: 15% auto;
-      max-height: 80vh; /* Prevent cutoff */
-      overflow-y: auto; /* Enable scrolling */
-    }
-  }
-
-  /* Adjusting for Desktop (adding margin-top to lower the modal on larger screens) */
-  @media (min-width: 1024px) {
-    .modal-content {
-      margin-top: 15%; /* Push the modal down on larger screens */
-    }
-  }
 
 
 
 </style>
+
 
 <!-- --- Form Section --- -->
 <form class="quote-form" novalidate>
@@ -460,64 +436,32 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   </div>
 </div>
 
-<!-- --- Modal Style --- -->
-<style>
-  .quote-form-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 9999;
-  }
-
-  .modal-content {
-    background: #fff;
-    border-radius: 10px;
-    padding: 24px;
-    position: relative;
-    margin-top: 100px;
-  }
-
-  #close-form {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    color: #999;
-    cursor: pointer;
-  }
-
-  #close-form:hover {
-    color: #333;
-  }
-</style>
 
 <script>
   // JavaScript for opening and closing the form popup
-  const openFormButton = document.getElementById("open-form");
-  const quoteFormModal = document.getElementById("quote-form-modal");
-  const closeFormButton = document.getElementById("close-form");
+const openFormButton = document.getElementById("open-form");
+const quoteFormModal = document.getElementById("quote-form-modal");
+const closeFormButton = document.getElementById("close-form");
 
-  // Open the form modal
-  openFormButton.addEventListener("click", () => {
-    quoteFormModal.style.display = "block";
-  });
+// Open the form modal
+openFormButton.addEventListener("click", () => {
+  quoteFormModal.style.display = "block";
+});
 
-  // Close the form modal
-  closeFormButton.addEventListener("click", () => {
+// Close the form modal
+closeFormButton.addEventListener("click", () => {
+  quoteFormModal.style.display = "none";
+});
+
+// Close the form if the user clicks outside of it
+window.addEventListener("click", (event) => {
+  if (event.target === quoteFormModal) {
     quoteFormModal.style.display = "none";
-  });
+  }
+});
 
-  // Close the form if the user clicks outside of it
-  window.addEventListener("click", (event) => {
-    if (event.target === quoteFormModal) {
-      quoteFormModal.style.display = "none";
-    }
-  });
 </script>
+
 
 
 

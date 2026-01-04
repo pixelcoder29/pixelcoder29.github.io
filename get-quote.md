@@ -113,32 +113,40 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   border-radius: 10px;
   padding: 24px;
   position: relative;
-  margin: 10% auto; /* Center modal vertically on larger screens */
+  margin: 10% auto;
   max-width: 600px;
   width: 90%;
   box-sizing: border-box;
-  max-height: 80vh; /* Limit height to 80% of the viewport */
-  overflow-y: auto; /* Allow scrolling if content exceeds height */
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
-/* Mobile Adjustments */
+/* Mobile Adjustments - Full Screen */
 @media (max-width: 600px) {
   .modal-content {
+    margin: 0;
     max-width: 100%;
-    padding: 16px;
-    margin: 5% auto; /* Adjust margin for mobile */
-    border-radius: 8px;
-    max-height: 85vh; /* Prevent cutoff */
-    overflow-y: auto; /* Enable scrolling */
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    padding: 60px 16px 16px 16px; /* Extra padding at top for close button */
+    overflow-y: auto;
   }
-}
-
-@media (max-width: 400px) {
-  .modal-content {
-    padding: 12px;
-    margin: 15% auto;
-    max-height: 80vh; /* Prevent cutoff */
-    overflow-y: auto; /* Enable scrolling */
+  
+  .quote-form-modal #close-form {
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    z-index: 10;
+    background: white;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
 }
 
@@ -454,11 +462,11 @@ closeFormButton.addEventListener("click", () => {
 });
 
 // Close the form if the user clicks outside of it
-window.addEventListener("click", (event) => {
-  if (event.target === quoteFormModal) {
-    quoteFormModal.style.display = "none";
-  }
-});
+//window.addEventListener("click", (event) => {
+//  if (event.target === quoteFormModal) {
+//    quoteFormModal.style.display = "none";
+//  }
+//});
 
 </script>
 
