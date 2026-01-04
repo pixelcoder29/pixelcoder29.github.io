@@ -97,6 +97,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   }
 }
 
+
 /* --- Modal Styles --- */
 .quote-form-modal {
   position: fixed;
@@ -107,6 +108,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   background: rgba(0, 0, 0, 0.5);
   display: none;
   z-index: 9999;
+  overflow: hidden; /* Prevent scrolling on the backdrop */
 }
 
 .modal-content {
@@ -126,24 +128,33 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 @media (max-width: 600px) {
   .quote-form-modal {
     overflow: hidden; /* Prevent any scrolling on the modal backdrop */
+    position: fixed; /* Keep it fixed */
+    touch-action: none; /* Prevent touch scrolling on backdrop */
   }
   
   .modal-content {
-    margin: 40px 0 0 0; /* 40px space at top to show dark overlay */
+    position: fixed; /* Keep modal content fixed */
+    top: 40px; /* Start 40px from top */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
     max-width: 100%;
     width: 100%;
     height: calc(100vh - 40px); /* Full height minus top space */
     max-height: calc(100vh - 40px);
-    min-height: calc(100vh - 40px); /* Ensure it doesn't shrink */
     border-radius: 12px 12px 0 0; /* Rounded top corners only */
     padding: 16px; /* Standard padding all around */
     padding-top: 50px; /* Just enough for the close button */
     overflow-y: auto;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    touch-action: pan-y; /* Only allow vertical scrolling inside modal */
   }
   
   .quote-form-modal #close-form {
-    top: 10px;
+    position: fixed; /* Fix the close button */
+    top: 50px; /* 40px overlay space + 10px padding */
     right: 16px;
     font-size: 28px;
     z-index: 10;
@@ -157,8 +168,6 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
 }
-
-
 
 
 </style>
