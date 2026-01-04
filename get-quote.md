@@ -241,6 +241,72 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   </div>
 </div>
 
+<!-- Clean Yard, Happy Pets, Happy Home Section -->
+<section style="text-align:center; padding: 50px 20px;">
+  <h2>Clean Yard, Happy Pets, Happy Home</h2>
+</section>
+
+<!-- Frequently Asked Questions (FAQs) -->
+<section style="background-color: #f8f8f8; padding: 40px 20px;">
+  <div style="max-width: 800px; margin: 0 auto; font-size: 16px; color: #333;">
+    <h3>Frequently Asked Questions (FAQs)</h3>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: Can you clean with my dog in the yard?</h4>
+      <p>A: Yes, we love cleaning with dogs! However, if your dog has shown signs of aggression, we ask that you keep them inside for the safety of our team. If your dog becomes aggressive, we will kindly ask you to secure them indoors for the duration of the service.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: Do I need to be home during the service?</h4>
+      <p>A: No, you don’t need to be home! As long as we have access to your yard, we’ll take care of the rest. We’ll send you a text notification when we’re on our way, so you’ll always know when to expect us.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: What areas do you serve?</h4>
+      <p>A: We proudly serve all of East Portland, including areas beyond the Willamette River, extending east to the end of Portland. We plan to expand our service areas soon!</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: How often can I schedule dog waste removal services?</h4>
+      <p>A: We offer weekly and bi-weekly services to keep your yard clean, safe, and odor-free. You can choose the frequency that fits your needs.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: How do you ensure the safety of my pets?</h4>
+      <p>A: Pet safety is a top priority. We sanitize our tools and boots between yards, and we ensure all gates are securely closed after service. If we notice any abnormalities in pet waste that could indicate health issues, we’ll alert you right away.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: Do you offer dog waste removal for commercial properties?</h4>
+      <p>A: Yes, we provide professional dog waste removal services for commercial properties. Whether it’s a dog park or a pet-friendly business, we’ve got you covered!</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: How do you handle bad weather?</h4>
+      <p>A: We always put safety first. If bad weather such as heavy rain or snow makes it unsafe to work, we’ll reschedule your service to the next available day.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: How does billing work for recurring services?</h4>
+      <p>A: We charge your card on file after each service. This ensures that you only pay for the services completed. If a service is skipped, you won’t be charged.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: Are you insured?</h4>
+      <p>A: We are not currently insured, but we take every precaution to ensure your property and pets are safe while we work.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: What if I need to skip a service day?</h4>
+      <p>A: Life happens! If you need to skip a service, simply let us know, and we’ll reschedule for a more convenient day.</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4>Q: What happens if there’s an issue with the service?</h4>
+      <p>A: We strive to provide excellent service every time. If any issues arise, please contact us right away, and we’ll address the situation promptly.</p>
+    </div>
+  </div>
+</section>
 
 
 
