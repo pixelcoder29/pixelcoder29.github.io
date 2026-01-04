@@ -97,7 +97,6 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   }
 }
 
-
 /* --- Modal Styles --- */
 .quote-form-modal {
   position: fixed;
@@ -146,6 +145,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     border-radius: 12px 12px 0 0; /* Rounded top corners only */
     padding: 16px; /* Standard padding all around */
     padding-top: 50px; /* Just enough for the close button */
+    padding-bottom: 30px; /* Extra space at bottom for button */
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
