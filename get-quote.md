@@ -210,6 +210,77 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   </div>
 </div>
 
+<!-- --- Section 1: Customer Benefits --- -->
+<div class="full-bleed-wrapper" style="background:#f0f9f4;">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:50px;">
+      <h2>Why Choose Yard Guards PDX?</h2>
+      <p>Effortless yard cleanup. More free time. Peace of mind.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>🕒 Save Time</h3>
+        <p>We handle the pet waste so you can focus on what matters most.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>✅ Zero Hassle</h3>
+        <p>Reliable cleanups, scheduled and managed entirely by our team.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>🌿 Enjoy Your Yard</h3>
+        <p>Healthy, vibrant lawn that’s safe for your family and pets.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- --- Section 2: Trust / Proof-Focused --- -->
+<div class="full-bleed-wrapper" style="background:#ffffff;">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:50px;">
+      <h2>Our Commitment to Your Yard</h2>
+      <p>We keep your yard clean, safe, and ready to enjoy, so you can relax knowing the job is done right.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>🚛 Waste Removal Included</h3>
+        <p>We haul away and properly dispose of all pet waste at no extra cost.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>📸 Gate Photo Proof</h3>
+        <p>Receive a photo of your secured gate after each visit.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>📱 Arrival Notifications</h3>
+        <p>We send a text when we’re on our way.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>🐶 Pet-Friendly Professionals</h3>
+        <p>Trained, uniformed, background-checked, and dog-loving team.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>🔄 Flexible Service</h3>
+        <p>No long-term contracts or obligations.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>🚗 Easy to Identify</h3>
+        <p>Look for our branded vehicle magnet when we arrive.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>🛡️ Satisfaction Guaranteed</h3>
+        <p>We’ll make it right if you’re not completely happy.</p>
+      </div>
+      <div class="card" style="background:#e0f7fa;color:#00796b;">
+        <h3>⭐ Customer Testimonial</h3>
+        <p>“Yard Guards PDX keeps my yard spotless — reliable and professional!” – 5★</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
 
