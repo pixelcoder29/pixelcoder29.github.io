@@ -393,10 +393,12 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 </div>
 
 <!-- --- Final CTA Section: "Ready for a Clean, Stress-Free Yard?" --- -->
-<section style="text-align:center; padding: 50px 20px; background-color: #f8f8f8;">
-  <h2>Ready for a Clean, Stress-Free Yard?</h2>
-  <button id="open-form" class="cta-button" style="max-width:300px; margin: 20px auto;">Get My Instant Quote</button>
-</section>
+<div class="full-bleed-wrapper" style="background:#f8f8f8;">
+  <div class="section-inner" style="text-align:center;">
+    <h2>Ready for a Clean, Stress-Free Yard?</h2>
+    <button id="open-form" class="cta-button" style="max-width:300px; margin: 20px auto;">Get My Instant Quote</button>
+  </div>
+</div>
 
 <!-- --- Hidden Form Modal --- -->
 <div id="quote-form-modal" class="quote-form-modal">
