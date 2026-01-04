@@ -238,47 +238,24 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 <!-- --- Section 2: Trust / Proof-Focused --- -->
 <div class="full-bleed-wrapper" style="background:#ffffff;">
   <div class="section-inner">
-    <div style="text-align:center;margin-bottom:50px;">
+    <div style="text-align:center;margin-bottom:30px;">
       <h2>Our Commitment to Your Yard</h2>
       <p>We keep your yard clean, safe, and ready to enjoy, so you can relax knowing the job is done right.</p>
     </div>
 
-    <div class="cards">
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>🚛 Waste Removal Included</h3>
-        <p>We haul away and properly dispose of all pet waste at no extra cost.</p>
-      </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>📸 Gate Photo Proof</h3>
-        <p>Receive a photo of your secured gate after each visit.</p>
-      </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>📱 Arrival Notifications</h3>
-        <p>We send a text when we’re on our way.</p>
-      </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>🐶 Pet-Friendly Professionals</h3>
-        <p>Trained, uniformed, background-checked, and dog-loving team.</p>
-      </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>🔄 Flexible Service</h3>
-        <p>No long-term contracts or obligations.</p>
-      </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>🚗 Easy to Identify</h3>
-        <p>Look for our branded vehicle magnet when we arrive.</p>
-      </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>🛡️ Satisfaction Guaranteed</h3>
-        <p>We’ll make it right if you’re not completely happy.</p>
-      </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>⭐ Customer Testimonial</h3>
-        <p>“Yard Guards PDX keeps my yard spotless — reliable and professional!” – 5★</p>
-      </div>
-    </div>
+    <ul style="max-width:700px;margin:0 auto;padding-left:20px;list-style:none;font-size:16px;line-height:1.8;color:#00796b;">
+      <li>🚛 <strong>Waste Removal Included</strong> – We haul away and properly dispose of all pet waste at no extra cost.</li>
+      <li>📸 <strong>Gate Photo Proof</strong> – Receive a photo of your secured gate after each visit.</li>
+      <li>📱 <strong>Arrival Notifications</strong> – We send a text when we’re on our way.</li>
+      <li>🐶 <strong>Pet-Friendly Professionals</strong> – Trained, uniformed, background-checked, and dog-loving team.</li>
+      <li>🔄 <strong>Flexible Service</strong> – No long-term contracts or obligations.</li>
+      <li>🚗 <strong>Easy to Identify</strong> – Look for our branded vehicle magnet when we arrive.</li>
+      <li>🛡️ <strong>Satisfaction Guaranteed</strong> – We’ll make it right if you’re not completely happy.</li>
+      <li>⭐ <strong>Customer Testimonial</strong> – “Yard Guards PDX keeps my yard spotless — reliable and professional!” – 5★</li>
+    </ul>
   </div>
 </div>
+
 
 
 <script defer>
