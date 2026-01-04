@@ -129,6 +129,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     overflow: hidden; /* Prevent any scrolling on the modal backdrop */
     position: fixed; /* Keep it fixed */
     touch-action: none; /* Prevent touch scrolling on backdrop */
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
   }
   
   .modal-content {
@@ -141,15 +143,18 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     max-width: 100%;
     width: 100%;
     height: calc(100vh - 40px); /* Full height minus top space */
+    height: calc(100dvh - 40px); /* Dynamic viewport - accounts for browser UI */
     max-height: calc(100vh - 40px);
+    max-height: calc(100dvh - 40px);
     border-radius: 12px 12px 0 0; /* Rounded top corners only */
     padding: 16px; /* Standard padding all around */
     padding-top: 50px; /* Just enough for the close button */
-    padding-bottom: 30px; /* Extra space at bottom for button */
+    padding-bottom: 40px; /* Extra space at bottom for button */
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     touch-action: pan-y; /* Only allow vertical scrolling inside modal */
+    box-sizing: border-box; /* Include padding in height calculation */
   }
   
   .quote-form-modal #close-form {
@@ -167,8 +172,12 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
+  
+  /* Extra padding for the form inside modal on mobile */
+  .quote-form-modal .quote-form {
+    padding-bottom: 20px;
+  }
 }
-
 
 </style>
 
