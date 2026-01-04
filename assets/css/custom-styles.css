@@ -221,6 +221,7 @@ footer a:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  align-items: stretch; /* ensures equal height across cards in the row */
 }
 
 .full-bleed-wrapper .card {
@@ -231,6 +232,11 @@ footer a:focus {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform .2s;
+
+  /* Flex for vertical centering of content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .full-bleed-wrapper .card:hover {
@@ -241,4 +247,10 @@ footer a:focus {
   .full-bleed-wrapper .card {
     flex: 1 1 100%;
   }
+}
+
+/* Optional: make text inside steps slightly bigger for clarity */
+.full-bleed-wrapper .card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
 }
