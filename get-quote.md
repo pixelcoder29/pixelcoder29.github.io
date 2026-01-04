@@ -164,7 +164,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 </form>
 
 <!-- --- Hero / Process Section --- -->
-<div class="full-bleed-wrapper" style="background:#f9f9f9;">
+<div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:50px;">
       <h2>We Scoop, You Relax</h2>
@@ -185,33 +185,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   </div>
 </div>
 
-<!-- --- Benefits Section --- -->
-<div class="full-bleed-wrapper" style="background:#ffffff;">
-  <div class="section-inner">
-    <div style="text-align:center;margin-bottom:50px;">
-      <h2>Why Choose Our Poop Scooping Service?</h2>
-      <p>We take the dirty work off your hands, giving you back your time and a yard you can be proud of.</p>
-    </div>
-
-    <div class="cards">
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>More Free Time</h3>
-        <p>Stop spending hours cleaning up after your pets. Focus on what matters most while we handle the mess.</p>
-      </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>Stress-Free</h3>
-        <p>Never worry about missing a cleanup. Our dependable service keeps your yard safe and clean.</p>
-      </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
-        <h3>Healthier Yard</h3>
-        <p>Regular waste removal protects your grass and keeps your yard vibrant and free from harmful bacteria.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- --- Section 1: Customer Benefits --- -->
-<div class="full-bleed-wrapper" style="background:#f0f9f4;">
+<div class="full-bleed-wrapper" style="background:#ffffff;">
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:50px;">
       <h2>Why Choose Yard Guards PDX?</h2>
@@ -236,7 +211,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 </div>
 
 <!-- --- Section 2: Trust / Proof-Focused --- -->
-<div class="full-bleed-wrapper" style="background:#ffffff;">
+<div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:30px;">
       <h2>Our Commitment to Your Yard</h2>
