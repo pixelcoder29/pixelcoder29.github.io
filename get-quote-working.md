@@ -107,7 +107,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   background: rgba(0, 0, 0, 0.5);
   display: none;
   z-index: 9999;
-  overflow: hidden; /* Prevent scrolling on the backdrop */
+  overflow: hidden;
 }
 
 .modal-content {
@@ -126,40 +126,40 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 /* Mobile Adjustments - Full Screen with Top Space */
 @media (max-width: 600px) {
   .quote-form-modal {
-    overflow: hidden; /* Prevent any scrolling on the modal backdrop */
-    position: fixed; /* Keep it fixed */
-    touch-action: none; /* Prevent touch scrolling on backdrop */
+    overflow: hidden;
+    position: fixed;
+    touch-action: none;
     height: 100vh;
-    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    height: 100dvh;
   }
   
   .modal-content {
-    position: fixed; /* Keep modal content fixed */
-    top: 40px; /* Start 40px from top */
+    position: fixed;
+    top: 40px;
     left: 0;
     right: 0;
     bottom: 0;
     margin: 0;
     max-width: 100%;
     width: 100%;
-    height: calc(100vh - 40px); /* Full height minus top space */
-    height: calc(100dvh - 40px); /* Dynamic viewport - accounts for browser UI */
+    height: calc(100vh - 40px);
+    height: calc(100dvh - 40px);
     max-height: calc(100vh - 40px);
     max-height: calc(100dvh - 40px);
-    border-radius: 12px 12px 0 0; /* Rounded top corners only */
-    padding: 16px; /* Standard padding all around */
-    padding-top: 50px; /* Just enough for the close button */
-    padding-bottom: 40px; /* Extra space at bottom for button */
+    border-radius: 12px 12px 0 0;
+    padding: 16px;
+    padding-top: 50px;
+    padding-bottom: 40px;
     overflow-y: auto;
     overflow-x: hidden;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    touch-action: pan-y; /* Only allow vertical scrolling inside modal */
-    box-sizing: border-box; /* Include padding in height calculation */
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    box-sizing: border-box;
   }
   
   .quote-form-modal #close-form {
-    position: fixed; /* Fix the close button */
-    top: 50px; /* 40px overlay space + 10px padding */
+    position: fixed;
+    top: 50px;
     right: 16px;
     font-size: 28px;
     z-index: 10;
@@ -173,12 +173,10 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
   
-  /* Extra padding for the form inside modal on mobile */
   .quote-form-modal .quote-form {
     padding-bottom: 20px;
   }
 }
-
 </style>
 
 
@@ -288,7 +286,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
       </div>
       <div class="card" style="background:#e0f7fa;color:#00796b;">
         <h3>🌿 Enjoy Your Yard</h3>
-        <p>Healthy, vibrant lawn that’s safe for your family and pets.</p>
+        <p>Healthy, vibrant lawn that's safe for your family and pets.</p>
       </div>
     </div>
   </div>
@@ -308,11 +306,11 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
           <li>🚛 We haul away all pet waste for a clean yard</li>
           <li>🛡️ Enjoy a clean, safe yard every day</li>
           <li>📸 Get a photo of your secured gate after every visit</li>
-          <li>📱 We send a text when we’re on our way</li>
+          <li>📱 We send a text when we're on our way</li>
           <li>🐶 Trained, dog-loving team you can trust</li>
           <li>🔄 No contracts, fully flexible service</li>
           <li>🚗 Spot our branded vehicle magnet on arrival</li>
-          <li>⭐ “They did amazing! Highly recommend to anyone who wants to take one thing off their plate.” – Wyatt D.</li>
+          <li>⭐ "They did amazing! Highly recommend to anyone who wants to take one thing off their plate." – Wyatt D.</li>
         </ul>
       </div>
       
@@ -331,66 +329,68 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 </section>
 
 <!-- Frequently Asked Questions (FAQs) -->
-<section style="background-color: #f8f8f8; padding: 40px 20px;">
-  <div style="max-width: 800px; margin: 0 auto; font-size: 16px; color: #333;">
-    <h3>Frequently Asked Questions (FAQs)</h3>
+<div class="full-bleed-wrapper" style="background:#f8f8f8;">
+  <div class="section-inner">
+    <h2 style="text-align:center; margin-bottom:40px;">Frequently Asked Questions (FAQs)</h2>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: Can you clean with my dog in the yard?</h4>
-      <p>A: Yes, we love cleaning with dogs! However, if your dog has shown signs of aggression, we ask that you keep them inside for the safety of our team. If your dog becomes aggressive, we will kindly ask you to secure them indoors for the duration of the service.</p>
-    </div>
+    <div style="max-width: 800px; margin: 0 auto; font-size: 16px; color: #333;">
+      <div style="margin-bottom: 20px;">
+        <h4>Q: Can you clean with my dog in the yard?</h4>
+        <p>A: Yes, we love cleaning with dogs! However, if your dog has shown signs of aggression, we ask that you keep them inside for the safety of our team. If your dog becomes aggressive, we will kindly ask you to secure them indoors for the duration of the service.</p>
+      </div>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: Do I need to be home during the service?</h4>
-      <p>A: No, you don’t need to be home! As long as we have access to your yard, we’ll take care of the rest. We’ll send you a text notification when we’re on our way, so you’ll always know when to expect us.</p>
-    </div>
+      <div style="margin-bottom: 20px;">
+        <h4>Q: Do I need to be home during the service?</h4>
+        <p>A: No, you don't need to be home! As long as we have access to your yard, we'll take care of the rest. We'll send you a text notification when we're on our way, so you'll always know when to expect us.</p>
+      </div>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: What areas do you serve?</h4>
-      <p>A: We proudly serve all of East Portland, including areas beyond the Willamette River, extending east to the end of Portland. We plan to expand our service areas soon!</p>
-    </div>
+      <div style="margin-bottom: 20px;">
+        <h4>Q: What areas do you serve?</h4>
+        <p>A: We proudly serve all of East Portland, including areas beyond the Willamette River, extending east to the end of Portland. We plan to expand our service areas soon!</p>
+      </div>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: How often can I schedule dog waste removal services?</h4>
-      <p>A: We offer weekly and bi-weekly services to keep your yard clean, safe, and odor-free. You can choose the frequency that fits your needs.</p>
-    </div>
+      <div style="margin-bottom: 20px;">
+        <h4>Q: How often can I schedule dog waste removal services?</h4>
+        <p>A: We offer weekly and bi-weekly services to keep your yard clean, safe, and odor-free. You can choose the frequency that fits your needs.</p>
+      </div>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: How do you ensure the safety of my pets?</h4>
-      <p>A: Pet safety is a top priority. We sanitize our tools and boots between yards, and we ensure all gates are securely closed after service. If we notice any abnormalities in pet waste that could indicate health issues, we’ll alert you right away.</p>
-    </div>
+      <div style="margin-bottom: 20px;">
+        <h4>Q: How do you ensure the safety of my pets?</h4>
+        <p>A: Pet safety is a top priority. We sanitize our tools and boots between yards, and we ensure all gates are securely closed after service. If we notice any abnormalities in pet waste that could indicate health issues, we'll alert you right away.</p>
+      </div>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: Do you offer dog waste removal for commercial properties?</h4>
-      <p>A: Yes, we provide professional dog waste removal services for commercial properties. Whether it’s a dog park or a pet-friendly business, we’ve got you covered!</p>
-    </div>
+      <div style="margin-bottom: 20px;">
+        <h4>Q: Do you offer dog waste removal for commercial properties?</h4>
+        <p>A: Yes, we provide professional dog waste removal services for commercial properties. Whether it's a dog park or a pet-friendly business, we've got you covered!</p>
+      </div>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: How do you handle bad weather?</h4>
-      <p>A: We always put safety first. If bad weather such as heavy rain or snow makes it unsafe to work, we’ll reschedule your service to the next available day.</p>
-    </div>
+      <div style="margin-bottom: 20px;">
+        <h4>Q: How do you handle bad weather?</h4>
+        <p>A: We always put safety first. If bad weather such as heavy rain or snow makes it unsafe to work, we'll reschedule your service to the next available day.</p>
+      </div>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: How does billing work for recurring services?</h4>
-      <p>A: We charge your card on file after each service. This ensures that you only pay for the services completed. If a service is skipped, you won’t be charged.</p>
-    </div>
+      <div style="margin-bottom: 20px;">
+        <h4>Q: How does billing work for recurring services?</h4>
+        <p>A: We charge your card on file after each service. This ensures that you only pay for the services completed. If a service is skipped, you won't be charged.</p>
+      </div>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: Are you insured?</h4>
-      <p>A: We are not currently insured, but we take every precaution to ensure your property and pets are safe while we work.</p>
-    </div>
+      <div style="margin-bottom: 20px;">
+        <h4>Q: Are you insured?</h4>
+        <p>A: We are not currently insured, but we take every precaution to ensure your property and pets are safe while we work.</p>
+      </div>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: What if I need to skip a service day?</h4>
-      <p>A: Life happens! If you need to skip a service, simply let us know, and we’ll reschedule for a more convenient day.</p>
-    </div>
+      <div style="margin-bottom: 20px;">
+        <h4>Q: What if I need to skip a service day?</h4>
+        <p>A: Life happens! If you need to skip a service, simply let us know, and we'll reschedule for a more convenient day.</p>
+      </div>
 
-    <div style="margin-bottom: 20px;">
-      <h4>Q: What happens if there’s an issue with the service?</h4>
-      <p>A: We strive to provide excellent service every time. If any issues arise, please contact us right away, and we’ll address the situation promptly.</p>
+      <div style="margin-bottom: 20px;">
+        <h4>Q: What happens if there's an issue with the service?</h4>
+        <p>A: We strive to provide excellent service every time. If any issues arise, please contact us right away, and we'll address the situation promptly.</p>
+      </div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- --- Final CTA Section: "Ready for a Clean, Stress-Free Yard?" --- -->
 <section style="text-align:center; padding: 50px 20px; background-color: #f8f8f8;">
@@ -398,44 +398,43 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   <button id="open-form" class="cta-button" style="max-width:300px; margin: 20px auto;">Get My Instant Quote</button>
 </section>
 
-<!-- --- Hidden Form Modal (same as the form at the top) --- -->
-<div id="quote-form-modal" class="quote-form-modal" style="display: none;">
-  <div class="modal-content" style="max-width:600px; margin: 0 auto; padding:24px; position: relative; background: white; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+<!-- --- Hidden Form Modal --- -->
+<div id="quote-form-modal" class="quote-form-modal">
+  <div class="modal-content">
     <span id="close-form" style="position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer;">&times;</span>
     
-    <!-- --- This is the same form as at the top --- -->
     <form class="quote-form" novalidate>
-      <div class="form-error-banner" id="form-error">Submission failed. Please try again.</div>
+      <div class="form-error-banner">Submission failed. Please try again.</div>
       <fieldset>
         <div class="form-row">
           <div class="form-group">
-            <label for="full_name">Full Name *</label>
+            <label for="full_name_modal">Full Name *</label>
             <input type="text" id="full_name_modal" name="fullName" placeholder="John Doe" required spellcheck="false">
-            <small class="error-message" id="name-error-modal"></small>
+            <small class="error-message"></small>
           </div>
           <div class="form-group">
-            <label for="phone">Phone Number *</label>
+            <label for="phone_modal">Phone Number *</label>
             <input type="tel" id="phone_modal" name="phoneNumber" placeholder="(503) 123-4567" maxlength="14" required spellcheck="false">
-            <small class="error-message" id="phone-error-modal"></small>
+            <small class="error-message"></small>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="email">Email *</label>
+            <label for="email_modal">Email *</label>
             <input type="email" id="email_modal" name="email" placeholder="john@email.com" required spellcheck="false">
-            <small class="error-message" id="email-error-modal"></small>
+            <small class="error-message"></small>
           </div>
           <div class="form-group">
-            <label for="zip">Zip Code *</label>
+            <label for="zip_modal">Zip Code *</label>
             <input type="text" id="zip_modal" name="zipCode" placeholder="97202" maxlength="5" required spellcheck="false">
-            <small class="error-message" id="zip-error-modal"></small>
+            <small class="error-message"></small>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="dogs">How many dogs do you have? *</label>
+            <label for="dogs_modal">How many dogs do you have? *</label>
             <select id="dogs_modal" name="howMany" required>
               <option value="" disabled selected>Select</option>
               <option>1</option>
@@ -445,21 +444,21 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
               <option>5</option>
               <option>6</option>
             </select>
-            <small class="error-message" id="dogs-error-modal"></small>
+            <small class="error-message"></small>
           </div>
           <div class="form-group">
-            <label for="frequency">Service Frequency *</label>
+            <label for="frequency_modal">Service Frequency *</label>
             <select id="frequency_modal" name="serviceFrequency" required>
               <option value="" disabled selected>Select</option>
               <option value="weekly">Weekly</option>
               <option value="bi-weekly">Bi-Weekly</option>
             </select>
-            <small class="error-message" id="freq-error-modal"></small>
+            <small class="error-message"></small>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="questions">Any questions or concerns?</label>
+          <label for="questions_modal">Any questions or concerns?</label>
           <textarea id="questions_modal" name="anyQuestions" rows="3"></textarea>
         </div>
 
@@ -470,110 +469,126 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   </div>
 </div>
 
-
 <script>
-  // JavaScript for opening and closing the form popup
+// JavaScript for opening and closing the form popup
 const openFormButton = document.getElementById("open-form");
 const quoteFormModal = document.getElementById("quote-form-modal");
 const closeFormButton = document.getElementById("close-form");
 
-// Open the form modal
 openFormButton.addEventListener("click", () => {
   quoteFormModal.style.display = "block";
-  document.body.style.overflow = "hidden"; // Prevent body scroll
+  document.body.style.overflow = "hidden";
 });
 
-// Close the form modal
 closeFormButton.addEventListener("click", () => {
   quoteFormModal.style.display = "none";
-  document.body.style.overflow = ""; // Re-enable body scroll
+  document.body.style.overflow = "";
 });
-
-// Modal will NOT close when clicking outside - removed that functionality
 </script>
-
-
-
-
 
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
 
-    const form = document.querySelector('.quote-form');
-    const fullName = document.getElementById("full_name");
-    const phone = document.getElementById("phone");
-    const zip = document.getElementById("zip");
-    const email = document.getElementById("email");
-    const dogs = document.getElementById("dogs");
-    const freq = document.getElementById("frequency");
-    const questions = document.getElementById("questions");
-    const formError = document.getElementById("form-error");
+    function setupFormValidation(formElement, fieldIds) {
+        const fullName = document.getElementById(fieldIds.fullName);
+        const phone = document.getElementById(fieldIds.phone);
+        const zip = document.getElementById(fieldIds.zip);
+        const email = document.getElementById(fieldIds.email);
+        const dogs = document.getElementById(fieldIds.dogs);
+        const freq = document.getElementById(fieldIds.frequency);
+        const questions = document.getElementById(fieldIds.questions);
+        const formError = formElement.querySelector('.form-error-banner');
 
-    function showError(el, msg){
-        const error = el.parentElement.querySelector('.error-message');
-        error.textContent = msg;
-        error.style.display = 'block';
-    }
-    function clearError(el){
-        const error = el.parentElement.querySelector('.error-message');
-        error.style.display = 'none';
-    }
+        function showError(el, msg){
+            const error = el.parentElement.querySelector('.error-message');
+            error.textContent = msg;
+            error.style.display = 'block';
+        }
+        function clearError(el){
+            const error = el.parentElement.querySelector('.error-message');
+            error.style.display = 'none';
+        }
 
-    fullName.addEventListener("blur",()=>{ fullName.value.trim()?clearError(fullName):showError(fullName,"Full Name is required.") });
-    phone.addEventListener("input", t=>{
-        let a=t.target.value.replace(/\D/g,"").substring(0,10), r="";
-        a.length>6?r=`(${a.slice(0,3)}) ${a.slice(3,6)}-${a.slice(6)}`:
-        a.length>3?r=`(${a.slice(0,3)}) ${a.slice(3)}`:
-        a.length>0&&(r=`(${a}`);
-        t.target.value=r;
-    });
-    phone.addEventListener("blur",()=>{ phone.value.replace(/\D/g,"").length!==10?showError(phone,"Please enter a valid 10-digit phone number."):clearError(phone) });
-    zip.addEventListener("input",()=>{ zip.value=zip.value.replace(/\D/g,"").substring(0,5) });
-    zip.addEventListener("blur",()=>{ zip.value.length!==5?showError(zip,"ZIP code must be 5 digits."):clearError(zip) });
-    email.addEventListener("blur",()=>{ email.checkValidity()?clearError(email):showError(email,"Please enter a valid email address.") });
-    dogs.addEventListener("change",()=>{ dogs.value?clearError(dogs):showError(dogs,"Please select how many dogs you have.") });
-    freq.addEventListener("change",()=>{ freq.value?clearError(freq):showError(freq,"Please select a service frequency.") });
+        fullName.addEventListener("blur",()=>{ fullName.value.trim()?clearError(fullName):showError(fullName,"Full Name is required.") });
+        phone.addEventListener("input", t=>{
+            let a=t.target.value.replace(/\D/g,"").substring(0,10), r="";
+            a.length>6?r=`(${a.slice(0,3)}) ${a.slice(3,6)}-${a.slice(6)}`:
+            a.length>3?r=`(${a.slice(0,3)}) ${a.slice(3)}`:
+            a.length>0&&(r=`(${a}`);
+            t.target.value=r;
+        });
+        phone.addEventListener("blur",()=>{ phone.value.replace(/\D/g,"").length!==10?showError(phone,"Please enter a valid 10-digit phone number."):clearError(phone) });
+        zip.addEventListener("input",()=>{ zip.value=zip.value.replace(/\D/g,"").substring(0,5) });
+        zip.addEventListener("blur",()=>{ zip.value.length!==5?showError(zip,"ZIP code must be 5 digits."):clearError(zip) });
+        email.addEventListener("blur",()=>{ email.checkValidity()?clearError(email):showError(email,"Please enter a valid email address.") });
+        dogs.addEventListener("change",()=>{ dogs.value?clearError(dogs):showError(dogs,"Please select how many dogs you have.") });
+        freq.addEventListener("change",()=>{ freq.value?clearError(freq):showError(freq,"Please select a service frequency.") });
 
-    form.addEventListener('submit', async function(e){
-        e.preventDefault();
-        formError.style.display = 'none';
-        let valid = true;
-        if(!fullName.value.trim()){ showError(fullName,"Full Name is required."); valid=false; }
-        if(phone.value.replace(/\D/g,"").length!==10){ showError(phone,"Please enter a valid 10-digit phone number."); valid=false; }
-        if(!email.checkValidity()){ showError(email,"Please enter a valid email address."); valid=false; }
-        if(zip.value.length!==5){ showError(zip,"ZIP code must be 5 digits."); valid=false; }
-        if(!dogs.value){ showError(dogs,"Please select how many dogs you have."); valid=false; }
-        if(!freq.value){ showError(freq,"Please select a service frequency."); valid=false; }
-        if(!valid) return;
+        formElement.addEventListener('submit', async function(e){
+            e.preventDefault();
+            formError.style.display = 'none';
+            let valid = true;
+            if(!fullName.value.trim()){ showError(fullName,"Full Name is required."); valid=false; }
+            if(phone.value.replace(/\D/g,"").length!==10){ showError(phone,"Please enter a valid 10-digit phone number."); valid=false; }
+            if(!email.checkValidity()){ showError(email,"Please enter a valid email address."); valid=false; }
+            if(zip.value.length!==5){ showError(zip,"ZIP code must be 5 digits."); valid=false; }
+            if(!dogs.value){ showError(dogs,"Please select how many dogs you have."); valid=false; }
+            if(!freq.value){ showError(freq,"Please select a service frequency."); valid=false; }
+            if(!valid) return;
 
-        const freqMap = { "weekly": "Weekly", "bi-weekly": "Bi-Weekly" };
-        const freqValue = freqMap[freq.value];
+            const freqMap = { "weekly": "Weekly", "bi-weekly": "Bi-Weekly" };
+            const freqValue = freqMap[freq.value];
 
-        const data = new URLSearchParams();
-        data.append("fullName", fullName.value.trim());
-        data.append("phoneNumber", phone.value.trim());
-        data.append("email", email.value.trim());
-        data.append("zipCode", zip.value.trim());
-        data.append("howMany", dogs.value);
-        data.append("serviceFrequency", freqValue);
-        data.append("anyQuestions", questions.value.trim());
+            const data = new URLSearchParams();
+            data.append("fullName", fullName.value.trim());
+            data.append("phoneNumber", phone.value.trim());
+            data.append("email", email.value.trim());
+            data.append("zipCode", zip.value.trim());
+            data.append("howMany", dogs.value);
+            data.append("serviceFrequency", freqValue);
+            data.append("anyQuestions", questions.value.trim());
 
-        try {
-            const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: data.toString()
-            });
+            try {
+                const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: data.toString()
+                });
 
-            if(response.ok){
-                window.location.href = '/thank-you/';
-            } else {
+                if(response.ok){
+                    window.location.href = '/thank-you/';
+                } else {
+                    formError.style.display = 'block';
+                }
+            } catch(err){
+                console.error(err);
                 formError.style.display = 'block';
             }
-        } catch(err){
-            console.error(err);
-            formError.style.display = 'block';
-        }
+        });
+    }
+
+    // Setup validation for top form
+    const topForm = document.querySelector('.quote-form:not(#quote-form-modal .quote-form)');
+    setupFormValidation(topForm, {
+        fullName: 'full_name',
+        phone: 'phone',
+        zip: 'zip',
+        email: 'email',
+        dogs: 'dogs',
+        frequency: 'frequency',
+        questions: 'questions'
+    });
+
+    // Setup validation for modal form
+    const modalForm = document.querySelector('#quote-form-modal .quote-form');
+    setupFormValidation(modalForm, {
+        fullName: 'full_name_modal',
+        phone: 'phone_modal',
+        zip: 'zip_modal',
+        email: 'email_modal',
+        dogs: 'dogs_modal',
+        frequency: 'frequency_modal',
+        questions: 'questions_modal'
     });
 });
 </script>
