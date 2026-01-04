@@ -96,6 +96,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     flex: 1 1 100%;
   }
 }
+
 /* --- Modal Styles --- */
 .quote-form-modal {
   position: fixed;
@@ -106,6 +107,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   background: rgba(0, 0, 0, 0.5);
   display: none;
   z-index: 9999;
+  overflow: hidden; /* Prevent scrolling on the backdrop */
 }
 
 .modal-content {
@@ -113,37 +115,69 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   border-radius: 10px;
   padding: 24px;
   position: relative;
-  margin: 10% auto; /* Center modal vertically on larger screens */
+  margin: 10% auto;
   max-width: 600px;
   width: 90%;
   box-sizing: border-box;
-  max-height: 80vh; /* Limit height to 80% of the viewport */
-  overflow-y: auto; /* Allow scrolling if content exceeds height */
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
-/* Mobile Adjustments */
+/* Mobile Adjustments - Full Screen with Top Space */
 @media (max-width: 600px) {
+  .quote-form-modal {
+    overflow: hidden; /* Prevent any scrolling on the modal backdrop */
+    position: fixed; /* Keep it fixed */
+    touch-action: none; /* Prevent touch scrolling on backdrop */
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  }
+  
   .modal-content {
+    position: fixed; /* Keep modal content fixed */
+    top: 40px; /* Start 40px from top */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
     max-width: 100%;
-    padding: 16px;
-    margin: 5% auto; /* Adjust margin for mobile */
-    border-radius: 8px;
-    max-height: 85vh; /* Prevent cutoff */
-    overflow-y: auto; /* Enable scrolling */
+    width: 100%;
+    height: calc(100vh - 40px); /* Full height minus top space */
+    height: calc(100dvh - 40px); /* Dynamic viewport - accounts for browser UI */
+    max-height: calc(100vh - 40px);
+    max-height: calc(100dvh - 40px);
+    border-radius: 12px 12px 0 0; /* Rounded top corners only */
+    padding: 16px; /* Standard padding all around */
+    padding-top: 50px; /* Just enough for the close button */
+    padding-bottom: 40px; /* Extra space at bottom for button */
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    touch-action: pan-y; /* Only allow vertical scrolling inside modal */
+    box-sizing: border-box; /* Include padding in height calculation */
+  }
+  
+  .quote-form-modal #close-form {
+    position: fixed; /* Fix the close button */
+    top: 50px; /* 40px overlay space + 10px padding */
+    right: 16px;
+    font-size: 28px;
+    z-index: 10;
+    background: white;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  /* Extra padding for the form inside modal on mobile */
+  .quote-form-modal .quote-form {
+    padding-bottom: 20px;
   }
 }
-
-@media (max-width: 400px) {
-  .modal-content {
-    padding: 12px;
-    margin: 15% auto;
-    max-height: 80vh; /* Prevent cutoff */
-    overflow-y: auto; /* Enable scrolling */
-  }
-}
-
-
-
 
 </style>
 
@@ -446,20 +480,16 @@ const closeFormButton = document.getElementById("close-form");
 // Open the form modal
 openFormButton.addEventListener("click", () => {
   quoteFormModal.style.display = "block";
+  document.body.style.overflow = "hidden"; // Prevent body scroll
 });
 
 // Close the form modal
 closeFormButton.addEventListener("click", () => {
   quoteFormModal.style.display = "none";
+  document.body.style.overflow = ""; // Re-enable body scroll
 });
 
-// Close the form if the user clicks outside of it
-window.addEventListener("click", (event) => {
-  if (event.target === quoteFormModal) {
-    quoteFormModal.style.display = "none";
-  }
-});
-
+// Modal will NOT close when clicking outside - removed that functionality
 </script>
 
 
