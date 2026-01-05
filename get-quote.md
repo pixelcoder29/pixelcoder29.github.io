@@ -43,6 +43,11 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 /* Inner content width control */
@@ -84,7 +89,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 }
 
 .section-inner p {
-  font-size: 20px;
+  font-size: 24px;
   color: #555;
   line-height: 1.6;
 }
@@ -96,7 +101,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     letter-spacing: -0.5px;
   }
   .section-inner p {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -108,7 +113,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
     line-height: 1.1;
   }
   .section-inner p {
-    font-size: 17px;
+    font-size: 19px;
   }
   .quote-form {
     padding: 24px 16px;
@@ -165,7 +170,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 }
 
 .full-bleed-wrapper .card p {
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 12px;
   line-height: 1.6;
   color: inherit;
@@ -173,7 +178,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 @media (max-width: 480px) {
   .full-bleed-wrapper .card p {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 
@@ -314,7 +319,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 
 @media (max-width: 480px) {
   .trust-section-left h2 {
-    font-size: 28px;
+    font-size: 32px;
     text-align: center;
   }
 }
@@ -346,20 +351,21 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 .trust-list {
   list-style: none;
   padding-left: 0;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.8;
-  color: #00796b;
+  color: #333;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
   .trust-list {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 
 @media (max-width: 480px) {
   .trust-list {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.8;
   }
 }
@@ -607,6 +613,8 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   </fieldset>
 </form>
 
+<div style="height: 60px;"></div>
+
 <!-- --- Hero / Process Section --- -->
 <div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner">
@@ -633,7 +641,7 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 </div>
 
 <!-- --- Section 1: Customer Benefits --- -->
-<div class="full-bleed-wrapper" style="background:#ffffff;">
+<div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:50px;">
       <h2>Why Choose Yard Guards PDX?</h2>
@@ -661,30 +669,64 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 <!-- --- Section 2: Trust / Proof-Focused (with image) --- -->
 <div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner">
-    <div class="trust-section-content">
-      
+    <div class="trust-section-content" style="display:flex; flex-wrap:wrap; gap:40px; align-items:flex-start;">
+
       <!-- Left: Bullet Points -->
-      <div class="trust-section-left">
+      <div class="trust-section-left" style="flex:1; min-width:300px;">
         <h2>Our Commitment to Your Yard</h2>
-        <p>We keep your yard clean and safe so you can relax knowing the job is done right.</p>
-        <ul class="trust-list">
-          <li data-icon="🚛">We haul away all pet waste for a clean yard</li>
-          <li data-icon="🛡️">Enjoy a clean, safe yard every day</li>
-          <li data-icon="📸">Get a photo of your secured gate after every visit</li>
-          <li data-icon="📱">We send a text when we're on our way</li>
-          <li data-icon="🐶">Trained, dog-loving team you can trust</li>
-          <li data-icon="🔄">No contracts, fully flexible service</li>
-          <li data-icon="🚗">Spot our branded vehicle magnet on arrival</li>
-          <li data-icon="⭐">"They did amazing! Highly recommend to anyone who wants to take one thing off their plate." – Wyatt D.</li>
+       <br>
+        <ul class="trust-list" style="list-style:none; padding:0; margin:0;">
+          
+          <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
+            <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">🚛</span>
+            <span>All Waste is hauled away</span>
+          </li>
+
+          <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
+            <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">🛡️</span>
+            <span>Enjoy a clean, safe yard every day</span>
+          </li>
+
+          <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
+            <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">📸</span>
+            <span>Photo of secured gate after every visit</span>
+          </li>
+
+          <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
+            <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">📱</span>
+            <span>Get a text when we're on our way</span>
+          </li>
+
+          <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
+            <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">🐶</span>
+            <span>Trained, dog-loving team you can trust</span>
+          </li>
+
+          <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
+            <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">🔄</span>
+            <span>No contracts, fully flexible service</span>
+          </li>
+
+          <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
+            <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">🚗</span>
+            <span>Branded vehicle magnet on arrival</span>
+          </li>
+
+          <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
+            <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">⭐</span>
+            <span>"They did amazing! Highly recommend to anyone who wants to take one thing off their plate." <br>– Wyatt D.</span>
+          </li>
+
         </ul>
       </div>
-      
-      <!-- Right: Image -->
-      <div class="trust-section-right">
-        <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard" loading="lazy">
-      </div>
 
+      <!-- Right: Image -->
+      <div class="trust-section-right" style="flex:1; min-width:300px;">
+        <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard" style="width:100%; height:auto; border-radius:8px;" loading="lazy">
+      </div>
+ <p style="text-align: center; width: 100%; padding-top: 10px; font-size: 26px">We keep your yard clean and safe so you can relax knowing the job is done right.</p>
     </div>
+    
   </div>
 </div>
 
@@ -695,129 +737,121 @@ body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
   </div>
 </div>
 
-<!-- Frequently Asked Questions (FAQs) -->
-<div class="full-bleed-wrapper" style="background:#f8f8f8;">
+<!-- Frequently Asked Questions (Professional + High-Converting) -->
+<div class="full-bleed-wrapper" style="background:#ffffff;">
   <div class="section-inner">
     <h2 style="text-align:center; margin-bottom:60px;">Frequently Asked Questions</h2>
 
     <div style="max-width: 900px; margin: 0 auto;">
+
+      <!-- 1. Safety & Pet Concerns (Most Important) -->
       <div class="faq-item">
         <div class="faq-question">
-          <span>Can you clean with my dog in the yard?</span>
+          <span>Will my pets be safe during service?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>Yes, we love cleaning with dogs! However, if your dog has shown signs of aggression, we ask that you keep them inside for the safety of our team. If your dog becomes aggressive, we will kindly ask you to secure them indoors for the duration of the service.</p>
+          <p>Your pets’ safety is our top priority. We sanitize our tools and boots between properties, secure all gates, and handle every yard with care. If we notice anything unusual in your pet’s waste that could indicate a health concern, we notify you immediately.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          <span>Do I need to be home during the service?</span>
+          <span>Can you clean if my dog is in the yard?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>No, you don't need to be home! As long as we have access to your yard, we'll take care of the rest. We'll send you a text notification when we're on our way, so you'll always know when to expect us.</p>
+         <p>Yes, we love pets! For safety, dogs that are uncomfortable with strangers should be kept inside during service. Otherwise, our team is happy to work around your furry friends.</p>
+
+        </div>
+      </div>
+
+      <!-- 2. Convenience & Access -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do I need to be home?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>No, you don’t have to be home. We just need access to your yard. You’ll receive a text when we’re on our way so you always know when to expect us.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          <span>What areas do you serve?</span>
+          <span>What if I need to skip a scheduled service?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>We proudly serve all of East Portland, including areas beyond the Willamette River, extending east to the end of Portland. We plan to expand our service areas soon!</p>
+<p>Life happens! Just notify us in advance and we’ll take care of the reschedule. No service, no charge.</p>
         </div>
       </div>
 
+      <!-- 3. Reliability & Weather -->
       <div class="faq-item">
         <div class="faq-question">
-          <span>How often can I schedule dog waste removal services?</span>
+          <span>Do you work in bad weather?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>We offer weekly and bi-weekly services to keep your yard clean, safe, and odor-free. You can choose the frequency that fits your needs.</p>
+          <p>We service rain or shine, except when driving conditions are unsafe (icy roads or extreme weather). Safety for both you and our team is always our top concern.</p>
         </div>
       </div>
 
+      <!-- 4. Payment & Billing -->
       <div class="faq-item">
         <div class="faq-question">
-          <span>How do you ensure the safety of my pets?</span>
+          <span>How do you handle payment?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>Pet safety is a top priority. We sanitize our tools and boots between yards, and we ensure all gates are securely closed after service. If we notice any abnormalities in pet waste that could indicate health issues, we'll alert you right away.</p>
+<p>We charge your card on file the morning of your scheduled service. You only pay for services that are completed.</p>
         </div>
       </div>
 
+      <!-- 5. Scheduling & Frequency -->
       <div class="faq-item">
         <div class="faq-question">
-          <span>Do you offer dog waste removal for commercial properties?</span>
+          <span>How often should I schedule service?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>Yes, we provide professional dog waste removal services for commercial properties. Whether it's a dog park or a pet-friendly business, we've got you covered!</p>
+          <p>We offer weekly or bi-weekly service plans to keep your yard clean, safe, and odor-free. Choose the frequency that fits your needs.</p>
         </div>
       </div>
 
+      <!-- 6. Service Area -->
       <div class="faq-item">
         <div class="faq-question">
-          <span>How do you handle bad weather?</span>
+          <span>Where do you provide service?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>We always put safety first. If bad weather such as heavy rain or snow makes it unsafe to work, we'll reschedule your service to the next available day.</p>
+<p>We proudly serve all of East Portland, from the Willamette River to the eastern city limits.</p>
         </div>
       </div>
 
+      <!-- 7. Service Quality & Issues -->
       <div class="faq-item">
         <div class="faq-question">
-          <span>How does billing work for recurring services?</span>
+          <span>What if I’m not satisfied or there’s an issue?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>We charge your card on file after each service. This ensures that you only pay for the services completed. If a service is skipped, you won't be charged.</p>
+          <p>Your satisfaction is guaranteed. If anything isn’t right, contact us immediately, and we’ll resolve it promptly.</p>
         </div>
       </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>Are you insured?</span>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-answer">
-          <p>We are not currently insured, but we take every precaution to ensure your property and pets are safe while we work.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What if I need to skip a service day?</span>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-answer">
-          <p>Life happens! If you need to skip a service, simply let us know, and we'll reschedule for a more convenient day.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What happens if there's an issue with the service?</span>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-answer">
-          <p>We strive to provide excellent service every time. If any issues arise, please contact us right away, and we'll address the situation promptly.</p>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 
+
 <!-- --- Final CTA Section: "Ready for a Clean, Stress-Free Yard?" --- -->
-<div class="full-bleed-wrapper" style="background:#f8f8f8;">
+<div class="full-bleed-wrapper" style="background:#ffffff">
   <div class="section-inner" style="text-align:center;">
-    <h2 style="margin-bottom:32px;">Ready for a Clean, Stress-Free Yard?</h2>
+    <h2 style="margin-bottom:40px;">Ready for a Clean, Stress-Free Yard?</h2>
+    
     <button id="open-form" class="cta-button" style="max-width:300px; margin: 0 auto;">Get My Instant Quote</button>
   </div>
 </div>
