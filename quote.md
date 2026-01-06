@@ -175,7 +175,6 @@ document.addEventListener('DOMContentLoaded', async function() {
   document.getElementById('billing-cycle').textContent = billingCycle;
   document.getElementById('total-price').textContent = totalPrice;
   document.getElementById('total-price-repeat').textContent = totalPrice;
-  document.getElementById('billing-cycle-repeat').textContent = billingCycle;
 
   // Quote open tracking can be added later if needed (e.g., via Google Analytics)
 
