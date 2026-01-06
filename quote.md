@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   justify-content: center;
   align-items: center;
   min-height: 60vh;
-  background: #f3f3f3;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .loading-content {
