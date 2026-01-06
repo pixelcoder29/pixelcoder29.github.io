@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   text-align: center;
   max-width: 400px;
   padding: 40px;
-  background: white;
+  background: #f3f3f3;
   border-radius: 16px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 .spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid #f3f3f3;
+  border: 4px solid #e0e0e0;
   border-top: 4px solid #4CAF50;
   border-radius: 50%;
   animation: spin 1s linear infinite;
