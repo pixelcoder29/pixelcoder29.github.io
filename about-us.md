@@ -3,31 +3,59 @@ layout: page
 title: About Us - Professional Dog Waste Removal Portland OR | Yard Guards PDX
 description: "Professional dog waste removal service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving all East Portland neighborhoods. Get your free quote today!"
 permalink: /about-us/
+keywords: "dog waste removal Portland, pet waste cleanup Portland OR, professional poop scooping Portland, yard waste removal East Portland, dog waste service Portland"
 ---
 
 <link rel="stylesheet" href="/assets/css/custom-pages.css">
 <script src="/assets/js/custom-pages.js" defer></script>
 
-<!-- Schema Markup for Local Business SEO -->
+<!-- Breadcrumbs Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pixelcoder29.github.io"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About Us",
+      "item": "https://pixelcoder29.github.io/about-us/"
+    }
+  ]
+}
+</script>
+
+<!-- Enhanced Local Business Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://pixelcoder29.github.io/#organization",
   "name": "Yard Guards PDX",
-  "description": "Professional dog waste removal service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving all East Portland.",
+  "alternateName": "Yard Guards Portland",
+  "description": "Professional dog waste removal and pet waste cleanup service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving all East Portland neighborhoods including Hawthorne, Belmont, Division, and beyond the Willamette River.",
   "url": "https://pixelcoder29.github.io",
   "telephone": "+15035120349",
   "email": "service@yardguardspdx.com",
+  "foundingDate": "2024",
   "address": {
     "@type": "PostalAddress",
     "addressRegion": "OR",
-    "addressLocality": "Portland"
+    "addressLocality": "Portland",
+    "addressCountry": "US"
   },
   "areaServed": [
     {
       "@type": "City",
       "name": "Portland",
-      "addressRegion": "OR"
+      "addressRegion": "OR",
+      "addressCountry": "US"
     },
     {
       "@type": "GeoCircle",
@@ -36,27 +64,121 @@ permalink: /about-us/
         "latitude": 45.5152,
         "longitude": -122.6784
       },
-      "geoRadius": 15000
+      "geoRadius": 15000,
+      "addressCountry": "US"
+    },
+    {
+      "@type": "Place",
+      "name": "East Portland",
+      "addressRegion": "OR",
+      "addressCountry": "US"
     }
   ],
   "serviceType": [
     "Dog Waste Removal",
     "Pet Waste Cleanup",
     "Poop Scooping Service",
-    "Yard Waste Management"
+    "Yard Waste Management",
+    "Professional Pet Waste Service"
   ],
   "priceRange": "$$",
-  "paymentAccepted": "Cash, Credit Card",
+  "paymentAccepted": ["Cash", "Credit Card"],
   "currenciesAccepted": "USD",
   "openingHours": "Mo-Su 08:00-18:00",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "1"
+    "reviewCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Wyatt D."
+    },
+    "reviewBody": "They did amazing! Highly recommend to anyone who wants to take one thing off their plate."
   },
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61584140774286",
     "https://www.instagram.com/yardguardspdx"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Dog Waste Removal Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Weekly Dog Waste Removal",
+          "description": "Professional weekly dog waste removal service with free hauling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bi-Weekly Dog Waste Removal",
+          "description": "Professional bi-weekly dog waste removal service with free hauling"
+        }
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Dog Waste Removal Portland",
+    "Pet Waste Cleanup Portland OR",
+    "Professional Poop Scooping Portland",
+    "Yard Waste Removal East Portland",
+    "Dog Waste Service Portland"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas of the yard do you clean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We clean all outdoor areas where your dogs spend time, including the backyard, sidewalks, patios, and any common areas. We ensure thorough coverage for a completely clean space."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle different weather conditions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We service in rain or shine, but will reschedule if driving conditions are unsafe due to ice, snow, or extreme weather. Your safety and ours is our top priority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work around pets and children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! Our team is experienced with dogs and families. We work safely around pets and children, and can accommodate specific timing preferences for the best experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you licensed and insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we are fully licensed and insured for your peace of mind. We maintain proper business insurance and follow all local regulations for waste disposal and service provision."
+      }
+    }
   ]
 }
 </script>

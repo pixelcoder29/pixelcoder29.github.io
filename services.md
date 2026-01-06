@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Services
+title: Dog Waste Removal Services Portland OR | Yard Guards PDX
+description: "Professional dog waste removal services in Portland OR. Weekly & bi-weekly poop scooping with free waste hauling. 100% satisfaction guarantee. Serving all East Portland neighborhoods."
 permalink: /services/
+keywords: "dog waste removal services Portland, poop scooping Portland OR, pet waste cleanup Portland, yard waste removal East Portland, professional dog poop service Portland"
 ---
 
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -10,6 +12,167 @@ permalink: /services/
 
 <link rel="stylesheet" href="/assets/css/custom-pages.css">
 <script src="/assets/js/custom-pages.js" defer></script>
+
+<!-- Breadcrumbs Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pixelcoder29.github.io"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://pixelcoder29.github.io/services/"
+    }
+  ]
+}
+</script>
+
+<!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://pixelcoder29.github.io/services/#service",
+  "name": "Professional Dog Waste Removal Services",
+  "description": "Complete dog waste removal and pet waste cleanup services in Portland OR. Weekly and bi-weekly poop scooping with free waste hauling and 100% satisfaction guarantee.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "@id": "https://pixelcoder29.github.io/#organization",
+    "name": "Yard Guards PDX",
+    "url": "https://pixelcoder29.github.io"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Portland",
+      "addressRegion": "OR",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "Place",
+      "name": "East Portland",
+      "addressRegion": "OR",
+      "addressCountry": "US"
+    }
+  ],
+  "serviceType": [
+    "Dog Waste Removal",
+    "Pet Waste Cleanup",
+    "Poop Scooping Service",
+    "Yard Waste Management"
+  ],
+  "category": "Home & Garden Services",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Weekly Dog Waste Removal",
+      "description": "Professional weekly dog waste removal service with free hauling",
+      "priceRange": "$$"
+    },
+    {
+      "@type": "Offer",
+      "name": "Bi-Weekly Dog Waste Removal",
+      "description": "Professional bi-weekly dog waste removal service with free hauling",
+      "priceRange": "$$"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Dog Waste Removal Service Plans",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Weekly Service Plan",
+          "description": "Weekly professional dog waste removal with free waste hauling"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bi-Weekly Service Plan",
+          "description": "Bi-weekly professional dog waste removal with free waste hauling"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+
+<!-- FAQ Schema for Services -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas of the yard do you clean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We clean all outdoor areas where your dogs spend time, including the backyard, sidewalks, patios, and any common areas. We ensure thorough coverage for a completely clean space."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle different weather conditions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We service in rain or shine, but will reschedule if driving conditions are unsafe due to ice, snow, or extreme weather. Your safety and ours is our top priority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work around pets and children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! Our team is experienced with dogs and families. We work safely around pets and children, and can accommodate specific timing preferences for the best experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you licensed and insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we are fully licensed and insured for your peace of mind. We maintain proper business insurance and follow all local regulations for waste disposal and service provision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I need to change my service schedule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Life happens! We offer flexible scheduling with no contracts. Simply let us know in advance about any changes to your service needs."
+      }
+    }
+  ]
+}
+</script>
 
 
 
