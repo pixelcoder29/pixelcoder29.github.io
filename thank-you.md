@@ -6,8 +6,8 @@ permalink: /thank-you/
 
 <div class="thank-you-container">
   <h1>Thank You!</h1>
-  <p>Your card has been saved successfully. We'll be in touch soon to confirm your service start date.</p>
-  <p>In the meantime, if you'd like to provide additional details to ensure a smooth service, please fill out this <a href="https://forms.gle/your-form-link" target="_blank">quick form</a>.</p>
+  <p>Your card has been saved successfully. The next step is to provide your service details so we can schedule your service.</p>
+  <p>Please fill out this <a href="https://forms.gle/your-form-link" target="_blank">required form</a> with your full address and any other important information.</p>
   <p>Questions? Contact us at service@yardguardspdx.com</p>
 </div>
 
