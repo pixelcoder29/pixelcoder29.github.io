@@ -105,6 +105,9 @@ url-pretty: "YardGuardsPDX.com"
 # Add the website title to the title of every page
 title-on-all-pages: true
 
+# Base URL for GitHub Pages
+url: "https://pixelcoder29.github.io"
+
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
 
@@ -299,4 +302,3 @@ plugins:
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
-
