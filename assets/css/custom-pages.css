@@ -846,23 +846,10 @@ html, body {
 /* === NAVIGATION STYLES === */
 
 /* Fix mobile navbar grow/shrink animation */
-.navbar,
-.navbar-collapse,
-.navbar-toggler {
-  transition: none !important;
-}
-
-.navbar-collapse {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.navbar-nav {
-  margin: 0 !important;
-}
-
-.navbar {
-  height: 70px !important;
+@media (max-width: 768px) {
+  .navbar-collapse {
+    transition: none !important;
+  }
 }
 
 /* Get Quote navigation button - desktop only */
