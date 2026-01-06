@@ -85,8 +85,8 @@ permalink: /quote/
     </div>
 
     <div class="quote-actions">
-      <button id="start-subscription" class="cta-button">Start My Subscription</button>
-      <p class="billing-note">You'll be charged $<span id="total-price-repeat"></span> every <span id="billing-cycle-repeat"></span> starting today.</p>
+      <button id="start-subscription" class="cta-button">Save My Card</button>
+      <p class="billing-note">Your card will be saved securely and you'll be charged $<span id="total-price-repeat"></span> on your service day.</p>
     </div>
   </div>
 </div>
