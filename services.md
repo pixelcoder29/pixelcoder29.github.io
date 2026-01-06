@@ -18,7 +18,7 @@ permalink: /services/
   <div class="section-inner" style="text-align:center;">
     <h1>Dog Waste Removal Services in East Portland</h1>
     <p style="font-size:20px; margin:24px 0 32px;">Professional, reliable dog poop scooping for residential properties. Weekly and bi-weekly service options tailored to your needs.</p>
-    <a href="/get-quote/" class="cta-button">Get Your Free Quote</a>
+    <button class="open-form-btn cta-button">Get Your Free Quote</button>
   </div>
 </div>
 
@@ -32,19 +32,19 @@ permalink: /services/
         <h3>Weekly Service</h3>
         <p>Perfect for households with 1-2 dogs. Keep your yard consistently clean and odor-free with regular weekly visits.</p>
         <div class="frequency">Every 7 Days</div>
-        <p style="font-size:16px; color:#666;">Pricing based on number of dogs - Get your personalized quote</p>
+        <p style="font-size:16px; color:#666;">Get your personalized quote</p>
       </div>
 
       <div class="service-option">
         <h3>Bi-Weekly Service</h3>
         <p>Ideal for homes with fewer dogs or lighter waste. Professional cleanup every two weeks for ongoing yard maintenance.</p>
         <div class="frequency">Every 14 Days</div>
-        <p style="font-size:16px; color:#666;">Pricing based on number of dogs - Get your personalized quote</p>
+        <p style="font-size:16px; color:#666;">Get your personalized quote</p>
       </div>
     </div>
 
     <div style="text-align:center; margin-top:40px;">
-      <a href="/get-quote/" class="cta-button">Get Your Custom Quote</a>
+      <button class="open-form-btn cta-button">Get Your Custom Quote</button>
       <p style="font-size:16px; color:#666; margin-top:16px;">No contracts • Flexible scheduling • Professional service</p>
     </div>
   </div>
@@ -86,10 +86,10 @@ permalink: /services/
       <li><strong>Thorough Cleanup:</strong> We remove all dog waste from your yard, sidewalks, and common areas</li>
       <li><strong>Eco-Friendly Disposal:</strong> Waste is properly disposed of in accordance with local environmental guidelines</li>
       <li><strong>Gate Security:</strong> We secure all gates and provide photos after each visit for your peace of mind</li>
-      <li><strong>Text Notifications:</strong> Receive a text message when we're on our way and when service is complete</li>
+      <li><strong>Text Notifications:</strong> Receive a text message when we're on our way to your location</li>
       <li><strong>Weather-Appropriate:</strong> Service continues rain or shine, except in extreme weather conditions</li>
       <li><strong>Pet Safety:</strong> Our team is experienced with dogs and takes extra care around your pets</li>
-      <li><strong>Reliable Scheduling:</strong> Consistent service times with flexibility for schedule changes</li>
+      <li><strong>Reliable Scheduling:</strong> Consistent service times with flexible options</li>
       <li><strong>Professional Equipment:</strong> We use proper tools and sanitation practices for the best results</li>
     </ul>
   </div>
@@ -170,7 +170,7 @@ permalink: /services/
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>Life happens! We offer flexible scheduling with no contracts. Simply let us know in advance if you need to adjust your service frequency or skip a visit.</p>
+          <p>Life happens! We offer flexible scheduling with no contracts. Simply let us know in advance about any changes to your service needs.</p>
         </div>
       </div>
 
@@ -191,8 +191,8 @@ permalink: /services/
 <!-- --- Final CTA --- -->
 <div class="full-bleed-wrapper" style="background:#ffffff;">
   <div class="section-inner" style="text-align:center;">
-    <h2 style="margin-bottom:24px;">Ready for Clean, Hassle-Free Yards?</h2>
-    <p style="font-size:20px; margin-bottom:32px;">Get your personalized quote today and experience the convenience of professional dog waste removal.</p>
-    <a href="/get-quote/" class="cta-button">Get Your Free Quote</a>
+    <h2 style="margin-bottom:24px; color: #1a1a1a;">Ready for Clean, Hassle-Free Yards?</h2>
+    <p style="font-size:20px; margin-bottom:32px; color: #37474f;">Get your personalized quote today and experience the convenience of professional dog waste removal.</p>
+    <button class="open-form-btn cta-button">Get Your Free Quote</button>
   </div>
 </div>

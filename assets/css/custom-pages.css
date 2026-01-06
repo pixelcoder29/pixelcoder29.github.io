@@ -117,24 +117,24 @@ html, body {
 }
 
 .full-bleed-wrapper .card {
-  padding: 32px 24px;
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.08);
   text-align: center;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  place-content: center;
   align-items: center;
-  justify-content: center;
   height: 180px;
   background: white;
+  padding: 20px;
 }
 
 @media (min-width: 481px) {
   .full-bleed-wrapper .card {
-    padding: 40px 30px;
     border-radius: 24px;
     height: 220px;
+    padding: 30px;
   }
 }
 
@@ -153,7 +153,7 @@ html, body {
 
 .full-bleed-wrapper .card p {
   font-size: 18px;
-  margin-top: 12px;
+  margin-top: 8px;
   line-height: 1.6;
   color: inherit;
 }
@@ -342,10 +342,11 @@ html, body {
 }
 
 .trust-list li {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  text-align: left;
 }
 
 @media (min-width: 481px) {
@@ -525,6 +526,360 @@ html, body {
   }
 }
 
+/* === ABOUT US PAGE STYLES === */
+
+/* About Us Story Grid */
+.about-us-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about-us-story-grid {
+    display: block;
+    gap: 0;
+  }
+
+  .about-us-story-grid > div:first-child {
+    margin-bottom: 3rem;
+  }
+
+  .about-us-story-grid > div:last-child {
+    text-align: center;
+  }
+
+  .about-us-story-grid > div:last-child img {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Feature Cards */
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-card {
+    padding: 1.25rem;
+  }
+}
+
+/* === ABOUT US PAGE MOBILE OPTIMIZATIONS === */
+
+/* About Us Typography Improvements */
+.full-bleed-wrapper:nth-child(1) h1 {
+  font-size: 2.8rem;
+}
+
+.full-bleed-wrapper:nth-child(1) p {
+  font-size: 1.6rem;
+  color: #444;
+}
+
+.full-bleed-wrapper:nth-child(2) h2 {
+  font-size: 2.3rem;
+  color: #2c2c2c;
+}
+
+.full-bleed-wrapper:nth-child(2) p {
+  font-size: 1.25rem;
+  color: #444;
+}
+
+.full-bleed-wrapper:nth-child(3) h2 {
+  font-size: 2.3rem;
+  color: #2c2c2c;
+}
+
+.full-bleed-wrapper:nth-child(3) p {
+  font-size: 1.25rem;
+  color: #444;
+}
+
+.full-bleed-wrapper:nth-child(4) h2 {
+  font-size: 2.3rem;
+  color: #2c2c2c;
+}
+
+.full-bleed-wrapper:nth-child(4) p {
+  font-size: 1.25rem;
+  color: #444;
+}
+
+.full-bleed-wrapper:nth-child(4) h3 {
+  font-size: 1.8rem;
+}
+
+.full-bleed-wrapper:nth-child(4) .section-inner > div > div > div p {
+  font-size: 1.15rem;
+  color: #444;
+}
+
+.full-bleed-wrapper:nth-child(5) h2 {
+  font-size: 2.3rem;
+  color: #2c2c2c;
+}
+
+.full-bleed-wrapper:nth-child(5) p {
+  font-size: 1.25rem;
+  color: #444;
+}
+
+.full-bleed-wrapper:last-child h2 {
+  font-size: 2.3rem;
+  color: white;
+}
+
+.full-bleed-wrapper:last-child p {
+  font-size: 1.25rem;
+  color: white;
+}
+
+/* Mobile hero section */
+@media (max-width: 480px) {
+  .full-bleed-wrapper:first-child .section-inner {
+    padding: 60px 20px;
+  }
+
+  .full-bleed-wrapper:first-child h1 {
+    font-size: 2.1rem !important;
+    line-height: 1.2;
+  }
+
+  .full-bleed-wrapper:first-child p {
+    font-size: 1.3rem !important;
+    line-height: 1.4;
+  }
+
+  .full-bleed-wrapper:first-child button {
+    padding: 14px 24px !important;
+    font-size: 1.1rem !important;
+    width: 100% !important;
+    max-width: 280px !important;
+  }
+}
+
+/* Mobile two-column layout fixes - force stacked layout */
+@media (max-width: 768px) {
+  /* Target the grid container in the second section */
+  .full-bleed-wrapper:nth-child(2) .section-inner > div > div[style*="display: grid"] {
+    display: block !important;
+    grid-template-columns: unset !important;
+    gap: 0 !important;
+  }
+
+  /* Stack the content and image vertically */
+  .full-bleed-wrapper:nth-child(2) .section-inner > div > div > div {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Add space between content and image */
+  .full-bleed-wrapper:nth-child(2) .section-inner > div > div > div:first-child {
+    margin-bottom: 3rem !important;
+  }
+
+  /* Center the image container */
+  .full-bleed-wrapper:nth-child(2) .section-inner > div > div > div:last-child {
+    text-align: center !important;
+  }
+
+  /* Make image larger on mobile */
+  .full-bleed-wrapper:nth-child(2) .section-inner > div > div > div:last-child img {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Mobile service cards */
+@media (max-width: 768px) {
+  .full-bleed-wrapper:nth-child(3) .section-inner .section-inner h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .full-bleed-wrapper:nth-child(3) .section-inner .section-inner p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Mobile why choose us section - Force single column layout */
+@media (max-width: 768px) {
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > p {
+    font-size: 1.1rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Force the grid to display as block on mobile - more specific override */
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > div[style] {
+    display: block !important;
+    grid-template-columns: unset !important;
+    gap: 0 !important;
+  }
+
+  /* Ensure each column stacks vertically */
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > div > div {
+    margin-bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Individual feature items as cards */
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > div > div {
+    background: white !important;
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    margin-bottom: 1.5rem !important;
+    border: 1px solid #f0f0f0 !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > div > div:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+  }
+
+  /* Last item in each column shouldn't have bottom margin */
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > div > div:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Extra small mobile devices - even more compact */
+@media (max-width: 480px) {
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > h2 {
+    font-size: 1.6rem !important;
+  }
+
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > p {
+    font-size: 1rem !important;
+  }
+
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > div > div h3 {
+    font-size: 1.3rem !important;
+  }
+
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > div > div p {
+    font-size: 0.95rem !important;
+  }
+
+  .full-bleed-wrapper:nth-child(4) .section-inner > div > div > div > div {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Mobile CTA sections */
+@media (max-width: 480px) {
+  .full-bleed-wrapper .section-inner h3 {
+    font-size: 1.4rem !important;
+  }
+
+  .full-bleed-wrapper .section-inner p {
+    font-size: 1rem !important;
+  }
+
+  .open-form-btn.cta-button {
+    padding: 14px 24px !important;
+    font-size: 1.1rem !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+
+  .full-bleed-wrapper:last-child .section-inner h2 {
+    font-size: 2rem !important;
+  }
+
+  .full-bleed-wrapper:last-child .section-inner p {
+    font-size: 1.2rem !important;
+  }
+
+  .full-bleed-wrapper:last-child .section-inner div button {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+/* === NAVIGATION STYLES === */
+
+/* Get Quote navigation button - desktop only */
+@media (min-width: 1200px) {
+  .get-quote-nav-btn {
+    background: #ff6d00 !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    text-align: center !important;
+    line-height: 1 !important;
+    transition: all 0.3s ease !important;
+    margin-left: 12px !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
+  .get-quote-nav-btn:hover {
+    background: #e55a00 !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(255,109,0,0.4) !important;
+  }
+
+  .get-quote-nav-item {
+    margin-left: 12px;
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
 /* === PAGE-SPECIFIC STYLES === */
 
 /* Services page styles */
@@ -637,6 +992,21 @@ html, body {
   color: #4CAF50;
   font-weight: bold;
   flex-shrink: 0;
+}
+
+/* Mobile optimization for benefits list */
+@media (max-width: 768px) {
+  .benefits-list li {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .benefits-list li strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
 }
 
 /* Service area */

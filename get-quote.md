@@ -135,54 +135,45 @@ permalink: /get-quote/
 <!-- --- Section 2: Trust / Proof-Focused (with image) --- -->
 <div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner">
-    <div class="trust-section-content" style="display:flex; flex-wrap:wrap; gap:40px; align-items:flex-start;">
+    <div class="trust-section-content">
 
       <!-- Left: Bullet Points -->
       <div class="trust-section-left" style="flex:1; min-width:300px;">
         <h2>Our Commitment to Your Yard</h2>
        <br>
         <ul class="trust-list" style="list-style:none; padding:0; margin:0;">
-          
           <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
             <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">🚛</span>
             <span>All Waste is hauled away</span>
           </li>
-
           <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
             <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">🛡️</span>
             <span>Enjoy a clean, safe yard every day</span>
           </li>
-
           <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
             <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">📸</span>
             <span>Photo of secured gate after every visit</span>
           </li>
-
           <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
             <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">📱</span>
             <span>Get a text when we're on our way</span>
           </li>
-
           <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
             <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">🐶</span>
             <span>Trained, dog-loving team you can trust</span>
           </li>
-
           <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
             <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">🔄</span>
             <span>No contracts, fully flexible service</span>
           </li>
-
           <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
             <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">🚗</span>
             <span>Branded vehicle magnet on arrival</span>
           </li>
-
           <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
             <span style="font-size:24px; width:36px; text-align:center; margin-right:12px;">⭐</span>
-            <span>"They did amazing! Highly recommend to anyone who wants to take one thing off their plate." <br>– Wyatt D.</span>
+            <span>"They did amazing! Highly recommend to anyone who wants to take one thing off their plate." – Wyatt D.</span>
           </li>
-
         </ul>
       </div>
 

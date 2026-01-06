@@ -4,17 +4,41 @@ function initializeFormModal() {
   const quoteFormModal = document.getElementById("quote-form-modal");
   const closeFormButton = document.getElementById("close-form");
 
-  if (openFormButtons.length && quoteFormModal && closeFormButton) {
-    openFormButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        quoteFormModal.style.display = "block";
-        document.body.style.overflow = "hidden";
-      });
-    });
+  console.log("Modal elements found:", {
+    openButtons: openFormButtons.length,
+    modal: !!quoteFormModal,
+    closeButton: !!closeFormButton
+  });
 
-    closeFormButton.addEventListener("click", () => {
+  if (quoteFormModal && closeFormButton) {
+    // Simple, direct event handlers
+    function openModalHandler() {
+      console.log("Opening modal");
+      quoteFormModal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModalHandler(e) {
+      console.log("Closing modal via X button");
+      e.preventDefault();
+      e.stopPropagation();
       quoteFormModal.style.display = "none";
       document.body.style.overflow = "";
+      return false;
+    }
+
+    // Add event listeners - only for opening and X button closing
+    openFormButtons.forEach(button => {
+      button.addEventListener("click", openModalHandler);
+    });
+
+    // Only allow closing via the X button - NO click-outside for exit-intent
+    closeFormButton.addEventListener("click", closeModalHandler);
+    console.log("Modal close button event listener added");
+  } else {
+    console.error("Modal elements not found:", {
+      modal: !!quoteFormModal,
+      closeButton: !!closeFormButton
     });
   }
 }
@@ -140,10 +164,77 @@ function setupFormValidation(formElement, fieldIds) {
   });
 }
 
+// === EXIT-INTENT FUNCTIONALITY (DESKTOP ONLY) ===
+function initializeExitIntent() {
+  // Only enable on desktop devices
+  if (window.innerWidth <= 768) return;
+
+  let exitIntentTriggered = false;
+  const quoteFormModal = document.getElementById("quote-form-modal");
+
+  // Function to show exit-intent modal
+  function showExitIntentModal() {
+    if (exitIntentTriggered || !quoteFormModal) return;
+
+    exitIntentTriggered = true;
+    quoteFormModal.style.display = "block";
+    document.body.style.overflow = "hidden";
+
+    // Track exit intent conversion
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'exit_intent_shown', {
+        event_category: 'engagement',
+        event_label: 'about_us_page'
+      });
+    }
+  }
+
+  // Detect mouse leaving towards the top of the page
+  document.addEventListener('mouseleave', function(e) {
+    // Check if mouse is leaving towards the top (exit intent)
+    if (e.clientY <= 0 && e.relatedTarget === null) {
+      showExitIntentModal();
+    }
+  });
+
+  // Also detect if mouse moves very quickly towards the exit
+  let lastY = 0;
+  document.addEventListener('mousemove', function(e) {
+    // If mouse suddenly jumps to the very top (user trying to close tab)
+    if (e.clientY <= 5 && lastY > 50) {
+      showExitIntentModal();
+    }
+    lastY = e.clientY;
+  });
+
+  // Fallback: Show after 30 seconds of inactivity (but only if user hasn't interacted)
+  let inactivityTimer;
+  function resetInactivityTimer() {
+    clearTimeout(inactivityTimer);
+    inactivityTimer = setTimeout(function() {
+      // Only show if user has scrolled down a bit (engaged with content)
+      if (window.scrollY > 200 && !exitIntentTriggered) {
+        showExitIntentModal();
+      }
+    }, 30000); // 30 seconds
+  }
+
+  // Reset timer on user interactions
+  ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(function(evt) {
+    document.addEventListener(evt, resetInactivityTimer, false);
+  });
+
+  // Start the inactivity timer
+  resetInactivityTimer();
+}
+
 // === INITIALIZE EVERYTHING WHEN DOM IS READY ===
 document.addEventListener('DOMContentLoaded', function(){
   // Initialize modal functionality
   initializeFormModal();
+
+  // Initialize exit-intent functionality
+  initializeExitIntent();
 
   // Initialize FAQ accordions
   initializeFAQ();
