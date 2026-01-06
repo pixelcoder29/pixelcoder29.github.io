@@ -235,6 +235,7 @@ keywords: "dog waste removal services Portland, poop scooping Portland OR, pet w
         <div class="step-number">3</div>
         <h3>Professional Service</h3>
         <p>Our trained team arrives, cleans thoroughly, and sends confirmation photos. You relax knowing it's done right.</p>
+        <img src="/assets/img/service-in-action.webp" alt="Professional Yard Guards PDX team member providing expert pet waste removal service" style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: 20px;" loading="lazy">
       </div>
     </div>
   </div>
