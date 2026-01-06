@@ -852,6 +852,19 @@ html, body {
   transition: none !important;
 }
 
+.navbar-collapse {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.navbar-nav {
+  margin: 0 !important;
+}
+
+.navbar {
+  height: 70px !important;
+}
+
 /* Get Quote navigation button - desktop only */
 @media (min-width: 1200px) {
   .get-quote-nav-btn {
