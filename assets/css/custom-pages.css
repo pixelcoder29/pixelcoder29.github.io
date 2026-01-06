@@ -139,14 +139,14 @@ html, body {
   }
 }
 
-/* Mobile card centering fixes */
+/* Mobile card centering fixes - keep consistent height */
 @media (max-width: 768px) {
   .full-bleed-wrapper .card {
     display: grid;
     place-items: center;
     grid-template-rows: auto 1fr;
     gap: 8px;
-    height: 180px;
+    height: 220px;  /* Keep same height as desktop to prevent breaking */
     padding: 20px;
     box-sizing: border-box;
   }
