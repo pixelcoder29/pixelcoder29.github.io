@@ -850,6 +850,11 @@ html, body {
   .navbar-collapse {
     transition: none !important;
   }
+
+  .navbar {
+    height: 70px !important;
+    min-height: 70px !important;
+  }
 }
 
 /* Get Quote navigation button - desktop only */
