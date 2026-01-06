@@ -1,44 +1,8 @@
 // === FORM MODAL FUNCTIONALITY ===
-function initializeFormModal() {
-  const buttons = document.querySelectorAll(".open-form-btn, #open-form");
-  const modal = document.getElementById("quote-form-modal");
-  const closeBtn = document.getElementById("close-form");
-
-  if (modal && closeBtn) {
-    const openModal = () => {
-      modal.style.display = "block";
-      document.body.style.overflow = "hidden";
-    };
-
-    const closeModal = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      modal.style.display = "none";
-      document.body.style.overflow = "";
-      return false;
-    };
-
-    buttons.forEach(btn => btn.addEventListener("click", openModal));
-    closeBtn.addEventListener("click", closeModal);
-  }
-}
+function initializeFormModal(){const e=document.querySelectorAll(".open-form-btn, #open-form"),t=document.getElementById("quote-form-modal"),n=document.getElementById("close-form");if(t&&n){const o=()=>{t.style.display="block",document.body.style.overflow="hidden"},c=e=>{e.preventDefault(),e.stopPropagation(),t.style.display="none",document.body.style.overflow="",!1};e.forEach(e=>e.addEventListener("click",o)),n.addEventListener("click",c)}}
 
 // === FAQ ACCORDION FUNCTIONALITY ===
-function initializeFAQ() {
-  document.querySelectorAll('.faq-item').forEach(item => {
-    const question = item.querySelector('.faq-question');
-    if (question) {
-      question.addEventListener('click', () => {
-        document.querySelectorAll('.faq-item').forEach(otherItem => {
-          if (otherItem !== item && otherItem.classList.contains('active')) {
-            otherItem.classList.remove('active');
-          }
-        });
-        item.classList.toggle('active');
-      });
-    }
-  });
-}
+function initializeFAQ(){document.querySelectorAll('.faq-item').forEach(e=>{const t=e.querySelector('.faq-question');t&&t.addEventListener('click',()=>{document.querySelectorAll('.faq-item').forEach(n=>{n!==e&&n.classList.contains('active')&&n.classList.remove('active')}),e.classList.toggle('active')})})}
 
 // === FORM VALIDATION FUNCTIONALITY ===
 function setupFormValidation(formElement, fieldIds) {
@@ -139,40 +103,7 @@ function setupFormValidation(formElement, fieldIds) {
 }
 
 // === EXIT-INTENT FUNCTIONALITY (DESKTOP ONLY) ===
-function initializeExitIntent() {
-  if (window.innerWidth <= 768) return;
-
-  let shown = false;
-  const modal = document.getElementById("quote-form-modal");
-
-  const showModal = () => {
-    if (!shown && modal) {
-      shown = true;
-      modal.style.display = "block";
-      document.body.style.overflow = "hidden";
-      if (window.gtag) {
-        gtag("event", "exit_intent_shown", {
-          event_category: "engagement",
-          event_label: "site_wide"
-        });
-      }
-    }
-  };
-
-  document.addEventListener("mouseleave", e => {
-    if (e.clientY <= 0 && e.relatedTarget === null) {
-      showModal();
-    }
-  });
-
-  let prevY = 0;
-  document.addEventListener("mousemove", e => {
-    if (e.clientY <= 5 && prevY > 50) {
-      showModal();
-    }
-    prevY = e.clientY;
-  });
-}
+function initializeExitIntent(){if(window.innerWidth<=768)return;let e=!1,t=document.getElementById("quote-form-modal"),n=()=>{e||t&&(e=!0,t.style.display="block",document.body.style.overflow="hidden",window.gtag&&gtag("event","exit_intent_shown",{event_category:"engagement",event_label:"site_wide"}))};document.addEventListener("mouseleave",e=>{0>=e.clientY&&null===e.relatedTarget&&n()});let o=0;document.addEventListener("mousemove",e=>{5>=e.clientY&&50<o&&n(),o=e.clientY})}
 
 // === INITIALIZE EVERYTHING WHEN DOM IS READY ===
 document.addEventListener('DOMContentLoaded', function(){
