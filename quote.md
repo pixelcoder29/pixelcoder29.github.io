@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   text-align: center;
   max-width: 400px;
   padding: 40px;
-  background: #f3f3f3;
+  background: white;
   border-radius: 16px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
