@@ -4,6 +4,8 @@ title: Your Personalized Quote
 permalink: /quote/
 ---
 
+<!-- Updated for setup mode -->
+# updated
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="/assets/css/custom-pages.css">
