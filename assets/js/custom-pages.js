@@ -2,7 +2,24 @@
 function initializeFormModal(){const e=document.querySelectorAll(".open-form-btn, #open-form"),t=document.getElementById("quote-form-modal"),n=document.getElementById("close-form");if(t&&n){const o=()=>{t.style.display="block",document.body.style.overflow="hidden"},c=e=>{e.preventDefault(),e.stopPropagation(),t.style.display="none",document.body.style.overflow="",!1};e.forEach(e=>e.addEventListener("click",o)),n.addEventListener("click",c)}}
 
 // === FAQ ACCORDION FUNCTIONALITY ===
-function initializeFAQ(){document.querySelectorAll('.faq-item').forEach(e=>{const t=e.querySelector('.faq-question');t&&t.addEventListener('click',()=>{document.querySelectorAll('.faq-item').forEach(n=>{n!==e&&n.classList.contains('active')&&n.classList.remove('active')}),e.classList.toggle('active')})})}
+function initializeFAQ(){
+  console.log('Initializing FAQ accordions');
+  document.querySelectorAll('.faq-item').forEach(e => {
+    const t = e.querySelector('.faq-question');
+    if (t) {
+      console.log('Adding click listener to FAQ question');
+      t.addEventListener('click', () => {
+        console.log('FAQ question clicked');
+        document.querySelectorAll('.faq-item').forEach(n => {
+          if (n !== e && n.classList.contains('active')) {
+            n.classList.remove('active');
+          }
+        });
+        e.classList.toggle('active');
+      });
+    }
+  });
+}
 
 // === FORM VALIDATION FUNCTIONALITY ===
 function setupFormValidation(formElement, fieldIds) {
