@@ -102,6 +102,26 @@ document.addEventListener('DOMContentLoaded', async function() {
     biweekly: {1: 32, 2: 36, 3: 39, 4: 42, 5: 46, 6: 49}
   };
 
+  // Stripe price IDs
+  const priceIds = {
+    weekly: {
+      1: 'price_1SmXplK2sYympqhEgk0kSOBd',
+      2: 'price_1SmY6LK2sYympqhEwgRjMYH2',
+      3: 'price_1SmY7NK2sYympqhEAB9EPjgY',
+      4: 'price_1SmY7rK2sYympqhE95O7197Y',
+      5: 'price_1SmY8KK2sYympqhEJ67GrHrc',
+      6: 'price_1SmY8pK2sYympqhELhU29LBS'
+    },
+    biweekly: {
+      1: 'price_1SmYG7K2sYympqhE16E3BrcL',
+      2: 'price_1SmYGnK2sYympqhEeUgQqVm5',
+      3: 'price_1SmYHFK2sYympqhESi2gi08w',
+      4: 'price_1SmYHfK2sYympqhEsY6K02ow',
+      5: 'price_1SmYI2K2sYympqhEfs5AN4Pg',
+      6: 'price_1SmYIQK2sYympqhE7qu5GEmh'
+    }
+  };
+
   let name = '', phone = '', email = '', zip = '', dogs = 1, freq = 'weekly', questions = 'None';
 
   if (quoteId) {
@@ -162,12 +182,13 @@ document.addEventListener('DOMContentLoaded', async function() {
   const startButton = document.getElementById('start-subscription');
 
   startButton.addEventListener('click', async function() {
+    const priceId = priceIds[normalizedFreq][dogs];
     try {
-      const response = await fetch('/.netlify/functions/create-checkout-session', { // Or your backend endpoint
+      const response = await fetch('https://hook.us2.make.com/your-payment-webhook-url', { // Replace with your payment webhook URL
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-          priceId: 'price_your_price_id', // Replace with actual Stripe price ID
+          priceId: priceId,
           customerEmail: email,
           customerName: name,
           customerPhone: phone,
