@@ -11,10 +11,14 @@ permalink: /quote/
 <script src="/assets/js/custom-pages.js" defer></script>
 
 <div class="quote-container">
-  <div class="quote-header">
-    <h1>Your Personalized Quote</h1>
-    <p>Here's your customized dog waste removal service quote. Review the details below and start your subscription today.</p>
+  <div id="loading" class="loading">
+    <p>Loading your personalized quote...</p>
   </div>
+  <div id="quote-content" style="display: none;">
+    <div class="quote-header">
+      <h1>Your Personalized Quote</h1>
+      <p>Here's your customized dog waste removal service quote. Review the details below and start your subscription today.</p>
+    </div>
 
   <div class="quote-details">
     <div class="detail-section">
@@ -115,15 +119,19 @@ document.addEventListener('DOMContentLoaded', async function() {
       dogs = parseInt(data.dogs) || 1;
       freq = data.freq || 'weekly';
       questions = data.questions || 'None';
-    } catch (e) {
-      console.error('Error fetching data', e);
-      alert('Unable to load quote data. Please try again later.');
-      return;
-    }
-  } else {
-    alert('Invalid quote link.');
+  } catch (e) {
+    console.error('Error fetching data', e);
+    alert('Unable to load quote data. Please try again later.');
     return;
   }
+} else {
+  alert('Invalid quote link.');
+  return;
+}
+
+  // Hide loading and show content
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('quote-content').style.display = 'block';
 
   // Populate fields
   document.getElementById('customer-name').textContent = name;
