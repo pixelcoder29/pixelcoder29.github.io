@@ -845,6 +845,11 @@ html, body {
 
 /* === NAVIGATION STYLES === */
 
+/* Fix mobile navbar grow/shrink animation */
+.navbar-collapse {
+  transition: none !important;
+}
+
 /* Get Quote navigation button - desktop only */
 @media (min-width: 1200px) {
   .get-quote-nav-btn {
