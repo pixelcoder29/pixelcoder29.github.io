@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', async function() {
           customerEmail: email,
           customerName: name,
           customerPhone: phone,
-          metadata: {quoteId: quoteId}
+          metadata: {quoteId: quoteId, customerEmail: email, customerName: name, customerPhone: phone}
         })
       });
 
