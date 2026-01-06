@@ -5,141 +5,111 @@ permalink: /thank-you/
 ---
 
 <div class="thank-you-container">
-  <div class="success-icon">✅</div>
-  <h1>Thank You for Your Trust!</h1>
-  <p class="success-message">Your card information has been saved securely. We're excited to help keep your yard clean and your pets happy!</p>
-  
+  <h1>Thank You</h1>
+  <p>Your payment information has been securely saved.</p>
+
   <div class="next-steps">
-    <h2>What's Next?</h2>
-    <p>To get your service scheduled, we need a few more details from you.</p>
-    <div class="cta-button">
-      <a href="https://forms.gle/your-form-link" target="_blank" class="btn-primary">Complete Service Details Form</a>
-    </div>
-    <p class="form-note">This quick form collects your service address, gate codes, and any special instructions. It's required to start your service.</p>
+    <h2>Next Steps</h2>
+    <p>To schedule your service, please complete the required details form below.</p>
+    <a href="https://form.jotform.com/260053619355153" target="_blank" class="cta-button">Complete Service Details Form</a>
+    <p class="note">This form collects your service address, yard access details, and cleaning preferences.</p>
   </div>
-  
-  <div class="contact-info">
-    <p>Have questions? We're here to help!</p>
-    <p><strong>Call:</strong> (503) 123-4567<br>
-    <strong>Email:</strong> <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a></p>
+
+  <div class="contact">
+    <p>For questions, contact us at <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a> or (503) 123-4567.</p>
   </div>
 </div>
 
 <style>
 .thank-you-container {
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.success-icon {
-  font-size: 4em;
-  margin-bottom: 20px;
 }
 
 .thank-you-container h1 {
-  color: #2c3e50;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  font-weight: 300;
+  color: #333;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  font-weight: normal;
 }
 
-.success-message {
-  font-size: 1.2em;
-  color: #34495e;
-  margin-bottom: 40px;
-  line-height: 1.6;
+.thank-you-container > p {
+  color: #666;
+  font-size: 1.1em;
+  margin-bottom: 30px;
 }
 
 .next-steps {
-  background: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   margin-bottom: 30px;
 }
 
 .next-steps h2 {
-  color: #2c3e50;
-  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: normal;
 }
 
 .next-steps p {
-  color: #7f8c8d;
+  color: #666;
   margin-bottom: 20px;
 }
 
 .cta-button {
-  margin: 30px 0;
-}
-
-.btn-primary {
   display: inline-block;
-  background: #4CAF50;
+  background: #007bff;
   color: white;
-  padding: 15px 30px;
+  padding: 12px 24px;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.1em;
+  border-radius: 4px;
   font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  transition: background 0.3s;
 }
 
-.btn-primary:hover {
-  background: #45a049;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+.cta-button:hover {
+  background: #0056b3;
 }
 
-.form-note {
+.note {
+  color: #999;
   font-size: 0.9em;
-  color: #e74c3c;
-  font-style: italic;
+  margin-top: 10px;
 }
 
-.contact-info {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+.contact {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
 }
 
-.contact-info p {
-  margin: 10px 0;
-  color: #34495e;
+.contact p {
+  color: #666;
+  margin: 0;
 }
 
-.contact-info a {
-  color: #3498db;
+.contact a {
+  color: #007bff;
   text-decoration: none;
 }
 
-.contact-info a:hover {
+.contact a:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .thank-you-container {
-    padding: 40px 15px;
-  }
-  
-  .thank-you-container h1 {
-    font-size: 2em;
-  }
-  
-  .next-steps {
-    padding: 30px 20px;
-  }
-  
-  .contact-info {
+    margin: 20px;
     padding: 20px;
+  }
+
+  .thank-you-container h1 {
+    font-size: 1.8em;
   }
 }
 </style>
