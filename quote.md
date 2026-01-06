@@ -135,8 +135,9 @@ document.addEventListener('DOMContentLoaded', async function() {
   document.getElementById('service-questions').textContent = questions;
 
   // Calculate price
-  const pricePerService = pricing[freq][dogs];
-  const billingCycle = freq === 'weekly' ? 'week' : '2 weeks';
+  const normalizedFreq = freq.toLowerCase();
+  const pricePerService = pricing[normalizedFreq] ? pricing[normalizedFreq][dogs] : 0;
+  const billingCycle = normalizedFreq === 'weekly' ? 'week' : '2 weeks';
   const totalPrice = pricePerService;
 
   document.getElementById('price-per-service').textContent = pricePerService;
