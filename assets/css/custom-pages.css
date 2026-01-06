@@ -846,7 +846,9 @@ html, body {
 /* === NAVIGATION STYLES === */
 
 /* Fix mobile navbar grow/shrink animation */
-.navbar-collapse {
+.navbar,
+.navbar-collapse,
+.navbar-toggler {
   transition: none !important;
 }
 
