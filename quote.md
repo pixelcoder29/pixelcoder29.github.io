@@ -197,6 +197,7 @@ document.addEventListener('DOMContentLoaded', async function() {
       });
 
       const session = await response.json();
+      console.log('Session:', session);
       const result = await stripe.redirectToCheckout({sessionId: session.id});
       if (result.error) {
         alert(result.error.message);
