@@ -232,6 +232,17 @@ document.addEventListener('DOMContentLoaded', async function() {
   z-index: 9999;
 }
 
+@media (max-width: 768px) {
+  .loading {
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 50vh;
+    background: none;
+    z-index: auto;
+  }
+}
+
 .loading-content {
   text-align: center;
   max-width: 400px;
