@@ -225,6 +225,12 @@ document.addEventListener('DOMContentLoaded', async function() {
   align-items: center;
   min-height: 60vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .loading-content {
