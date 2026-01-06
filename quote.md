@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   startButton.addEventListener('click', async function() {
     const priceId = priceIds[normalizedFreq][dogs];
     try {
-      const response = await fetch('https://hook.us2.make.com/your-payment-webhook-url', { // Replace with your payment webhook URL
+      const response = await fetch('https://hook.us2.make.com/uhlb6qvyclumhxhshi19of8vzu4cnxx2', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
