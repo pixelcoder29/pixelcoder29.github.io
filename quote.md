@@ -221,26 +221,15 @@ document.addEventListener('DOMContentLoaded', async function() {
 <style>
 .loading {
   position: fixed;
-  top: 0;
+  top: 70px;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   z-index: 9999;
-}
-
-@media (max-width: 768px) {
-  .loading {
-    position: static;
-    width: 100%;
-    height: auto;
-    min-height: 50vh;
-    background: none;
-    z-index: auto;
-  }
 }
 
 .loading-content {
