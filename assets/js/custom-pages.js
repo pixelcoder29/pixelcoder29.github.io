@@ -207,25 +207,7 @@ function initializeExitIntent() {
     lastY = e.clientY;
   });
 
-  // Fallback: Show after 30 seconds of inactivity (but only if user hasn't interacted)
-  let inactivityTimer;
-  function resetInactivityTimer() {
-    clearTimeout(inactivityTimer);
-    inactivityTimer = setTimeout(function() {
-      // Only show if user has scrolled down a bit (engaged with content)
-      if (window.scrollY > 200 && !exitIntentTriggered) {
-        showExitIntentModal();
-      }
-    }, 30000); // 30 seconds
-  }
-
-  // Reset timer on user interactions
-  ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(function(evt) {
-    document.addEventListener(evt, resetInactivityTimer, false);
-  });
-
-  // Start the inactivity timer
-  resetInactivityTimer();
+  // Removed 30-second inactivity timer for less intrusive experience
 }
 
 // === INITIALIZE EVERYTHING WHEN DOM IS READY ===
