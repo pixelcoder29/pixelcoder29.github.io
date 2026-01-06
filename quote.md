@@ -14,7 +14,14 @@ permalink: /quote/
 
 <div class="quote-container">
   <div id="loading" class="loading">
-    <p>Loading your personalized quote...</p>
+    <div class="loading-content">
+      <div class="loading-logo">
+        <img src="/assets/img/yard-guards-pdx-banner-logo.webp" alt="Yard Guards PDX Logo" class="logo-img">
+      </div>
+      <div class="spinner"></div>
+      <p class="loading-text">Preparing your personalized quote...</p>
+      <p class="loading-subtext">This will only take a moment</p>
+    </div>
   </div>
   <div id="quote-content" style="display: none;">
     <div class="quote-header">
@@ -212,6 +219,59 @@ document.addEventListener('DOMContentLoaded', async function() {
 </script>
 
 <style>
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.loading-content {
+  text-align: center;
+  max-width: 400px;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.loading-logo {
+  margin-bottom: 30px;
+}
+
+.logo-img {
+  max-width: 200px;
+  height: auto;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.loading-subtext {
+  color: #666;
+  font-size: 0.9em;
+}
+
 .quote-container {
   max-width: 800px;
   margin: 0 auto;
