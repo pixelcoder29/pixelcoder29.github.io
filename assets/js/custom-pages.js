@@ -1,70 +1,8 @@
 // === FORM MODAL FUNCTIONALITY ===
-function initializeFormModal() {
-  const openFormButtons = document.querySelectorAll(".open-form-btn, #open-form");
-  const quoteFormModal = document.getElementById("quote-form-modal");
-  const closeFormButton = document.getElementById("close-form");
-
-  console.log("Modal elements found:", {
-    openButtons: openFormButtons.length,
-    modal: !!quoteFormModal,
-    closeButton: !!closeFormButton
-  });
-
-  if (quoteFormModal && closeFormButton) {
-    // Simple, direct event handlers
-    function openModalHandler() {
-      console.log("Opening modal");
-      quoteFormModal.style.display = "block";
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeModalHandler(e) {
-      console.log("Closing modal via X button");
-      e.preventDefault();
-      e.stopPropagation();
-      quoteFormModal.style.display = "none";
-      document.body.style.overflow = "";
-      return false;
-    }
-
-    // Add event listeners - only for opening and X button closing
-    openFormButtons.forEach(button => {
-      button.addEventListener("click", openModalHandler);
-    });
-
-    // Only allow closing via the X button - NO click-outside for exit-intent
-    closeFormButton.addEventListener("click", closeModalHandler);
-    console.log("Modal close button event listener added");
-  } else {
-    console.error("Modal elements not found:", {
-      modal: !!quoteFormModal,
-      closeButton: !!closeFormButton
-    });
-  }
-}
+function initializeFormModal(){const e=document.querySelectorAll(".open-form-btn, #open-form"),t=document.getElementById("quote-form-modal"),n=document.getElementById("close-form");if(t&&n){const o=()=>{t.style.display="block",document.body.style.overflow="hidden"},c=e=>{e.preventDefault(),e.stopPropagation(),t.style.display="none",document.body.style.overflow="",!1};e.forEach(e=>e.addEventListener("click",o)),n.addEventListener("click",c)}}
 
 // === FAQ ACCORDION FUNCTIONALITY ===
-function initializeFAQ() {
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-
-    if (question) {
-      question.addEventListener('click', () => {
-        // Close other open items (optional - remove if you want multiple open at once)
-        faqItems.forEach(otherItem => {
-          if (otherItem !== item && otherItem.classList.contains('active')) {
-            otherItem.classList.remove('active');
-          }
-        });
-
-        // Toggle current item
-        item.classList.toggle('active');
-      });
-    }
-  });
-}
+function initializeFAQ(){document.querySelectorAll('.faq-item').forEach(e=>{const t=e.querySelector('.faq-question');t&&t.addEventListener('click',()=>{document.querySelectorAll('.faq-item').forEach(n=>{n!==e&&n.classList.contains('active')&&n.classList.remove('active')}),e.classList.toggle('active')})})}
 
 // === FORM VALIDATION FUNCTIONALITY ===
 function setupFormValidation(formElement, fieldIds) {
@@ -165,50 +103,7 @@ function setupFormValidation(formElement, fieldIds) {
 }
 
 // === EXIT-INTENT FUNCTIONALITY (DESKTOP ONLY) ===
-function initializeExitIntent() {
-  // Only enable on desktop devices
-  if (window.innerWidth <= 768) return;
-
-  let exitIntentTriggered = false;
-  const quoteFormModal = document.getElementById("quote-form-modal");
-
-  // Function to show exit-intent modal
-  function showExitIntentModal() {
-    if (exitIntentTriggered || !quoteFormModal) return;
-
-    exitIntentTriggered = true;
-    quoteFormModal.style.display = "block";
-    document.body.style.overflow = "hidden";
-
-    // Track exit intent conversion
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'exit_intent_shown', {
-        event_category: 'engagement',
-        event_label: 'about_us_page'
-      });
-    }
-  }
-
-  // Detect mouse leaving towards the top of the page
-  document.addEventListener('mouseleave', function(e) {
-    // Check if mouse is leaving towards the top (exit intent)
-    if (e.clientY <= 0 && e.relatedTarget === null) {
-      showExitIntentModal();
-    }
-  });
-
-  // Also detect if mouse moves very quickly towards the exit
-  let lastY = 0;
-  document.addEventListener('mousemove', function(e) {
-    // If mouse suddenly jumps to the very top (user trying to close tab)
-    if (e.clientY <= 5 && lastY > 50) {
-      showExitIntentModal();
-    }
-    lastY = e.clientY;
-  });
-
-  // Removed 30-second inactivity timer for less intrusive experience
-}
+function initializeExitIntent(){if(window.innerWidth<=768)return;let e=!1,t=document.getElementById("quote-form-modal"),n=()=>{e||t||(e=!0,t.style.display="block",document.body.style.overflow="hidden",window.gtag&&gtag("event","exit_intent_shown",{event_category:"engagement",event_label:"site_wide"}))};document.addEventListener("mouseleave",e=>{0>=e.clientY&&null===e.relatedTarget&&n()});let o=0;document.addEventListener("mousemove",e=>{5>=e.clientY&&50<o&&n(),o=e.clientY})}
 
 // === INITIALIZE EVERYTHING WHEN DOM IS READY ===
 document.addEventListener('DOMContentLoaded', function(){
