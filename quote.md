@@ -220,23 +220,22 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 <style>
 .loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  z-index: 9999;
 }
 
 .loading-content {
   text-align: center;
   max-width: 400px;
-  padding: 40px;
+  padding: 20px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
