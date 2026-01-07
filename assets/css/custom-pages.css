@@ -996,6 +996,15 @@ html, body {
 
 /* === PAGE-SPECIFIC STYLES === */
 
+/* Privacy Policy and Terms page bullet point indentation */
+.page-template .content ul {
+  margin-left: 20px;
+}
+
+.page-template .content li {
+  margin-bottom: 8px;
+}
+
 /* Services page styles */
 .service-options {
   display: grid;
