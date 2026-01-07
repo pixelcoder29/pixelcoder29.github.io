@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Us - Professional Dog Waste Removal Portland OR | Yard Guards PDX
-description: "Professional dog waste removal service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving all East Portland neighborhoods. Get your free quote today!"
+description: "Professional dog waste removal service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods. Get your free quote today!"
 permalink: /about-us/
 keywords: "dog waste removal Portland, pet waste cleanup Portland OR, professional poop scooping Portland, yard waste removal East Portland, dog waste service Portland"
 ---
@@ -45,11 +45,11 @@ body {
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "AnimalService",
   "@id": "https://pixelcoder29.github.io/#organization",
   "name": "Yard Guards PDX",
   "alternateName": "Yard Guards Portland",
-  "description": "Professional dog waste removal and pet waste cleanup service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving all East Portland neighborhoods including Hawthorne, Belmont, Division, and beyond the Willamette River.",
+  "description": "Professional dog waste removal and pet waste cleanup service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods.",
   "url": "https://pixelcoder29.github.io",
   "telephone": "+15035120349",
   "email": "service@yardguardspdx.com",
@@ -68,17 +68,7 @@ body {
       "addressCountry": "US"
     },
     {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 45.5152,
-        "longitude": -122.6784
-      },
-      "geoRadius": 15000,
-      "addressCountry": "US"
-    },
-    {
-      "@type": "Place",
+      "@type": "City",
       "name": "East Portland",
       "addressRegion": "OR",
       "addressCountry": "US"
@@ -197,7 +187,7 @@ body {
 <div class="full-bleed-wrapper" style="background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%); color: white; padding: 80px 0;">
   <div class="section-inner" style="text-align: center;">
     <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: white;">Professional Dog Waste Removal Portland OR</h1>
-    <p style="font-size: 1.5rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: #f8f8f8;">Free waste hauling • 100% satisfaction guarantee • Serving all East Portland. Get your professional dog waste removal service today.</p>
+    <p style="font-size: 1.5rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: #f8f8f8;">Free waste hauling • 100% satisfaction guarantee • Serving Portland. Get your professional dog waste removal service today.</p>
     <button class="open-form-btn cta-button" style="background: #ff6d00; color: white; border: none; font-size: 1.2rem; padding: 15px 30px; box-shadow: 0 4px 15px rgba(255,109,0,0.3);">Get Your Free Quote</button>
   </div>
 </div>
@@ -302,7 +292,7 @@ body {
         <!-- Feature 3 -->
         <div class="feature-card">
           <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; color: #2e7d32;">📱 Portland Local Experts</h3>
-          <p style="font-size: 1.1rem; line-height: 1.7; color: #555;">Based in East Portland, we understand the unique needs of our community. Quick response times and local knowledge you can count on.</p>
+          <p style="font-size: 1.1rem; line-height: 1.7; color: #555;">Based in East Portland, we understand the unique needs of our community. Quick response times and local knowledge you can count on. <a href="/services" style="color:#2e7d32;">View our service options</a>.</p>
         </div>
 
         <!-- Feature 4 -->

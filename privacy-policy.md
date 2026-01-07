@@ -27,7 +27,8 @@ When you use our website or online forms, we may also collect:
 
 - IP addresses and browser/device information  
 
-We do not knowingly collect information from children under 13 and comply with COPPA regulations.  
+**Children’s Privacy:**  
+We do not knowingly collect information from children under 13 and comply with COPPA regulations. Our services are not intended for children under 13.  
 
 You are responsible for providing accurate and up-to-date information. Yard Guards PDX is not responsible for errors or delays resulting from inaccurate information provided by customers.
 
@@ -42,6 +43,7 @@ We use your information to:
 - Respond to questions, requests, or service issues  
 - Use aggregated or anonymized data for internal business analytics and service improvements  
 - Communicate about account status, cancellations, and the option to resume services  
+- Send marketing communications (emails or SMS) if you have opted in via our Terms & Conditions  
 
 ---
 
@@ -52,6 +54,7 @@ We do not sell or rent your personal information. We may share your information 
 - With employees who assist with service delivery, under strict confidentiality agreements  
 - With service providers, such as Stripe, for payment processing  
 - As required by law or to protect the safety of our customers, staff, or property  
+- With third-party service providers outside the United States, only when necessary for service delivery or payment processing. We require these providers to maintain confidentiality and protect your data in accordance with applicable laws.  
 
 We may use third-party service providers to assist with our services. While we require these providers to maintain confidentiality, Yard Guards PDX is not responsible for the privacy practices of third-party services beyond our control.
 

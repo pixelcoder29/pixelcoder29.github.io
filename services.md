@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Dog Waste Removal Services Portland OR | Yard Guards PDX
-description: "Professional dog waste removal services in Portland OR. Weekly & bi-weekly poop scooping with free waste hauling. 100% satisfaction guarantee. Serving all East Portland neighborhoods."
+description: "Professional dog waste removal services in Portland OR. Weekly & bi-weekly poop scooping with free waste hauling. 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods."
 permalink: /services/
-keywords: "dog waste removal services Portland, poop scooping Portland OR, pet waste cleanup Portland, yard waste removal East Portland, professional dog poop service Portland"
+keywords: "dog waste removal Portland, pet waste cleanup Portland OR, professional dog poop service Portland, weekly dog waste removal, dog poop scooping service"
 ---
 
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -189,7 +189,7 @@ body {
 <!-- --- Hero Section --- -->
 <div class="full-bleed-wrapper section-background-light">
   <div class="section-inner section-inner-center">
-    <h1>Dog Waste Removal Services in East Portland</h1>
+    <h1>Dog Waste Removal Services in Portland</h1>
     <p class="hero-description-large">Professional, reliable dog poop scooping for residential properties. Weekly and bi-weekly service options tailored to your needs.</p>
     <button class="open-form-btn cta-button">Get Your Free Quote</button>
   </div>
@@ -274,8 +274,8 @@ body {
 <div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner" style="padding: 1.5rem 1.25rem;">
     <div class="service-area" style="margin: 0;">
-      <h3 style="font-size: 36px;">Serving East Portland</h3>
-      <p style="font-size: 22px;">We proudly provide dog waste removal services throughout East Portland, from the Willamette River to the eastern city limits. Quick response times and reliable local service.</p>
+      <h3 style="font-size: 36px;">Serving Portland</h3>
+      <p style="font-size: 22px;">We proudly provide dog waste removal services throughout Portland, with comprehensive coverage in East Portland from the Willamette River to the eastern city limits. Quick response times and reliable local service.</p>
     </div>
   </div>
 </div>
@@ -288,7 +288,7 @@ body {
     <div class="cards">
       <div class="card" style="background:#e0f7fa;color:#1a1a1a;">
         <h3>🐕 Dog Lovers</h3>
-        <p style="font-size: 21px">We love dogs and work safely around your pets with care and respect.</p>
+        <p style="font-size: 21px">We love dogs and work safely around your pets with care and respect. <a href="/about-us" style="color:#2e7d32;">Learn more about our team</a>.</p>
       </div>
       <div class="card" style="background:#e0f7fa;color:#1a1a1a;">
         <h3>⏰ Time Saving</h3>
@@ -392,7 +392,7 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>We proudly serve all of East Portland, from the Willamette River to the eastern city limits.</p>
+<p>We proudly serve Portland, with comprehensive coverage throughout East Portland from the Willamette River to the eastern city limits.</p>
         </div>
       </div>
 
