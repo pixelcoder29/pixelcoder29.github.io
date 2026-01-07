@@ -43,7 +43,19 @@ We use your information to:
 - Respond to questions, requests, or service issues  
 - Use aggregated or anonymized data for internal business analytics and service improvements  
 - Communicate about account status, cancellations, and the option to resume services  
-- Send marketing communications (emails or SMS) if you have opted in via our Terms & Conditions  
+
+---
+
+## 2a. Marketing Communications
+
+By providing your phone number and email and agreeing to our Terms & Conditions, you consent to receive marketing communications from Yard Guards PDX via email or SMS.  
+
+- Message and data rates may apply.  
+- You can opt out of marketing messages at any time:  
+  - Reply **STOP** to opt out of SMS messages.  
+  - Click the **unsubscribe link** in any marketing email.  
+
+Service-related texts and emails — such as scheduling confirmations, on-the-way notifications, invoices, and important account updates — are part of your service agreement and **are not considered marketing communications**.
 
 ---
 

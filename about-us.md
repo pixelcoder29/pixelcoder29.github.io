@@ -256,7 +256,7 @@ body {
       <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
         <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
         <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a1a;">Quick Response</h3>
-        <p style="color: #666; line-height: 1.6;">Fast, reliable service with same-day options for urgent dog waste removal needs in Portland.</p>
+        <p style="color: #666; line-height: 1.6;">Fast, reliable service for urgent dog waste removal needs in Portland.</p>
       </div>
 
       <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
@@ -338,7 +338,7 @@ body {
         <img src="/assets/img/before.webp" alt="Before: Portland yard with pet waste issues" style="width: 100%; height: 250px; object-fit: cover;" loading="lazy">
         <div style="padding: 20px; text-align: center;">
           <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; color: #d32f2f;">Before: Problem Yard</h4>
-          <p style="color: #666; font-size: 0.9rem;">Typical Portland yard with pet waste issues</p>
+          <p style="color: #666; font-size: 0.9rem;">Typical yard with pet waste issues</p>
         </div>
       </div>
 
@@ -352,7 +352,7 @@ body {
     </div>
 
     <div style="text-align: center; margin-top: 3rem;">
-      <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">Join hundreds of Portland families who've transformed their yards with professional dog waste removal.</p>
+      <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">Join local Portland families who've transformed their yards with professional dog waste removal.</p>
       <button class="open-form-btn cta-button" style="font-size: 1.1rem; padding: 14px 28px;">See Your Yard Transformed</button>
     </div>
   </div>
