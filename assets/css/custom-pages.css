@@ -1062,6 +1062,15 @@ html, body {
   margin-bottom: 16px;
   padding-left: 12px;
   line-height: 1.7;
+  list-style: none;
+  position: relative;
+}
+
+.page-template .content li::before {
+  content: "-";
+  position: absolute;
+  left: -12px;
+  color: #333;
 }
 
 /* Services page styles */
