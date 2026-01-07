@@ -266,15 +266,15 @@ document.addEventListener('DOMContentLoaded', async function() {
 }
 
 .loading-text {
-  font-size: 1.2em;
-  color: #333;
+  font-size: 1.2rem;
+  color: var(--text-primary);
   margin-bottom: 10px;
   font-weight: 500;
 }
 
 .loading-subtext {
-  color: #666;
-  font-size: 0.9em;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
 .quote-container {
@@ -321,40 +321,40 @@ document.addEventListener('DOMContentLoaded', async function() {
 }
 
 .total-amount {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: bold;
-  color: #4CAF50;
+  color: var(--accent-primary);
 }
 
 .trust-elements {
   display: flex;
   justify-content: space-around;
-  margin: 30px 0;
+  margin: 1.875rem 0;
   flex-wrap: wrap;
 }
 
 .trust-item {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 0.625rem;
 }
 
 .trust-icon {
-  font-size: 1.5em;
-  margin-right: 10px;
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
 }
 
 .quote-actions {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 .cta-button {
-  background: #4CAF50;
+  background: var(--accent-primary);
   color: white;
   border: none;
-  padding: 15px 30px;
-  font-size: 1.2em;
+  padding: 0.9375rem 1.875rem;
+  font-size: 1.2rem;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
@@ -365,8 +365,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 }
 
 .billing-note {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #666;
+  margin-top: 0.625rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
 }
 </style>

@@ -257,14 +257,14 @@ body {
     <h2 style="text-align:center; margin-bottom:32px;">Complete Dog Waste Removal Service</h2>
 
     <ul class="benefits-list">
-      <li style="color: #222;"><strong>Thorough Cleanup:</strong> We remove all dog waste from your yard, sidewalks, and common areas</li>
-      <li style="color: #222;"><strong>Eco-Friendly Disposal:</strong> Waste is properly disposed of in accordance with local environmental guidelines</li>
-      <li style="color: #222;"><strong>Gate Security:</strong> We secure all gates and provide photos after each visit for your peace of mind</li>
-      <li style="color: #222;"><strong>Text Notifications:</strong> Receive a text message when we're on our way to your location</li>
-      <li style="color: #222;"><strong>Weather-Appropriate:</strong> Service continues rain or shine, except in extreme weather conditions</li>
-      <li style="color: #222;"><strong>Pet Safety:</strong> Our team is experienced with dogs and takes extra care around your pets</li>
-      <li style="color: #222;"><strong>Reliable Scheduling:</strong> Consistent service times with flexible options</li>
-      <li style="color: #222;"><strong>Professional Equipment:</strong> We use proper tools and sanitation practices for the best results</li>
+      <li style="color: #222;"><strong>✅ Thorough Cleanup:</strong> We remove all dog waste from your yard, sidewalks, and common areas</li>
+      <li style="color: #222;"><strong>✅ Eco-Friendly Disposal:</strong> Waste is properly disposed of in accordance with local environmental guidelines</li>
+      <li style="color: #222;"><strong>✅ Gate Security:</strong> We secure all gates and provide photos after each visit for your peace of mind</li>
+      <li style="color: #222;"><strong>✅ Text Notifications:</strong> Receive a text message when we're on our way to your location</li>
+      <li style="color: #222;"><strong>✅ Weather-Appropriate:</strong> Service continues rain or shine, except in extreme weather conditions</li>
+      <li style="color: #222;"><strong>✅ Pet Safety:</strong> Our team is experienced with dogs and takes extra care around your pets</li>
+      <li style="color: #222;"><strong>✅ Reliable Scheduling:</strong> Consistent service times with flexible options</li>
+      <li style="color: #222;"><strong>✅ Professional Equipment:</strong> We use proper tools and sanitation practices for the best results</li>
     </ul>
   </div>
 </div>
@@ -287,7 +287,7 @@ body {
     <div class="cards">
       <div class="card" style="background:#e0f7fa;color:#1a1a1a;">
         <h3>🐕 Dog Lovers</h3>
-        <p>Our team loves dogs and understands their needs. We work safely and respectfully around your pets.</p>
+        <p>We love dogs and work safely around your pets with care and respect.</p>
       </div>
       <div class="card" style="background:#e0f7fa;color:#1a1a1a;">
         <h3>⏰ Time Saving</h3>

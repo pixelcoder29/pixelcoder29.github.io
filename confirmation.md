@@ -39,38 +39,38 @@ permalink: /confirmation/
 }
 
 .success-icon {
-  font-size: 3em;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
 }
 
 .confirmation-container h1 {
-  color: #333;
-  font-size: 2.2em;
-  margin-bottom: 10px;
-  font-weight: normal;
+  color: var(--text-primary);
+  font-size: 2.2rem;
+  margin-bottom: 0.625rem;
+  font-weight: 600;
 }
 
 .confirmation-container > p {
-  color: #666;
-  font-size: 1.1em;
-  margin-bottom: 30px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.875rem;
 }
 
 .next-steps {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .next-steps h2 {
-  color: #333;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  font-weight: normal;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.625rem;
+  font-weight: 600;
 }
 
 .next-steps p {
-  color: #666;
-  margin-bottom: 15px;
-  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 0.9375rem;
+  line-height: 1.65;
 }
 
 .actions {
@@ -109,17 +109,17 @@ permalink: /confirmation/
 }
 
 .contact {
-  border-top: 1px solid #e0e0e0;
-  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.25rem;
 }
 
 .contact p {
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 .contact a {
-  color: #007bff;
+  color: var(--accent-primary);
   text-decoration: none;
 }
 
@@ -127,14 +127,14 @@ permalink: /confirmation/
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .confirmation-container {
-    margin: 20px;
-    padding: 20px;
+    margin: 1.25rem;
+    padding: 1.25rem;
   }
 
   .confirmation-container h1 {
-    font-size: 1.8em;
+    font-size: 1.8rem;
   }
 
   .actions {

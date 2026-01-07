@@ -34,67 +34,67 @@ permalink: /thank-you/
 }
 
 .thank-you-container h1 {
-  color: #333;
-  font-size: 2.2em;
-  margin-bottom: 10px;
-  font-weight: normal;
+  color: var(--text-primary);
+  font-size: 2.2rem;
+  margin-bottom: 0.625rem;
+  font-weight: 600;
 }
 
 .thank-you-container > p {
-  color: #666;
-  font-size: 1.1em;
-  margin-bottom: 30px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.875rem;
 }
 
 .next-steps {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .next-steps h2 {
-  color: #333;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  font-weight: normal;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.625rem;
+  font-weight: 600;
 }
 
 .next-steps p {
-  color: #666;
-  margin-bottom: 20px;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
 }
 
 .cta-button {
   display: inline-block;
-  background: #007bff;
+  background: var(--accent-primary);
   color: white;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 4px;
-  font-weight: bold;
+  font-weight: 700;
   transition: background 0.3s;
 }
 
 .cta-button:hover {
-  background: #0056b3;
+  background: #45a049;
 }
 
 .note {
-  color: #999;
-  font-size: 0.9em;
-  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 0.625rem;
 }
 
 .contact {
-  border-top: 1px solid #e0e0e0;
-  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.25rem;
 }
 
 .contact p {
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 .contact a {
-  color: #007bff;
+  color: var(--accent-primary);
   text-decoration: none;
 }
 
