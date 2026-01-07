@@ -74,6 +74,7 @@ permalink: /get-quote/
       <textarea id="questions" name="anyQuestions" rows="3"></textarea>
     </div>
 
+    <p class="privacy-text" style="font-size: 12px; margin-top: 10px;">By providing my phone number and email, I agree to receive texts and emails from Yard Guards PDX, including marketing messages. Messaging frequency varies; message and data rates may apply. Reply STOP to opt out of texts, or click the unsubscribe link in any email for email opt-out. Reply HELP for more information.</p>
     <div class="form-group">
       <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 14px;">
         <input type="checkbox" id="privacy_agree" name="privacyAgree" required style="margin-top: 2px;">
@@ -81,7 +82,6 @@ permalink: /get-quote/
       </label>
       <small class="error-message" id="privacy-error"></small>
     </div>
-    <p class="privacy-text" style="font-size: 12px; margin-top: 10px;">By providing my phone number and email, I agree to receive texts and emails from Yard Guards PDX, including marketing messages. Messaging frequency varies; message and data rates may apply. Reply STOP to opt out of texts, or click the unsubscribe link in any email for email opt-out. Reply HELP for more information.</p>
     <button type="submit" class="cta-button">Request My Quote</button>
   </fieldset>
 </form>
@@ -384,6 +384,7 @@ permalink: /get-quote/
           <textarea id="questions_modal" name="anyQuestions" rows="3"></textarea>
         </div>
 
+        <p class="privacy-text" style="font-size: 12px; margin-top: 10px;">By providing my phone number and email, I agree to receive texts and emails from Yard Guards PDX, including marketing messages. Messaging frequency varies; message and data rates may apply. Reply STOP to opt out of texts, or click the unsubscribe link in any email for email opt-out. Reply HELP for more information.</p>
         <div class="form-group">
           <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 14px;">
             <input type="checkbox" id="privacy_agree_modal" name="privacyAgree" required style="margin-top: 2px;">
@@ -391,7 +392,6 @@ permalink: /get-quote/
           </label>
           <small class="error-message" id="privacy-modal-error"></small>
         </div>
-        <p class="privacy-text" style="font-size: 12px; margin-top: 10px;">By providing my phone number and email, I agree to receive texts and emails from Yard Guards PDX, including marketing messages. Messaging frequency varies; message and data rates may apply. Reply STOP to opt out of texts, or click the unsubscribe link in any email for email opt-out. Reply HELP for more information.</p>
         <button type="submit" class="cta-button">Request My Quote</button>
       </fieldset>
     </form>
