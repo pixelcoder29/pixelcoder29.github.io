@@ -9,7 +9,7 @@ permalink: /privacy-policy/
 
   <h1>Yard Guards PDX – Privacy Policy</h1>
 
-  <p class="effective-date"><strong>Effective Date:</strong> January 7, 2025</p>
+  <p class="effective-date"><strong>Effective Date:</strong> January 7, 2026</p>
 
   <section class="summary-section">
     <h2>Plain-Language Summary</h2>
