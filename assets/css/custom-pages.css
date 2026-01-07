@@ -958,8 +958,10 @@ html, body {
   .navbar-collapse {
     transition: none !important;
   }
+}
 
-  /* Make Get Quote link a button on mobile */
+/* Make Get Quote link a button on all viewports below 1200px */
+@media (max-width: 1199px) {
   .get-quote-nav-item .nav-link {
     background: #ff6d00 !important;
     color: white !important;
@@ -987,7 +989,7 @@ html, body {
     box-shadow: 0 4px 12px rgba(255,109,0,0.4) !important;
   }
 
-  /* Center the button in mobile nav */
+  /* Center the button in nav for viewports below 1200px */
   .get-quote-nav-item {
     width: 100% !important;
     text-align: center !important;
