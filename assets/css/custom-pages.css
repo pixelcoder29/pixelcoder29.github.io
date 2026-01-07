@@ -1042,7 +1042,8 @@ html, body {
 
 /* Privacy Policy and Terms page bullet point indentation */
 .page-template .content ul {
-  margin-left: 20px;
+  margin-left: 30px;
+  padding-left: 20px;
 }
 
 .page-template .content li {
