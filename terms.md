@@ -4,150 +4,191 @@ title: "Terms & Conditions"
 permalink: /terms/
 ---
 
-# Yard Guards PDX – Terms & Conditions
+<div class="terms-content">
 
-**Effective Date:** January 7, 2026
+  <h1>Yard Guards PDX – Terms & Conditions</h1>
 
-## Plain-Language Summary
+  <p class="effective-date"><strong>Effective Date:</strong> January 7, 2026</p>
 
-These Terms & Conditions explain how our service works, including billing, cancellations, pet safety rules, and your responsibilities as a customer. By signing up, you agree to these terms. Use of our services is also subject to our [Privacy Policy](/privacy-policy/).
+  <section class="summary-section">
+    <h2>Plain-Language Summary</h2>
+    <p>These Terms & Conditions explain how our service works, including billing, cancellations, pet safety rules, and your responsibilities as a customer. By signing up, you agree to these terms. Use of our services is also subject to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+  </section>
 
----
+  <hr class="section-divider">
 
-## 1. Overview
+  <section class="overview-section">
+    <h2>1. Overview</h2>
+    <p>Yard Guards PDX provides recurring dog waste removal services.</p>
+    <p>By using our service, you acknowledge and accept these Terms & Conditions.</p>
+  </section>
 
-Yard Guards PDX provides recurring dog waste removal services.
+  <hr class="section-divider">
 
-By using our service, you acknowledge and accept these Terms & Conditions.
+  <section class="definitions-section">
+    <h2>2. Definitions</h2>
+    <ul class="definitions-list">
+      <li><strong>Service:</strong> The recurring dog waste removal services provided by Yard Guards PDX.</li>
+      <li><strong>Customer:</strong> The individual or entity that signs up for the Service.</li>
+      <li><strong>Yard Guards PDX:</strong> The company providing the Service.</li>
+    </ul>
+  </section>
 
----
+  <hr class="section-divider">
 
-## 2. Definitions
+  <section class="billing-section">
+    <h2>3. Billing & Payments</h2>
+    <ul class="billing-list">
+      <li>Services are billed <strong>weekly or biweekly</strong>, on the scheduled service day, based on the frequency selected.</li>
+      <li>All payments are final. No refunds or partial refunds are issued.</li>
+      <li>Payments are processed securely through Stripe.</li>
+      <li>By signing up, you authorize recurring automatic charges for your scheduled service.</li>
+    </ul>
 
-  - **Service:** The recurring dog waste removal services provided by Yard Guards PDX.
-  - **Customer:** The individual or entity that signs up for the Service.
-  - **Yard Guards PDX:** The company providing the Service.
+    <div class="payment-failures-notice">
+      <h3>Payment Failures</h3>
+      <p>If a payment fails due to insufficient funds, expired card, or other issues, Yard Guards PDX will attempt to contact the customer to update payment information. Service may be paused until payment is successfully processed.</p>
+    </div>
+  </section>
 
----
+  <hr class="section-divider">
 
-## 3. Billing & Payments
+  <section class="cancellations-section">
+    <h2>4. Cancellations & Pausing</h2>
+    <ul class="cancellations-list">
+      <li>You may cancel or pause your service at any time by emailing <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a>.</li>
+      <li>Cancelling or pausing stops future billing only.</li>
+    </ul>
+  </section>
 
-  - Services are billed **weekly or biweekly**, on the scheduled service day, based on the frequency selected.
-  - All payments are final. No refunds or partial refunds are issued.
-  - Payments are processed securely through Stripe.
-  - By signing up, you authorize recurring automatic charges for your scheduled service.
+  <hr class="section-divider">
 
-**Payment Failures:**
-If a payment fails due to insufficient funds, expired card, or other issues, Yard Guards PDX will attempt to contact the customer to update payment information. Service may be paused until payment is successfully processed.
+  <section class="service-policies-section">
+    <h2>5. Service Timing & Policies</h2>
+    <ul class="timing-list">
+      <li><strong>First Service:</strong> Scheduled on the <strong>next available service day</strong> based on your zip code.</li>
+      <li><strong>Service Duration:</strong> Typically 10–15 minutes per visit; larger yards or multiple piles may take longer, up to 1 hour.</li>
+    </ul>
 
----
+    <div class="pets-access-section">
+      <h3>Pets & Access (Aggressive Dogs)</h3>
+      <ul class="pets-list">
+        <li>Pets that are uncomfortable around strangers <strong>must be secured</strong> during service.</li>
+        <li>If a dog becomes aggressive and cannot be safely secured, the service will be <strong>stopped for that visit</strong>.</li>
+        <li>The visit <strong>counts as a completed service</strong> for billing purposes because our team <strong>arrived on-site and attempted the service</strong>, which consumes time and resources.</li>
+        <li>Customers will be <strong>notified</strong> if a visit is stopped due to an aggressive dog so they can secure pets for future visits.</li>
+        <li>Customers are responsible for ensuring the yard is accessible and pets are secured during service.</li>
+      </ul>
+    </div>
 
-## 4. Cancellations & Pausing
+    <div class="schedule-adjustments-section">
+      <h3>Right to Adjust Schedule / Service Modifications</h3>
+      <ul class="adjustments-list">
+        <li>Yard Guards PDX may adjust service days or time windows to optimize routing, staffing, and service efficiency. Customers will be notified in advance.</li>
+        <li>Service scope may be modified if necessary for safety, efficiency, or unforeseen circumstances.</li>
+      </ul>
+    </div>
 
-  - You may cancel or pause your service at any time by emailing [service@yardguardspdx.com](mailto:service@yardguardspdx.com).
-  - Cancelling or pausing stops future billing only.
+    <div class="service-exceptions-section">
+      <h3>Service Exceptions</h3>
+      <ul class="exceptions-list">
+        <li>Yard Guards PDX provides routine dog waste removal. We are not responsible for extreme or unusual yard conditions beyond normal dog waste, such as fallen tree branches, flooding, mudslides, or other extraordinary hazards.</li>
+      </ul>
+    </div>
+  </section>
 
----
+  <hr class="section-divider">
 
-## 5. Service Timing & Policies
+  <section class="complaints-section">
+    <h2>6. Service Issues & Complaints</h2>
+    <p>Concerns about service must be reported to <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a> within 48 hours of the visit.</p>
+    <p>All issues are reviewed on a case-by-case basis. Any resolution is at the discretion of Yard Guards PDX and does <strong>not constitute a refund, credit, or guarantee</strong>.</p>
+  </section>
 
-  - **First Service:** Scheduled on the **next available service day** based on your zip code.
-  - **Service Duration:** Typically 10–15 minutes per visit; larger yards or multiple piles may take longer, up to 1 hour.
+  <hr class="section-divider">
 
-**Pets & Access (Aggressive Dogs):**
+  <section class="photos-section">
+    <h2>7. Photos & Videos</h2>
+    <ul class="photos-list">
+      <li>Yard Guards PDX may take photos or short videos for promotional purposes.</li>
+      <li>No personal identifying information (names, addresses, phone numbers) will be shared.</li>
+      <li>Consent is required to feature your yard; email <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a> to grant or withdraw consent.</li>
+    </ul>
+  </section>
 
-  - Pets that are uncomfortable around strangers **must be secured** during service.
-  - If a dog becomes aggressive and cannot be safely secured, the service will be **stopped for that visit**.
-  - The visit **counts as a completed service** for billing purposes because our team **arrived on-site and attempted the service**, which consumes time and resources.
-  - Customers will be **notified** if a visit is stopped due to an aggressive dog so they can secure pets for future visits.
-  - Customers are responsible for ensuring the yard is accessible and pets are secured during service.
+  <hr class="section-divider">
 
-**Right to Adjust Schedule / Service Modifications:**
+  <section class="disputes-section">
+    <h2>8. Disputes & Chargebacks</h2>
+    <p>Contact Yard Guards PDX directly to resolve concerns before initiating a dispute or chargeback.</p>
+    <p>Payments are non-refundable; cancellations only stop future billing.</p>
+  </section>
 
-  - Yard Guards PDX may adjust service days or time windows to optimize routing, staffing, and service efficiency. Customers will be notified in advance.
-  - Service scope may be modified if necessary for safety, efficiency, or unforeseen circumstances.
+  <hr class="section-divider">
 
-**Service Exceptions:**
+  <section class="liability-section">
+    <h2>9. Limitation of Liability</h2>
+    <p>Yard Guards PDX is not liable for indirect, incidental, or consequential damages, including property damage, lost wages, or personal injury, except in cases of gross negligence or willful misconduct.</p>
+  </section>
 
-  - Yard Guards PDX provides routine dog waste removal. We are not responsible for extreme or unusual yard conditions beyond normal dog waste, such as fallen tree branches, flooding, mudslides, or other extraordinary hazards.
+  <hr class="section-divider">
 
----
+  <section class="force-majeure-section">
+    <h2>10. Force Majeure</h2>
+    <p>Yard Guards PDX is not responsible for delays or missed services due to events beyond reasonable control, including weather, natural disasters, or other unforeseen circumstances.</p>
+  </section>
 
-## 6. Service Issues & Complaints
+  <hr class="section-divider">
 
-Concerns about service must be reported to [service@yardguardspdx.com](mailto:service@yardguardspdx.com) within 48 hours of the visit.
+  <section class="governing-law-section">
+    <h2>11. Governing Law & Jurisdiction</h2>
+    <p>These Terms are governed by the laws of the State of Oregon.</p>
+    <p>Any disputes arising from these Terms shall be resolved in the state or federal courts located in Portland, Oregon.</p>
+  </section>
 
-All issues are reviewed on a case-by-case basis. Any resolution is at the discretion of Yard Guards PDX and does **not constitute a refund, credit, or guarantee**.
+  <hr class="section-divider">
 
----
+  <section class="entire-agreement-section">
+    <h2>12. Entire Agreement</h2>
+    <p>These Terms constitute the entire agreement between you and Yard Guards PDX regarding the services provided and supersede any prior agreements or communications, except as otherwise stated in our Privacy Policy.</p>
+  </section>
 
-## 7. Photos & Videos
+  <hr class="section-divider">
 
-  - Yard Guards PDX may take photos or short videos for promotional purposes.
-  - No personal identifying information (names, addresses, phone numbers) will be shared.
-  - Consent is required to feature your yard; email [service@yardguardspdx.com](mailto:service@yardguardspdx.com) to grant or withdraw consent.
+  <section class="changes-section">
+    <h2>13. Changes to Terms</h2>
+    <p>Yard Guards PDX may update these Terms & Conditions from time to time.</p>
+    <p>The most current version will be posted on the website. Continued use of our services constitutes acceptance of any changes.</p>
+  </section>
 
----
+  <hr class="section-divider">
 
-## 8. Disputes & Chargebacks
+  <section class="severability-section">
+    <h2>14. Severability</h2>
+    <p>If any provision of these Terms is found invalid or unenforceable, the remaining provisions will remain in full force and effect.</p>
+  </section>
 
-Contact Yard Guards PDX directly to resolve concerns before initiating a dispute or chargeback.  
-Payments are non-refundable; cancellations only stop future billing.
+  <hr class="section-divider">
 
----
+  <section class="communications-section">
+    <h2>15. Electronic Communications</h2>
+    <p>By signing up, you consent to receive service-related communications via email or text, including service reminders, on-the-way notifications, invoices, and important updates regarding your account or scheduled visits.</p>
+  </section>
 
-## 9. Limitation of Liability
+  <hr class="section-divider">
 
-Yard Guards PDX is not liable for indirect, incidental, or consequential damages, including property damage, lost wages, or personal injury, except in cases of gross negligence or willful misconduct.
+  <section class="marketing-communications-section">
+    <h2>16. Marketing Communications</h2>
+    <p>By agreeing to these Terms & Conditions, you consent to receive <strong>marketing communications</strong> from Yard Guards PDX, including <strong>promotional emails and SMS messages</strong>.</p>
+    <p>You may opt out at any time by clicking the unsubscribe link in emails or replying "STOP" to SMS.</p>
+    <p><strong>Service-related emails and texts</strong> (on-the-way notifications, receipts, account updates) will continue regardless of marketing preferences.</p>
+  </section>
 
----
+  <hr class="section-divider">
 
-## 10. Force Majeure
+  <section class="contact-section">
+    <h2>17. Contact Information</h2>
+    <p>For questions about these Terms, cancellations, or service concerns, email <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a>.</p>
+  </section>
 
-Yard Guards PDX is not responsible for delays or missed services due to events beyond reasonable control, including weather, natural disasters, or other unforeseen circumstances.
-
----
-
-## 11. Governing Law & Jurisdiction
-
-These Terms are governed by the laws of the State of Oregon.  
-Any disputes arising from these Terms shall be resolved in the state or federal courts located in Portland, Oregon.
-
----
-
-## 12. Entire Agreement
-
-These Terms constitute the entire agreement between you and Yard Guards PDX regarding the services provided and supersede any prior agreements or communications, except as otherwise stated in our Privacy Policy.
-
----
-
-## 13. Changes to Terms
-
-Yard Guards PDX may update these Terms & Conditions from time to time.  
-The most current version will be posted on the website. Continued use of our services constitutes acceptance of any changes.
-
----
-
-## 14. Severability
-
-If any provision of these Terms is found invalid or unenforceable, the remaining provisions will remain in full force and effect.
-
----
-
-## 15. Electronic Communications
-
-By signing up, you consent to receive service-related communications via email or text, including service reminders, on-the-way notifications, invoices, and important updates regarding your account or scheduled visits.
-
----
-
-## 16. Marketing Communications
-
-By agreeing to these Terms & Conditions, you consent to receive **marketing communications** from Yard Guards PDX, including **promotional emails and SMS messages**.  
-You may opt out at any time by clicking the unsubscribe link in emails or replying “STOP” to SMS.  
-**Service-related emails and texts** (on-the-way notifications, receipts, account updates) will continue regardless of marketing preferences.
-
----
-
-## 17. Contact Information
-
-For questions about these Terms, cancellations, or service concerns, email [service@yardguardspdx.com](mailto:service@yardguardspdx.com).
+</div>
