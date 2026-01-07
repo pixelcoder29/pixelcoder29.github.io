@@ -9,6 +9,12 @@ keywords: "dog waste removal Portland, pet waste cleanup Portland OR, profession
 <link rel="stylesheet" href="/assets/css/custom-pages.css">
 <script src="/assets/js/custom-pages.js" defer></script>
 
+<style>
+.header-section {
+  display: none;
+}
+</style>
+
 <!-- Breadcrumbs Schema -->
 <script type="application/ld+json">
 {
