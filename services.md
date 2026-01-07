@@ -285,15 +285,15 @@ body {
     <h2 style="text-align:center; margin-bottom:32px;">Why Choose Yard Guards PDX?</h2>
 
     <div class="cards">
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
+      <div class="card" style="background:#e0f7fa;color:#1a1a1a;">
         <h3>🐕 Dog Lovers</h3>
         <p>Our team loves dogs and understands their needs. We work safely and respectfully around your pets.</p>
       </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
+      <div class="card" style="background:#e0f7fa;color:#1a1a1a;">
         <h3>⏰ Time Saving</h3>
         <p>Free up your schedule for what matters most. We handle the dirty work so you can enjoy your yard.</p>
       </div>
-      <div class="card" style="background:#e0f7fa;color:#00796b;">
+      <div class="card" style="background:#e0f7fa;color:#1a1a1a;">
         <h3>🌱 Eco-Friendly</h3>
         <p>Environmentally responsible waste disposal and sustainable practices for our community.</p>
       </div>
