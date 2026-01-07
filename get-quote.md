@@ -69,17 +69,19 @@ permalink: /get-quote/
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="questions">Any questions or concerns?</label>
-      <textarea id="questions" name="anyQuestions" rows="3"></textarea>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="questions">Any questions or concerns?</label>
+        <textarea id="questions" name="anyQuestions" rows="3"></textarea>
+      </div>
     </div>
 
     <p class="privacy-text" style="font-size: 12px; margin-top: 10px;">By providing my phone number and email, I agree to receive texts and emails from Yard Guards PDX, including marketing messages. Messaging frequency varies; message and data rates may apply. Reply STOP to opt out of texts, or click the unsubscribe link in any email for email opt-out. Reply HELP for more information.</p>
-    <div class="form-group">
-      <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 14px;">
-        <input type="checkbox" id="privacy_agree" name="privacyAgree" required style="margin-top: 2px;">
-        <span>By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</span>
-      </label>
+    <div class="form-group privacy-group">
+      <div>
+        <input type="checkbox" id="privacy_agree" name="privacyAgree" required>
+        <label for="privacy_agree">By checking this box I agree to the <a href="/privacy-policy" target="_blank">Privacy Policy</a> *</label>
+      </div>
       <small class="error-message" id="privacy-error"></small>
     </div>
     <button type="submit" class="cta-button">Request My Quote</button>
@@ -379,17 +381,19 @@ permalink: /get-quote/
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="questions_modal">Any questions or concerns?</label>
-          <textarea id="questions_modal" name="anyQuestions" rows="3"></textarea>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="questions_modal">Any questions or concerns?</label>
+            <textarea id="questions_modal" name="anyQuestions" rows="3"></textarea>
+          </div>
         </div>
 
         <p class="privacy-text" style="font-size: 12px; margin-top: 10px;">By providing my phone number and email, I agree to receive texts and emails from Yard Guards PDX, including marketing messages. Messaging frequency varies; message and data rates may apply. Reply STOP to opt out of texts, or click the unsubscribe link in any email for email opt-out. Reply HELP for more information.</p>
-        <div class="form-group">
-          <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 14px;">
-            <input type="checkbox" id="privacy_agree_modal" name="privacyAgree" required style="margin-top: 2px;">
-            <span>By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</span>
-          </label>
+        <div class="form-group privacy-group">
+          <div>
+            <input type="checkbox" id="privacy_agree_modal" name="privacyAgree" required>
+            <label for="privacy_agree_modal">By checking this box I agree to the <a href="/privacy-policy" target="_blank">Privacy Policy</a> *</label>
+          </div>
           <small class="error-message" id="privacy-modal-error"></small>
         </div>
         <button type="submit" class="cta-button">Request My Quote</button>

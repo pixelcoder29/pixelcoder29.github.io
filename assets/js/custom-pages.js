@@ -17,13 +17,31 @@ function setupFormValidation(formElement, fieldIds) {
   const formError = formElement.querySelector('.form-error-banner');
 
   function showError(el, msg){
-    const error = el.parentElement.querySelector('.error-message');
-    error.textContent = msg;
-    error.style.display = 'block';
+    let error;
+    if (el.id.includes('privacy_agree')) {
+      // For privacy checkbox, error is at the privacy-group level
+      error = el.closest('.privacy-group').querySelector('.error-message');
+    } else {
+      // For other fields, error is in the parent element
+      error = el.parentElement.querySelector('.error-message');
+    }
+    if (error) {
+      error.textContent = msg;
+      error.style.display = 'block';
+    }
   }
   function clearError(el){
-    const error = el.parentElement.querySelector('.error-message');
-    error.style.display = 'none';
+    let error;
+    if (el.id.includes('privacy_agree')) {
+      // For privacy checkbox, error is at the privacy-group level
+      error = el.closest('.privacy-group').querySelector('.error-message');
+    } else {
+      // For other fields, error is in the parent element
+      error = el.parentElement.querySelector('.error-message');
+    }
+    if (error) {
+      error.style.display = 'none';
+    }
   }
 
   if (fullName) {
@@ -84,6 +102,12 @@ function setupFormValidation(formElement, fieldIds) {
     if (dogs) data.append("howMany", dogs.value);
     if (freq) data.append("serviceFrequency", freqValue);
     if (questions) data.append("anyQuestions", questions.value.trim());
+
+    // Add consent tracking for legal compliance
+    if (privacyAgree) {
+      data.append("privacyPolicyAgreed", privacyAgree.checked ? "true" : "false");
+      data.append("consentTimestamp", new Date().toISOString());
+    }
 
     try {
       const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {

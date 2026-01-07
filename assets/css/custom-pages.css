@@ -32,12 +32,37 @@ footer {
 .quote-form input::placeholder,.quote-form textarea::placeholder{color:rgba(0,0,0,.45)}
 .quote-form select{color:rgba(0,0,0,.85)}
 .quote-form select option:disabled[selected]{color:rgba(0,0,0,.45)}
-.quote-form textarea{resize:vertical;min-height:100px}
+.quote-form textarea{resize:vertical;min-height:100px;width:100%;box-sizing:border-box}
 .error-message{color:#d93025;font-size:0.8125rem;margin-top:8px;display:none;font-weight:500}
+
+.form-group.privacy-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group.privacy-group > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-group.privacy-group label {
+  display: inline-block;
+  margin: 0;
+}
+
+.form-group.privacy-group input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  flex-shrink: 0;
+}
 .cta-button{background:linear-gradient(135deg, #4CAF50 0%, #45a049 100%);color:#fff;font-weight:700;padding:18px 32px;border:none;border-radius:12px;cursor:pointer;margin-top:24px;width:100%;font-size:18px;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(76,175,80,0.3);letter-spacing:0.3px}
 .cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(76,175,80,0.4)}
 .cta-button:active{transform:translateY(0)}
-.privacy-text{font-size:0.875rem;margin-top:16px;color:#666;line-height:1.5}
+.privacy-text{font-size:0.875rem;margin-top:16px;margin-left:5px;color:#666;line-height:1.5}
 .privacy-text a{color:#4CAF50;text-decoration:none;font-weight:600}
 .privacy-text a:hover{text-decoration:underline}
 .form-error-banner{display:none;background:#fdd;color:#900;padding:14px;border-radius:12px;margin-bottom:20px;font-weight:600;font-size:14px}
