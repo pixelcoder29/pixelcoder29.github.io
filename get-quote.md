@@ -111,21 +111,21 @@ permalink: /get-quote/
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:50px;">
       <h2>Why Choose Yard Guards PDX?</h2>
-      <p>Effortless yard cleanup. More free time. Peace of mind.</p>
+      <p style="font-size: 20px">Effortless yard cleanup. More free time. Peace of mind.</p>
     </div>
 
     <div class="cards">
       <div class="card" style="background:#e0f7fa;color:#00796b;">
         <h3>🕒 Save Time</h3>
-        <p>We handle the pet waste so you can focus on what matters most.</p>
+        <p style="font-size: 20px">We handle the pet waste so you can focus on what matters most.</p>
       </div>
       <div class="card" style="background:#e0f7fa;color:#00796b;">
         <h3>✅ Zero Hassle</h3>
-        <p>Reliable cleanups, scheduled and managed entirely by our team.</p>
+        <p style="font-size: 20px">Reliable cleanups, scheduled and managed entirely by our team.</p>
       </div>
       <div class="card" style="background:#e0f7fa;color:#00796b;">
         <h3>🌿 Enjoy Your Yard</h3>
-        <p>Healthy, vibrant lawn that's safe for your family and pets.</p>
+        <p style="font-size: 20px">Healthy, vibrant lawn that's safe for your family and pets.</p>
       </div>
     </div>
   </div>
@@ -181,7 +181,7 @@ permalink: /get-quote/
       <div class="trust-section-right" style="flex:1; min-width:300px;">
         <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Clean Yard" style="width:100%; height:auto; border-radius:8px;" loading="lazy">
       </div>
- <p style="text-align: center; width: 100%; padding-top: 10px; font-size: 26px">We keep your yard clean and safe so you can relax knowing the job is done right.</p>
+ <p style="text-align: center; width: 100%; padding-top: 10px; font-size: 21px">We keep your yard clean and safe so you can relax knowing the job is done right.</p>
     </div>
     
   </div>
@@ -306,8 +306,8 @@ permalink: /get-quote/
 
 <!-- --- Final CTA Section: "Ready for a Clean, Stress-Free Yard?" --- -->
 <div class="full-bleed-wrapper" style="background:#ffffff">
-  <div class="section-inner" style="text-align:center;">
-    <h2 style="margin-bottom:40px;">Ready for a Clean, Stress-Free Yard?</h2>
+  <div class="section-inner" style="text-align:center; margin-bottom: 20px">
+    <h2 style="margin-bottom:40px; margin-top: 0px">Ready for a Clean, Stress-Free Yard?</h2>
     
     <button id="open-form" class="cta-button" style="max-width:300px; margin: 0 auto;">Get My Instant Quote</button>
   </div>

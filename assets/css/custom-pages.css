@@ -1116,3 +1116,148 @@ html, body {
   max-width: 600px;
   margin: 0 auto;
 }
+
+/* === EXTRACTED INLINE STYLES === */
+
+/* HERO SECTION */
+.hero-wrapper {
+  background: #f8f8f8;
+}
+
+/* GENERAL SECTIONS */
+.section-background-light {
+  background: #f8f8f8;
+}
+
+.section-header-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-description-large {
+  font-size: 20px;
+}
+
+.section-inner-center {
+  text-align: center;
+}
+
+.hero-description {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #1a1a1a;
+}
+
+.cta-button-max-width {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* TRUST SECTION */
+.trust-section-right-custom {
+  flex: 1;
+  min-width: 300px;
+  margin-top: 20px;
+}
+
+.trust-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.trust-bottom-text {
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+/* CUSTOMER BENEFITS CARDS */
+.card-background-light {
+  background: #e0f7fa;
+  color: #1a1a1a;
+}
+
+.card-text-large {
+  font-size: 21px;
+}
+
+/* TRUST LIST */
+.trust-list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.trust-emoji {
+  font-size: 24px;
+  width: 36px;
+  text-align: center;
+}
+
+/* HOW IT WORKS CARDS */
+.card-background-green {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.step-emoji {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+/* SECTION TITLES */
+.section-title-large {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.section-background-white {
+  background: #ffffff;
+}
+
+.section-title-margin {
+  margin-bottom: 40px;
+}
+
+/* MODAL */
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* SERVICES PAGE SPECIFIC */
+.hero-description-large {
+  font-size: 20px;
+  margin: 24px 0 32px;
+}
+
+.service-image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 20px auto 0;
+  display: block;
+}
+
+.service-option-description {
+  margin-bottom: 20px;
+}
+
+.service-frequency {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4CAF50;
+  margin-bottom: 16px;
+}
+
+.section-title-center-margin {
+  text-align: center;
+  margin-bottom: 40px;
+}
