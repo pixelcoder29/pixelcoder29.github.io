@@ -1045,7 +1045,7 @@ html, body {
 .privacy-policy-page .col-lg-10,
 .terms-page .col-xl-8,
 .terms-page .col-lg-10 {
-  padding: 40px 30px;
+  padding: 0 30px;
 }
 
 .page-template .content {
