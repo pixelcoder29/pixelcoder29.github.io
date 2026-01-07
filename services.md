@@ -205,20 +205,20 @@ body {
         <h3>Weekly Service</h3>
         <p>Perfect for households with 1-2 dogs. Keep your yard consistently clean and odor-free with regular weekly visits.</p>
         <div class="frequency">Every 7 Days</div>
-        <p style="font-size:16px; color:#666;">Get your personalized quote</p>
+        <p style="font-size:16px; color:#333;">Get your personalized quote</p>
       </div>
 
       <div class="service-option">
         <h3>Bi-Weekly Service</h3>
         <p>Ideal for homes with fewer dogs or lighter waste. Professional cleanup every two weeks for ongoing yard maintenance.</p>
         <div class="frequency">Every 14 Days</div>
-        <p style="font-size:16px; color:#666;">Get your personalized quote</p>
+        <p style="font-size:16px; color:#333;">Get your personalized quote</p>
       </div>
     </div>
 
     <div style="text-align:center; margin-top:40px;">
       <button class="open-form-btn cta-button">Get Your Custom Quote</button>
-      <p style="font-size:16px; color:#666; margin-top:16px;">No contracts • Flexible scheduling • Professional service</p>
+      <p style="font-size:16px; color:#333; margin-top:16px;">No contracts • Flexible scheduling • Professional service</p>
     </div>
   </div>
 </div>
@@ -257,14 +257,14 @@ body {
     <h2 style="text-align:center; margin-bottom:32px;">Complete Dog Waste Removal Service</h2>
 
     <ul class="benefits-list">
-      <li><strong>Thorough Cleanup:</strong> We remove all dog waste from your yard, sidewalks, and common areas</li>
-      <li><strong>Eco-Friendly Disposal:</strong> Waste is properly disposed of in accordance with local environmental guidelines</li>
-      <li><strong>Gate Security:</strong> We secure all gates and provide photos after each visit for your peace of mind</li>
-      <li><strong>Text Notifications:</strong> Receive a text message when we're on our way to your location</li>
-      <li><strong>Weather-Appropriate:</strong> Service continues rain or shine, except in extreme weather conditions</li>
-      <li><strong>Pet Safety:</strong> Our team is experienced with dogs and takes extra care around your pets</li>
-      <li><strong>Reliable Scheduling:</strong> Consistent service times with flexible options</li>
-      <li><strong>Professional Equipment:</strong> We use proper tools and sanitation practices for the best results</li>
+      <li style="color: #222;"><strong>Thorough Cleanup:</strong> We remove all dog waste from your yard, sidewalks, and common areas</li>
+      <li style="color: #222;"><strong>Eco-Friendly Disposal:</strong> Waste is properly disposed of in accordance with local environmental guidelines</li>
+      <li style="color: #222;"><strong>Gate Security:</strong> We secure all gates and provide photos after each visit for your peace of mind</li>
+      <li style="color: #222;"><strong>Text Notifications:</strong> Receive a text message when we're on our way to your location</li>
+      <li style="color: #222;"><strong>Weather-Appropriate:</strong> Service continues rain or shine, except in extreme weather conditions</li>
+      <li style="color: #222;"><strong>Pet Safety:</strong> Our team is experienced with dogs and takes extra care around your pets</li>
+      <li style="color: #222;"><strong>Reliable Scheduling:</strong> Consistent service times with flexible options</li>
+      <li style="color: #222;"><strong>Professional Equipment:</strong> We use proper tools and sanitation practices for the best results</li>
     </ul>
   </div>
 </div>
@@ -314,7 +314,7 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>We clean all outdoor areas where your dogs spend time, including the backyard, sidewalks, patios, and any common areas. We ensure thorough coverage for a completely clean space.</p>
+          <p style="color: #222;">We clean all outdoor areas where your dogs spend time, including the backyard, sidewalks, patios, and any common areas. We ensure thorough coverage for a completely clean space.</p>
         </div>
       </div>
 
@@ -324,7 +324,7 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>We service in rain or shine, but will reschedule if driving conditions are unsafe due to ice, snow, or extreme weather. Your safety and ours is our top priority.</p>
+          <p style="color: #222;">We service in rain or shine, but will reschedule if driving conditions are unsafe due to ice, snow, or extreme weather. Your safety and ours is our top priority.</p>
         </div>
       </div>
 
@@ -334,17 +334,17 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>Absolutely! Our team is experienced with dogs and families. We work safely around pets and children, and can accommodate specific timing preferences for the best experience.</p>
+          <p style="color: #222;">Absolutely! Our team is experienced with dogs and families. We work safely around pets and children, and can accommodate specific timing preferences for the best experience.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          <span>What if I need to change my service schedule?</span>
+          <span>What if I need to change your service schedule?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>Life happens! We offer flexible scheduling with no contracts. Simply let us know in advance about any changes to your service needs.</p>
+          <p style="color: #222;">Life happens! We offer flexible scheduling with no contracts. Simply let us know in advance about any changes to your service needs.</p>
         </div>
       </div>
 
@@ -354,7 +354,7 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>Yes, we are fully licensed and insured for your peace of mind. We maintain proper business insurance and follow all local regulations for waste disposal and service provision.</p>
+          <p style="color: #222;">Yes, we are fully licensed and insured for your peace of mind. We maintain proper business insurance and follow all local regulations for waste disposal and service provision.</p>
         </div>
       </div>
 
@@ -366,7 +366,7 @@ body {
 <div class="full-bleed-wrapper" style="background:#ffffff;">
   <div class="section-inner" style="text-align:center;">
     <h2 style="margin-bottom:24px; color: #1a1a1a;">Ready for Clean, Hassle-Free Yards?</h2>
-    <p style="font-size:20px; margin-bottom:32px; color: #37474f;">Get your personalized quote today and experience the convenience of professional dog waste removal.</p>
+    <p style="font-size:20px; margin-bottom:32px; color: #1a1a1a;">Get your personalized quote today and experience the convenience of professional dog waste removal.</p>
     <button class="open-form-btn cta-button">Get Your Free Quote</button>
   </div>
 </div>
