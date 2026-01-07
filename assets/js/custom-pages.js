@@ -103,7 +103,7 @@ function setupFormValidation(formElement, fieldIds) {
 }
 
 // === EXIT-INTENT FUNCTIONALITY (DESKTOP ONLY) ===
-function initializeExitIntent(){if(window.innerWidth<=768)return;let e=!1,t=document.getElementById("quote-form-modal"),n=()=>{e||t&&(e=!0,t.style.display="block",document.body.style.overflow="hidden",window.gtag&&gtag("event","exit_intent_shown",{event_category:"engagement",event_label:"site_wide"}))};document.addEventListener("mouseleave",e=>{0>=e.clientY&&null===e.relatedTarget&&n()});let o=0;document.addEventListener("mousemove",e=>{5>=e.clientY&&50<o&&n(),o=e.clientY})}
+function initializeExitIntent(){if(window.innerWidth<=768||window.location.pathname.includes("/quote/"))return;let e=!1,t=document.getElementById("quote-form-modal"),n=()=>{e||t&&(e=!0,t.style.display="block",document.body.style.overflow="hidden",window.gtag&&gtag("event","exit_intent_shown",{event_category:"engagement",event_label:"site_wide"}))};document.addEventListener("mouseleave",e=>{0>=e.clientY&&null===e.relatedTarget&&n()});let o=0;document.addEventListener("mousemove",e=>{5>=e.clientY&&50<o&&n(),o=e.clientY})}
 
 // === INITIALIZE EVERYTHING WHEN DOM IS READY ===
 document.addEventListener('DOMContentLoaded', function(){
