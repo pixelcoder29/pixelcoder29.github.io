@@ -45,7 +45,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .form-group.privacy-group label {
@@ -59,8 +59,8 @@ footer {
 }
 
 .form-group.privacy-group input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin: 0;
   flex-shrink: 0;
   cursor: pointer;
