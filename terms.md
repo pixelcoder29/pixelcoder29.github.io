@@ -16,7 +16,7 @@ These Terms & Conditions explain how our service works, including billing, cance
 
 ## 1. Overview
 
-Yard Guards PDX provides recurring dog waste removal services.  
+Yard Guards PDX provides recurring dog waste removal services.
 
 By using our service, you acknowledge and accept these Terms & Conditions.
 
@@ -24,64 +24,68 @@ By using our service, you acknowledge and accept these Terms & Conditions.
 
 ## 2. Definitions
 
-- **Service:** The recurring dog waste removal services provided by Yard Guards PDX.  
-- **Customer:** The individual or entity that signs up for the Service.  
-- **Yard Guards PDX:** The company providing the Service.  
+  - **Service:** The recurring dog waste removal services provided by Yard Guards PDX.
+  - **Customer:** The individual or entity that signs up for the Service.
+  - **Yard Guards PDX:** The company providing the Service.
 
 ---
 
 ## 3. Billing & Payments
 
-- Services are billed **weekly or biweekly**, on the scheduled service day, based on the frequency selected.  
-- All payments are final. No refunds or partial refunds are issued.  
-- Payments are processed securely through Stripe.  
-- By signing up, you authorize recurring automatic charges for your scheduled service.
+  - Services are billed **weekly or biweekly**, on the scheduled service day, based on the frequency selected.
+  - All payments are final. No refunds or partial refunds are issued.
+  - Payments are processed securely through Stripe.
+  - By signing up, you authorize recurring automatic charges for your scheduled service.
 
-**Payment Failures:**  
+**Payment Failures:**
 If a payment fails due to insufficient funds, expired card, or other issues, Yard Guards PDX will attempt to contact the customer to update payment information. Service may be paused until payment is successfully processed.
 
 ---
 
 ## 4. Cancellations & Pausing
 
-- You may cancel or pause your service at any time by emailing [service@yardguardspdx.com](mailto:service@yardguardspdx.com).  
-- Cancelling or pausing stops future billing only.  
+  - You may cancel or pause your service at any time by emailing [service@yardguardspdx.com](mailto:service@yardguardspdx.com).
+  - Cancelling or pausing stops future billing only.
 
 ---
 
 ## 5. Service Timing & Policies
 
-- **First Service:** Scheduled on the **next available service day** based on your zip code.  
-- **Service Duration:** Typically 10–15 minutes per visit; larger yards or multiple piles may take longer, up to 1 hour.  
+  - **First Service:** Scheduled on the **next available service day** based on your zip code.
+  - **Service Duration:** Typically 10–15 minutes per visit; larger yards or multiple piles may take longer, up to 1 hour.
 
-**Pets & Access (Aggressive Dogs):**  
-- Pets that are uncomfortable around strangers **must be secured** during service.  
-- If a dog becomes aggressive and cannot be safely secured, the service will be **stopped for that visit**.  
-- The visit **counts as a completed service** for billing purposes because our team **arrived on-site and attempted the service**, which consumes time and resources.  
-- Customers will be **notified** if a visit is stopped due to an aggressive dog so they can secure pets for future visits.  
-- Customers are responsible for ensuring the yard is accessible and pets are secured during service.
+**Pets & Access (Aggressive Dogs):**
 
-**Right to Adjust Schedule / Service Modifications:**  
-- Yard Guards PDX may adjust service days or time windows to optimize routing, staffing, and service efficiency. Customers will be notified in advance.  
-- Service scope may be modified if necessary for safety, efficiency, or unforeseen circumstances.
+  - Pets that are uncomfortable around strangers **must be secured** during service.
+  - If a dog becomes aggressive and cannot be safely secured, the service will be **stopped for that visit**.
+  - The visit **counts as a completed service** for billing purposes because our team **arrived on-site and attempted the service**, which consumes time and resources.
+  - Customers will be **notified** if a visit is stopped due to an aggressive dog so they can secure pets for future visits.
+  - Customers are responsible for ensuring the yard is accessible and pets are secured during service.
 
-**Service Exceptions:**  
-- Yard Guards PDX provides routine dog waste removal. We are not responsible for extreme or unusual yard conditions beyond normal dog waste, such as fallen tree branches, flooding, mudslides, or other extraordinary hazards.
+**Right to Adjust Schedule / Service Modifications:**
+
+  - Yard Guards PDX may adjust service days or time windows to optimize routing, staffing, and service efficiency. Customers will be notified in advance.
+  - Service scope may be modified if necessary for safety, efficiency, or unforeseen circumstances.
+
+**Service Exceptions:**
+
+  - Yard Guards PDX provides routine dog waste removal. We are not responsible for extreme or unusual yard conditions beyond normal dog waste, such as fallen tree branches, flooding, mudslides, or other extraordinary hazards.
 
 ---
 
 ## 6. Service Issues & Complaints
 
-Concerns about service must be reported to [service@yardguardspdx.com](mailto:service@yardguardspdx.com) within 48 hours of the visit.  
+Concerns about service must be reported to [service@yardguardspdx.com](mailto:service@yardguardspdx.com) within 48 hours of the visit.
+
 All issues are reviewed on a case-by-case basis. Any resolution is at the discretion of Yard Guards PDX and does **not constitute a refund, credit, or guarantee**.
 
 ---
 
 ## 7. Photos & Videos
 
-- Yard Guards PDX may take photos or short videos for promotional purposes.  
-- No personal identifying information (names, addresses, phone numbers) will be shared.  
-- Consent is required to feature your yard; email [service@yardguardspdx.com](mailto:service@yardguardspdx.com) to grant or withdraw consent.
+  - Yard Guards PDX may take photos or short videos for promotional purposes.
+  - No personal identifying information (names, addresses, phone numbers) will be shared.
+  - Consent is required to feature your yard; email [service@yardguardspdx.com](mailto:service@yardguardspdx.com) to grant or withdraw consent.
 
 ---
 
