@@ -3,6 +3,11 @@
 body{background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
 .header-section{height:25px}
 
+/* Remove footer margin-top */
+footer {
+  margin-top: 0;
+}
+
 /* === FORM STYLES === */
 .quote-form{max-width:600px;margin:0 auto;padding:32px 24px;position:relative}
 .quote-form fieldset{border:none}
