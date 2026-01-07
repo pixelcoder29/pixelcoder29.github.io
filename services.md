@@ -17,6 +17,10 @@ keywords: "dog waste removal services Portland, poop scooping Portland OR, pet w
 .header-section {
   display: none;
 }
+
+body {
+  margin-top: -20px;
+}
 </style>
 
 <!-- Breadcrumbs Schema -->
