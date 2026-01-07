@@ -13,6 +13,7 @@ function setupFormValidation(formElement, fieldIds) {
   const dogs = document.getElementById(fieldIds.dogs);
   const freq = document.getElementById(fieldIds.frequency);
   const questions = document.getElementById(fieldIds.questions);
+  const privacyAgree = document.getElementById(fieldIds.privacyAgree);
   const formError = formElement.querySelector('.form-error-banner');
 
   function showError(el, msg){
@@ -68,6 +69,7 @@ function setupFormValidation(formElement, fieldIds) {
     if (zip && zip.value.length!==5){ showError(zip,"ZIP code must be 5 digits."); valid=false; }
     if (dogs && !dogs.value){ showError(dogs,"Please select how many dogs you have."); valid=false; }
     if (freq && !freq.value){ showError(freq,"Please select a service frequency."); valid=false; }
+    if (privacyAgree && !privacyAgree.checked){ showError(privacyAgree,"You must agree to the Privacy Policy to continue."); valid=false; }
 
     if(!valid) return;
 
@@ -126,7 +128,8 @@ document.addEventListener('DOMContentLoaded', function(){
       email: 'email',
       dogs: 'dogs',
       frequency: 'frequency',
-      questions: 'questions'
+      questions: 'questions',
+      privacyAgree: 'privacy_agree'
     });
   }
 
@@ -140,7 +143,8 @@ document.addEventListener('DOMContentLoaded', function(){
       email: 'email_modal',
       dogs: 'dogs_modal',
       frequency: 'frequency_modal',
-      questions: 'questions_modal'
+      questions: 'questions_modal',
+      privacyAgree: 'privacy_agree_modal'
     });
   }
 });
