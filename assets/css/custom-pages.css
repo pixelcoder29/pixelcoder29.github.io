@@ -961,7 +961,7 @@ html, body {
 
   /* Make Get Quote link a button on mobile */
   .get-quote-nav-item .nav-link {
-    background: #4CAF50 !important;
+    background: #ff6d00 !important;
     color: white !important;
     border: none !important;
     padding: 8px 16px !important;
@@ -971,19 +971,27 @@ html, body {
     text-align: center !important;
     line-height: 1 !important;
     transition: all 0.3s ease !important;
-    margin-left: 8px !important;
-    display: inline-block !important;
+    margin: 8px auto 0 !important;
+    display: block !important;
     text-decoration: none !important;
     white-space: nowrap !important;
     box-sizing: border-box !important;
-    box-shadow: 0 2px 8px rgba(76,175,80,0.3) !important;
+    box-shadow: 0 2px 8px rgba(255,109,0,0.3) !important;
+    width: fit-content !important;
   }
 
   .get-quote-nav-item .nav-link:hover {
-    background: #45a049 !important;
+    background: #e55a00 !important;
     color: white !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 4px 12px rgba(76,175,80,0.4) !important;
+    box-shadow: 0 4px 12px rgba(255,109,0,0.4) !important;
+  }
+
+  /* Center the button in mobile nav */
+  .get-quote-nav-item {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 8px !important;
   }
 }
 
