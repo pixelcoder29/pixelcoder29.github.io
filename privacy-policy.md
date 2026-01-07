@@ -4,6 +4,7 @@ title: "Privacy Policy"
 permalink: /privacy-policy/
 ---
 
+<body class="privacy-policy-page">
 <div class="privacy-policy-content">
 
   <h1>Yard Guards PDX – Privacy Policy</h1>

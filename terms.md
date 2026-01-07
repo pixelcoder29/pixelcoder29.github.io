@@ -4,6 +4,7 @@ title: "Terms & Conditions"
 permalink: /terms/
 ---
 
+<body class="terms-page">
 <div class="terms-content">
 
   <h1>Yard Guards PDX – Terms & Conditions</h1>

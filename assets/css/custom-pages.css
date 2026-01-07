@@ -1040,9 +1040,13 @@ html, body {
 
 /* === PAGE-SPECIFIC STYLES === */
 
-/* Privacy Policy and Terms page styling */
-.page-template .content {
+/* Privacy Policy and Terms page styling - body padding for these pages only */
+body.privacy-policy-page,
+body.terms-page {
   padding: 40px 30px;
+}
+
+.page-template .content {
   line-height: 1.8;
   margin-bottom: 20px;
 }
