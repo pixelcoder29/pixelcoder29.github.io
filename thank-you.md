@@ -11,7 +11,7 @@ permalink: /thank-you/
   <div class="next-steps">
     <h2>Next Steps</h2>
     <p>To schedule your service, please complete the required details form below.</p>
-    <a href="https://form.jotform.com/260053619355153" target="_blank" class="cta-button">Complete Service Details Form</a>
+    <a id="jotform-link" href="https://form.jotform.com/260053619355153" target="_blank" class="cta-button">Complete Service Details Form</a>
     <p class="note">This form collects your service address, yard access details, and cleaning preferences.</p>
   </div>
 
@@ -55,6 +55,33 @@ permalink: /thank-you/
   //   debugDiv.innerText = `Session ID: ${sessionId || 'none'} | Amount: $${amount} | ${pixelStatus}`;
   //   document.body.appendChild(debugDiv);
   // });
+
+  // Build dynamic JotForm URL with customer data from localStorage
+  window.addEventListener('DOMContentLoaded', () => {
+    const jotformLink = document.getElementById('jotform-link');
+    if (jotformLink) {
+      // Get customer data from localStorage
+      const userName = localStorage.getItem('userName') || '';
+      const userEmail = localStorage.getItem('userEmail') || '';
+      const userPhone = localStorage.getItem('userPhone') || '';
+      const userZip = localStorage.getItem('userZip') || '';
+
+      // Build URL with query parameters
+      const baseUrl = 'https://form.jotform.com/260053619355153';
+      const urlParams = new URLSearchParams();
+
+      // Add parameters only if data exists
+      if (userName) urlParams.append('fullname', encodeURIComponent(userName));
+      if (userEmail) urlParams.append('email', encodeURIComponent(userEmail));
+      if (userPhone) urlParams.append('phoneNumber', encodeURIComponent(userPhone));
+      if (userZip) urlParams.append('zipCode', encodeURIComponent(userZip));
+
+      // Update href if we have any parameters
+      if (urlParams.toString()) {
+        jotformLink.href = `${baseUrl}?${urlParams.toString()}`;
+      }
+    }
+  });
 </script>
 <noscript>
   <img height="1" width="1" style="display:none"
