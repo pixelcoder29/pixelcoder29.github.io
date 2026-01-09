@@ -161,12 +161,18 @@ function setupFormValidation(formElement, fieldIds) {
         // Track Lead event with event_id for CAPI matching
         console.log('fbq defined:', typeof fbq);
         console.log('About to fire Lead event with ID:', eventId);
+        let pixelStatus = 'NOT FIRED';
         if (typeof fbq !== 'undefined') {
           fbq('track', 'Lead', {}, {eventID: eventId});
           console.log('Lead event fired successfully');
+          pixelStatus = 'FIRED SUCCESSFULLY';
         } else {
           console.error('fbq not defined - Facebook pixel not loaded');
+          pixelStatus = 'FAILED - fbq undefined';
         }
+
+        // Temporary debug alert - remove after testing
+        alert(`Pixel Debug:\nfbq defined: ${typeof fbq}\nEvent ID: ${eventId}\nStatus: ${pixelStatus}\n\nCheck console for more details.`);
 
         window.location.href = '/confirmation/';
       } else {
