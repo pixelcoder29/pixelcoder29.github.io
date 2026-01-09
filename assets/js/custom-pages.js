@@ -105,7 +105,8 @@ function setupFormValidation(formElement, fieldIds) {
 
     // Add consent tracking for legal compliance
     if (privacyAgree) {
-      data.append("privacyPolicyAgreed", privacyAgree.checked ? "true" : "false");
+      data.append("Consent", privacyAgree.checked ? "true" : "false");
+      data.append("marketingConsent", "true");
       data.append("consentTimestamp", new Date().toISOString());
     }
 
