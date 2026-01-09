@@ -163,7 +163,7 @@ function setupFormValidation(formElement, fieldIds) {
           fbq('track', 'Lead', {}, {eventID: eventId});
         }
 
-        window.location.href = '/thank-you/';
+        window.location.href = '/confirmation/';
       } else {
         if (formError) formError.style.display = 'block';
       }

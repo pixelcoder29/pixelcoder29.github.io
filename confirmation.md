@@ -11,7 +11,7 @@ permalink: /confirmation/
 
   <div class="next-steps">
     <h2>What Happens Next?</h2>
-    <p>We'll review your information and contact you within 24 hours to schedule your first service. You'll receive a confirmation email with your service details.</p>
+    <p>We'll reach out to you shortly to discuss your service details and schedule your first visit. You'll receive a text message from us soon.</p>
     <p>In the meantime, feel free to explore our services or contact us if you have any questions.</p>
   </div>
 
