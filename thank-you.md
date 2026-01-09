@@ -70,11 +70,23 @@ permalink: /thank-you/
       const baseUrl = 'https://form.jotform.com/260053619355153';
       const urlParams = new URLSearchParams();
 
+      // Custom encoding function that preserves @ symbol in emails but encodes everything else
+      function encodeForJotForm(value) {
+        // For email fields, preserve @ symbol but encode everything else
+        if (value.includes('@')) {
+          return value.replace(/@/g, '@').replace(/[^@\w.-]/g, (match) => {
+            return encodeURIComponent(match);
+          });
+        }
+        // For non-email fields, use standard encoding
+        return encodeURIComponent(value);
+      }
+
       // Add parameters only if data exists
-      if (userName) urlParams.append('fullname', encodeURIComponent(userName));
-      if (userEmail) urlParams.append('email', encodeURIComponent(userEmail));
-      if (userPhone) urlParams.append('phoneNumber', encodeURIComponent(userPhone));
-      if (userZip) urlParams.append('zipCode', encodeURIComponent(userZip));
+      if (userName) urlParams.append('fullname', encodeForJotForm(userName));
+      if (userEmail) urlParams.append('email', encodeForJotForm(userEmail));
+      if (userPhone) urlParams.append('phoneNumber', encodeForJotForm(userPhone));
+      if (userZip) urlParams.append('zipCode', encodeForJotForm(userZip));
 
       // Update href if we have any parameters
       if (urlParams.toString()) {
