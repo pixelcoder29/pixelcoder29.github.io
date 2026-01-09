@@ -158,6 +158,16 @@ function setupFormValidation(formElement, fieldIds) {
         }
         localStorage.setItem('quoteAmount', amount);
 
+        // Store user data for Purchase CAPI event
+        localStorage.setItem('userEmail', email.value.trim());
+        localStorage.setItem('userPhone', phone.value.trim());
+        localStorage.setItem('userName', fullName.value.trim());
+        localStorage.setItem('userZip', zip.value.trim());
+        localStorage.setItem('purchaseEventId', eventId);
+        localStorage.setItem('purchaseSourceUrl', window.location.href);
+        localStorage.setItem('purchaseFbc', getFbc());
+        localStorage.setItem('purchaseFbp', getCookie('_fbp'));
+
         // Track Lead event with event_id for CAPI matching
         console.log('fbq defined:', typeof fbq);
         console.log('About to fire Lead event with ID:', eventId);
