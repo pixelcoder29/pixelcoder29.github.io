@@ -142,18 +142,26 @@ body {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What areas of the yard do you clean?",
+      "name": "Will my pets be safe during service?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We clean all outdoor areas where your dogs spend time, including the backyard, sidewalks, patios, and any common areas. We ensure thorough coverage for a completely clean space."
+        "text": "Your pets' safety is our top priority. We sanitize our tools and boots between properties, secure all gates, and handle every yard with care."
       }
     },
     {
       "@type": "Question",
-      "name": "How do you handle different weather conditions?",
+      "name": "How do you ensure your tools and equipment are properly sanitized?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We service in rain or shine, but will reschedule if driving conditions are unsafe due to ice, snow, or extreme weather. Your safety and ours is our top priority."
+        "text": "We use kennel-grade disinfectant/sanitizer that's safe for pets to thoroughly disinfect all our tools and boots between properties. This prevents the transmission of diseases like parvo and other dog-related illnesses, keeping all pets in our service area safe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any hidden fees or extra charges for the initial cleanup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges."
       }
     },
     {
@@ -166,18 +174,10 @@ body {
     },
     {
       "@type": "Question",
-      "name": "Are you licensed and insured?",
+      "name": "How do you handle payment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we are fully licensed and insured for your peace of mind. We maintain proper business insurance and follow all local regulations for waste disposal and service provision."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if I need to change my service schedule?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Life happens! We offer flexible scheduling with no contracts. Simply let us know in advance about any changes to your service needs."
+        "text": "We charge your card on file the day of your scheduled service. You only pay for services that are completed."
       }
     }
   ]
@@ -322,12 +322,21 @@ body {
 
       <div class="faq-item">
         <div class="faq-question">
+          <span>How do you ensure your tools and equipment are properly sanitized?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We use kennel-grade disinfectant/sanitizer that's safe for pets to thoroughly disinfect all our tools and boots between properties. This prevents the transmission of diseases like parvo and other dog-related illnesses, keeping all pets in our service area safe.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
           <span>Can you clean if my dog is in the yard?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
          <p>Yes, we love pets! For safety, dogs that are uncomfortable with strangers should be kept inside during service. Otherwise, our team is happy to work around your furry friends.</p>
-
         </div>
       </div>
 
@@ -364,6 +373,16 @@ body {
       </div>
 
       <!-- 4. Payment & Billing -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Are there any hidden fees or extra charges for the initial cleanup?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+<p>No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges.</p>
+        </div>
+      </div>
+
       <div class="faq-item">
         <div class="faq-question">
           <span>How do you handle payment?</span>
