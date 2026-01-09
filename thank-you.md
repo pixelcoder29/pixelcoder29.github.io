@@ -20,6 +20,47 @@ permalink: /thank-you/
   </div>
 </div>
 
+<!-- Facebook Pixel Purchase Tracking -->
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const sessionId = urlParams.get('session_id');
+  const amount = parseFloat(localStorage.getItem('quoteAmount')) || 0;
+
+  let pixelStatus = 'Did NOT fire';
+
+  if (sessionId &&
+      (sessionId.startsWith('cs_test_') || sessionId.startsWith('cs_live_')) &&
+      !localStorage.getItem('pixelFired-' + sessionId)) {
+
+      if (amount > 0 && typeof fbq !== 'undefined') {
+          fbq('track', 'Purchase', {value: amount, currency: 'USD'});
+          pixelStatus = 'Pixel FIRED!';
+      } else {
+          pixelStatus = 'Did NOT fire (no amount or fbq undefined)';
+      }
+
+      localStorage.setItem('pixelFired-' + sessionId, 'true');
+      localStorage.removeItem('quoteAmount');
+  } else if (sessionId) {
+      pixelStatus = 'Did NOT fire (already fired for this session)';
+  } else {
+      pixelStatus = 'Did NOT fire (no valid session_id)';
+  }
+
+  // Debug banner (uncomment for testing)
+  // window.addEventListener('DOMContentLoaded', () => {
+  //   const debugDiv = document.createElement('div');
+  //   debugDiv.id = 'pixel-debug';
+  //   debugDiv.style.cssText = 'position:fixed;bottom:0;left:0;background:#fff;color:#000;padding:5px;z-index:9999;font-size:14px;';
+  //   debugDiv.innerText = `Session ID: ${sessionId || 'none'} | Amount: $${amount} | ${pixelStatus}`;
+  //   document.body.appendChild(debugDiv);
+  // });
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=1487573468971173&ev=Purchase&noscript=1"/>
+</noscript>
+
 <style>
 .thank-you-container {
   max-width: 800px;

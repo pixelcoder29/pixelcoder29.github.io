@@ -109,6 +109,10 @@ function setupFormValidation(formElement, fieldIds) {
       data.append("consentTimestamp", new Date().toISOString());
     }
 
+    // Generate unique event ID for pixel/CAPI matching
+    const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    data.append("eventId", eventId);
+
     try {
       const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {
         method: 'POST',
@@ -117,6 +121,23 @@ function setupFormValidation(formElement, fieldIds) {
       });
 
       if(response.ok){
+        // Calculate amount and store in localStorage
+        const weeklyPrices = [0, 23, 25, 27, 29, 32, 34];
+        const biweeklyPrices = [0, 32, 36, 39, 42, 46, 49];
+        const dogsCount = parseInt(dogs.value);
+        let amount = 0;
+        if (freq.value === "weekly") {
+          amount = weeklyPrices[dogsCount] || 0;
+        } else if (freq.value === "bi-weekly") {
+          amount = biweeklyPrices[dogsCount] || 0;
+        }
+        localStorage.setItem('quoteAmount', amount);
+
+        // Track Lead event with event_id for CAPI matching
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead', {}, {eventID: eventId});
+        }
+
         window.location.href = '/thank-you/';
       } else {
         if (formError) formError.style.display = 'block';
