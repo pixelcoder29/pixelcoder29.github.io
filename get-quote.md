@@ -11,8 +11,55 @@ permalink: /get-quote/
 <link rel="stylesheet" href="/assets/css/custom-pages.css">
 <script src="/assets/js/custom-pages.js" defer></script>
 
-
-
+<!-- FAQ Schema for Get Quote Page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will my pets be safe during service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your pets' safety is our top priority. We sanitize our tools and boots between properties, secure all gates, and handle every yard with care. If we notice anything unusual in your pet's waste that could indicate a health concern, we notify you immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you ensure your tools and equipment are properly sanitized?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use kennel-grade disinfectant/sanitizer that's safe for pets to thoroughly disinfect all our tools and boots between properties. This prevents the transmission of diseases like parvo and other dog-related illnesses, keeping all pets in our service area safe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any hidden fees or extra charges for the initial cleanup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work around pets and children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! Our team is experienced with dogs and families. We work safely around pets and children, and can accommodate specific timing preferences for the best experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We charge your card on file the morning of your scheduled service. You only pay for services that are completed."
+      }
+    }
+  ]
+}
+</script>
 
 <!-- --- Form Section --- -->
 <form class="quote-form" novalidate>
@@ -217,7 +264,17 @@ permalink: /get-quote/
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>Your pets’ safety is our top priority. We sanitize our tools and boots between properties, secure all gates, and handle every yard with care. If we notice anything unusual in your pet’s waste that could indicate a health concern, we notify you immediately.</p>
+          <p>Your pets' safety is our top priority. We sanitize our tools and boots between properties, secure all gates, and handle every yard with care. If we notice anything unusual in your pet's waste that could indicate a health concern, we notify you immediately.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How do you ensure your tools and equipment are properly sanitized?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We use kennel-grade disinfectant/sanitizer that's safe for pets to thoroughly disinfect all our tools and boots between properties. This prevents the transmission of diseases like parvo and other dog-related illnesses, keeping all pets in our service area safe.</p>
         </div>
       </div>
 
@@ -228,7 +285,6 @@ permalink: /get-quote/
         </div>
         <div class="faq-answer">
          <p>Yes, we love pets! For safety, dogs that are uncomfortable with strangers should be kept inside during service. Otherwise, our team is happy to work around your furry friends.</p>
-
         </div>
       </div>
 
@@ -239,7 +295,7 @@ permalink: /get-quote/
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>No, you don’t have to be home. We just need access to your yard. You’ll receive a text when we’re on our way so you always know when to expect us.</p>
+          <p>No, you don't have to be home. We just need access to your yard. You'll receive a text when we're on our way so you always know when to expect us.</p>
         </div>
       </div>
 
@@ -249,7 +305,7 @@ permalink: /get-quote/
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>Life happens! Just notify us in advance and we’ll take care of the reschedule. No service, no charge.</p>
+<p>Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge.</p>
         </div>
       </div>
 
@@ -265,6 +321,16 @@ permalink: /get-quote/
       </div>
 
       <!-- 4. Payment & Billing -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Are there any hidden fees or extra charges for the initial cleanup?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+<p>No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges.</p>
+        </div>
+      </div>
+
       <div class="faq-item">
         <div class="faq-question">
           <span>How do you handle payment?</span>
@@ -293,18 +359,18 @@ permalink: /get-quote/
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>We proudly serve all of East Portland, from the Willamette River to the eastern city limits.</p>
+<p>We proudly serve Portland, with comprehensive coverage throughout East Portland from the Willamette River to the eastern city limits.</p>
         </div>
       </div>
 
       <!-- 7. Service Quality & Issues -->
       <div class="faq-item">
         <div class="faq-question">
-          <span>What if I’m not satisfied or there’s an issue?</span>
+          <span>What if I'm not satisfied or there's an issue?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>Your satisfaction is guaranteed. If anything isn’t right, contact us immediately, and we’ll resolve it promptly.</p>
+          <p>Your satisfaction is guaranteed. If anything isn't right, contact us immediately, and we'll resolve it promptly.</p>
         </div>
       </div>
 
