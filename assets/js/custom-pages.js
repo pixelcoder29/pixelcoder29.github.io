@@ -112,6 +112,7 @@ function setupFormValidation(formElement, fieldIds) {
     // Generate unique event ID for pixel/CAPI matching
     const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
     data.append("eventId", eventId);
+    data.append("sourceUrl", window.location.href);
 
     try {
       const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {
