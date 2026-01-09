@@ -185,12 +185,38 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // Quote open tracking can be added later if needed (e.g., via Google Analytics)
 
+  // Helper functions for Facebook tracking
+  function getFbc() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const fbclid = urlParams.get('fbclid');
+    if (fbclid) {
+      // Construct fbc from fbclid: fb.1.{timestamp}.{fbclid}
+      const timestamp = Date.now();
+      return `fb.1.${timestamp}.${fbclid}`;
+    }
+    // Fallback to cookie
+    const value = `; ${document.cookie}`;
+    const parts = value.split('; _fbc=');
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return '';
+  }
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return '';
+  }
+
   // Stripe integration
   const stripe = Stripe('pk_test_51SaE4lK2sYympqhEaHWlwI3hKxkySU8KWRJwtBcbz7hwGFD2bkN7GUk23vQRAcq75g74B4Qb9G4KZdZqfXRDhadU00hghQcHjL');
   const startButton = document.getElementById('start-subscription');
 
   startButton.addEventListener('click', async function() {
     const priceId = priceIds[normalizedFreq][dogs];
+
+    // Generate event ID
+    const eventId = 'purchase_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+
     try {
       const response = await fetch('https://hook.us2.make.com/uhlb6qvyclumhxhshi19of8vzu4cnxx2', {
         method: 'POST',
@@ -200,7 +226,22 @@ document.addEventListener('DOMContentLoaded', async function() {
           customerEmail: email,
           customerName: name,
           customerPhone: phone,
-          metadata: {quoteId: quoteId, customerEmail: email, customerName: name, customerPhone: phone}
+          metadata: {
+            quoteId: quoteId,
+            customerEmail: email,
+            customerName: name,
+            customerPhone: phone,
+            eventid: eventId,
+            sourceurl: window.location.href,
+            email: email,
+            phone: phone,
+            name: name,
+            zip: zip,
+            client_user_agent: navigator.userAgent,
+            fbc: getFbc(),
+            fbp: getCookie('_fbp'),
+            value: totalPrice
+          }
         })
       });
 
