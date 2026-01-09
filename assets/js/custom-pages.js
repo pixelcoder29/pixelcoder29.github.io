@@ -114,6 +114,15 @@ function setupFormValidation(formElement, fieldIds) {
     data.append("eventId", eventId);
     data.append("sourceUrl", window.location.href);
 
+    // Capture Facebook cookies for CAPI
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    data.append("fbc", getCookie('_fbc') || '');
+    data.append("fbp", getCookie('_fbp') || '');
+
     try {
       const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {
         method: 'POST',
