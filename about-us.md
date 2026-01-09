@@ -250,7 +250,7 @@ body {
       <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
         <div style="font-size: 3rem; margin-bottom: 1rem;">🏘️</div>
         <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a1a;">East Portland Coverage</h3>
-        <p style="color: #666; line-height: 1.6;">Complete East Portland service area including Hawthorne, Belmont, Division, and beyond the Willamette River.</p>
+        <p style="color: #666; line-height: 1.6;">Complete East Portland service area including Hawthorne, Belmont, Division, and all areas east of the Willamette River.</p>
       </div>
 
       <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
