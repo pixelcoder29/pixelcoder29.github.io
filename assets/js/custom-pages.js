@@ -181,9 +181,6 @@ function setupFormValidation(formElement, fieldIds) {
           pixelStatus = 'FAILED - fbq undefined';
         }
 
-        // Temporary debug alert - remove after testing
-        alert(`Pixel Debug:\nfbq defined: ${typeof fbq}\nEvent ID: ${eventId}\nStatus: ${pixelStatus}\n\nCheck console for more details.`);
-
         window.location.href = '/confirmation/';
       } else {
         if (formError) formError.style.display = 'block';
