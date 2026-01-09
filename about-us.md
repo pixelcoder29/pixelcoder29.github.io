@@ -369,3 +369,83 @@ body {
     </div>
   </div>
 </div>
+
+<!-- --- Hidden Form Modal --- -->
+<div id="quote-form-modal" class="quote-form-modal">
+  <div class="modal-content">
+    <span id="close-form" style="position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer;">&times;</span>
+
+    <form class="quote-form" novalidate>
+      <div class="form-error-banner">Submission failed. Please try again.</div>
+      <fieldset>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="full_name_modal">Full Name *</label>
+            <input type="text" id="full_name_modal" name="fullName" placeholder="John Doe" required spellcheck="false">
+            <small class="error-message"></small>
+          </div>
+          <div class="form-group">
+            <label for="phone_modal">Phone Number *</label>
+            <input type="tel" id="phone_modal" name="phoneNumber" placeholder="(503) 123-4567" maxlength="14" required spellcheck="false">
+            <small class="error-message"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email_modal">Email *</label>
+            <input type="email" id="email_modal" name="email" placeholder="john@email.com" required spellcheck="false">
+            <small class="error-message"></small>
+          </div>
+          <div class="form-group">
+            <label for="zip_modal">Zip Code *</label>
+            <input type="text" id="zip_modal" name="zipCode" placeholder="97202" maxlength="5" required spellcheck="false">
+            <small class="error-message"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dogs_modal">How many dogs do you have? *</label>
+            <select id="dogs_modal" name="howMany" required>
+              <option value="" disabled selected>Select</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+            <small class="error-message"></small>
+          </div>
+          <div class="form-group">
+            <label for="frequency_modal">Service Frequency *</label>
+            <select id="frequency_modal" name="serviceFrequency" required>
+              <option value="" disabled selected>Select</option>
+              <option value="weekly">Weekly</option>
+              <option value="bi-weekly">Bi-Weekly</option>
+            </select>
+            <small class="error-message"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="questions_modal">Any questions or concerns?</label>
+            <textarea id="questions_modal" name="anyQuestions" rows="3"></textarea>
+          </div>
+        </div>
+
+        <p class="privacy-text" style="font-size: 12px; margin-top: 10px;">By providing my phone number and email, I agree to receive texts and emails from Yard Guards PDX, including marketing messages. Messaging frequency varies; message and data rates may apply. Reply STOP to opt out of texts, or click the unsubscribe link in any email for email opt-out. Reply HELP for more information.</p>
+        <div class="form-group privacy-group">
+          <div>
+            <input type="checkbox" id="privacy_agree_modal" name="privacyAgree" required>
+            <label for="privacy_agree_modal">By checking this box I agree to the <a href="/privacy-policy" target="_blank">Privacy Policy</a> *</label>
+          </div>
+          <small class="error-message" id="privacy-modal-error"></small>
+        </div>
+        <button type="submit" class="cta-button">Request My Quote</button>
+      </fieldset>
+    </form>
+  </div>
+</div>
