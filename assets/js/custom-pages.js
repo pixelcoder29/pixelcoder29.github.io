@@ -159,8 +159,13 @@ function setupFormValidation(formElement, fieldIds) {
         localStorage.setItem('quoteAmount', amount);
 
         // Track Lead event with event_id for CAPI matching
+        console.log('fbq defined:', typeof fbq);
+        console.log('About to fire Lead event with ID:', eventId);
         if (typeof fbq !== 'undefined') {
           fbq('track', 'Lead', {}, {eventID: eventId});
+          console.log('Lead event fired successfully');
+        } else {
+          console.error('fbq not defined - Facebook pixel not loaded');
         }
 
         window.location.href = '/confirmation/';
