@@ -114,14 +114,29 @@ function setupFormValidation(formElement, fieldIds) {
     data.append("eventId", eventId);
     data.append("sourceUrl", window.location.href);
 
-    // Capture Facebook cookies for CAPI
+    // Capture Facebook click ID and browser ID for CAPI
+    function getFbc() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const fbclid = urlParams.get('fbclid');
+      if (fbclid) {
+        // Construct fbc from fbclid: fb.1.{timestamp}.{fbclid}
+        const timestamp = Date.now();
+        return `fb.1.${timestamp}.${fbclid}`;
+      }
+      // Fallback to cookie
+      const value = `; ${document.cookie}`;
+      const parts = value.split('; _fbc=');
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return '';
+    }
     function getCookie(name) {
       const value = `; ${document.cookie}`;
       const parts = value.split(`; ${name}=`);
       if (parts.length === 2) return parts.pop().split(';').shift();
+      return '';
     }
-    data.append("fbc", getCookie('_fbc') || '');
-    data.append("fbp", getCookie('_fbp') || '');
+    data.append("fbc", getFbc());
+    data.append("fbp", getCookie('_fbp'));
 
     try {
       const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {
