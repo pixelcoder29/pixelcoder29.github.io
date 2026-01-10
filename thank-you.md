@@ -10,9 +10,9 @@ permalink: /thank-you/
 
   <div class="next-steps">
     <h2>Next Steps</h2>
-    <p>To schedule your service, please complete the required details form below.</p>
+    <p>To schedule your service, please complete the required service details form below.</p>
     <a id="jotform-link" href="https://form.jotform.com/260053619355153" target="_blank" class="cta-button">Complete Service Details Form</a>
-    <p class="note">This form collects your service address, yard access details, and cleaning preferences.</p>
+    <p class="note">This form collects your service address, yard access info, and cleaning preferences.</p>
   </div>
 
   <div class="contact">
