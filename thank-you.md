@@ -16,7 +16,7 @@ permalink: /thank-you/
   </div>
 
   <div class="contact">
-    <p>For questions, contact us at <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a> or (503) 123-4567.</p>
+    <p>For questions, contact us at <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a>.</p>
   </div>
 </div>
 
@@ -57,6 +57,7 @@ permalink: /thank-you/
   // });
 
   window.addEventListener('DOMContentLoaded', () => {
+    console.log('Thank you page script running');
     const userName = localStorage.getItem('userName') || '';
     const userEmail = localStorage.getItem('userEmail') || '';
     const userPhone = localStorage.getItem('userPhone') || '';
@@ -68,7 +69,7 @@ permalink: /thank-you/
       if (nextSteps) nextSteps.style.display = 'none';
       const errorDiv = document.createElement('div');
       errorDiv.className = 'error-message';
-      errorDiv.style.cssText = 'background: #ffe6e6; border: 1px solid #d9534f; color: #d9534f; padding: 1rem; border-radius: 4px; margin-bottom: 1.25rem; font-size: 1.1rem;';
+      errorDiv.style.cssText = 'background: #ffffff !important; border: 2px solid #000000 !important; color: #000000 !important; padding: 1rem; border-radius: 4px; margin-bottom: 1.25rem; font-size: 1.1rem; font-weight: bold; display: block !important; visibility: visible !important;';
       errorDiv.innerHTML = '<p>It looks like this page was opened on a different device or browser. Please text us to get a special link to complete your service request.</p>';
       const firstP = document.querySelector('.thank-you-container > p');
       if (firstP) {
