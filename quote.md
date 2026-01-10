@@ -212,6 +212,11 @@ document.addEventListener('DOMContentLoaded', async function() {
   const startButton = document.getElementById('start-subscription');
 
   startButton.addEventListener('click', async function() {
+    // Disable button and change text to prevent multiple clicks
+    const originalText = startButton.textContent;
+    startButton.disabled = true;
+    startButton.textContent = 'Processing...';
+
     const priceId = priceIds[normalizedFreq][dogs];
 
     // Generate event ID
@@ -250,10 +255,16 @@ document.addEventListener('DOMContentLoaded', async function() {
       const result = await stripe.redirectToCheckout({sessionId: session.id});
       if (result.error) {
         alert(result.error.message);
+        // Re-enable button on error
+        startButton.disabled = false;
+        startButton.textContent = originalText;
       }
     } catch (error) {
       console.error('Error:', error);
       alert('Something went wrong. Please try again.');
+      // Re-enable button on error
+      startButton.disabled = false;
+      startButton.textContent = originalText;
     }
   });
 });

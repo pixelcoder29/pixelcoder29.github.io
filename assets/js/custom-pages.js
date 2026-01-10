@@ -15,6 +15,7 @@ function setupFormValidation(formElement, fieldIds) {
   const questions = document.getElementById(fieldIds.questions);
   const privacyAgree = document.getElementById(fieldIds.privacyAgree);
   const formError = formElement.querySelector('.form-error-banner');
+  const submitButton = formElement.querySelector('button[type="submit"]');
 
   function showError(el, msg){
     let error;
@@ -79,6 +80,12 @@ function setupFormValidation(formElement, fieldIds) {
   formElement.addEventListener('submit', async function(e){
     e.preventDefault();
     if (formError) formError.style.display = 'none';
+
+    // Disable button and change text to prevent multiple submissions
+    const originalText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting...';
+
     let valid = true;
 
     if (fullName && !fullName.value.trim()){ showError(fullName,"Full Name is required."); valid=false; }
@@ -89,7 +96,11 @@ function setupFormValidation(formElement, fieldIds) {
     if (freq && !freq.value){ showError(freq,"Please select a service frequency."); valid=false; }
     if (privacyAgree && !privacyAgree.checked){ showError(privacyAgree,"You must agree to the Privacy Policy to continue."); valid=false; }
 
-    if(!valid) return;
+    if(!valid) {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+      return;
+    }
 
     const freqMap = { "weekly": "Weekly", "bi-weekly": "Bi-Weekly" };
     const freqValue = freqMap[freq.value] || freq.value;
@@ -185,10 +196,14 @@ function setupFormValidation(formElement, fieldIds) {
         window.location.href = '/confirmation/';
       } else {
         if (formError) formError.style.display = 'block';
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
       }
     } catch(err){
       console.error(err);
       if (formError) formError.style.display = 'block';
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
     }
   });
 }
