@@ -56,41 +56,52 @@ permalink: /thank-you/
   //   document.body.appendChild(debugDiv);
   // });
 
-  // Build dynamic JotForm URL with customer data from localStorage
   window.addEventListener('DOMContentLoaded', () => {
-    const jotformLink = document.getElementById('jotform-link');
-    if (jotformLink) {
-      // Get customer data from localStorage
-      const userName = localStorage.getItem('userName') || '';
-      const userEmail = localStorage.getItem('userEmail') || '';
-      const userPhone = localStorage.getItem('userPhone') || '';
-      const userZip = localStorage.getItem('userZip') || '';
+    const userName = localStorage.getItem('userName') || '';
+    const userEmail = localStorage.getItem('userEmail') || '';
+    const userPhone = localStorage.getItem('userPhone') || '';
+    const userZip = localStorage.getItem('userZip') || '';
+    const hasAllData = userName && userEmail && userPhone && userZip;
+    const nextSteps = document.querySelector('.next-steps');
 
-      // Build URL with query parameters
-      const baseUrl = 'https://form.jotform.com/260053619355153';
-      const urlParams = new URLSearchParams();
-
-      // Custom encoding function that preserves @ symbol in emails but encodes everything else
-      function encodeForJotForm(value) {
-        // For email fields, preserve @ symbol but encode everything else
-        if (value.includes('@')) {
-          return value.replace(/@/g, '@').replace(/[^@\w.-]/g, (match) => {
-            return encodeURIComponent(match);
-          });
-        }
-        // For non-email fields, use standard encoding
-        return encodeURIComponent(value);
+    if (!hasAllData) {
+      if (nextSteps) nextSteps.style.display = 'none';
+      const errorDiv = document.createElement('div');
+      errorDiv.className = 'error-message';
+      errorDiv.innerHTML = '<p>It looks like this page was opened on a different device or browser. Please text us to get a special link to complete your service request.</p>';
+      const contactDiv = document.querySelector('.contact');
+      if (contactDiv) {
+        contactDiv.parentNode.insertBefore(errorDiv, contactDiv);
       }
+    } else {
+      const jotformLink = document.getElementById('jotform-link');
+      if (jotformLink) {
+        // Build URL with query parameters
+        const baseUrl = 'https://form.jotform.com/260053619355153';
+        const urlParams = new URLSearchParams();
 
-      // Add parameters only if data exists
-      if (userName) urlParams.append('fullname', encodeForJotForm(userName));
-      if (userEmail) urlParams.append('email', encodeForJotForm(userEmail));
-      if (userPhone) urlParams.append('phoneNumber', encodeForJotForm(userPhone));
-      if (userZip) urlParams.append('zipCode', encodeForJotForm(userZip));
+        // Custom encoding function that preserves @ symbol in emails but encodes everything else
+        function encodeForJotForm(value) {
+          // For email fields, preserve @ symbol but encode everything else
+          if (value.includes('@')) {
+            return value.replace(/@/g, '@').replace(/[^@\w.-]/g, (match) => {
+              return encodeURIComponent(match);
+            });
+          }
+          // For non-email fields, use standard encoding
+          return encodeURIComponent(value);
+        }
 
-      // Update href if we have any parameters
-      if (urlParams.toString()) {
-        jotformLink.href = `${baseUrl}?${urlParams.toString()}`;
+        // Add parameters only if data exists
+        if (userName) urlParams.append('fullname', encodeForJotForm(userName));
+        if (userEmail) urlParams.append('email', encodeForJotForm(userEmail));
+        if (userPhone) urlParams.append('phoneNumber', encodeForJotForm(userPhone));
+        if (userZip) urlParams.append('zipCode', encodeForJotForm(userZip));
+
+        // Update href if we have any parameters
+        if (urlParams.toString()) {
+          jotformLink.href = `${baseUrl}?${urlParams.toString()}`;
+        }
       }
     }
   });
@@ -180,6 +191,16 @@ permalink: /thank-you/
 
 .contact a:hover {
   text-decoration: underline;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.error-message p {
+  margin: 0;
 }
 
 @media (max-width: 600px) {
