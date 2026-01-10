@@ -62,18 +62,23 @@ permalink: /thank-you/
     const userPhone = localStorage.getItem('userPhone') || '';
     const userZip = localStorage.getItem('userZip') || '';
     const hasAllData = userName && userEmail && userPhone && userZip;
+    console.log('localStorage data:', {userName, userEmail, userPhone, userZip, hasAllData});
     const nextSteps = document.querySelector('.next-steps');
 
     if (!hasAllData) {
+      console.log('Showing error message');
       if (nextSteps) nextSteps.style.display = 'none';
       const errorDiv = document.createElement('div');
       errorDiv.className = 'error-message';
       errorDiv.innerHTML = '<p>It looks like this page was opened on a different device or browser. Please text us to get a special link to complete your service request.</p>';
-      const contactDiv = document.querySelector('.contact');
-      if (contactDiv) {
-        contactDiv.parentNode.insertBefore(errorDiv, contactDiv);
+      const firstP = document.querySelector('.thank-you-container > p');
+      console.log('firstP found:', !!firstP);
+      if (firstP) {
+        firstP.insertAdjacentElement('afterend', errorDiv);
+        console.log('Error message inserted after first paragraph');
       }
     } else {
+      console.log('Data found, proceeding normally');
       const jotformLink = document.getElementById('jotform-link');
       if (jotformLink) {
         // Build URL with query parameters
@@ -194,7 +199,11 @@ permalink: /thank-you/
 }
 
 .error-message {
+  background: #ffe6e6;
+  border: 1px solid #d9534f;
   color: #d9534f;
+  padding: 1rem;
+  border-radius: 4px;
   font-size: 1.1rem;
   margin-bottom: 1.25rem;
 }
