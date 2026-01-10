@@ -70,6 +70,7 @@ permalink: /thank-you/
       if (nextSteps) nextSteps.style.display = 'none';
       const errorDiv = document.createElement('div');
       errorDiv.className = 'error-message';
+      errorDiv.style.cssText = 'background: #ffe6e6; border: 1px solid #d9534f; color: #d9534f; padding: 1rem; border-radius: 4px; margin-bottom: 1.25rem; font-size: 1.1rem;';
       errorDiv.innerHTML = '<p>It looks like this page was opened on a different device or browser. Please text us to get a special link to complete your service request.</p>';
       const firstP = document.querySelector('.thank-you-container > p');
       console.log('firstP found:', !!firstP);
