@@ -6,13 +6,12 @@ permalink: /confirmation/
 
 <div class="confirmation-container">
   <div class="success-icon">✅</div>
-  <h1>Thank You!</h1>
-  <p>Your details have been received successfully.</p>
+  <h1>Thanks, we got your request!</h1>
+  <p>One of us at Yard Guards PDX is reviewing your info right now.</p>
 
   <div class="next-steps">
     <h2>What Happens Next?</h2>
-    <p>We'll reach out to you shortly to discuss your service details and schedule your first visit. You'll receive a text message from us soon.</p>
-    <p>In the meantime, feel free to explore our services or contact us if you have any questions.</p>
+    <p>You’ll receive a text from us shortly. When you hear from us, feel free to reply with anything about your yard or pups that we should know.</p>
   </div>
 
   <div class="actions">
@@ -24,6 +23,7 @@ permalink: /confirmation/
     <p>Questions? <a href="mailto:service@yardguardspdx.com">Contact us</a></p>
   </div>
 </div>
+
 
 <style>
 .confirmation-container {
