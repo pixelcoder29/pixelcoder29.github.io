@@ -155,6 +155,11 @@ function setupFormValidation(formElement, fieldIds) {
     data.append("fbc", getFbc());
     data.append("fbp", getCookie('_fbp'));
 
+    // Determine lead source
+    const urlParams = new URLSearchParams(window.location.search);
+    const leadSource = urlParams.get('fbclid') ? "Facebook Ads" : "Organic";
+    data.append("leadSource", leadSource);
+
     try {
       const response = await fetch('https://hook.us2.make.com/6ign8tg00oc6upzncx43ufqo4qdw4g7c', {
         method: 'POST',
