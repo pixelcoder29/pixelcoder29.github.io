@@ -11,7 +11,7 @@ permalink: /final-confirmation/
 
   <div class="next-steps">
     <h2>What Happens Next?</h2>
-    <p>We'll review your service requirements and manually schedule your first visit. You'll receive a text message confirmation with your exact service date and time within the next 24 hours.</p>
+    <p>We'll review your service details and manually schedule your first visit. You'll receive a text confirmation with your exact service date and time window within the next 24 hours.</p>
     <p>If you have any questions in the meantime, feel free to contact us.</p>
   </div>
 
