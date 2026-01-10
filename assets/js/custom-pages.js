@@ -79,12 +79,14 @@ function setupFormValidation(formElement, fieldIds) {
 
   formElement.addEventListener('submit', async function(e){
     e.preventDefault();
+    if (formElement.hasSubmitted) return; // Prevent duplicate submissions
     if (formError) formError.style.display = 'none';
 
     // Disable button and change text to prevent multiple submissions
     const originalText = submitButton.textContent;
     submitButton.disabled = true;
     submitButton.textContent = 'Submitting...';
+    formElement.hasSubmitted = true; // Flag to prevent any further submissions
 
     let valid = true;
 
@@ -123,7 +125,10 @@ function setupFormValidation(formElement, fieldIds) {
 
     // Generate unique event ID for pixel/CAPI matching
     const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    // Generate unique external ID for deduplication in Zoho/Make.com
+    const externalId = 'form_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
     data.append("eventId", eventId);
+    data.append("externalId", externalId);
     data.append("sourceUrl", window.location.href);
 
     // Capture Facebook click ID and browser ID for CAPI

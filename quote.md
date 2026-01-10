@@ -212,15 +212,19 @@ document.addEventListener('DOMContentLoaded', async function() {
   const startButton = document.getElementById('start-subscription');
 
   startButton.addEventListener('click', async function() {
+    if (startButton.hasClicked) return; // Prevent duplicate clicks
     // Disable button and change text to prevent multiple clicks
     const originalText = startButton.textContent;
     startButton.disabled = true;
     startButton.textContent = 'Processing...';
+    startButton.hasClicked = true; // Flag to prevent any further clicks
 
     const priceId = priceIds[normalizedFreq][dogs];
 
     // Generate event ID
     const eventId = 'purchase_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    // Generate unique external ID for deduplication
+    const externalId = 'stripe_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
     try {
       const response = await fetch('https://hook.us2.make.com/uhlb6qvyclumhxhshi19of8vzu4cnxx2', {
@@ -237,6 +241,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             customerName: name,
             customerPhone: phone,
             eventid: eventId,
+            externalId: externalId,
             sourceurl: window.location.href,
             email: email,
             phone: phone,
