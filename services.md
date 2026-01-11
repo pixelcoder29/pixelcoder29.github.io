@@ -177,7 +177,7 @@ body {
       "name": "How do you handle payment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We charge your card on file the day of your scheduled service. You only pay for services that are completed."
+        "text": "We charge your card on file the day before each scheduled service, and you only pay for services that are completed."
       }
     }
   ]
@@ -389,7 +389,7 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>We charge your card on file the day of your scheduled service. You only pay for services that are completed.</p>
+<p>We charge your card on file the day before each scheduled service, and you only pay for services that are completed.</p>
         </div>
       </div>
 
