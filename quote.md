@@ -69,7 +69,7 @@ permalink: /quote/
         <div class="price-breakdown">
           <p><strong>Price per Service:</strong> $<span id="price-per-service"></span></p>
           <p><strong>Frequency:</strong> <span id="frequency-display"></span></p>
-          <p><strong>Service Description:</strong> Professional dog waste removal and yard cleanup.</p>
+          <p><strong>Service Description:</strong> Professional dog waste removal.</p>
         </div>
         <div class="price-total">
           <p class="total-label">Total per <span id="billing-cycle"></span>:</p>
