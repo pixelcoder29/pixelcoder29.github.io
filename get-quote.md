@@ -54,7 +54,7 @@ permalink: /get-quote/
       "name": "How do you handle payment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We charge your card on file the morning of your scheduled service. You only pay for services that are completed."
+        "text": "We charge your card on file the day before your scheduled service. You only pay for services that are completed."
       }
     }
   ]
@@ -337,7 +337,7 @@ permalink: /get-quote/
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>We charge your card on file the morning of your scheduled service. You only pay for services that are completed.</p>
+<p>We charge your card on file the day before your scheduled service. You only pay for services that are completed.</p>
         </div>
       </div>
 
