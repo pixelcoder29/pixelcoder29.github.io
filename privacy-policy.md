@@ -9,7 +9,7 @@ permalink: /privacy-policy/
 
   <h1>Yard Guards PDX – Privacy Policy</h1>
 
-  <p class="effective-date"><strong>Effective Date:</strong> January 7, 2026</p>
+  <p class="effective-date"><strong>Effective Date:</strong> January 10, 2026</p>
 
   <section class="summary-section">
     <h2>Plain-Language Summary</h2>
@@ -58,7 +58,7 @@ permalink: /privacy-policy/
 
   <section class="marketing-section">
     <h2>2a. Marketing Communications</h2>
-    <p>By providing your phone number and email and agreeing to our Terms & Conditions, you consent to receive marketing communications from Yard Guards PDX via email or SMS.</p>
+    <p>By providing your phone number and email, you consent to receive marketing communications from Yard Guards PDX via email or SMS.</p>
     <ul class="marketing-list">
       <li>Message and data rates may apply</li>
       <li>You can opt out of marketing messages at any time:
@@ -80,7 +80,7 @@ permalink: /privacy-policy/
       <li>With employees who assist with service delivery, under strict confidentiality agreements</li>
       <li>With service providers, such as Stripe, for payment processing</li>
       <li>As required by law or to protect the safety of our customers, staff, or property</li>
-      <li>With third-party service providers outside the United States, only when necessary for service delivery or payment processing. We require these providers to maintain confidentiality and protect your data in accordance with applicable laws</li>
+      <li>With third-party service providers, only when necessary for service delivery or payment processing. We require these providers to maintain confidentiality and protect your data in accordance with applicable laws</li>
     </ul>
     <p>We may use third-party service providers to assist with our services. While we require these providers to maintain confidentiality, Yard Guards PDX is not responsible for the privacy practices of third-party services beyond our control.</p>
   </section>
@@ -102,7 +102,7 @@ permalink: /privacy-policy/
 
   <section class="rights-section">
     <h2>5. Your Rights</h2>
-    <p>You can contact us at <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a> to:</p>
+    <p>You can contact us at <a href="mailto:support@yardguardspdx.com">support@yardguardspdx.com</a> to:</p>
     <ul class="rights-list">
       <li>Access or correct your personal information</li>
       <li>Request deletion of your personal information</li>
@@ -141,7 +141,7 @@ permalink: /privacy-policy/
 
   <section class="contact-section">
     <h2>9. Contact Us</h2>
-    <p>For questions about this Privacy Policy or your personal information, email us at <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a>.</p>
+    <p>For questions about this Privacy Policy or your personal information, email us at <a href="mailto:support@yardguardspdx.com">support@yardguardspdx.com</a>.</p>
   </section>
 
 </div>

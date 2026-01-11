@@ -52,7 +52,7 @@ body {
   "description": "Professional dog waste removal and pet waste cleanup service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods.",
   "url": "https://pixelcoder29.github.io",
   "telephone": "+15035120349",
-  "email": "service@yardguardspdx.com",
+  "email": "support@yardguardspdx.com",
   "foundingDate": "2024",
   "address": {
     "@type": "PostalAddress",

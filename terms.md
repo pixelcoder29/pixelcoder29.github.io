@@ -20,7 +20,7 @@ permalink: /terms/
 
   <section class="overview-section">
     <h2>1. Overview</h2>
-    <p>Yard Guards PDX provides recurring dog waste removal services.</p>
+    <p>Yard Guards PDX provides recurring pet waste removal services.</p>
     <p>By using our service, you acknowledge and accept these Terms & Conditions.</p>
   </section>
 
@@ -29,7 +29,7 @@ permalink: /terms/
   <section class="definitions-section">
     <h2>2. Definitions</h2>
     <ul class="definitions-list">
-      <li><strong>Service:</strong> The recurring dog waste removal services provided by Yard Guards PDX.</li>
+      <li><strong>Service:</strong> The recurring pet waste removal services provided by Yard Guards PDX.</li>
       <li><strong>Customer:</strong> The individual or entity that signs up for the Service.</li>
       <li><strong>Yard Guards PDX:</strong> The company providing the Service.</li>
     </ul>
@@ -40,7 +40,7 @@ permalink: /terms/
   <section class="billing-section">
     <h2>3. Billing & Payments</h2>
     <ul class="billing-list">
-      <li>Services are billed <strong>weekly or biweekly</strong>, on the scheduled service day, based on the frequency selected.</li>
+      <li>Services are billed <strong>weekly or biweekly</strong>, on the day before the scheduled service at <strong>12:00 AM PST</strong>, based on the frequency selected.</li>
       <li>All payments are final. No refunds or partial refunds are issued.</li>
       <li>Payments are processed securely through Stripe.</li>
       <li>By signing up, you authorize recurring automatic charges for your scheduled service.</li>
@@ -57,7 +57,7 @@ permalink: /terms/
   <section class="cancellations-section">
     <h2>4. Cancellations & Pausing</h2>
     <ul class="cancellations-list">
-      <li>You may cancel or pause your service at any time by emailing <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a>.</li>
+      <li>You may cancel or pause your service at any time by emailing <a href="mailto:support@yardguardspdx.com">support@yardguardspdx.com</a>.</li>
       <li>Cancelling or pausing stops future billing only.</li>
     </ul>
   </section>
@@ -93,7 +93,7 @@ permalink: /terms/
     <div class="service-exceptions-section">
       <h3>Service Exceptions</h3>
       <ul class="exceptions-list">
-        <li>Yard Guards PDX provides routine dog waste removal. We are not responsible for extreme or unusual yard conditions beyond normal dog waste, such as fallen tree branches, flooding, mudslides, or other extraordinary hazards.</li>
+        <li>Yard Guards PDX provides routine pet waste removal. We are not responsible for extreme or unusual yard conditions beyond normal pet waste, such as fallen tree branches, flooding, mudslides, or other extraordinary hazards.</li>
       </ul>
     </div>
   </section>
@@ -102,7 +102,7 @@ permalink: /terms/
 
   <section class="complaints-section">
     <h2>6. Service Issues & Complaints</h2>
-    <p>Concerns about service must be reported to <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a> within 48 hours of the visit.</p>
+    <p>Concerns about service must be reported to <a href="mailto:support@yardguardspdx.com">support@yardguardspdx.com</a> within 48 hours of the visit.</p>
     <p>All issues are reviewed on a case-by-case basis. Any resolution is at the discretion of Yard Guards PDX and does <strong>not constitute a refund, credit, or guarantee</strong>.</p>
   </section>
 
@@ -113,7 +113,7 @@ permalink: /terms/
     <ul class="photos-list">
       <li>Yard Guards PDX may take photos or short videos for promotional purposes.</li>
       <li>No personal identifying information (names, addresses, phone numbers) will be shared.</li>
-      <li>Consent is required to feature your yard; email <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a> to grant or withdraw consent.</li>
+      <li>Consent is required to feature your yard; email <a href="mailto:support@yardguardspdx.com">support@yardguardspdx.com</a> to grant or withdraw consent.</li>
     </ul>
   </section>
 
@@ -189,7 +189,7 @@ permalink: /terms/
 
   <section class="contact-section">
     <h2>17. Contact Information</h2>
-    <p>For questions about these Terms, cancellations, or service concerns, email <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a>.</p>
+    <p>For questions about these Terms, cancellations, or service concerns, email <a href="mailto:support@yardguardspdx.com">support@yardguardspdx.com</a>.</p>
   </section>
 
 </div>

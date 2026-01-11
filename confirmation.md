@@ -20,7 +20,7 @@ permalink: /confirmation/
   </div>
 
   <div class="contact">
-    <p>Questions? <a href="mailto:service@yardguardspdx.com">Contact us</a></p>
+    <p>Questions? <a href="mailto:support@yardguardspdx.com">Contact us</a></p>
   </div>
 </div>
 

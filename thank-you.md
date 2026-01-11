@@ -16,7 +16,7 @@ permalink: /thank-you/
   </div>
 
   <div class="contact">
-    <p>For questions, contact us at <a href="mailto:service@yardguardspdx.com">service@yardguardspdx.com</a>.</p>
+    <p>For questions, contact us at <a href="mailto:support@yardguardspdx.com">support@yardguardspdx.com</a>.</p>
   </div>
 </div>
 
