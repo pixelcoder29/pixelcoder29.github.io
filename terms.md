@@ -9,7 +9,7 @@ permalink: /terms/
 
   <h1>Yard Guards PDX – Terms & Conditions</h1>
 
-  <p class="effective-date"><strong>Effective Date:</strong> January 7, 2026</p>
+  <p class="effective-date"><strong>Effective Date:</strong> January 10, 2026</p>
 
   <section class="summary-section">
     <h2>Plain-Language Summary</h2>
