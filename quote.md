@@ -260,7 +260,8 @@ document.addEventListener('DOMContentLoaded', async function() {
             fbc: getFbc(),
             fbp: getCookie('_fbp'),
             value: totalPrice,
-            serviceFrequency: normalizedFreq
+            serviceFrequency: normalizedFreq,
+            numberOfDogs: dogs
           }
         })
       });
