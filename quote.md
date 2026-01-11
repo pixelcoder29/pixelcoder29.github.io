@@ -160,12 +160,20 @@ document.addEventListener('DOMContentLoaded', async function() {
   return;
 }
 
+  // Helper function to title case names
+  function titleCaseName(name) {
+    if (!name) return '';
+    return name.toLowerCase().split(/\s+/).map(word => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(' ');
+  }
+
   // Hide loading and show content
   document.getElementById('loading').style.display = 'none';
   document.getElementById('quote-content').style.display = 'block';
 
   // Populate fields
-  document.getElementById('customer-name').textContent = name;
+  document.getElementById('customer-name').textContent = titleCaseName(name);
   document.getElementById('customer-phone').textContent = phone;
   document.getElementById('customer-email').textContent = email;
   document.getElementById('customer-zip').textContent = zip;
