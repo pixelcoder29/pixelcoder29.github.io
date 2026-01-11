@@ -266,7 +266,7 @@ body {
     <h2 style="text-align:center; margin-bottom:52px;">Complete Pet Waste Removal Service</h2>
 
     <ul style="font-size: 20px" class="benefits-list">
-      <li style="color: #222;"><strong style="font-size: 21px">✅ Thorough Cleanup:</strong> We remove all dog waste from your yard, sidewalks, and common areas</li>
+      <li style="color: #222;"><strong style="font-size: 21px">✅ Thorough Cleanup:</strong> We remove all pet waste from the areas you select: backyard, side yard, and front yard.</li>
       <li style="color: #222;"><strong style="font-size: 21px">✅ Eco-Friendly Disposal:</strong> Waste is properly disposed of in accordance with local environmental guidelines</li>
       <li style="color: #222;"><strong style="font-size: 21px">✅ Gate Security:</strong> We secure all gates and provide photos after each visit for your peace of mind</li>
       <li style="color: #222;"><strong style="font-size: 21px">✅ Text Notifications:</strong> Receive a text message when we're on our way to your location</li>
