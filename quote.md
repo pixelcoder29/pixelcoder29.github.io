@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
   };
 
-  let name = '', phone = '', email = '', zip = '', dogs = 1, freq = 'weekly', questions = 'None';
+  let name = '', phone = '', email = '', zip = '', dogs = 1, freq = 'weekly', displayFreq = 'Weekly', questions = 'None';
 
   if (quoteId) {
     try {
@@ -146,7 +146,9 @@ document.addEventListener('DOMContentLoaded', async function() {
       email = data.email || '';
       zip = data.zip || '';
       dogs = parseInt(data.dogs) || 1;
-      freq = data.freq || 'weekly';
+      const originalFreq = data.freq || 'weekly';
+      displayFreq = originalFreq.charAt(0).toUpperCase() + originalFreq.slice(1).toLowerCase();
+      freq = originalFreq.toLowerCase().replace(/-/g, '');
       questions = data.questions || 'None';
   } catch (e) {
     console.error('Error fetching data', e);
@@ -168,17 +170,24 @@ document.addEventListener('DOMContentLoaded', async function() {
   document.getElementById('customer-email').textContent = email;
   document.getElementById('customer-zip').textContent = zip;
   document.getElementById('service-dogs').textContent = dogs;
-  document.getElementById('service-frequency').textContent = freq.charAt(0).toUpperCase() + freq.slice(1);
+  document.getElementById('service-frequency').textContent = displayFreq;
   document.getElementById('service-questions').textContent = questions;
 
   // Calculate price
+  // Normalize frequency by removing hyphens to match pricing keys (e.g., "bi-weekly" -> "biweekly")
   const normalizedFreq = freq.toLowerCase();
   const pricePerService = pricing[normalizedFreq] ? pricing[normalizedFreq][dogs] : 0;
+
+  // Safeguard: Log warning if frequency is unrecognized to prevent silent pricing failures
+  if (!pricing[normalizedFreq]) {
+    console.warn('Unrecognized service frequency:', normalizedFreq, '- defaulting to $0. Check pricing data.');
+  }
+
   const billingCycle = normalizedFreq === 'weekly' ? 'week' : '2 weeks';
   const totalPrice = pricePerService;
 
   document.getElementById('price-per-service').textContent = pricePerService;
-  document.getElementById('frequency-display').textContent = freq.charAt(0).toUpperCase() + freq.slice(1);
+  document.getElementById('frequency-display').textContent = displayFreq;
   document.getElementById('billing-cycle').textContent = billingCycle;
   document.getElementById('total-price').textContent = totalPrice;
   document.getElementById('total-price-repeat').textContent = totalPrice;
@@ -250,7 +259,8 @@ document.addEventListener('DOMContentLoaded', async function() {
             client_user_agent: navigator.userAgent,
             fbc: getFbc(),
             fbp: getCookie('_fbp'),
-            value: totalPrice
+            value: totalPrice,
+            serviceFrequency: normalizedFreq
           }
         })
       });
