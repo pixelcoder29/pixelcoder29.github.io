@@ -161,7 +161,15 @@ body {
       "name": "Are there any hidden fees or extra charges for the initial cleanup?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges, and we take all pet waste away at no extra cost."
+        "text": "No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to handle the pet waste myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Never! We haul away and properly dispose of all pet waste at no extra cost, leaving your yard clean, hassle-free, and ready for your pets to enjoy."
       }
     },
     {
@@ -379,7 +387,17 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges, and we take all pet waste away at no extra cost.</p>
+<p>No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do I have to handle the pet waste myself?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+<p>Never! We haul away and properly dispose of all pet waste at no extra cost, leaving your yard clean, hassle-free, and ready for your pets to enjoy.</p>
         </div>
       </div>
 
