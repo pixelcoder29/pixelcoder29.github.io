@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About Us - Professional Dog Waste Removal Portland OR | Yard Guards PDX
-description: "Professional dog waste removal service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods. Get your free quote today!"
+title: About Us - Professional Pet Waste Removal Portland OR | Yard Guards PDX
+description: "Professional pet waste removal service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods. Get your free quote today!"
 permalink: /about-us/
 keywords: "dog waste removal Portland, pet waste cleanup Portland OR, professional poop scooping Portland, yard waste removal East Portland, dog waste service Portland"
 ---
@@ -186,8 +186,8 @@ body {
 <!-- === HERO SECTION === -->
 <div class="full-bleed-wrapper" style="background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%); color: white; padding: 80px 0;">
   <div class="section-inner" style="text-align: center;">
-    <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: white;">Professional Dog Waste Removal Portland OR</h1>
-    <p style="font-size: 1.5rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: #f8f8f8;">Free waste hauling • 100% satisfaction guarantee • Serving Portland. Get your professional dog waste removal service today.</p>
+    <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: white;">Professional Pet Waste Removal Portland OR</h1>
+    <p style="font-size: 1.5rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: #f8f8f8;">Free waste hauling • 100% satisfaction guarantee • Serving Portland. Get your professional pet waste removal service today.</p>
     <button class="open-form-btn cta-button" style="background: #ff6d00; color: white; border: none; font-size: 1.2rem; padding: 15px 30px; box-shadow: 0 4px 15px rgba(255,109,0,0.3);">Get Your Free Quote</button>
   </div>
 </div>
@@ -200,9 +200,9 @@ body {
 
         <!-- Left: Story Content -->
         <div>
-          <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #1a1a1a;">Meet Yard Guards PDX - Portland's Premier Dog Waste Removal Service</h2>
+          <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #1a1a1a;">Meet Yard Guards PDX - Portland's Premier Pet Waste Removal Service</h2>
           <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 1.5rem; color: #1a1a1a;">At Yard Guards PDX, we're passionate about keeping Portland's yards clean, safe, and beautiful. As a fresh, dedicated local service in East Portland, we understand the unique challenges of maintaining pristine yards in our vibrant community.</p>
-          <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem; color: #1a1a1a;">Our mission is simple: provide professional dog waste removal Portland OR residents can trust, with exceptional service that goes above and beyond. We're not just cleaning yards – we're protecting families, pets, and the environment.</p>
+          <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem; color: #1a1a1a;">Our mission is simple: provide professional pet waste removal Portland OR residents can trust, with exceptional service that goes above and beyond. We're not just cleaning yards – we're protecting families, pets, and the environment.</p>
 
           <div style="background: #f0f9f0; padding: 25px; border-radius: 12px; border-left: 4px solid #4CAF50;">
             <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: #2e7d32;">Why Portland Chooses Yard Guards PDX</h3>
@@ -229,7 +229,7 @@ body {
 
         <!-- Right: Team Photo -->
         <div style="text-align: center;">
-          <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Yard Guards PDX Professional Team - Dog Waste Removal Portland OR" style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);" loading="lazy">
+          <img src="/assets/img/yard-guards-pdx-trust-photo.webp" alt="Yard Guards PDX Professional Team - Pet Waste Removal Portland OR" style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);" loading="lazy">
           <p style="margin-top: 15px; font-style: italic; color: #666;">Our professional team serving East Portland</p>
         </div>
 
@@ -242,7 +242,7 @@ body {
 <div class="full-bleed-wrapper" style="background: #f8f8f8;">
   <div class="section-inner">
     <div style="text-align: center; margin-bottom: 3rem;">
-      <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a1a;">Dog Waste Removal Throughout East Portland</h2>
+      <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a1a;">Pet Waste Removal Throughout East Portland</h2>
       <p style="font-size: 1.3rem; color: #1a1a1a; max-width: 800px; margin: 0 auto;">From the Willamette River to the eastern city limits, we're your trusted partner for professional poop scooping and pet waste cleanup across all East Portland neighborhoods.</p>
     </div>
 
@@ -273,7 +273,7 @@ body {
   <div class="section-inner">
     <div style="max-width: 1000px; margin: 0 auto;">
       <h2 style="font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; color: #1a1a1a;">Why Portland Families Choose Yard Guards PDX</h2>
-      <p style="font-size: 1.3rem; text-align: center; margin-bottom: 3rem; color: #1a1a1a;">Professional dog waste removal Portland OR trusts, with unbeatable service and pricing.</p>
+      <p style="font-size: 1.3rem; text-align: center; margin-bottom: 3rem; color: #1a1a1a;">Professional pet waste removal Portland OR trusts, with unbeatable service and pricing.</p>
 
       <div class="features-grid">
 
@@ -317,7 +317,7 @@ body {
 
       <!-- CTA Section -->
       <div style="text-align: center; margin-top: 3rem; padding: 40px; background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e8 100%); border-radius: 16px;">
-        <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #2e7d32;">Ready for Professional Dog Waste Removal in Portland?</h3>
+        <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #2e7d32;">Ready for Professional Pet Waste Removal in Portland?</h3>
         <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #1a1a1a;">Get your free quote today and experience the Yard Guards PDX difference. Free waste hauling, guaranteed satisfaction, serving all East Portland.</p>
         <button class="open-form-btn cta-button" style="background: #ff6d00; color: white; border: none; font-size: 1.2rem; padding: 15px 30px; box-shadow: 0 4px 15px rgba(255,109,0,0.3);">Get Your Free Quote Now</button>
       </div>
@@ -330,7 +330,7 @@ body {
   <div class="section-inner">
     <div style="text-align: center; margin-bottom: 3rem;">
       <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a1a;">Before & After: Yard Transformations</h2>
-      <p style="font-size: 1.3rem; color: #555;">See the dramatic difference professional dog waste removal makes in Portland yards.</p>
+      <p style="font-size: 1.3rem; color: #555;">See the dramatic difference professional pet waste removal makes in Portland yards.</p>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
@@ -352,7 +352,7 @@ body {
     </div>
 
     <div style="text-align: center; margin-top: 3rem;">
-      <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">Join local Portland families who've transformed their yards with professional dog waste removal.</p>
+      <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">Join local Portland families who've transformed their yards with professional pet waste removal.</p>
       <button class="open-form-btn cta-button" style="font-size: 1.1rem; padding: 14px 28px;">See Your Yard Transformed</button>
     </div>
   </div>
@@ -361,7 +361,7 @@ body {
 <!-- === FINAL CTA === -->
 <div class="full-bleed-wrapper" style="background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); color: white;">
   <div class="section-inner" style="text-align: center; padding: 60px 20px;">
-    <h2 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 1.5rem; color: white;">Get Professional Dog Waste Removal in Portland Today</h2>
+    <h2 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 1.5rem; color: white;">Get Professional Pet Waste Removal in Portland Today</h2>
     <p style="font-size: 1.4rem; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; color: #f5f5f5; text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Free waste hauling • 100% satisfaction guarantee • All East Portland coverage. Don't wait for pet waste to ruin your yard.</p>
 
     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">

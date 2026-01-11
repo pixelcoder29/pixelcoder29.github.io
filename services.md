@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Dog Waste Removal Services Portland OR | Yard Guards PDX
-description: "Professional dog waste removal services in Portland OR. Weekly & bi-weekly poop scooping with free waste hauling. 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods."
+title: Pet Waste Removal Services Portland OR | Yard Guards PDX
+description: "Professional pet waste removal services in Portland OR. Weekly & bi-weekly poop scooping with free waste hauling. 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods."
 permalink: /services/
 keywords: "dog waste removal Portland, pet waste cleanup Portland OR, professional dog poop service Portland, weekly dog waste removal, dog poop scooping service"
 ---
