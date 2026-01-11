@@ -161,7 +161,7 @@ body {
       "name": "Are there any hidden fees or extra charges for the initial cleanup?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges."
+        "text": "No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges, and we take all pet waste away at no extra cost."
       }
     },
     {
@@ -379,7 +379,7 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges.</p>
+<p>No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges, and we take all pet waste away at no extra cost.</p>
         </div>
       </div>
 
