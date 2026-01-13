@@ -32,10 +32,17 @@ permalink: /thank-you/
       (sessionId.startsWith('cs_test_') || sessionId.startsWith('cs_live_')) &&
       !localStorage.getItem('pixelFired-' + sessionId)) {
 
+      // Get the event ID that was stored from the Make.com response
+      const purchaseEventId = localStorage.getItem('purchaseEventId');
+      console.log('Purchase Event ID from localStorage:', purchaseEventId);
+
       if (amount > 0 && typeof fbq !== 'undefined') {
-          fbq('track', 'Purchase', {value: amount, currency: 'USD'});
+          console.log('Firing Purchase pixel with eventID:', purchaseEventId);
+          fbq('track', 'Purchase', {value: amount, currency: 'USD'}, {eventID: purchaseEventId});
+          console.log('Purchase pixel fired successfully');
           pixelStatus = 'Pixel FIRED!';
       } else {
+          console.log('Purchase pixel not fired - amount:', amount, 'fbq defined:', typeof fbq);
           pixelStatus = 'Did NOT fire (no amount or fbq undefined)';
       }
 
@@ -47,14 +54,14 @@ permalink: /thank-you/
       pixelStatus = 'Did NOT fire (no valid session_id)';
   }
 
-  // Debug banner (uncomment for testing)
-  // window.addEventListener('DOMContentLoaded', () => {
-  //   const debugDiv = document.createElement('div');
-  //   debugDiv.id = 'pixel-debug';
-  //   debugDiv.style.cssText = 'position:fixed;bottom:0;left:0;background:#fff;color:#000;padding:5px;z-index:9999;font-size:14px;';
-  //   debugDiv.innerText = `Session ID: ${sessionId || 'none'} | Amount: $${amount} | ${pixelStatus}`;
-  //   document.body.appendChild(debugDiv);
-  // });
+  // Debug banner for testing
+  window.addEventListener('DOMContentLoaded', () => {
+    const debugDiv = document.createElement('div');
+    debugDiv.id = 'pixel-debug';
+    debugDiv.style.cssText = 'position:fixed;bottom:0;left:0;background:#fff;color:#000;padding:5px;z-index:9999;font-size:14px;border:1px solid #000;max-width:400px;';
+    debugDiv.innerText = `Session ID: ${sessionId || 'none'} | Amount: $${amount} | ${pixelStatus}`;
+    document.body.appendChild(debugDiv);
+  });
 
   window.addEventListener('DOMContentLoaded', () => {
     console.log('Thank you page script running');

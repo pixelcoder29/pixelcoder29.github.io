@@ -275,7 +275,16 @@ document.addEventListener('DOMContentLoaded', async function() {
       });
 
       const session = await response.json();
-      console.log('Session:', session);
+      console.log('Session response from Make.com:', session);
+
+      // Store the event ID returned from Make.com for Purchase pixel matching
+      if (session.eventId) {
+        console.log('Storing Purchase eventId in localStorage:', session.eventId);
+        localStorage.setItem('purchaseEventId', session.eventId);
+      } else {
+        console.log('No eventId in Make.com response');
+      }
+
       const result = await stripe.redirectToCheckout({sessionId: session.id});
       if (result.error) {
         alert(result.error.message);
