@@ -54,14 +54,14 @@ permalink: /thank-you/
       pixelStatus = 'Did NOT fire (no valid session_id)';
   }
 
-  // Debug banner for testing
-  window.addEventListener('DOMContentLoaded', () => {
-    const debugDiv = document.createElement('div');
-    debugDiv.id = 'pixel-debug';
-    debugDiv.style.cssText = 'position:fixed;bottom:0;left:0;background:#fff;color:#000;padding:5px;z-index:9999;font-size:14px;border:1px solid #000;max-width:400px;';
-    debugDiv.innerText = `Session ID: ${sessionId || 'none'} | Amount: $${amount} | ${pixelStatus}`;
-    document.body.appendChild(debugDiv);
-  });
+  // Debug banner (uncomment for testing)
+  // window.addEventListener('DOMContentLoaded', () => {
+  //   const debugDiv = document.createElement('div');
+  //   debugDiv.id = 'pixel-debug';
+  //   debugDiv.style.cssText = 'position:fixed;bottom:0;left:0;background:#fff;color:#000;padding:5px;z-index:9999;font-size:14px;border:1px solid #000;max-width:400px;';
+  //   debugDiv.innerText = `Session ID: ${sessionId || 'none'} | Amount: $${amount} | ${pixelStatus}`;
+  //   document.body.appendChild(debugDiv);
+  // });
 
   window.addEventListener('DOMContentLoaded', () => {
     console.log('Thank you page script running');
