@@ -326,7 +326,7 @@ permalink: /get-quote/
 
       <div class="faq-item">
         <div class="faq-question">
-          <span>How do you ensure your tools and equipment are properly sanitized?</span>
+          <span>How do you ensure your tools and equipment are proper`ly sanitized?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -460,6 +460,7 @@ permalink: /get-quote/
     <span id="close-form" style="position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer;">&times;</span>
     
     <form class="quote-form" novalidate>
+      <h2 style="text-align: center; margin-bottom: 35px;">Get My Free Quote Today!</h2>
       <div class="form-error-banner">Submission failed. Please try again.</div>
       <fieldset>
         <div class="form-row">

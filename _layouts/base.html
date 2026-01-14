@@ -41,6 +41,7 @@ common-js:
     <span id="close-form" style="position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer;">&times;</span>
 
     <form class="quote-form" novalidate>
+      <h2 style="text-align: center; margin-bottom: 35px;">Get My Free Quote Today!</h2>
       <div class="form-error-banner">Submission failed. Please try again.</div>
       <fieldset>
         <div class="form-row">
@@ -99,7 +100,14 @@ common-js:
           <textarea id="questions_modal" name="anyQuestions" rows="3"></textarea>
         </div>
 
-        <p class="privacy-text">By submitting, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</p>
+        <p class="privacy-text" style="font-size: 12px; margin-top: 10px;">By providing my phone number and email, I agree to receive texts and emails from Yard Guards PDX, including marketing messages. Messaging frequency varies; message and data rates may apply. Reply STOP to opt out of texts, or click the unsubscribe link in any email for email opt-out. Reply HELP for more information.</p>
+        <div class="form-group privacy-group">
+          <div>
+            <input type="checkbox" id="privacy_agree_modal" name="privacyAgree" required>
+            <label for="privacy_agree_modal">By checking this box I agree to the <a href="/privacy-policy" target="_blank">Privacy Policy</a> *</label>
+          </div>
+          <small class="error-message" id="privacy-modal-error"></small>
+        </div>
         <button type="submit" class="cta-button">Request My Quote</button>
       </fieldset>
     </form>
