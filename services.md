@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Pet Waste Removal Services Portland OR | Yard Guards PDX
-description: "Professional pet waste removal services in Portland OR. Weekly & bi-weekly poop scooping with free waste hauling. 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods."
+title: Pet Waste Removal Services Portland Oregon | Yard Guards PDX
+description: "Professional pet waste removal services in Portland Oregon. Weekly & bi-weekly poop scooping with free waste hauling. 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods."
 permalink: /services/
 keywords: "dog waste removal Portland, pet waste cleanup Portland OR, professional dog poop service Portland, weekly dog waste removal, dog poop scooping service"
 ---
@@ -52,7 +52,7 @@ body {
   "@type": "Service",
   "@id": "https://pixelcoder29.github.io/services/#service",
   "name": "Professional Pet Waste Removal Services",
-  "description": "Complete pet waste removal and cleanup services in Portland OR. Weekly and bi-weekly poop scooping with free waste hauling and 100% satisfaction guarantee.",
+  "description": "Complete pet waste removal and cleanup services in Portland Oregon. Weekly and bi-weekly poop scooping with free waste hauling and 100% satisfaction guarantee.",
   "provider": {
     "@type": "LocalBusiness",
     "@id": "https://pixelcoder29.github.io/#organization",
@@ -197,7 +197,7 @@ body {
 <!-- --- Hero Section --- -->
 <div class="full-bleed-wrapper section-background-light">
   <div class="section-inner section-inner-center">
-    <h1>Pet Waste Removal Services in Portland</h1>
+    <h1>Pet Waste Removal Services in Portland Oregon</h1>
     <p class="hero-description-large">Professional, reliable pet waste removal for residential properties. Weekly and bi-weekly service options tailored to your needs.</p>
     <button class="open-form-btn cta-button">Get Your Free Quote</button>
   </div>
@@ -282,8 +282,8 @@ body {
 <div class="full-bleed-wrapper" style="background:#f8f8f8;">
   <div class="section-inner" style="padding: 1.5rem 1.25rem;">
     <div class="service-area" style="margin: 0;">
-      <h3 style="font-size: 36px;">Serving Portland</h3>
-      <p style="font-size: 22px;">We proudly provide pet waste removal services throughout Portland, with comprehensive coverage in East Portland from the Willamette River to the eastern city limits. Quick response times and reliable local service.</p>
+      <h3 style="font-size: 36px;">Serving Portland Oregon</h3>
+      <p style="font-size: 22px;">We proudly provide pet waste removal services throughout Portland Oregon, with comprehensive coverage in East Portland from the Willamette River to the eastern city limits. Quick response times and reliable local service.</p>
     </div>
   </div>
 </div>
@@ -429,7 +429,7 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>We proudly serve Portland, with comprehensive coverage throughout East Portland from the Willamette River to the eastern city limits.</p>
+<p>We proudly serve Portland Oregon, with comprehensive coverage throughout East Portland from the Willamette River to the eastern city limits.</p>
         </div>
       </div>
 
