@@ -33,13 +33,13 @@ body {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://pixelcoder29.github.io"
+      "item": "https://www.yardguardspdx.com"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Services",
-      "item": "https://pixelcoder29.github.io/services/"
+      "item": "https://www.yardguardspdx.com/services/"
     }
   ]
 }
@@ -50,14 +50,14 @@ body {
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://pixelcoder29.github.io/services/#service",
+  "@id": "https://www.yardguardspdx.com/services/#service",
   "name": "Professional Pet Waste Removal Services",
   "description": "Complete pet waste removal and cleanup services in Portland Oregon. Weekly and bi-weekly poop scooping with free waste hauling and 100% satisfaction guarantee.",
   "provider": {
     "@type": "LocalBusiness",
-    "@id": "https://pixelcoder29.github.io/#organization",
+    "@id": "https://www.yardguardspdx.com/#organization",
     "name": "Yard Guards PDX",
-    "url": "https://pixelcoder29.github.io"
+    "url": "https://www.yardguardspdx.com"
   },
   "areaServed": [
     {

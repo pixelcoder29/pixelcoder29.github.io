@@ -29,13 +29,13 @@ body {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://pixelcoder29.github.io"
+      "item": "https://www.yardguardspdx.com"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "About Us",
-      "item": "https://pixelcoder29.github.io/about-us/"
+      "item": "https://www.yardguardspdx.com/about-us/"
     }
   ]
 }
@@ -46,11 +46,11 @@ body {
 {
   "@context": "https://schema.org",
   "@type": "AnimalService",
-  "@id": "https://pixelcoder29.github.io/#organization",
+  "@id": "https://www.yardguardspdx.com/#organization",
   "name": "Yard Guards PDX",
   "alternateName": "Yard Guards Portland",
   "description": "Professional dog waste removal and pet waste cleanup service in Portland OR. Free waste hauling, 100% satisfaction guarantee. Serving Portland and East Portland neighborhoods.",
-  "url": "https://pixelcoder29.github.io",
+  "url": "https://www.yardguardspdx.com",
   "telephone": "+15035120349",
   "email": "support@yardguardspdx.com",
   "foundingDate": "2024",

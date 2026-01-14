@@ -105,7 +105,7 @@ url-pretty: "YardGuardsPDX.com"
 title-on-all-pages: true
 
 # Base URL for GitHub Pages
-url: "https://pixelcoder29.github.io"
+url: "https://www.yardguardspdx.com"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
