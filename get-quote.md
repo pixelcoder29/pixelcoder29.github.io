@@ -35,6 +35,38 @@ permalink: /get-quote/
     },
     {
       "@type": "Question",
+      "name": "Can you clean if my dog is in the yard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we love pets! For safety, dogs that are uncomfortable with strangers should be kept inside during service. Otherwise, our team is happy to work around your furry friends."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, you don't have to be home. We just need access to your yard. You'll receive a text when we're on our way so you always know when to expect us."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I need to skip a scheduled service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work in bad weather?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We service rain or shine, except when driving conditions are unsafe (icy roads or extreme weather). Safety for both you and our team is always our top concern."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Are there any hidden fees or extra charges for the initial cleanup?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -51,18 +83,34 @@ permalink: /get-quote/
     },
     {
       "@type": "Question",
-      "name": "Do you work around pets and children?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely! Our team is experienced with dogs and families. We work safely around pets and children, and can accommodate specific timing preferences for the best experience."
-      }
-    },
-    {
-      "@type": "Question",
       "name": "How do you handle payment?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "We charge your card on file the day before each scheduled service, and you only pay for services that are completed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I schedule service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer weekly or bi-weekly service plans to keep your yard clean, safe, and odor-free. Choose the frequency that fits your needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do you provide service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We proudly serve Portland Oregon, with comprehensive coverage throughout East Portland from the Willamette River to the eastern city limits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I'm not satisfied or there's an issue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your satisfaction is guaranteed. If anything isn't right, contact us immediately, and we'll resolve it promptly."
       }
     }
   ]
@@ -377,7 +425,7 @@ permalink: /get-quote/
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>We proudly serve Portland, with comprehensive coverage throughout East Portland from the Willamette River to the eastern city limits.</p>
+<p>We proudly serve Portland Oregon, with comprehensive coverage throughout East Portland from the Willamette River to the eastern city limits.</p>
         </div>
       </div>
 

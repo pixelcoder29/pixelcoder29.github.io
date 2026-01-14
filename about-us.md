@@ -149,34 +149,98 @@ body {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What areas of the yard do you clean?",
+      "name": "Will my pets be safe during service?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We clean all outdoor areas where your dogs spend time, including the backyard, sidewalks, patios, and any common areas. We ensure thorough coverage for a completely clean space."
+        "text": "Your pets' safety is our top priority. We sanitize our tools and boots between properties, secure all gates, and handle every yard with care."
       }
     },
     {
       "@type": "Question",
-      "name": "How do you handle different weather conditions?",
+      "name": "How do you ensure your tools and equipment are properly sanitized?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We service in rain or shine, but will reschedule if driving conditions are unsafe due to ice, snow, or extreme weather. Your safety and ours is our top priority."
+        "text": "We use kennel-grade disinfectant/sanitizer that's safe for pets to thoroughly disinfect all our tools and boots between properties. This prevents the transmission of diseases like parvo and other dog-related illnesses, keeping all pets in our service area safe."
       }
     },
     {
       "@type": "Question",
-      "name": "Do you work around pets and children?",
+      "name": "Can you clean if my dog is in the yard?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely! Our team is experienced with dogs and families. We work safely around pets and children, and can accommodate specific timing preferences for the best experience."
+        "text": "Yes, we love pets! For safety, dogs that are uncomfortable with strangers should be kept inside during service. Otherwise, our team is happy to work around your furry friends."
       }
     },
     {
       "@type": "Question",
-      "name": "Are you licensed and insured?",
+      "name": "Do I need to be home?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we are fully licensed and insured for your peace of mind. We maintain proper business insurance and follow all local regulations for waste disposal and service provision."
+        "text": "No, you don't have to be home. We just need access to your yard. You'll receive a text when we're on our way so you always know when to expect us."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I need to skip a scheduled service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work in bad weather?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We service rain or shine, except when driving conditions are unsafe (icy roads or extreme weather). Safety for both you and our team is always our top concern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any hidden fees or extra charges for the initial cleanup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to handle the pet waste myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Never! We haul away and properly dispose of all pet waste at no extra cost, leaving your yard clean, hassle-free, and ready for your pets to enjoy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We charge your card on file the day before each scheduled service, and you only pay for services that are completed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I schedule service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer weekly or bi-weekly service plans to keep your yard clean, safe, and odor-free. Choose the frequency that fits your needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do you provide service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We proudly serve Portland Oregon, with comprehensive coverage throughout East Portland from the Willamette River to the eastern city limits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I'm not satisfied or there's an issue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your satisfaction is guaranteed. If anything isn't right, contact us immediately, and we'll resolve it promptly."
       }
     }
   ]
