@@ -96,6 +96,9 @@
   <!-- Preload critical resources -->
   <link rel="preload" href="{{ "/assets/css/custom-pages.css" | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="{{ "/assets/js/custom-pages.js" | relative_url }}" as="script">
+  {% if site.title-img %}
+    <link rel="preload" href="{{ site.title-img | relative_url }}" as="image">
+  {% endif %}
 
   <!-- CSS includes -->
   {% if layout.common-ext-css %}
