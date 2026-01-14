@@ -22,7 +22,7 @@ permalink: /get-quote/
       "name": "Will my pets be safe during service?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your pets' safety is our top priority. We sanitize our tools and boots between properties, secure all gates, and handle every yard with care. If we notice anything unusual in your pet's waste that could indicate a health concern, we notify you immediately."
+        "text": "Your pets' safety is our top priority. We sanitize our tools and boots between properties, secure all gates, and handle every yard with care."
       }
     },
     {
@@ -320,7 +320,7 @@ permalink: /get-quote/
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          <p>Your pets' safety is our top priority. We sanitize our tools and boots between properties, secure all gates, and handle every yard with care. If we notice anything unusual in your pet's waste that could indicate a health concern, we notify you immediately.</p>
+          <p>Your pets' safety is our top priority. We sanitize our tools and boots between properties, secure all gates, and handle every yard with care.</p>
         </div>
       </div>
 
