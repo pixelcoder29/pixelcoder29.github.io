@@ -111,25 +111,57 @@ document.addEventListener('DOMContentLoaded', async function() {
     biweekly: {1: 32, 2: 36, 3: 39, 4: 42, 5: 46, 6: 49}
   };
 
-  // Stripe price IDs
-  const priceIds = {
-    weekly: {
-      1: 'price_1SmXplK2sYympqhEgk0kSOBd',
-      2: 'price_1SmY6LK2sYympqhEwgRjMYH2',
-      3: 'price_1SmY7NK2sYympqhEAB9EPjgY',
-      4: 'price_1SmY7rK2sYympqhE95O7197Y',
-      5: 'price_1SmY8KK2sYympqhEJ67GrHrc',
-      6: 'price_1SmY8pK2sYympqhELhU29LBS'
+  // Stripe configuration - switch between 'test' and 'live'
+  const STRIPE_MODE = 'live'; // Change to 'test' for testing
+
+  const stripeConfig = {
+    test: {
+      publishableKey: 'pk_test_51SaE4lK2sYympqhEaHWlwI3hKxkySU8KWRJwtBcbz7hwGFD2bkN7GUk23vQRAcq75g74B4Qb9G4KZdZqfXRDhadU00hghQcHjL',
+      priceIds: {
+        weekly: {
+          1: 'price_1SmXplK2sYympqhEgk0kSOBd',
+          2: 'price_1SmY6LK2sYympqhEwgRjMYH2',
+          3: 'price_1SmY7NK2sYympqhEAB9EPjgY',
+          4: 'price_1SmY7rK2sYympqhE95O7197Y',
+          5: 'price_1SmY8KK2sYympqhEJ67GrHrc',
+          6: 'price_1SmY8pK2sYympqhELhU29LBS'
+        },
+        biweekly: {
+          1: 'price_1SmYG7K2sYympqhE16E3BrcL',
+          2: 'price_1SmYGnK2sYympqhEeUgQqVm5',
+          3: 'price_1SmYHFK2sYympqhESi2gi08w',
+          4: 'price_1SmYHfK2sYympqhEsY6K02ow',
+          5: 'price_1SmYI2K2sYympqhEfs5AN4Pg',
+          6: 'price_1SmYIQK2sYympqhE7qu5GEmh'
+        }
+      }
     },
-    biweekly: {
-      1: 'price_1SmYG7K2sYympqhE16E3BrcL',
-      2: 'price_1SmYGnK2sYympqhEeUgQqVm5',
-      3: 'price_1SmYHFK2sYympqhESi2gi08w',
-      4: 'price_1SmYHfK2sYympqhEsY6K02ow',
-      5: 'price_1SmYI2K2sYympqhEfs5AN4Pg',
-      6: 'price_1SmYIQK2sYympqhE7qu5GEmh'
+    live: {
+      publishableKey: 'pk_live_51SaE4lK2sYympqhE7mHFQJZMzEeZfSAdxcQFUIuMEsfecZne5xJsGzR6wdEcPQqHFXNDeB9uzzfxGWkAZ4jwJPzh00VjSbMFge',
+      priceIds: {
+        weekly: {
+          1: 'price_1SpUxbK2sYympqhEQHFfvrw9',
+          2: 'price_1SpUxeK2sYympqhEvRMzTqcn',
+          3: 'price_1SpUxfK2sYympqhEKfTJ6hDx',
+          4: 'price_1SpUxgK2sYympqhEAAs8Cevl',
+          5: 'price_1SpUxiK2sYympqhEcRzQhHBc',
+          6: 'price_1SpUxjK2sYympqhESZeVmM9R'
+        },
+        biweekly: {
+          1: 'price_1SpUxlK2sYympqhEbbbpy024',
+          2: 'price_1SpUxmK2sYympqhE61WNGQzI',
+          3: 'price_1SpUxnK2sYympqhEAsDStOm4',
+          4: 'price_1SpUxpK2sYympqhE0Az8Xy6Q',
+          5: 'price_1SpUxqK2sYympqhEJovH9wEB',
+          6: 'price_1SpUxsK2sYympqhE4IVwuuj2'
+        }
+      }
     }
   };
+
+  // Get current configuration
+  const currentConfig = stripeConfig[STRIPE_MODE];
+  const priceIds = currentConfig.priceIds;
 
   let name = '', phone = '', email = '', zip = '', dogs = 1, freq = 'weekly', displayFreq = 'Weekly', questions = 'None';
 
@@ -225,7 +257,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   }
 
   // Stripe integration
-  const stripe = Stripe('pk_test_51SaE4lK2sYympqhEaHWlwI3hKxkySU8KWRJwtBcbz7hwGFD2bkN7GUk23vQRAcq75g74B4Qb9G4KZdZqfXRDhadU00hghQcHjL');
+  const stripe = Stripe(currentConfig.publishableKey);
   const startButton = document.getElementById('start-subscription');
 
   startButton.addEventListener('click', async function() {
