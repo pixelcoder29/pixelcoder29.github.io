@@ -13,6 +13,19 @@ permalink: /quote/
 <script src="/assets/js/custom-pages.js" defer></script>
 
 <div class="quote-container">
+  <!-- Ad Blocker Warning Banner -->
+  <div id="adblocker-warning" class="adblocker-warning" style="display: none;">
+    <div class="warning-content">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-text">
+        <h3>Ad Blocker Detected</h3>
+        <p>Please disable your ad blocker (like uBlock Origin) for this site and refresh the page to complete your payment.</p>
+        <p><strong>Why?</strong> Ad blockers prevent our secure payment system from loading.</p>
+        <button onclick="location.reload()" class="refresh-btn">Refresh Page</button>
+      </div>
+    </div>
+  </div>
+
   <div id="loading" class="loading">
     <div class="loading-content">
       <div class="loading-logo">
@@ -172,6 +185,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({id: quoteId})
       });
+
+      if (!response.ok) {
+        // Check if this might be ad blocker interference
+        if (response.status === 0 || response.type === 'opaque' || response.status === 404) {
+          adBlockerDetected = true;
+          console.warn('API call blocked - likely ad blocker');
+        }
+        throw new Error(`HTTP ${response.status}`);
+      }
+
       const data = await response.json();
       name = data.name || '';
       phone = data.phone || '';
@@ -182,15 +205,23 @@ document.addEventListener('DOMContentLoaded', async function() {
       displayFreq = originalFreq.charAt(0).toUpperCase() + originalFreq.slice(1).toLowerCase();
       freq = originalFreq.toLowerCase().replace(/-/g, '');
       questions = data.questions || 'None';
-  } catch (e) {
-    console.error('Error fetching data', e);
-    alert('Unable to load quote data. Please try again later.');
+    } catch (e) {
+      console.error('Error fetching data', e);
+
+      // Enhanced error detection for ad blockers
+      if (e.message.includes('Failed to fetch') || e.message.includes('NetworkError') ||
+          e.message.includes('blocked') || adBlockerDetected) {
+        adBlockerDetected = true;
+        console.warn('API call failed - likely ad blocker interference');
+      } else {
+        alert('Unable to load quote data. Please try again later.');
+        return;
+      }
+    }
+  } else {
+    alert('Invalid quote link.');
     return;
   }
-} else {
-  alert('Invalid quote link.');
-  return;
-}
 
   // Helper function to title case names
   function titleCaseName(name) {
@@ -256,9 +287,37 @@ document.addEventListener('DOMContentLoaded', async function() {
     return '';
   }
 
-  // Stripe integration
-  const stripe = Stripe(currentConfig.publishableKey);
+  // Ad blocker detection and Stripe integration
+  let stripe = null;
+  let adBlockerDetected = false;
+
+  try {
+    stripe = Stripe(currentConfig.publishableKey);
+  } catch (error) {
+    adBlockerDetected = true;
+    console.warn('Stripe.js blocked by ad blocker');
+  }
+
+  // Check for ad blocker by testing Stripe availability
+  if (!stripe || typeof stripe.redirectToCheckout !== 'function') {
+    adBlockerDetected = true;
+  }
+
+  // Show ad blocker warning if detected
+  if (adBlockerDetected) {
+    document.getElementById('adblocker-warning').style.display = 'block';
+    document.getElementById('quote-content').style.display = 'none';
+  }
+
   const startButton = document.getElementById('start-subscription');
+
+  // Disable button if ad blocker is detected
+  if (adBlockerDetected) {
+    startButton.disabled = true;
+    startButton.textContent = 'Ad Blocker Detected - Please Refresh';
+    startButton.style.background = '#ccc';
+    startButton.style.cursor = 'not-allowed';
+  }
 
   startButton.addEventListener('click', async function() {
     if (startButton.hasClicked) return; // Prevent duplicate clicks
@@ -306,6 +365,20 @@ document.addEventListener('DOMContentLoaded', async function() {
         })
       });
 
+      // Check for ad blocker interference in payment API call
+      if (!response.ok) {
+        if (response.status === 0 || response.type === 'opaque' || response.status === 404) {
+          console.warn('Payment API call blocked - likely ad blocker');
+          // Show ad blocker warning and hide quote content
+          document.getElementById('adblocker-warning').style.display = 'block';
+          document.getElementById('quote-content').style.display = 'none';
+          startButton.disabled = false;
+          startButton.textContent = originalText;
+          return;
+        }
+        throw new Error(`HTTP ${response.status}`);
+      }
+
       const session = await response.json();
       console.log('Session response from Make.com:', session);
 
@@ -326,7 +399,18 @@ document.addEventListener('DOMContentLoaded', async function() {
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('Something went wrong. Please try again.');
+
+      // Enhanced error detection for ad blockers in payment flow
+      if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError') ||
+          error.message.includes('blocked')) {
+        console.warn('Payment API failed - likely ad blocker interference');
+        // Show ad blocker warning
+        document.getElementById('adblocker-warning').style.display = 'block';
+        document.getElementById('quote-content').style.display = 'none';
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+
       // Re-enable button on error
       startButton.disabled = false;
       startButton.textContent = originalText;
@@ -499,5 +583,67 @@ document.addEventListener('DOMContentLoaded', async function() {
   margin-top: 0.625rem;
   font-size: 0.9rem;
   color: var(--text-secondary);
+}
+
+/* Ad Blocker Warning Styles */
+.adblocker-warning {
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  border: 2px solid #f44336;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(244, 67, 54, 0.2);
+}
+
+.warning-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.warning-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.warning-text h3 {
+  color: #d32f2f;
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.warning-text p {
+  margin: 8px 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.refresh-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.refresh-btn:hover {
+  background: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .warning-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .warning-icon {
+    align-self: center;
+  }
 }
 </style>
