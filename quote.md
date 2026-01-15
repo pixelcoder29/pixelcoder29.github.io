@@ -108,7 +108,7 @@ permalink: /quote/
 
     <div class="quote-actions">
       <button id="start-subscription" class="cta-button">Save My Card</button>
-      <p class="billing-note">Your card will be saved securely and you'll be charged $<span id="total-price-repeat"></span> the day before each scheduled service.</p>
+      <p class="billing-note">Your card is saved securely and won’t be charged right now. We'll only charge $<span id="total-price-repeat"></span> the day before each scheduled service. Easy and worry-free!</p>
     </div>
   </div>
 </div>
