@@ -259,14 +259,14 @@ body {
     <div class="service-options">
       <div class="service-option">
         <h3>Weekly Service</h3>
-        <p>Perfect for households with 1-2 dogs. Keep your yard consistently clean and odor-free with regular weekly visits.</p>
+        <p>Keep your yard clean and odor-free with professional weekly visits.</p>
         <div class="frequency">Every 7 Days</div>
       
       </div>
 
       <div class="service-option">
         <h3>Bi-Weekly Service</h3>
-        <p>Ideal for homes with fewer dogs or lighter waste. Professional cleanup every two weeks for ongoing yard maintenance.</p>
+        <p>Keep your yard clean and well-maintained with professional visits every 2 weeks.</p>
         <div class="frequency">Every 14 Days</div>
       
       </div>
