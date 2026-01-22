@@ -170,7 +170,7 @@ function setupFormValidation(formElement, fieldIds) {
       if(response.ok){
         // Calculate amount and store in localStorage
         const weeklyPrices = [0, 23, 25, 27, 29, 32, 34];
-        const biweeklyPrices = [0, 32, 36, 39, 42, 46, 49];
+        const biweeklyPrices = [0, 39, 43, 46, 49, 54, 58];
         const dogsCount = parseInt(dogs.value);
         let amount = 0;
         if (freq.value === "weekly") {
