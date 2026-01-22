@@ -2,6 +2,7 @@
 layout: page
 title: Your Personalized Quote
 permalink: /quote/
+sitemap: false
 ---
 
 <!-- Rebuild trigger -->

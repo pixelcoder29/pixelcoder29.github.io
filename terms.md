@@ -2,6 +2,9 @@
 layout: page
 title: "Terms & Conditions"
 permalink: /terms/
+sitemap_priority: 0.3
+sitemap_changefreq: yearly
+sitemap_lastmod: 2024-01-21
 ---
 
 <body class="terms-page">

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.yardguardspdx.com/</loc>
+    <image:image>
+      <image:loc>https://www.yardguardspdx.com/assets/img/yard-guards-pdx-banner-logo.webp</image:loc>
+      <image:title>Yard Guards PDX Logo - Professional Pet Waste Removal Portland</image:title>
+      <image:caption>Yard Guards PDX professional logo for pet waste removal services in Portland Oregon</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.yardguardspdx.com/assets/img/service-in-action.webp</image:loc>
+      <image:title>Yard Guards PDX Team in Action - Professional Pet Waste Removal</image:title>
+      <image:caption>Professional Yard Guards PDX team members providing expert pet waste removal service</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.yardguardspdx.com/assets/img/yard-guards-pdx-trust-photo.webp</image:loc>
+      <image:title>Yard Guards PDX Professional Team - Trusted Pet Waste Service</image:title>
+      <image:caption>Yard Guards PDX professional team providing trusted pet waste removal services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.yardguardspdx.com/assets/img/before.webp</image:loc>
+      <image:title>Before: Yard Needing Pet Waste Cleanup</image:title>
+      <image:caption>Before photo showing yard with pet waste issues before Yard Guards PDX service</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.yardguardspdx.com/assets/img/after.webp</image:loc>
+      <image:title>After: Clean Yard with Yard Guards PDX Service</image:title>
+      <image:caption>After photo showing clean, safe yard following professional Yard Guards PDX pet waste removal</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.yardguardspdx.com/services/</loc>
+    <image:image>
+      <image:loc>https://www.yardguardspdx.com/assets/img/service-in-action.webp</image:loc>
+      <image:title>Yard Guards PDX Service in Action</image:title>
+      <image:caption>Professional pet waste removal service demonstration by Yard Guards PDX team</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.yardguardspdx.com/about-us/</loc>
+    <image:image>
+      <image:loc>https://www.yardguardspdx.com/assets/img/yard-guards-pdx-trust-photo.webp</image:loc>
+      <image:title>Yard Guards PDX Professional Team</image:title>
+      <image:caption>Yard Guards PDX professional team serving pet owners</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.yardguardspdx.com/assets/img/before.webp</image:loc>
+      <image:title>Before Yard Transformation</image:title>
+      <image:caption>Before photo showing typical yard needing pet waste cleanup services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.yardguardspdx.com/assets/img/after.webp</image:loc>
+      <image:title>After Yard Transformation</image:title>
+      <image:caption>Clean, safe yard after professional pet waste removal by Yard Guards PDX</image:caption>
+    </image:image>
+  </url>
+</urlset>

@@ -2,6 +2,7 @@
 layout: page
 title: Thank You
 permalink: /thank-you/
+sitemap: false
 ---
 
 <div class="thank-you-container">

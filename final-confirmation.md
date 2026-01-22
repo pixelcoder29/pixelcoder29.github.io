@@ -2,6 +2,7 @@
 layout: page
 title: Service Confirmed
 permalink: /final-confirmation/
+sitemap: false
 ---
 
 <div class="confirmation-container">

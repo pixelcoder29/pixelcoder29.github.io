@@ -2,6 +2,7 @@
 layout: page
 title: Confirmation
 permalink: /confirmation/
+sitemap: false
 ---
 
 <div class="confirmation-container">

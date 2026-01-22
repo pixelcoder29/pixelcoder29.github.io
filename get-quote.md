@@ -2,6 +2,9 @@
 layout: page
 title: Get Quote
 permalink: /get-quote/
+sitemap_priority: 0.8
+sitemap_changefreq: monthly
+sitemap_lastmod: 2024-01-21
 ---
 
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">

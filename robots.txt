@@ -16,6 +16,7 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://www.yardguardspdx.com/sitemap.xml
+Sitemap: https://www.yardguardspdx.com/sitemap-images.xml
 
 # Crawl delay (optional - helps with server load)
 Crawl-delay: 1

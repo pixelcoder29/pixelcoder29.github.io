@@ -2,6 +2,9 @@
 layout: page
 title: "Privacy Policy"
 permalink: /privacy-policy/
+sitemap_priority: 0.3
+sitemap_changefreq: yearly
+sitemap_lastmod: 2024-01-21
 ---
 
 <body class="privacy-policy-page">
