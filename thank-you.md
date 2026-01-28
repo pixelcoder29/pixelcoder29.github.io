@@ -11,7 +11,15 @@ sitemap: false
 
   <div class="next-steps">
     <h2>Next Steps</h2>
-    <p>Next, we'll ask you a few quick questions about your service preferences. Just let us know when you're ready to complete your details by sending us a text.</p>
+    <p>Next, we'll ask you a few quick questions about your service preferences. Just let us know when you're ready to complete your details.</p>
+    
+    <div id="service-details-section">
+      <button id="complete-service-btn" class="cta-button">Complete Service Details</button>
+      <p id="service-note" class="note">This form collects your service address, yard access info, and cleaning preferences.</p>
+      <p id="fallback-message" class="note" style="display: none; color: #d9534f; font-weight: bold;">
+        We'll contact you shortly to complete your service details.
+      </p>
+    </div>
   </div>
 
   <div class="contact">
@@ -61,6 +69,56 @@ sitemap: false
   //   debugDiv.innerText = `Session ID: ${sessionId || 'none'} | Amount: $${amount} | ${pixelStatus}`;
   //   document.body.appendChild(debugDiv);
   // });
+
+  // Service Details Button Functionality
+  window.addEventListener('DOMContentLoaded', () => {
+    const completeBtn = document.getElementById('complete-service-btn');
+    const serviceNote = document.getElementById('service-note');
+    const fallbackMessage = document.getElementById('fallback-message');
+    
+    if (completeBtn) {
+      completeBtn.addEventListener('click', () => {
+        const userName = localStorage.getItem('userName') || '';
+        const userEmail = localStorage.getItem('userEmail') || '';
+        const userPhone = localStorage.getItem('userPhone') || '';
+        const userZip = localStorage.getItem('userZip') || '';
+        const hasAllData = userName && userEmail && userPhone && userZip;
+
+        if (hasAllData) {
+          // Build URL with query parameters
+          const baseUrl = 'https://form.jotform.com/260053619355153';
+          const urlParams = new URLSearchParams();
+
+          // Custom encoding function that preserves @ symbol in emails but encodes everything else
+          function encodeForJotForm(value) {
+            // For email fields, preserve @ symbol but encode everything else
+            if (value.includes('@')) {
+              return value.replace(/@/g, '@').replace(/[^@\w.-]/g, (match) => {
+                return encodeURIComponent(match);
+              });
+            }
+            // For non-email fields, use standard encoding
+            return encodeURIComponent(value);
+          }
+
+          // Add parameters only if data exists
+          if (userName) urlParams.append('fullname', encodeForJotForm(userName));
+          if (userEmail) urlParams.append('email', encodeForJotForm(userEmail));
+          if (userPhone) urlParams.append('phoneNumber', encodeForJotForm(userPhone));
+          if (userZip) urlParams.append('zipCode', encodeForJotForm(userZip));
+
+          // Open the form with pre-filled data
+          const formUrl = `${baseUrl}?${urlParams.toString()}`;
+          window.open(formUrl, '_blank');
+        } else {
+          // Graceful fallback when localStorage data is missing
+          serviceNote.style.display = 'none';
+          fallbackMessage.style.display = 'block';
+          completeBtn.style.display = 'none';
+        }
+      });
+    }
+  });
 
   // localStorage troubleshooting code (commented out for customer experience)
   // Uncomment this section for debugging localStorage issues:
