@@ -11,9 +11,7 @@ sitemap: false
 
   <div class="next-steps">
     <h2>Next Steps</h2>
-    <p>To schedule your service, please complete the required service details form below.</p>
-    <a id="jotform-link" href="https://form.jotform.com/260053619355153" target="_blank" class="cta-button">Complete Service Details Form</a>
-    <p class="note">This form collects your service address, yard access info, and cleaning preferences.</p>
+    <p>Next, we'll ask you a few quick questions about your service preferences. Just let us know when you're ready to complete your details.</p>
   </div>
 
   <div class="contact">
@@ -64,6 +62,9 @@ sitemap: false
   //   document.body.appendChild(debugDiv);
   // });
 
+  // localStorage troubleshooting code (commented out for customer experience)
+  // Uncomment this section for debugging localStorage issues:
+  /*
   window.addEventListener('DOMContentLoaded', () => {
     console.log('Thank you page script running');
     const userName = localStorage.getItem('userName') || '';
@@ -115,6 +116,7 @@ sitemap: false
       }
     }
   });
+  */
 </script>
 <noscript>
   <img height="1" width="1" style="display:none"
