@@ -9,15 +9,38 @@ sitemap: false
   <h1>Thank You</h1>
   <p>Your payment information has been securely saved.</p>
 
-  <div class="next-steps">
-    <h2>Next Steps</h2>
-    <p>Next, we'll ask you a few quick questions about your service preferences. Just let us know when you're ready to complete your details.</p>
-    
-    <div id="service-details-section">
-      <button id="complete-service-btn" class="cta-button">Complete Service Details</button>
-      <p id="service-note" class="note">This form collects your service address, yard access info, and cleaning preferences.</p>
-      <p id="fallback-message" class="note" style="display: none; color: #d9534f; font-weight: bold;">
-        We'll contact you shortly to complete your service details.
+  <!-- Original content that shows when localStorage data is available -->
+  <div id="original-content" style="display: none;">
+    <div class="next-steps">
+      <h2>Next Steps</h2>
+      <p>To schedule your service, please complete the required service details form below.</p>
+      <a id="jotform-link" href="https://form.jotform.com/260053619355153" target="_blank" class="cta-button">Complete Service Details Form</a>
+      <p class="note">This form collects your service address, yard access info, and cleaning preferences.</p>
+    </div>
+  </div>
+
+  <!-- Enhanced button functionality -->
+  <div id="enhanced-content" style="display: none;">
+    <div class="next-steps">
+      <h2>Next Steps</h2>
+      <p>Next, we'll ask you a few quick questions about your service preferences. Just let us know when you're ready to complete your details.</p>
+      
+      <div id="service-details-section">
+        <button id="complete-service-btn" class="cta-button">Complete Service Details</button>
+        <p id="service-note" class="note">This form collects your service address, yard access info, and cleaning preferences.</p>
+        <p id="fallback-message" class="note" style="display: none; color: #d9534f; font-weight: bold;">
+          We'll contact you shortly to complete your service details.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fallback message when no localStorage data -->
+  <div id="fallback-content" style="display: none;">
+    <div class="next-steps">
+      <h2>Next Steps</h2>
+      <p class="error-message" style="background: #ffffff !important; border: 2px solid #000000 !important; color: #000000 !important; padding: 1rem; border-radius: 4px; font-size: 1.1rem; font-weight: bold;">
+        Please text us to get a special link to complete your service request.
       </p>
     </div>
   </div>
@@ -70,29 +93,74 @@ sitemap: false
   //   document.body.appendChild(debugDiv);
   // });
 
-  // Service Details Button Functionality
+  // Smart Content Display Logic
   window.addEventListener('DOMContentLoaded', () => {
+    // Check for localStorage data
+    const userName = localStorage.getItem('userName') || '';
+    const userEmail = localStorage.getItem('userEmail') || '';
+    const userPhone = localStorage.getItem('userPhone') || '';
+    const userZip = localStorage.getItem('userZip') || '';
+    const hasAllData = userName && userEmail && userPhone && userZip;
+
+    // Check URL parameters as fallback
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlName = urlParams.get('fullname') || '';
+    const urlEmail = urlParams.get('email') || '';
+    const urlPhone = urlParams.get('phoneNumber') || '';
+    const urlZip = urlParams.get('zipCode') || '';
+    const hasUrlData = urlName && urlEmail && urlPhone && urlZip;
+
+    // Show appropriate content based on data availability
+    if (hasAllData || hasUrlData) {
+      // Show original content with working JotForm link
+      document.getElementById('original-content').style.display = 'block';
+      
+      // Also show enhanced content with button functionality
+      document.getElementById('enhanced-content').style.display = 'block';
+      
+      // Update JotForm link with pre-filled data
+      const jotformLink = document.getElementById('jotform-link');
+      if (jotformLink) {
+        const baseUrl = 'https://form.jotform.com/260053619355153';
+        const linkParams = new URLSearchParams();
+        
+        // Use localStorage data if available, otherwise use URL parameters
+        const name = hasAllData ? userName : urlName;
+        const email = hasAllData ? userEmail : urlEmail;
+        const phone = hasAllData ? userPhone : urlPhone;
+        const zip = hasAllData ? userZip : urlZip;
+        
+        // Custom encoding function that preserves @ symbol in emails but encodes everything else
+        function encodeForJotForm(value) {
+          if (value.includes('@')) {
+            return value.replace(/@/g, '@').replace(/[^@\w.-]/g, (match) => {
+              return encodeURIComponent(match);
+            });
+          }
+          return encodeURIComponent(value);
+        }
+
+        if (name) linkParams.append('fullname', encodeForJotForm(name));
+        if (email) linkParams.append('email', encodeForJotForm(email));
+        if (phone) linkParams.append('phoneNumber', encodeForJotForm(phone));
+        if (zip) linkParams.append('zipCode', encodeForJotForm(zip));
+
+        if (linkParams.toString()) {
+          jotformLink.href = `${baseUrl}?${linkParams.toString()}`;
+        }
+      }
+    } else {
+      // Show fallback message when no data available
+      document.getElementById('fallback-content').style.display = 'block';
+    }
+
+    // Enhanced button functionality
     const completeBtn = document.getElementById('complete-service-btn');
     const serviceNote = document.getElementById('service-note');
     const fallbackMessage = document.getElementById('fallback-message');
     
     if (completeBtn) {
       completeBtn.addEventListener('click', () => {
-        // Check localStorage first
-        const userName = localStorage.getItem('userName') || '';
-        const userEmail = localStorage.getItem('userEmail') || '';
-        const userPhone = localStorage.getItem('userPhone') || '';
-        const userZip = localStorage.getItem('userZip') || '';
-        const hasAllData = userName && userEmail && userPhone && userZip;
-
-        // Check URL parameters as fallback
-        const urlParams = new URLSearchParams(window.location.search);
-        const urlName = urlParams.get('fullname') || '';
-        const urlEmail = urlParams.get('email') || '';
-        const urlPhone = urlParams.get('phoneNumber') || '';
-        const urlZip = urlParams.get('zipCode') || '';
-        const hasUrlData = urlName && urlEmail && urlPhone && urlZip;
-
         if (hasAllData) {
           // Use localStorage data
           generateAndOpenForm(userName, userEmail, userPhone, userZip);
