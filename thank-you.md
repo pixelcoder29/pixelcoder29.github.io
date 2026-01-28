@@ -78,40 +78,29 @@ sitemap: false
     
     if (completeBtn) {
       completeBtn.addEventListener('click', () => {
+        // Check localStorage first
         const userName = localStorage.getItem('userName') || '';
         const userEmail = localStorage.getItem('userEmail') || '';
         const userPhone = localStorage.getItem('userPhone') || '';
         const userZip = localStorage.getItem('userZip') || '';
         const hasAllData = userName && userEmail && userPhone && userZip;
 
+        // Check URL parameters as fallback
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlName = urlParams.get('fullname') || '';
+        const urlEmail = urlParams.get('email') || '';
+        const urlPhone = urlParams.get('phoneNumber') || '';
+        const urlZip = urlParams.get('zipCode') || '';
+        const hasUrlData = urlName && urlEmail && urlPhone && urlZip;
+
         if (hasAllData) {
-          // Build URL with query parameters
-          const baseUrl = 'https://form.jotform.com/260053619355153';
-          const urlParams = new URLSearchParams();
-
-          // Custom encoding function that preserves @ symbol in emails but encodes everything else
-          function encodeForJotForm(value) {
-            // For email fields, preserve @ symbol but encode everything else
-            if (value.includes('@')) {
-              return value.replace(/@/g, '@').replace(/[^@\w.-]/g, (match) => {
-                return encodeURIComponent(match);
-              });
-            }
-            // For non-email fields, use standard encoding
-            return encodeURIComponent(value);
-          }
-
-          // Add parameters only if data exists
-          if (userName) urlParams.append('fullname', encodeForJotForm(userName));
-          if (userEmail) urlParams.append('email', encodeForJotForm(userEmail));
-          if (userPhone) urlParams.append('phoneNumber', encodeForJotForm(userPhone));
-          if (userZip) urlParams.append('zipCode', encodeForJotForm(userZip));
-
-          // Open the form with pre-filled data
-          const formUrl = `${baseUrl}?${urlParams.toString()}`;
-          window.open(formUrl, '_blank');
+          // Use localStorage data
+          generateAndOpenForm(userName, userEmail, userPhone, userZip);
+        } else if (hasUrlData) {
+          // Use URL parameters
+          generateAndOpenForm(urlName, urlEmail, urlPhone, urlZip);
         } else {
-          // Graceful fallback when localStorage data is missing
+          // Graceful fallback when no data available
           serviceNote.style.display = 'none';
           fallbackMessage.style.display = 'block';
           completeBtn.style.display = 'none';
@@ -119,6 +108,34 @@ sitemap: false
       });
     }
   });
+
+  // Helper function to generate and open form
+  function generateAndOpenForm(name, email, phone, zip) {
+    const baseUrl = 'https://form.jotform.com/260053619355153';
+    const formParams = new URLSearchParams();
+
+    // Custom encoding function that preserves @ symbol in emails but encodes everything else
+    function encodeForJotForm(value) {
+      // For email fields, preserve @ symbol but encode everything else
+      if (value.includes('@')) {
+        return value.replace(/@/g, '@').replace(/[^@\w.-]/g, (match) => {
+          return encodeURIComponent(match);
+        });
+      }
+      // For non-email fields, use standard encoding
+      return encodeURIComponent(value);
+    }
+
+    // Add parameters only if data exists
+    if (name) formParams.append('fullname', encodeForJotForm(name));
+    if (email) formParams.append('email', encodeForJotForm(email));
+    if (phone) formParams.append('phoneNumber', encodeForJotForm(phone));
+    if (zip) formParams.append('zipCode', encodeForJotForm(zip));
+
+    // Open the form with pre-filled data
+    const formUrl = `${baseUrl}?${formParams.toString()}`;
+    window.open(formUrl, '_blank');
+  }
 
   // localStorage troubleshooting code (commented out for customer experience)
   // Uncomment this section for debugging localStorage issues:
