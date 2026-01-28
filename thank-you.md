@@ -11,7 +11,7 @@ sitemap: false
 
   <div class="next-steps">
     <h2>Next Steps</h2>
-    <p>Next, we'll ask you a few quick questions about your service preferences. Just let us know when you're ready to complete your details.</p>
+    <p>Next, we'll ask you a few quick questions about your service preferences. Just let us know when you're ready to complete your details by sending us a text.</p>
   </div>
 
   <div class="contact">
