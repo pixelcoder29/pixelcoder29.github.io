@@ -329,7 +329,7 @@ sitemap_lastmod: 2024-01-21
 
       <div class="faq-item">
         <div class="faq-question">
-          <span>How do you ensure your tools and equipment are proper`ly sanitized?</span>
+          <span>How do you ensure your tools and equipment are properly sanitized?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
