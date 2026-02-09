@@ -182,6 +182,7 @@ sitemap_lastmod: 2024-01-21
       </div>
     </div>
 
+    <!-- COMMENTED OUT: Privacy text and checkbox for future restoration
     <p class="privacy-text" style="font-size: 12px; margin-top: 10px;">By providing my phone number and email, I agree to receive texts and emails from Yard Guards PDX, including marketing messages. Messaging frequency varies; message and data rates may apply. Reply STOP to opt out of texts, or click the unsubscribe link in any email for email opt-out. Reply HELP for more information.</p>
     <div class="form-group privacy-group">
       <div>
@@ -190,6 +191,7 @@ sitemap_lastmod: 2024-01-21
       </div>
       <small class="error-message" id="privacy-error"></small>
     </div>
+    -->
     <button type="submit" class="cta-button">Request My Quote</button>
   </fieldset>
 </form>
@@ -524,6 +526,7 @@ sitemap_lastmod: 2024-01-21
           </div>
         </div>
 
+        <!-- COMMENTED OUT: Privacy text and checkbox for future restoration
         <p class="privacy-text" style="font-size: 12px; margin-top: 10px;">By providing my phone number and email, I agree to receive texts and emails from Yard Guards PDX, including marketing messages. Messaging frequency varies; message and data rates may apply. Reply STOP to opt out of texts, or click the unsubscribe link in any email for email opt-out. Reply HELP for more information.</p>
         <div class="form-group privacy-group">
           <div>
@@ -532,6 +535,7 @@ sitemap_lastmod: 2024-01-21
           </div>
           <small class="error-message" id="privacy-modal-error"></small>
         </div>
+        -->
         <button type="submit" class="cta-button">Request My Quote</button>
       </fieldset>
     </form>
