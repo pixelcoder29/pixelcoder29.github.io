@@ -12,7 +12,7 @@ sitemap_lastmod: 2024-01-21
 
   <h1>Yard Guards PDX – Terms & Conditions</h1>
 
-  <p class="effective-date"><strong>Effective Date:</strong> January 10, 2026</p>
+  <p class="effective-date"><strong>Effective Date:</strong> February 8, 2026</p>
 
   <section class="summary-section">
     <h2>Plain-Language Summary</h2>
@@ -43,7 +43,7 @@ sitemap_lastmod: 2024-01-21
   <section class="billing-section">
     <h2>3. Billing & Payments</h2>
     <ul class="billing-list">
-      <li>Services are billed <strong>weekly or biweekly</strong>, on the day before the scheduled service at <strong>12:00 AM PST</strong>, based on the frequency selected.</li>
+      <li>Services are billed <strong>weekly or biweekly</strong>, on the day before the scheduled service, based on the frequency selected.</li>
       <li>All payments are final. No refunds or partial refunds are issued.</li>
       <li>Payments are processed securely through Stripe.</li>
       <li>By signing up, you authorize recurring automatic charges for your scheduled service.</li>
