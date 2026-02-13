@@ -4,7 +4,7 @@ title: "Terms & Conditions"
 permalink: /terms/
 sitemap_priority: 0.3
 sitemap_changefreq: yearly
-sitemap_lastmod: 2024-01-21
+sitemap_lastmod: 2026-02-13
 ---
 
 <body class="terms-page">
@@ -12,7 +12,7 @@ sitemap_lastmod: 2024-01-21
 
   <h1>Yard Guards PDX – Terms & Conditions</h1>
 
-  <p class="effective-date"><strong>Effective Date:</strong> February 8, 2026</p>
+  <p class="effective-date"><strong>Effective Date:</strong> February 13, 2026</p>
 
   <section class="summary-section">
     <h2>Plain-Language Summary</h2>
@@ -47,6 +47,7 @@ sitemap_lastmod: 2024-01-21
       <li>All payments are final. No refunds or partial refunds are issued.</li>
       <li>Payments are processed securely through Stripe.</li>
       <li>By signing up, you authorize recurring automatic charges for your scheduled service.</li>
+      <li>Additional service fees may apply for extended accumulation, inaccessible yards, or safety-related service interruptions as outlined in these Terms.</li>
     </ul>
 
     <div class="payment-failures-notice">
@@ -57,13 +58,15 @@ sitemap_lastmod: 2024-01-21
 
   <hr class="section-divider">
 
-  <section class="cancellations-section">
+ <section class="cancellations-section">
     <h2>4. Cancellations & Pausing</h2>
     <ul class="cancellations-list">
       <li>You may cancel or pause your service at any time by emailing <a href="mailto:support@yardguardspdx.com">support@yardguardspdx.com</a>.</li>
-      <li>Cancelling or pausing stops future billing only.</li>
+      <li>Cancelling or pausing stops future billing only. If service is paused or skipped and waste accumulation exceeds normal levels for your selected service frequency, the next visit may require additional time, and an additional cleanup fee may apply.</li>
+      <li>Weekly pricing is based on consistent weekly service. Repeated skips may result in pricing adjustments to reflect actual service frequency.</li>
     </ul>
-  </section>
+</section>
+
 
   <hr class="section-divider">
 
@@ -125,8 +128,8 @@ sitemap_lastmod: 2024-01-21
   <section class="disputes-section">
     <h2>8. Disputes & Chargebacks</h2>
     <p>Contact Yard Guards PDX directly to resolve concerns before initiating a dispute or chargeback.</p>
-    <p>Payments are non-refundable; cancellations only stop future billing.</p>
-  </section>
+    <p>Payments are non-refundable, and cancellations only stop future billing. Additional fees, including extra cleanup charges due to skipped, paused, or inaccessible service, cannot be disputed or reversed.</p>
+</section>
 
   <hr class="section-divider">
 
@@ -139,8 +142,8 @@ sitemap_lastmod: 2024-01-21
 
   <section class="force-majeure-section">
     <h2>10. Force Majeure</h2>
-    <p>Yard Guards PDX is not responsible for delays or missed services due to events beyond reasonable control, including weather, natural disasters, or other unforeseen circumstances.</p>
-  </section>
+    <p>Yard Guards PDX is not responsible for delays, missed services, or additional fees resulting from events beyond reasonable control, including but not limited to weather, natural disasters, acts of God, labor disputes, or other unforeseen circumstances. Customers remain responsible for all charges for scheduled services affected by such events.</p>
+</section>
 
   <hr class="section-divider">
 

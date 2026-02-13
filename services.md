@@ -6,7 +6,7 @@ permalink: /services/
 keywords: "dog waste removal Portland, pet waste cleanup Portland OR, professional dog poop service Portland, weekly dog waste removal, dog poop scooping service"
 sitemap_priority: 0.9
 sitemap_changefreq: monthly
-sitemap_lastmod: 2024-01-21
+sitemap_lastmod: 2026-02-13
 ---
 
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -180,7 +180,7 @@ body {
       "name": "What if I need to skip a scheduled service?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge."
+        "text": "Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge. If service is paused and waste accumulation exceeds normal levels for your selected plan, an additional cleanup fee may apply at the next visit."
       }
     },
     {
@@ -196,7 +196,7 @@ body {
       "name": "Are there any hidden fees or extra charges for the initial cleanup?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges."
+        "text": "No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees. Additional fees only apply if service is paused, access is unavailable, or waste accumulation exceeds normal service levels."
       }
     },
     {
@@ -416,7 +416,7 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge.</p>
+<p>Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge. If service is paused and waste accumulation exceeds normal levels for your selected plan, an additional cleanup fee may apply at the next visit.</p>
         </div>
       </div>
 
@@ -438,7 +438,7 @@ body {
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees or additional charges.</p>
+<p>No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees. Additional fees only apply if service is paused, access is unavailable, or waste accumulation exceeds normal service levels.</p>
         </div>
       </div>
 
