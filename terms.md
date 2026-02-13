@@ -85,6 +85,7 @@ sitemap_lastmod: 2026-02-13
         <li>The visit <strong>counts as a completed service</strong> for billing purposes because our team <strong>arrived on-site and attempted the service</strong>, which consumes time and resources.</li>
         <li>Customers will be <strong>notified</strong> if a visit is stopped due to an aggressive dog so they can secure pets for future visits.</li>
         <li>Customers are responsible for ensuring the yard is accessible and pets are secured during service.</li>
+        <li>If the yard is inaccessible upon arrival (locked gate, blocked entry, etc.), the visit will count as a completed service for billing purposes.</li>
       </ul>
     </div>
 
