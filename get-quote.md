@@ -57,7 +57,7 @@ sitemap_lastmod: 2026-02-13
       "name": "What if I need to skip a scheduled service?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge. If service is paused and waste accumulation exceeds normal levels for your selected plan, an additional cleanup fee may apply at the next visit."
+        "text": "Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge."
       }
     },
     {
@@ -70,10 +70,10 @@ sitemap_lastmod: 2026-02-13
     },
     {
       "@type": "Question",
-      "name": "Are there any hidden fees or extra charges for the initial cleanup?",
+      "name": "Are there extra charges for the initial cleanup?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees. Additional fees only apply if service is paused, access is unavailable, or waste accumulation exceeds normal service levels."
+        "text": "No, our quoted price includes the initial cleanup."
       }
     },
     {
@@ -366,7 +366,7 @@ sitemap_lastmod: 2026-02-13
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge. If service is paused and waste accumulation exceeds normal levels for your selected plan, an additional cleanup fee may apply at the next visit.</p>
+<p>Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge.</p>
         </div>
       </div>
 
@@ -384,11 +384,11 @@ sitemap_lastmod: 2026-02-13
       <!-- 4. Payment & Billing -->
       <div class="faq-item">
         <div class="faq-question">
-          <span>Are there any hidden fees or extra charges for the initial cleanup?</span>
+          <span>Are there extra charges for the initial cleanup?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>No, our quoted price includes the initial cleanup and all ongoing services. There are no hidden fees. Additional fees only apply if service is paused, access is unavailable, or waste accumulation exceeds normal service levels.</p>
+<p>No, our quoted price includes the initial cleanup.</p>
         </div>
       </div>
 
