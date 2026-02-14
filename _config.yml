@@ -23,6 +23,7 @@ navbar-links:
   Services: "services"
   About Us: "about-us"
   Get Quote: "get-quote"
+  Customer Portal: "https://billing.stripe.com/p/login/eVq4gA5DW4gBagx4qV0oM00"
 
 ################
 # --- Logo --- #
