@@ -121,8 +121,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // Pricing data
   const pricing = {
-    weekly: {1: 23, 2: 25, 3: 27, 4: 29, 5: 32, 6: 34},
-    biweekly: {1: 39, 2: 43, 3: 46, 4: 49, 5: 54, 6: 58}
+    weekly: {1: 29, 2: 34, 3: 39, 4: 44, 5: 47, 6: 49},
+    biweekly: {1: 49, 2: 54, 3: 59, 4: 64, 5: 69, 6: 73}
   };
 
   // Stripe configuration - switch between 'test' and 'live'
