@@ -133,20 +133,20 @@ document.addEventListener('DOMContentLoaded', async function() {
       publishableKey: 'pk_test_51SaE4lK2sYympqhEaHWlwI3hKxkySU8KWRJwtBcbz7hwGFD2bkN7GUk23vQRAcq75g74B4Qb9G4KZdZqfXRDhadU00hghQcHjL',
       priceIds: {
         weekly: {
-          1: 'price_1SmXplK2sYympqhEgk0kSOBd',
-          2: 'price_1SmY6LK2sYympqhEwgRjMYH2',
-          3: 'price_1SmY7NK2sYympqhEAB9EPjgY',
-          4: 'price_1SmY7rK2sYympqhE95O7197Y',
-          5: 'price_1SmY8KK2sYympqhEJ67GrHrc',
-          6: 'price_1SmY8pK2sYympqhELhU29LBS'
+          1: 'price_1TEcgFK2sYympqhE03NdzoFp',
+          2: 'price_1TEch8K2sYympqhEyr8N6V8l',
+          3: 'price_1TEcheK2sYympqhESgwyFZzO',
+          4: 'price_1TEchxK2sYympqhEF8mjjBXZ',
+          5: 'price_1TEciLK2sYympqhEBrFfWhQG',
+          6: 'price_1TEcioK2sYympqhEztVI7DXT'
         },
         biweekly: {
-          1: 'price_1SmYG7K2sYympqhE16E3BrcL',
-          2: 'price_1SmYGnK2sYympqhEeUgQqVm5',
-          3: 'price_1SmYHFK2sYympqhESi2gi08w',
-          4: 'price_1SmYHfK2sYympqhEsY6K02ow',
-          5: 'price_1SmYI2K2sYympqhEfs5AN4Pg',
-          6: 'price_1SmYIQK2sYympqhE7qu5GEmh'
+          1: 'price_1TEclEK2sYympqhE5Bs9tHMB',
+          2: 'price_1TEclnK2sYympqhE2aMxaO4z',
+          3: 'price_1SpUxnK2sYympqhEAsDStOm4',
+          4: 'price_1SpUxpK2sYympqhE0Az8Xy6Q',
+          5: 'price_1SpUxqK2sYympqhEJovH9wEB',
+          6: 'price_1SpUxsK2sYympqhE4IVwuuj2'
         }
       }
     },
