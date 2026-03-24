@@ -178,6 +178,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   const priceIds = currentConfig.priceIds;
 
   let name = '', phone = '', email = '', zip = '', dogs = 1, freq = 'weekly', displayFreq = 'Weekly', questions = 'None';
+  let adBlockerDetected = false;
 
   if (quoteId) {
     try {
