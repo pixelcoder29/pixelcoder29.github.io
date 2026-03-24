@@ -648,3 +648,4 @@ document.addEventListener('DOMContentLoaded', async function() {
   }
 }
 </style>
+"// Force rebuild $(date)" 
