@@ -57,7 +57,7 @@ sitemap_lastmod: 2026-02-13
       "name": "What if I need to skip a scheduled service?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge."
+        "text": "Life happens! Just notify us in advance and we'll take care of the reschedule."
       }
     },
     {
@@ -366,7 +366,7 @@ sitemap_lastmod: 2026-02-13
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-<p>Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge.</p>
+<p>Life happens! Just notify us in advance and we'll take care of the reschedule.</p>
         </div>
       </div>
 

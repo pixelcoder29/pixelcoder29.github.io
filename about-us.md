@@ -187,7 +187,7 @@ body {
       "name": "What if I need to skip a scheduled service?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Life happens! Just notify us in advance and we'll take care of the reschedule. No service, no charge."
+        "text": "Life happens! Just notify us in advance and we'll take care of the reschedule."
       }
     },
     {
